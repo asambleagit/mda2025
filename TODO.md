@@ -7,6 +7,7 @@
 - [x] Actualizar JavaScript para usar íconos dinámicos desde servicios.js
 - [x] Hacer enlaces funcionales usando datos de servicios.js
 - [x] Agregar transiciones suaves y animaciones en todo el sitio
-- [ ] Mejorar tipografía y espaciado
-- [ ] Limpiar código comentado
-- [ ] Probar diseño responsivo en diferentes tamaños de pantalla
+- [x] Mejorar tipografía y espaciado
+- [x] Limpiar código comentado
+- [x] Probar diseño responsivo en diferentes tamaños de pantalla
+- [x] Convertir servicios.js a formato JSON puro

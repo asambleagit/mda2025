@@ -215,50 +215,95 @@ body {
 }
 
 .filter-tab {
-  background: var(--calm-white);
-  border: 1px solid rgba(183, 230, 225, 0.5);
+  background: linear-gradient(135deg, var(--calm-white) 0%, var(--calm-light) 100%);
+  border: 2px solid transparent;
   color: var(--calm-text-light);
-  padding: 12px 24px;
-  border-radius: 25px;
+  padding: 14px 28px;
+  border-radius: 30px;
   transition: var(--transition);
   cursor: pointer;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 0.95rem;
   transform: translateY(0);
+  box-shadow: var(--shadow-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-tab::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.filter-tab:hover::before {
+  left: 100%;
 }
 
 .filter-tab.active,
 .filter-tab:hover {
-  background: var(--calm-accent);
-  color: white;
-  border-color: var(--calm-accent);
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, var(--calm-primary) 0%, var(--calm-secondary) 100%);
+  color: var(--calm-white);
+  border-color: var(--calm-primary);
+  transform: translateY(-3px) scale(1.05);
   box-shadow: var(--shadow-medium);
+  font-weight: 600;
 }
 
 /* Filtros de localidades */
 .filter-localidad-tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 1%;
+  gap: 8px;
   justify-content: center;
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .filter-localidad-tab {
-  background: var(--calm-white);
-  border: 1px solid rgba(183, 230, 225, 0.5);
+  background: linear-gradient(135deg, var(--calm-white) 0%, var(--calm-light) 100%);
+  border: 2px solid transparent;
   color: var(--calm-text-light);
-  padding: 5 10px;
-  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: var(--transition);
   cursor: pointer;
-  margin: 1%;
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 0.85rem;
+  transform: translateY(0);
+  box-shadow: var(--shadow-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-localidad-tab::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.filter-localidad-tab:hover::before {
+  left: 100%;
 }
 
 .filter-localidad-tab.active,
 .filter-localidad-tab:hover {
-  background: var(--calm-secondary);
-  color: white;
-  border-color: var(--calm-accent);
+  background: linear-gradient(135deg, var(--calm-green) 0%, var(--calm-accent) 100%);
+  color: var(--calm-white);
+  border-color: var(--calm-green);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: var(--shadow-medium);
+  font-weight: 500;
 }
 
 /* Servicios */
@@ -385,3 +430,46 @@ body {
 .amenity-item-wrapper:nth-child(4) { animation-delay: 0.4s; }
 .amenity-item-wrapper:nth-child(5) { animation-delay: 0.5s; }
 .amenity-item-wrapper:nth-child(6) { animation-delay: 0.6s; }
+
+/* Responsive filter tabs */
+@media (max-width: 768px) {
+  .filter-tabs {
+    gap: 12px;
+    padding: 0.5rem;
+  }
+
+  .filter-tab {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+
+  .filter-localidad-tabs {
+    gap: 6px;
+    padding: 0.5rem;
+  }
+
+  .filter-localidad-tab {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .filter-tabs {
+    gap: 8px;
+  }
+
+  .filter-tab {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+
+  .filter-localidad-tabs {
+    gap: 4px;
+  }
+
+  .filter-localidad-tab {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+}
