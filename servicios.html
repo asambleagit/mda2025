@@ -550,22 +550,22 @@
         // Plantilla HTML de cada servicio
         const html = `
            <div class="col-lg-${amenitiesData.length == 1 ? "12" : "6"} amenity-item-wrapper" data-category="${item.categoria}">
-                    <div class="amenity-card">
-                        <div class="amenity-header">
-                            <div class="amenity-icon">
-                                <i class="fas fa-home"></i>
-                            </div>
-                            <div>
-                                <h5 class="amenity-title">${item.titulo}</h5>                               
-                            </div>
-                        </div>
-                        <p style="color: var(--calm-text-light); margin-bottom: 16px;">Elije alguna de las siguientes opciones para ver la informacion.</p>
-                        <div class="amenity-actions">
-                            <a href="#" class="calm-btn-sm">Google Maps</a>
-                            <a href="#" class="calm-btn-sm">Sitio de la Municipalidad</a>
-                        </div>
-                    </div>
-                </div>
+              <div class="amenity-card">
+                  <div class="amenity-header">
+                      <div class="amenity-icon">
+                          <i class="fas ${item.icon || 'fa-home'}"></i>
+                      </div>
+                      <div>
+                          <h5 class="amenity-title">${item.titulo}</h5>
+                      </div>
+                  </div>
+                  <p style="color: var(--calm-text-light); margin-bottom: 16px;">Elige alguna de las siguientes opciones para ver la información.</p>
+                  <div class="amenity-actions">
+                      <a href="${item.link1 || '#'}" class="calm-btn-sm" target="_blank">Google Maps</a>
+                      <a href="${item.link1 || '#'}" class="calm-btn-sm" target="_blank">Sitio de la Municipalidad</a>
+                  </div>
+              </div>
+          </div>
         `;
         container.insertAdjacentHTML("beforeend", html);
       });
