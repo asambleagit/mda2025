@@ -16,5 +16,47 @@
     "localidad": "ajo",
     "titulo": "Farmacias en Mar de Ajó",
     "link1": "https://lacosta.gob.ar/salud/"
+  },
+  {
+    "categoria": "restaurante",
+    "localidad": "ajo",
+    "titulo": "Restaurantes en Mar de Ajó",
+    "link1": "https://www.google.com/maps/search/restaurantes+mar+de+ajo"
+  },
+  {
+    "categoria": "restaurante",
+    "localidad": "bernardo",
+    "titulo": "Restaurantes en San Bernardo",
+    "link1": "https://www.google.com/maps/search/restaurantes+san+bernardo"
+  },
+  {
+    "categoria": "restaurante",
+    "localidad": "teresita",
+    "titulo": "Restaurantes en Santa Teresita",
+    "link1": "https://www.google.com/maps/search/restaurantes+santa+teresita"
+  },
+  {
+    "categoria": "restaurante",
+    "localidad": "tuyu",
+    "titulo": "Restaurantes en Mar del Tuyú",
+    "link1": "https://www.google.com/maps/search/restaurantes+Mar+del+tuyu"
+  },
+  {
+    "categoria": "restaurante",
+    "localidad": "costa",
+    "titulo": "Restaurantes en Costa del Este",
+    "link1": "https://www.google.com/maps/search/restaurantes+Costa+del+Este"
+  },
+  {
+    "categoria": "restaurante",
+    "localidad": "aguas",
+    "titulo": "Restaurantes en Aguas Verdes",
+    "link1": "https://www.google.com/maps/search/restaurantes+Aguas+Verdes"
+  },
+  {
+    "categoria": "restaurante",
+    "localidad": "lucila",
+    "titulo": "Restaurantes en Lucila del Mar",
+    "link1": "https://www.google.com/maps/search/restaurantes+Lucila+del+Mar"
   }
 ]
