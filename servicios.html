@@ -24,7 +24,7 @@
       <div class="text-center mb-5">
         <h2 class="display-4 fw-bold text-primary">Servicios Locales</h2>
         <p class="lead text-muted">
-          Consulta los servicios segun tu asamblea
+          Consulta los servicios según tu asamblea
         </p>
       </div>
 
@@ -139,7 +139,16 @@
 
     // Estado inicial: sin ninguna asamblea seleccionada
     document.addEventListener('DOMContentLoaded', function () {
-      console.log('Selector de asambleas inicializado sin selección');
+      // console.log('Selector de asambleas inicializado sin selección');
+
+      // Auto seleccionar asamblea1 si la fecha actual es anterior al 21 de Octubre de 2025
+      const currentDate = new Date();
+      const cutoffDate = new Date('2025-10-21T00:00:00');
+      if (currentDate < cutoffDate) {
+        selectAssembly('asamblea1');
+      } else {
+        selectAssembly('asamblea2');
+      }
     });
 
     // ---- Filtro por categoría de servicios ----
