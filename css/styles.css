@@ -3,6 +3,8 @@
     --text-dark: #1f2937;
     --white: #ffffff;
 
+    --body-back-effects: #1c4975;
+
     --bgseccion-dentro: #d6f1f5;
     --textseccion-dentro: #1c6697;
 
@@ -24,16 +26,36 @@ body {
     font-family: "Inter", sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
+    background: var(--body-back-effects) !important;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);
-    min-height: 42vh;
+    background: #ffffff;
+    height: 36vh;
     display: flex;
-    align-items: center;
+    padding-left: 25%;
+    flex-direction: column;
+    /* Explicitly set to row */
+    align-items: right;
+    justify-content: center;
+    /* Changed from 'right' to 'flex-end' for better browser compatibility */
     position: relative;
     overflow: hidden;
+}
+
+.hero-image-container {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    z-index: 1;
+}
+
+.hero-animated-img {
+    width: 40%;
+    object-fit: contain;
+    transition: filter 2s ease-in-out;
+    animation: colorShift 5s infinite alternate;
 }
 
 .hero-content {
@@ -45,8 +67,91 @@ body {
 .hero h1 {
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 700;
-    color: white;
+    color: black;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto redondeado hacia abajo */
+.roundedDownEffect {
+    /*background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);*/
+    background: #1c4975;
+    min-height: 3vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.roundedDownEffect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Este es el color/gradiente del círculo */
+    /*background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);*/
+    background: var(--bgseccion-dentro);
+    /*clip-path: circle(50% at 50% 50%);*/
+    /*clip-path: polygon(100% 70%, 100% 0%, 0% 0%, 0% 70%, 50% 100%);*/
+    clip-path: ellipse(55% 70% at 49% 0%);
+    z-index: 1;
+}
+
+/* Efecto redondeado hacia arriba para portada */
+.roundedUpHeroEffect {
+    /*background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);*/
+    background: #ffffff;
+    min-height: 5vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.roundedUpHeroEffect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Este es el color/gradiente del círculo */
+    /*background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);*/
+    background: var(--bgseccion-dentro);
+    /*clip-path: circle(50% at 50% 50%);*/
+    /*clip-path: polygon(100% 70%, 100% 0%, 0% 0%, 0% 70%, 50% 100%);*/
+    clip-path: ellipse(70% 60% at 50% 100%);
+
+}
+
+/* Efecto redondeado hacia arriba */
+.roundedUpEffect {
+    /*background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);*/
+    background: #1c4975;
+    min-height: 3vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.roundedUpEffect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Este es el color/gradiente del círculo */
+    /*background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);*/
+    background: var(--bgseccion-dentro);
+    /*clip-path: circle(50% at 50% 50%);*/
+    /*clip-path: polygon(100% 70%, 100% 0%, 0% 0%, 0% 70%, 50% 100%);*/
+    clip-path: ellipse(80% 90% at 49% 100%);
+    z-index: 1;
 }
 
 /* Botones Home */
@@ -120,6 +225,7 @@ body {
     color: var(--textseccion-fuera);
     margin-top: 10px;
 }
+
 /* FAQ */
 .faq-item {
     background: white;
@@ -169,4 +275,19 @@ body {
     cursor: pointer;
     opacity: 0.6;
     transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animación de cambio de color suave */
+@keyframes colorShift {
+    0% {
+        filter: hue-rotate(0deg) brightness(1);
+    }
+
+    50% {
+        filter: hue-rotate(90deg) brightness(1.1);
+    }
+
+    100% {
+        filter: hue-rotate(180deg) brightness(1);
+    }
 }
