@@ -26,13 +26,13 @@ body {
     font-family: "Inter", sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
-    background: var(--body-back-effects) !important;
+    /*background: var(--body-back-effects) !important;*/
 }
 
 /* Hero Section */
 .hero {
     background: #ffffff;
-    height: 36vh;
+    height: 30vh;
     display: flex;
     padding-left: 25%;
     flex-direction: column;
@@ -52,7 +52,7 @@ body {
 }
 
 .hero-animated-img {
-    width: 40%;
+    width: 30%;
     object-fit: contain;
     transition: filter 2s ease-in-out;
     animation: colorShift 5s infinite alternate;
@@ -65,7 +65,8 @@ body {
 }
 
 .hero h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    /*font-size: clamp(2rem, 5vw, 4rem);*/
+    font-size: clamp(1rem, 3vw, 2.5rem);
     font-weight: 700;
     color: black;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -74,8 +75,9 @@ body {
 /* Efecto redondeado hacia abajo */
 .roundedDownEffect {
     /*background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);*/
-    background: #1c4975;
-    min-height: 3vh;
+    /*background: #1c4975;*/
+    background: white;
+    min-height: 2vh;
     display: flex;
     align-items: center;
     position: relative;
@@ -101,7 +103,8 @@ body {
 /* Efecto redondeado hacia arriba para portada */
 .roundedUpHeroEffect {
     /*background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);*/
-    background: #ffffff;
+    background: #1c4975;
+    /*background: #ffffff;*/
     min-height: 5vh;
     display: flex;
     align-items: center;
@@ -129,7 +132,8 @@ body {
 /* Efecto redondeado hacia arriba */
 .roundedUpEffect {
     /*background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);*/
-    background: #1c4975;
+     /*background: #1c4975;*/
+    background: white;
     min-height: 3vh;
     display: flex;
     align-items: center;
@@ -147,7 +151,8 @@ body {
     height: 100%;
     /* Este es el color/gradiente del círculo */
     /*background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);*/
-    background: var(--bgseccion-dentro);
+    /*background: var(--bgseccion-dentro);*/
+    background: #1c4975;
     /*clip-path: circle(50% at 50% 50%);*/
     /*clip-path: polygon(100% 70%, 100% 0%, 0% 0%, 0% 70%, 50% 100%);*/
     clip-path: ellipse(80% 90% at 49% 100%);
