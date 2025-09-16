@@ -1,0 +1,172 @@
+/* Variables de color */
+:root {
+    --text-dark: #1f2937;
+    --white: #ffffff;
+
+    --bgseccion-dentro: #d6f1f5;
+    --textseccion-dentro: #1c6697;
+
+    --bgseccion-fuera: #cceae8;
+    --textseccion-fuera: #539091;
+
+    --bgseccion-info: #c7a9c1;
+    --textseccion-info: #4d0e40;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);
+    min-height: 42vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Botones Home */
+.btn-section {
+    border-radius: 10px;
+    box-shadow: 0 4px 18px rgba(37, 99, 235, 0.07);
+    font-size: 1.2rem;
+    border: 2px solid transparent !important;
+    gap: 2px;
+    transition: all 0.3s ease;
+}
+
+.btn-section:hover {
+    transform: translateY(-2px) scale(1.02);
+}
+
+.dentro-btn {
+    background: var(--bgseccion-dentro);
+    color: var(--textseccion-dentro);
+    border-color: #c3e7ec !important;
+}
+
+.fuera-btn {
+    background: var(--bgseccion-fuera);
+    color: var(--textseccion-fuera);
+}
+
+.info-btn {
+    background: var(--bgseccion-info);
+    color: var(--text-dark);
+}
+
+/* Quick Access */
+.quick-access-icon {
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.quick-access-icon:hover {
+    border: 2px solid var(--textseccion-info);
+    transform: scale(1.1);
+}
+
+.quick-access-icon img {
+    width: 60%;
+    height: auto;
+}
+
+.quick-accessInfo-title {
+    font-weight: bold;
+    color: var(--textseccion-info);
+    margin-top: 10px;
+}
+
+.quick-access-subtitle {
+    color: #555;
+    font-size: 14px;
+}
+
+.quick-accessServ-title {
+    font-weight: bold;
+    color: var(--textseccion-fuera);
+    margin-top: 10px;
+}
+/* FAQ */
+.faq-item {
+    background: white;
+    border: 1px solid lightgray;
+    transition: all 0.3s ease;
+}
+
+.faq-question {
+    padding: 14px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    padding: 0 25px 25px;
+    display: none;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Botón subir */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1c6697;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    opacity: 0.6;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
