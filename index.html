@@ -18,7 +18,66 @@
 
   <!-- Material Symbols -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <style>
+    .chip-track {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      /* Firefox */
+    }
 
+    .chip-track::-webkit-scrollbar {
+      display: none;
+    }
+
+
+
+    /* Chips en mobile (2 visibles) */
+    .chip-item {
+      flex: 0 0 40%;
+      scroll-snap-align: start;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: transform .2s ease, box-shadow .2s ease;
+
+
+    }
+
+    .chip-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .chip-item.active {
+      background-color: #64c7c3;
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(100, 199, 195, 0.2);
+    }
+
+    /* En pantallas medianas (desktop) → distribución normal */
+    @media (min-width: 768px) {
+      .chip-track {
+        overflow-x: visible;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .chip-item {
+        flex: unset;
+
+        /* tamaño natural */
+      }
+
+      .chip-item.btn {
+
+        padding-top: 0.25rem;
+        /* antes era ~0.45rem */
+        padding-bottom: 0.25rem;
+        font-size: 10px;
+        /* un poco más chico el texto */
+      }
+    }
+  </style>
 
 </head>
 
@@ -424,47 +483,59 @@
   <section id="quick-access servicios" class="py-5">
     <div class="container">
       <div class="row justify-content-center text-center">
-
-        <!-- Restaurant -->
-
-
-        <div class="col-6 col-md-3 mb-4">
+        <h4>Consultá los servicios según tu asamblea</h4>
+        <h5>¿A cuál asistirás?</h5>
+        <div class="col-6 col-md-6 mb-4 mt-4">
           <a href="" class="text-decoration-none">
             <div class="quick-access-icon mx-auto mb-2">
-              <img src="https://cdn-icons-png.flaticon.com/512/562/562678.png" alt="">
+              <p class="quick-accessServ-title"> Mar de Ajó 1</p>
             </div>
-            <div class="quick-accessServ-title">Restaurant</div>
-            <div class="quick-access-subtitle">Sitios para cenar</div>
+            <div class="quick-accessServ-title">17 al 19 de Octubre</div>
+
           </a>
         </div>
-
-
-        <!-- Hospitales -->
-
-        <div class="col-6 col-md-3 mb-4">
+        <div class="col-6 col-md-6 mb-5 mt-4">
           <a href="" class="text-decoration-none">
-            <div class="quick-access-icon mx-auto mb-2">
-              <img src="https://cdn-icons-png.flaticon.com/512/3209/3209159.png" alt="Hospitales">
+            <div class="quick-access-icon mx-auto mb-2" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);">
+              <p class="quick-accessServ-title"> Mar de Ajó 2</p>
             </div>
-            <div class="quick-accessServ-title">Hospitales</div>
-            <div class="quick-access-subtitle">Principales</div>
-          </a>
-        </div>
+            <div class="quick-accessServ-title">25 al 27 de Octubre</div>
 
-        <!-- Farmacia -->
-
-        <div class="col-6 col-md-3 mb-4">
-          <a href="" class="text-decoration-none">
-            <div class="quick-access-icon mx-auto mb-2">
-              <img src="https://cdn-icons-png.flaticon.com/512/4320/4320337.png" alt="Farmacia">
-            </div>
-            <div class="quick-accessServ-title">Farmacia</div>
-            <div class="quick-access-subtitle">Opciones cercanas</div>
           </a>
         </div>
 
       </div>
     </div>
+    <div class="chip-carousel-container d-flex align-items-center">
+      <!-- Flecha izquierda -->
+      <button class="chip-prev btn btn-light d-md-none me-2" aria-label="Anterior">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+
+      <!-- Carrusel de chips -->
+      <div class="chip-track flex-grow-1 d-flex gap-3" id="chipTrack">
+        <button class="chip-item btn rounded-pill btn-light">Todos</button>
+        <button class="chip-item btn rounded-pill btn-light">Restaurantes</button>
+        <button class="chip-item btn rounded-pill btn-light">Alojamientos</button>
+        <button class="chip-item btn rounded-pill btn-light">Hospitales</button>
+        <button class="chip-item btn rounded-pill btn-light">Farmacias</button>
+        <button class="chip-item btn rounded-pill btn-light">Cajeros</button>
+      </div>
+
+      <!-- Flecha derecha -->
+      <button class="chip-next btn btn-light d-md-none ms-2" aria-label="Siguiente">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+
+
+
   </section>
 
 
@@ -477,7 +548,23 @@
   </button>
   <script src="js/script.js"> </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const track = document.getElementById('chipTrack');
+      const prevBtn = document.querySelector('.chip-prev');
+      const nextBtn = document.querySelector('.chip-next');
 
+      function goNext() {
+        track.scrollBy({ left: track.clientWidth, behavior: 'smooth' });
+      }
+      function goPrev() {
+        track.scrollBy({ left: -track.clientWidth, behavior: 'smooth' });
+      }
+
+      prevBtn.addEventListener('click', goPrev);
+      nextBtn.addEventListener('click', goNext);
+    });
+  </script>
 
 
 </body>
