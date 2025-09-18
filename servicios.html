@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <!-- Icons-->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <link rel="stylesheet" href="servicios.css">
+  <link rel="stylesheet" href="servicios.css" />
 
 
 <body>
@@ -28,15 +28,15 @@
         </p>
       </div>
 
-      <div class="assembly-selector-container mb-5">
+      <div class="assembly-selector-container mb-5" style="margin-bottom: 4rem;">
         <div class="assembly-cards-wrapper">
           <div class="assembly-card active" data-assembly="asamblea1" onclick="selectAssembly('asamblea1')">
             <h4 class="assembly-title">Mar de Ajó 1</h4>
-            <p class="assembly-date">17 al 19 de Octubre</p>
+            <p class="assembly-date">17 al 19 de Octubre de 2025</p>
           </div>
           <div class="assembly-card" data-assembly="asamblea2" onclick="selectAssembly('asamblea2')">
             <h4 class="assembly-title">Mar de Ajó 2</h4>
-            <p class="assembly-date">25 al 27 de Octubre</p>
+            <p class="assembly-date">25 al 27 de Octubre de 2025</p>
           </div>
         </div>
       </div>
@@ -55,10 +55,12 @@
         <button class="filter-localidad-tab active" data-filter="all">Todas las localidades</button>
         <button class="filter-localidad-tab" data-filter="teresita">Santa Teresita</button>
         <button class="filter-localidad-tab" data-filter="tuyu">Mar del Tuyú</button>
+        <button class="filter-localidad-tab" data-filter="tuyu">Mar del Tuyú</button>
         <button class="filter-localidad-tab" data-filter="costa">Costa del Este</button>
         <button class="filter-localidad-tab" data-filter="aguas">Aguas Verdes</button>
         <button class="filter-localidad-tab" data-filter="lucila">Lucila del Mar</button>
         <button class="filter-localidad-tab" data-filter="bernardo">San Bernardo</button>
+        <button class="filter-localidad-tab" data-filter="ajo">Mar de Ajó</button>
         <button class="filter-localidad-tab" data-filter="ajo">Mar de Ajó</button>
         <button class="filter-localidad-tab" data-filter="atlantis">Nueva Atlantis</button>
         <button class="filter-localidad-tab" data-filter="medanos">Punta Medanos</button>
@@ -162,15 +164,23 @@
 
         const parentFilter = this.dataset.filter; // Categoría seleccionada
         const localidadTab = document.querySelector(".filter-localidad-tab.active");
-        const localidadFilter = localidadTab.dataset.filter;
+        const localidadFilter = localidadTab ? localidadTab.dataset.filter : 'all';
 
         // Mostrar todos los servicios si se selecciona "all"
         if (parentFilter === "all") {
-          renderAmenities2(window.globalEventData);
+          if (localidadFilter === "all") {
+            renderAmenities2(window.globalEventData);
+          } else {
+            renderAmenities2(window.globalEventData.filter(x => x.localidad.toLowerCase() === localidadFilter.toLowerCase()));
+          }
         }
         else {
           // Filtrar solo por categoría
-          renderAmenities2(window.globalEventData.filter(i => i.categoria === parentFilter));
+          if (localidadFilter === "all") {
+            renderAmenities2(window.globalEventData.filter(i => i.categoria === parentFilter));
+          } else {
+            renderAmenities2(window.globalEventData.filter(x => x.categoria === parentFilter && x.localidad.toLowerCase() === localidadFilter.toLowerCase()));
+          }
         }
       });
     });
@@ -186,7 +196,7 @@
 
         const filterParentTab = document.querySelector(".filter-tab.active");
         const localidadFilter = this.dataset.filter; // Localidad seleccionada
-        const parentFilter = filterParentTab.dataset.filter; // Categoría activa
+        const parentFilter = filterParentTab ? filterParentTab.dataset.filter : 'all'; // Categoría activa
 
         if (parentFilter === "all") {
           if (localidadFilter === "all") {
