@@ -245,11 +245,6 @@ body {
     font-size: 14px;
 }
 
-.quick-accessServ-title {
-    font-weight: bold;
-    color: var(--textseccion-fuera);
-    margin-top: 10px;
-}
 
 /* FAQ */
 .faq-item {
@@ -280,7 +275,80 @@ body {
 .faq-item.active .faq-answer {
     display: block;
 }
+/*Seccion servicios */
+.icon-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #f0f4ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: #3b5bfd;
+    }
 
+    .hover-card {
+      transition: all 0.3s ease;
+      border-radius: 1rem;
+    }
+
+    .hover-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+/* Chips*/
+ .chip-track {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      /* Firefox */
+    }
+
+    .chip-track::-webkit-scrollbar {
+      display: none;
+    }
+
+
+
+    /* Chips en mobile (2 visibles) */
+    .chip-item {
+      flex: 0 0 40%;
+      scroll-snap-align: start;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: transform .2s ease, box-shadow .2s ease;
+
+
+    }
+
+    .chip-item:hover {
+
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .chip-item.active {
+      background-color: #64c7c3;
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(100, 199, 195, 0.2);
+    }
+
+
+
+    /* En pantallas medianas (desktop) → distribución normal */
+    @media (min-width: 768px) {
+      .chip-track {
+        overflow-x: visible;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .chip-item {
+        flex: unset;
+
+        /* tamaño natural */
+      }
+    }
 /* Botón subir */
 .scroll-top-btn {
     position: fixed;

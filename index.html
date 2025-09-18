@@ -18,67 +18,10 @@
 
   <!-- Material Symbols -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
   <style>
-    .chip-track {
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      /* Firefox */
-    }
 
-    .chip-track::-webkit-scrollbar {
-      display: none;
-    }
-
-
-
-    /* Chips en mobile (2 visibles) */
-    .chip-item {
-      flex: 0 0 40%;
-      scroll-snap-align: start;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-      transition: transform .2s ease, box-shadow .2s ease;
-
-
-    }
-
-    .chip-item:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
-    }
-
-    .chip-item.active {
-      background-color: #64c7c3;
-      color: #fff;
-      box-shadow: 0 8px 18px rgba(100, 199, 195, 0.2);
-    }
-
-    /* En pantallas medianas (desktop) → distribución normal */
-    @media (min-width: 768px) {
-      .chip-track {
-        overflow-x: visible;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .chip-item {
-        flex: unset;
-
-        /* tamaño natural */
-      }
-
-      .chip-item.btn {
-
-        padding-top: 0.25rem;
-        /* antes era ~0.45rem */
-        padding-bottom: 0.25rem;
-        font-size: 10px;
-        /* un poco más chico el texto */
-      }
-    }
   </style>
-
 </head>
 
 
@@ -122,7 +65,7 @@
       <div class="col-12 col-md-5">
         <a href="#quick-access dependencias"
           class="btn btn-primary dentro-btn btn-lg w-100 d-flex align-items-center justify-content-start px-4 py-4 flex-column align-items-start"
-          style="border-radius: 10px; box-shadow: 0 4px 18px rgba(37,99,235,0.07); font-size: 1.2rem; background: #d6f1f5; color: #1c6697; border: 2px solid  #c3e7ec !important; gap: 2px;">
+          style="border-radius: 10px; box-shadow: 0 4px 18px rgba(37,99,235,0.07); font-size: 1.2rem; background:var(--bgseccion-info); color: #1c6697; border: 2px solid  #c3e7ec !important; gap: 2px;">
           <div class="d-flex align-items-center w-100" style="gap: 0;">
             <i class="fas fa-info-circle" style="font-size: 2.5rem; color: #1c6697;"></i>
             <span
@@ -136,9 +79,9 @@
       </div>
 
       <div class="col-12 col-md-5">
-        <a href="#quick-access servicios"
+        <a href="#Servicios"
           class="btn btn-primary fuera-btn btn-lg w-100 d-flex align-items-center justify-content-start px-4 py-4 flex-column align-items-start"
-          style="border-radius: 10px; box-shadow: 0 4px 18px rgba(37,99,235,0.07); font-size: 1.2rem; background:var(--bgseccion-fuera); color: var(--textseccion-fuera); border: 2px solid  #c3e7ec !important; gap: 2px;">
+          style="border-radius: 10px; box-shadow: 0 4px 18px rgba(37,99,235,0.07); font-size: 1.2rem; background:var(--bgseccion-info); color: var(--textseccion-fuera); border: 2px solid  #c3e7ec !important; gap: 2px;">
           <div class="d-flex align-items-center w-100" style="gap: 0;">
             <i class="fas fa-concierge-bell" style="font-size: 2.5rem; color:var(--textseccion-fuera);"></i>
             <span
@@ -479,33 +422,79 @@
 
     </div>
   </section>
-  <!-- Quick access Servicios -->
-  <section id="quick-access servicios" class="py-5">
-    <div class="container">
+  <!-- Seccion Servicios -->
+  <section id="Servicios" class="py-5">
+    <div class="container my-5">
       <div class="row justify-content-center text-center">
-        <h4>Consultá los servicios según tu asamblea</h4>
-        <h5>¿A cuál asistirás?</h5>
-        <div class="col-6 col-md-6 mb-4 mt-4">
-          <a href="" class="text-decoration-none">
-            <div class="quick-access-icon mx-auto mb-2">
-              <p class="quick-accessServ-title"> Mar de Ajó 1</p>
-            </div>
-            <div class="quick-accessServ-title">17 al 19 de Octubre</div>
+        <h4 class="fw-bold mb-2">Consultá los servicios según tu asamblea</h4>
+        <h6 class="text-muted mb-4">¿A cuál asistirás?</h6>
 
+        <div class="col-6 col-sm-6 col-md-4 mb-4">
+          <a href="#" class="text-decoration-none">
+            <div class="card h-100 border-0 shadow-sm hover-card">
+              <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                <div class="icon-circle mb-3">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <h5 class="fw-semibold mb-1">Mar de Ajó 1</h5>
+                <p class="text-muted small">17 al 19 de Octubre</p>
+              </div>
+            </div>
           </a>
         </div>
-        <div class="col-6 col-md-6 mb-5 mt-4">
-          <a href="" class="text-decoration-none">
-            <div class="quick-access-icon mx-auto mb-2" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);">
-              <p class="quick-accessServ-title"> Mar de Ajó 2</p>
-            </div>
-            <div class="quick-accessServ-title">25 al 27 de Octubre</div>
 
+        <div class="col-6 col-sm-6 col-md-4 mb-4">
+          <a href="#" class="text-decoration-none">
+            <div class="card h-100 border-0 shadow-sm hover-card">
+              <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                <div class="icon-circle mb-3">
+                  <i class="bi bi-calendar-event"></i>
+                </div>
+                <h5 class="fw-semibold mb-1">Mar de Ajó 2</h5>
+                <p class="text-muted small">25 al 27 de Octubre</p>
+              </div>
+            </div>
           </a>
         </div>
 
       </div>
     </div>
+    <!-- Carrousel Servicios-->
+
+
+
+    <div class="chip-carousel-container d-flex align-items-center">
+
+      <!-- Flecha izquierda -->
+      <button class="chip-prev btn btn-light d-md-none me-2" aria-label="Anterior">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+
+      <!-- Carrusel de chips -->
+
+      <div class="chip-track flex-grow-1 d-flex gap-3" id="chipTrack">
+
+        <button class="chip-item btn rounded-pill btn-light">Todos los servicios</button>
+        <button class="chip-item btn rounded-pill btn-light">Restaurantes</button>
+        <button class="chip-item btn rounded-pill btn-light">Alojamientos</button>
+        <button class="chip-item btn rounded-pill btn-light">Hospitales</button>
+        <button class="chip-item btn rounded-pill btn-light">Farmacias</button>
+        <button class="chip-item btn rounded-pill btn-light">Cajeros</button>
+      </div>
+
+      <!-- Flecha derecha -->
+      <button class="chip-next btn btn-light d-md-none ms-2" aria-label="Siguiente">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+    <br /><br />
+    <!--Carrousel Localidades-->
     <div class="chip-carousel-container d-flex align-items-center">
       <!-- Flecha izquierda -->
       <button class="chip-prev btn btn-light d-md-none me-2" aria-label="Anterior">
@@ -517,12 +506,12 @@
 
       <!-- Carrusel de chips -->
       <div class="chip-track flex-grow-1 d-flex gap-3" id="chipTrack">
-        <button class="chip-item btn rounded-pill btn-light">Todos</button>
-        <button class="chip-item btn rounded-pill btn-light">Restaurantes</button>
-        <button class="chip-item btn rounded-pill btn-light">Alojamientos</button>
-        <button class="chip-item btn rounded-pill btn-light">Hospitales</button>
-        <button class="chip-item btn rounded-pill btn-light">Farmacias</button>
-        <button class="chip-item btn rounded-pill btn-light">Cajeros</button>
+        <button class="chip-item btn rounded-pill btn-light">Todas las localidades</button>
+        <button class="chip-item btn rounded-pill btn-light">Santa Teresita</button>
+        <button class="chip-item btn rounded-pill btn-light">Mar del Tuyú</button>
+        <button class="chip-item btn rounded-pill btn-light">Costa del Este</button>
+        <button class="chip-item btn rounded-pill btn-light">San Bernardo</button>
+        <button class="chip-item btn rounded-pill btn-light">Mar de Ajó</button>
       </div>
 
       <!-- Flecha derecha -->
