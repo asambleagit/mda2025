@@ -55,8 +55,8 @@
                   style="color: var(--calm-text); font-size: 1.1rem; line-height: 1.7; margin-bottom: 25px; text-align: justify;">
                   En octubre se celebrará la serie de asambleas regionales <strong
                     style="color: var(--textseccion-dentro);">"Adoración pura"</strong> en el Estadio de "La Costa" de
-                  Mar de Ajo, Buenos Aires. Este sitio ayuda a explicar dónde están situados los distintos departamentos
-                  dentro del predio y como llegar a los hoteles, centros comerciales, restaurantes, farmacias,
+                  Mar de Ajó, Buenos Aires. Este sitio ayuda a explicar donde están situados los distintos departamentos
+                  dentro del predio y cómo llegar a los hoteles, centros comerciales, restaurantes, farmacias,
                   estaciones de servicio, cajeros automáticos, etc., tanto en la ciudad de la asamblea como en los
                   alrededores.
                 </p>
@@ -474,11 +474,11 @@
                 <!--Cards eleccion de Asamblea-->
                 <div class=" assembly-selector-container col-6 col-sm-6 col-md-4 mb-4 ">
 
-                    <div class="assembly-cards-wrapper card h-100 border-0 shadow-sm hover-card" style="cursor: pointer">
-                        <div class="assembly-card card-body d-flex flex-column align-items-center justify-content-center"
+                    <div class="assembly-cards-wrapper card h-100 border-0 rounded-pill shadow-sm hover-card" style="cursor: pointer">
+                        <div class="assembly-card card-body d-flex flex-column align-items-center justify-content-center "
                             data-assembly="asamblea1" onclick="selectAssembly('asamblea1')">
                             <div class="icon-circle mb-3">
-                                <i class="bi bi-geo-alt-fill"></i>
+                                <img src="Image/logo1.png" alt="Logo" style="width: 48px; height: 48px;">
                             </div>
                             <h5 class="assembly-title fw-semibold mb-1">Mar de Ajó 1</h5>
                             <p class="assembly-date text-muted small">17 al 19 de Octubre</p>
@@ -488,11 +488,11 @@
                 </div>
 
                 <div class=" assembly-selector-container col-6 col-sm-6 col-md-4 mb-4 " style="cursor: pointer">
-                    <div class="assembly-cards-wrapper card h-100 border-0 shadow-sm hover-card">
+                    <div class="assembly-cards-wrapper card h-100 border-0 rounded-pill shadow-sm hover-card">
                         <div class=" assembly-card card-body d-flex flex-column align-items-center justify-content-center"
                             data-assembly="asamblea2" onclick="selectAssembly('asamblea2')">
                             <div class="icon-circle mb-3">
-                                <i class="bi bi-geo-alt-fill"></i>
+                                <img src="Image/logo1.png" alt="Logo" style="width: 48px; height: 48px;">
                             </div>
                             <h5 class="assembly-title fw-semibold mb-1">Mar de Ajó 2</h5>
                             <p class="assembly-date text-muted small">25 al 27 de Octubre</p>
@@ -555,20 +555,21 @@
                 <button class="filter-localidad-tab chip-item active btn rounded-pill btn-light" data-filter="all">Todas
                     las
                     localidades</button>
-                <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="teresita">Santa
-                    Teresita</button>
-                <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="tuyu">Mar del
-                    Tuyú</button>
-                <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="costa">Costa del
-                    Este</button>
-                <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="bernardo">San
-                    Bernardo</button>
-                <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="ajo">Mar de
-                    Ajó</button>
                 <button class="filter-localidad-tab chip-item btn rounded-pill btn-light"
                     data-filter="carilo">Cariló</button>
+                <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="costa">Costa del
+                    Este</button>
+                <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="ajo">Mar de
+                    Ajó</button>
+                <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="tuyu">Mar del
+                    Tuyú</button>
+                <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="pinamar" wh>Pinamar</button>
                 <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="medanos" wh>Punta
-                    Medanos</button>
+                    Médanos</button>
+                <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="bernardo">San
+                    Bernardo</button>
+                <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="teresita">Santa
+                    Teresita</button>
             </div>
 
             <!-- Flecha derecha -->
@@ -647,13 +648,21 @@
       // Agregar clase para indicar que hay una selección activa
       wrapper.classList.add('has-selection');
 
-      // Quitar clase 'active' de todas las cards
+      // Quitar clase 'active' y estilos de botón de todas las cards, pero mantener rounded-pill
       document.querySelectorAll('.assembly-card').forEach(card => {
-        card.classList.remove('active');
+        card.classList.remove('active', 'btn', 'btn-light');
+        card.classList.add('rounded-pill'); // Always rounded
+        card.style.backgroundColor = '';
+        card.style.color = '';
+        card.style.border = '';
       });
 
-      // Marcar la card seleccionada como 'active'
-      document.querySelector(`[data-assembly="${assemblyId}"]`).classList.add('active');
+      // Marcar la card seleccionada como 'active' y aplicar estilos de botón
+      const selectedCard = document.querySelector(`[data-assembly="${assemblyId}"]`);
+      selectedCard.classList.add('active', 'btn', 'btn-light');
+      selectedCard.style.backgroundColor = '#f8f9fa'; // Similar to btn-light
+      selectedCard.style.color = '#212529';
+      selectedCard.style.border = '1px solid #dee2e6';
 
       // Mensaje en consola (debug)
       console.log(`Asamblea seleccionada: ${assemblyId}`);
@@ -703,22 +712,58 @@
         const localidadTab = document.querySelector(".filter-localidad-tab.active");
         const localidadFilter = localidadTab.dataset.filter;
 
+        // Obtener la asamblea seleccionada
+        const activeAssemblyCard = document.querySelector('.assembly-card.active');
+        const currentAssembly = activeAssemblyCard ? activeAssemblyCard.dataset.assembly : null;
+
         // Mostrar todos los servicios si se selecciona "all"
         if (parentFilter === "all") {
           if (localidadFilter === "all") {
             // Mostrar todo si no hay filtros
-            renderAmenities2(window.globalEventData);
+            let filteredList = window.globalEventData;
+            if (currentAssembly) {
+              filteredList = filteredList.filter(item => {
+                if (currentAssembly === 'asamblea1') {
+                  return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
+                } else if (currentAssembly === 'asamblea2') {
+                  return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
+                }
+                return true;
+              });
+            }
+            renderAmenities2(filteredList);
           }
           else {
             // Filtrar solo por localidad
             let filteredList = window.globalEventData.filter(x => x.localidad?.toLowerCase().includes(localidadFilter.toLowerCase()));
+            if (currentAssembly) {
+              filteredList = filteredList.filter(item => {
+                if (currentAssembly === 'asamblea1') {
+                  return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
+                } else if (currentAssembly === 'asamblea2') {
+                  return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
+                }
+                return true;
+              });
+            }
             renderAmenities2(filteredList);
           }
         }
         else {
           if (localidadFilter === "all") {
             // Filtrar solo por categoría
-            renderAmenities2(window.globalEventData.filter(i => i.categoria === parentFilter));
+            let filteredList = window.globalEventData.filter(i => i.categoria === parentFilter);
+            if (currentAssembly) {
+              filteredList = filteredList.filter(item => {
+                if (currentAssembly === 'asamblea1') {
+                  return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
+                } else if (currentAssembly === 'asamblea2') {
+                  return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
+                }
+                return true;
+              });
+            }
+            renderAmenities2(filteredList);
           }
           else {
             // Filtrar por localidad Y categoría
@@ -727,6 +772,16 @@
                 x.localidad?.toLowerCase().includes(localidadFilter.toLowerCase()) &&
                 x.categoria === parentFilter
             );
+            if (currentAssembly) {
+              filteredList = filteredList.filter(item => {
+                if (currentAssembly === 'asamblea1') {
+                  return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
+                } else if (currentAssembly === 'asamblea2') {
+                  return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
+                }
+                return true;
+              });
+            }
             renderAmenities2(filteredList);
           }
         }
@@ -746,21 +801,57 @@
         const localidadFilter = this.dataset.filter; // Localidad seleccionada
         const parentFilter = filterParentTab.dataset.filter; // Categoría activa
 
+        // Obtener la asamblea seleccionada
+        const activeAssemblyCard = document.querySelector('.assembly-card.active');
+        const currentAssembly = activeAssemblyCard ? activeAssemblyCard.dataset.assembly : null;
+
         if (parentFilter === "all") {
           if (localidadFilter === "all") {
             // Mostrar todo si no hay filtros
-            renderAmenities2(window.globalEventData);
+            let filteredList = window.globalEventData;
+            if (currentAssembly) {
+              filteredList = filteredList.filter(item => {
+                if (currentAssembly === 'asamblea1') {
+                  return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
+                } else if (currentAssembly === 'asamblea2') {
+                  return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
+                }
+                return true;
+              });
+            }
+            renderAmenities2(filteredList);
           }
           else {
             // Filtrar solo por localidad
             let filteredList = window.globalEventData.filter(x => x.localidad?.toLowerCase().includes(localidadFilter.toLowerCase()));
+            if (currentAssembly) {
+              filteredList = filteredList.filter(item => {
+                if (currentAssembly === 'asamblea1') {
+                  return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
+                } else if (currentAssembly === 'asamblea2') {
+                  return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
+                }
+                return true;
+              });
+            }
             renderAmenities2(filteredList);
           }
         }
         else {
           if (localidadFilter === "all") {
             // Filtrar solo por categoría
-            renderAmenities2(window.globalEventData.filter(i => i.categoria === parentFilter));
+            let filteredList = window.globalEventData.filter(i => i.categoria === parentFilter);
+            if (currentAssembly) {
+              filteredList = filteredList.filter(item => {
+                if (currentAssembly === 'asamblea1') {
+                  return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
+                } else if (currentAssembly === 'asamblea2') {
+                  return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
+                }
+                return true;
+              });
+            }
+            renderAmenities2(filteredList);
           }
           else {
             // Filtrar por localidad Y categoría
@@ -769,6 +860,16 @@
                 x.localidad?.toLowerCase().includes(localidadFilter.toLowerCase()) &&
                 x.categoria === parentFilter
             );
+            if (currentAssembly) {
+              filteredList = filteredList.filter(item => {
+                if (currentAssembly === 'asamblea1') {
+                  return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
+                } else if (currentAssembly === 'asamblea2') {
+                  return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
+                }
+                return true;
+              });
+            }
             renderAmenities2(filteredList);
           }
         }
@@ -831,6 +932,49 @@
     document.addEventListener('dataLoaded', function () {
       // Renderizar los servicios iniciales
       renderAmenities2(window.globalEventData);
+    });
+
+    // ---- Manejar selección de asamblea y filtrar servicios ----
+    document.addEventListener('assemblyChanged', function (e) {
+      const selectedAssembly = e.detail.assemblyId;
+
+      // Obtener los filtros activos actuales
+      const categoryFilter = document.querySelector(".filter-tab.active")?.dataset.filter || "all";
+      const localityFilter = document.querySelector(".filter-localidad-tab.active")?.dataset.filter || "all";
+
+      let filteredList = window.globalEventData;
+
+      // Filtrar por categoría si no es "all"
+      if (categoryFilter !== "all") {
+        filteredList = filteredList.filter(i => i.categoria === categoryFilter);
+      }
+
+      // Filtrar por localidad si no es "all"
+      if (localityFilter !== "all") {
+        filteredList = filteredList.filter(x => x.localidad?.toLowerCase().includes(localityFilter.toLowerCase()));
+      }
+
+      // Filtrar por asamblea
+      if (selectedAssembly === 'asamblea1') {
+        filteredList = filteredList.filter(item => item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea);
+      } else if (selectedAssembly === 'asamblea2') {
+        filteredList = filteredList.filter(item => item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea);
+      }
+
+      renderAmenities2(filteredList);
+    });
+
+    // ---- Inicializar selección de asamblea y disparar evento para filtrar servicios ----
+    document.addEventListener('DOMContentLoaded', function () {
+      const currentDate = new Date();
+      const cutoffDate = new Date('2025-10-21T00:00:00');
+      let initialAssembly = 'asamblea1';
+      if (currentDate >= cutoffDate) {
+        initialAssembly = 'asamblea2';
+      }
+      selectAssembly(initialAssembly);
+      const event = new CustomEvent('assemblyChanged', { detail: { assemblyId: initialAssembly } });
+      document.dispatchEvent(event);
     });
   </script>
 
