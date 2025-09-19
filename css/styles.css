@@ -37,10 +37,13 @@ linear-gradient(to right, #A2D9D0 0, #DCF8F8 10%, #DCF8F8 100%)
   --bgseccion-info: linear-gradient(to right, #A2D9D0 0, #E0E5CA 10%, #E0E5CA 100%);
   --textseccion-info: #539091;
 
+  --bgportada-color: linear-gradient(135deg, var(--calm-light), var(--calm-accent));
+
 
   --calm-primary: #2D5AA0;
   --calm-secondary: #4A90A4;
-  --calm-accent: #85CDCA;
+ 
+   --calm-accent: #85CDCA;
   --calm-light: #B8E6E1;
   --calm-cream: #F7F5F3;
   --calm-white: #FFFFFF;
