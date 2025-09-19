@@ -15,340 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <!-- Icons-->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <style>
-    :root {
-      --text-dark: #1f2937;
-      --white: #ffffff;
-      --bgseccion-dentro: #d6f1f5;
-      --textseccion-dentro: #1c6697;
-      --bgseccion-fuera: #cceae8;
-      --textseccion-fuera: #539091;
-      --calm-primary: #2D5AA0;
-      --calm-secondary: #4A90A4;
-      --calm-accent: #85CDCA;
-      --calm-light: #B8E6E1;
-      --calm-cream: #F7F5F3;
-      --calm-white: #FFFFFF;
-      --calm-text: #2C3E50;
-      --calm-text-light: #718096;
-      --calm-green: #68C3A3;
-      --calm-sunset: #F093FB;
-      --calm-sunrise: #F5D020;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Inter", sans-serif;
-      line-height: 1.6;
-      background: #1c4975;
-    }
-
-    .servicios {
-      height: 100vh;
-    }
-
-
-    /* Estilos para el selector de asambleas */
-    .assembly-selector-container {
-      perspective: 1000px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 10vh;
-      /*margin: 40px 0;*/
-    }
-
-    .assembly-cards-wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 30vw;
-      height: 10vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 5%;
-    }
-
-    .assembly-card {
-      position: relative;
-      /*background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);*/
-      border-radius: 20px;
-      /*padding: 25px 20px;*/
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      transform-style: preserve-3d;
-      color: rgb(83, 72, 182);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      min-width: 15vw;
-      height: 8vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 1;
-    }
-
-    .assembly-card.active {
-      transform: scale(1.2) translateZ(50px);
-      z-index: 2;
-      /*background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);*/
-      /*box-shadow: 0 20px 40px rgba(79, 172, 254, 0.4);*/
-    }
-
-    .assembly-card:hover {
-      transform: scale(1.3) translateZ(-20px);
-      opacity: 0.85;
-    }
-
-    .assembly-card:not(.active) {
-      transform: scale(0.85) translateZ(-30px);
-      opacity: 0.7;
-      /*background: linear-gradient(135deg, #a8a8a8 0%, #7a7a7a 100%);*/
-    }
-
-    .assembly-card:hover:not(.active) {
-      transform: scale(0.9) translateZ(-20px);
-      opacity: 0.85;
-    }
-
-    .assembly-icon {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      transition: all 0.3s ease;
-    }
-
-    .assembly-card.active .assembly-icon {
-      font-size: 3rem;
-      text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-    }
-
-    .assembly-title {
-      font-weight: 700;
-      font-size: 1.3rem;
-      margin-bottom: 5px;
-      letter-spacing: 1px;
-      transition: all 0.3s ease;
-    }
-
-    .assembly-card.active .assembly-title {
-      font-size: 1.5rem;
-    }
-
-    .assembly-date {
-      font-size: 0.9rem;
-      opacity: 0.9;
-      margin: 0;
-      transition: all 0.3s ease;
-    }
-
-    .assembly-card.active .assembly-date {
-      font-size: 1rem;
-      font-weight: 500;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .assembly-selector-container {
-        height: 180px;
-        margin: 30px 0;
-      }
-
-      .assembly-cards-wrapper {
-        gap: 15px;
-        height: 160px;
-      }
-
-      .assembly-card {
-        min-width: 160px;
-        height: 140px;
-        padding: 20px 15px;
-      }
-
-      .assembly-card.active {
-        transform: scale(1.15) translateZ(30px);
-      }
-
-      .assembly-card:not(.active) {
-        transform: scale(0.8) translateZ(-20px);
-      }
-
-      .assembly-icon {
-        font-size: 2rem;
-      }
-
-      .assembly-card.active .assembly-icon {
-        font-size: 2.3rem;
-      }
-
-      .assembly-title {
-        font-size: 1.1rem;
-      }
-
-      .assembly-card.active .assembly-title {
-        font-size: 1.3rem;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .assembly-cards-wrapper {
-        gap: 10px;
-      }
-
-      .assembly-card {
-        min-width: 140px;
-        height: 120px;
-        padding: 15px 10px;
-      }
-
-      .assembly-title {
-        font-size: 1rem;
-      }
-
-      .assembly-date {
-        font-size: 0.8rem;
-      }
-    }
-
-    /* Filtros de servicios */
-    .filter-tabs {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 2%;
-    }
-
-    .filter-tab {
-      background: var(--calm-white);
-      border: 1px solid rgba(183, 230, 225, 0.5);
-      color: var(--calm-text-light);
-      padding: 12px 24px;
-      border-radius: 25px;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      font-weight: 400;
-    }
-
-    .filter-tab.active,
-    .filter-tab:hover {
-      background: var(--calm-accent);
-      color: white;
-      border-color: var(--calm-accent);
-    }
-
-    /* Filtros de localidades */
-    .filter-localidad-tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1%;
-      justify-content: center;
-    }
-
-    .filter-localidad-tab {
-      background: var(--calm-white);
-      border: 1px solid rgba(183, 230, 225, 0.5);
-      color: var(--calm-text-light);
-      padding: 5 10px;
-      /*border-radius: 15px;*/
-      transition: all 0.3s ease;
-      cursor: pointer;
-      margin: 1%;
-      font-weight: 200;
-    }
-
-    .filter-localidad-tab.active,
-    .filter-localidad-tab:hover {
-      background: var(--calm-secondary);
-      color: white;
-      border-color: var(--calm-accent);
-    }
-
-    /* Servicios */
-    .amenity-card {
-      background: var(--calm-white);
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-      transition: all 0.3s ease;
-      margin-bottom: 20px;
-      border-left: 4px solid var(--calm-accent);
-    }
-
-    .amenity-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .amenity-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 12px;
-    }
-
-    .amenity-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 8px;
-      background: linear-gradient(135deg, var(--calm-light), var(--calm-accent));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--calm-primary);
-      margin-right: 16px;
-    }
-
-    .amenity-title {
-      font-weight: 500;
-      font-size: 1.1rem;
-      color: var(--calm-text);
-      margin: 0;
-    }
-
-    .amenity-meta {
-      color: var(--calm-text-light);
-      font-size: 0.9rem;
-      margin-bottom: 12px;
-    }
-
-    .amenity-actions {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .calm-btn-sm {
-      background: transparent;
-      border: 1px solid var(--calm-accent);
-      color: var(--calm-primary);
-      padding: 6px 16px;
-      font-size: 0.85rem;
-      border-radius: 15px;
-      transition: all 0.3s ease;
-      text-decoration: none;
-    }
-
-    .calm-btn-sm:hover {
-      background: var(--calm-accent);
-      color: white;
-    }
-
-    .calm-btn-emergency {
-      background: #FF6B6B;
-      border: 1px solid #FF6B6B;
-      color: white;
-    }
-
-    .calm-btn-emergency:hover {
-      background: #FF5252;
-      color: white;
-    }
-  </style>
+  <link rel="stylesheet" href="servicios.css" />
 
 
 <body>
@@ -357,19 +24,19 @@
       <div class="text-center mb-5">
         <h2 class="display-4 fw-bold text-primary">Servicios Locales</h2>
         <p class="lead text-muted">
-          Consulta los servicios segun tu asamblea
+          Consulta los servicios según tu asamblea
         </p>
       </div>
 
-      <div class="assembly-selector-container mb-5">
+      <div class="assembly-selector-container mb-5" style="margin-bottom: 4rem;">
         <div class="assembly-cards-wrapper">
           <div class="assembly-card active" data-assembly="asamblea1" onclick="selectAssembly('asamblea1')">
-            <h4 class="assembly-title">Mar de Ajo 1</h4>
-            <p class="assembly-date">17 a 19 de Octubre</p>
+            <h4 class="assembly-title">Mar de Ajó 1</h4>
+            <p class="assembly-date">17 al 19 de Octubre de 2025</p>
           </div>
           <div class="assembly-card" data-assembly="asamblea2" onclick="selectAssembly('asamblea2')">
-            <h4 class="assembly-title">Mar de Ajo 2</h4>
-            <p class="assembly-date">25 a 27 de Octubre</p>
+            <h4 class="assembly-title">Mar de Ajó 2</h4>
+            <p class="assembly-date">25 al 27 de Octubre de 2025</p>
           </div>
         </div>
       </div>
@@ -379,24 +46,26 @@
       <div class="filter-tabs">
         <button class="filter-tab active" data-filter="all">Todos los servicios</button>
         <button class="filter-tab" data-filter="restaurante">Restaurantes</button>
-        <button class="filter-tab" data-filter="hotel">Alojamiento</button>
-        <button class="filter-tab" data-filter="centroSalud">Centro Salud</button>
-        <button class="filter-tab" data-filter="farmacia">Farmacia</button>
-        <button class="filter-tab" data-filter="cajero">Cajeros Automaticos</button>
+        <button class="filter-tab" data-filter="hotel">Alojamientos</button>
+        <button class="filter-tab" data-filter="centroSalud">Centros de Salud</button>
+        <button class="filter-tab" data-filter="farmacia">Farmacias</button>
+        <button class="filter-tab" data-filter="cajero">Cajeros Automáticos</button>
       </div>
       <div class="filter-localidad-tabs">
         <button class="filter-localidad-tab active" data-filter="all">Todas las localidades</button>
         <button class="filter-localidad-tab" data-filter="teresita">Santa Teresita</button>
-        <button class="filter-localidad-tab" data-filter="tuyu">Mar del Tuyu</button>
+        <button class="filter-localidad-tab" data-filter="tuyu">Mar del Tuyú</button>
+        <button class="filter-localidad-tab" data-filter="tuyu">Mar del Tuyú</button>
         <button class="filter-localidad-tab" data-filter="costa">Costa del Este</button>
         <button class="filter-localidad-tab" data-filter="aguas">Aguas Verdes</button>
         <button class="filter-localidad-tab" data-filter="lucila">Lucila del Mar</button>
         <button class="filter-localidad-tab" data-filter="bernardo">San Bernardo</button>
-        <button class="filter-localidad-tab" data-filter="ajo">Mar de Ajo</button>
+        <button class="filter-localidad-tab" data-filter="ajo">Mar de Ajó</button>
+        <button class="filter-localidad-tab" data-filter="ajo">Mar de Ajó</button>
         <button class="filter-localidad-tab" data-filter="atlantis">Nueva Atlantis</button>
         <button class="filter-localidad-tab" data-filter="medanos">Punta Medanos</button>
-        <button class="filter-localidad-tab" data-filter="piinamar">Pinamar</button>
-        <button class="filter-localidad-tab" data-filter="carilo">Carilo</button>
+        <button class="filter-localidad-tab" data-filter="pinamar">Pinamar</button>
+        <button class="filter-localidad-tab" data-filter="carilo">Cariló</button>
       </div>
 
       <!-- Amenities List -->
@@ -404,12 +73,18 @@
     </div>
   </section>
 
-  <script type="module">
-    // Importamos los servicios desde un archivo externo
-    import { servicios } from "./servicios.js";
+  <script>
+    // Cargamos los servicios desde un archivo JSON externo
+    fetch('./servicios.json')
+      .then(response => response.json())
+      .then(data => {
+        // Guardamos los servicios en una variable global accesible en toda la página
+        window.globalEventData = data;
 
-    // Guardamos los servicios en una variable global accesible en toda la página
-    window.globalEventData = servicios;
+        // Notificar que los datos están cargados
+        document.dispatchEvent(new Event('dataLoaded'));
+      })
+      .catch(error => console.error('Error loading servicios.json:', error));
   </script>
 
   <script>
@@ -466,27 +141,46 @@
 
     // Estado inicial: sin ninguna asamblea seleccionada
     document.addEventListener('DOMContentLoaded', function () {
-      console.log('Selector de asambleas inicializado sin selección');
+      // console.log('Selector de asambleas inicializado sin selección');
+
+      // Auto seleccionar asamblea1 si la fecha actual es anterior al 21 de Octubre de 2025
+      const currentDate = new Date();
+      const cutoffDate = new Date('2025-10-21T00:00:00');
+      if (currentDate < cutoffDate) {
+        selectAssembly('asamblea1');
+      } else {
+        selectAssembly('asamblea2');
+      }
     });
 
     // ---- Filtro por categoría de servicios ----
     document.querySelectorAll('.filter-tab').forEach(btn => {
       btn.addEventListener('click', function () {
+        if (!window.globalEventData) return; // Esperar a que los datos estén cargados
+
         // Quitar 'active' de todos los filtros y aplicar solo al seleccionado
         document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
         this.classList.add('active');
 
         const parentFilter = this.dataset.filter; // Categoría seleccionada
         const localidadTab = document.querySelector(".filter-localidad-tab.active");
-        const localidadFilter = localidadTab.dataset.filter;
+        const localidadFilter = localidadTab ? localidadTab.dataset.filter : 'all';
 
         // Mostrar todos los servicios si se selecciona "all"
         if (parentFilter === "all") {
-          renderAmenities2(window.globalEventData);
+          if (localidadFilter === "all") {
+            renderAmenities2(window.globalEventData);
+          } else {
+            renderAmenities2(window.globalEventData.filter(x => x.localidad.toLowerCase() === localidadFilter.toLowerCase()));
+          }
         }
         else {
           // Filtrar solo por categoría
-          renderAmenities2(window.globalEventData.filter(i => i.categoria === parentFilter));
+          if (localidadFilter === "all") {
+            renderAmenities2(window.globalEventData.filter(i => i.categoria === parentFilter));
+          } else {
+            renderAmenities2(window.globalEventData.filter(x => x.categoria === parentFilter && x.localidad.toLowerCase() === localidadFilter.toLowerCase()));
+          }
         }
       });
     });
@@ -494,13 +188,15 @@
     // ---- Filtro por localidad ----
     document.querySelectorAll('.filter-localidad-tab').forEach(btn => {
       btn.addEventListener('click', function () {
+        if (!window.globalEventData) return; // Esperar a que los datos estén cargados
+
         // Quitar 'active' de todos los filtros de localidad y aplicar solo al seleccionado
         document.querySelectorAll('.filter-localidad-tab').forEach(b => b.classList.remove('active'));
         this.classList.add('active');
 
         const filterParentTab = document.querySelector(".filter-tab.active");
         const localidadFilter = this.dataset.filter; // Localidad seleccionada
-        const parentFilter = filterParentTab.dataset.filter; // Categoría activa
+        const parentFilter = filterParentTab ? filterParentTab.dataset.filter : 'all'; // Categoría activa
 
         if (parentFilter === "all") {
           if (localidadFilter === "all") {
@@ -509,7 +205,7 @@
           }
           else {
             // Filtrar solo por localidad
-            let filteredList = window.globalEventData.filter(x => x.localidad.toLower().contains(localidadFilter));
+            let filteredList = window.globalEventData.filter(x => x.localidad?.toLowerCase().includes(localidadFilter.toLowerCase()));
             renderAmenities2(filteredList);
           }
         }
@@ -531,6 +227,18 @@
       });
     });
 
+    // ---- Función para obtener icono según categoría ----
+    function getIcon(categoria) {
+      switch (categoria) {
+        case 'farmacia': return 'fa-pills';
+        case 'hotel': return 'fa-hotel';
+        case 'restaurante': return 'fa-utensils';
+        case 'centroSalud': return 'fa-hospital';
+        case 'cajero': return 'fa-credit-card';
+        default: return 'fa-home';
+      }
+    }
+
     // ---- Renderizado de servicios (amenities) ----
     function renderAmenities2(amenitiesData) {
       const container = document.getElementById("amenities-list");
@@ -550,32 +258,32 @@
         // Plantilla HTML de cada servicio
         const html = `
            <div class="col-lg-${amenitiesData.length == 1 ? "12" : "6"} amenity-item-wrapper" data-category="${item.categoria}">
-                    <div class="amenity-card">
-                        <div class="amenity-header">
-                            <div class="amenity-icon">
-                                <i class="fas fa-home"></i>
-                            </div>
-                            <div>
-                                <h5 class="amenity-title">${item.titulo}</h5>                               
-                            </div>
-                        </div>
-                        <p style="color: var(--calm-text-light); margin-bottom: 16px;">Elije alguna de las siguientes opciones para ver la informacion.</p>
-                        <div class="amenity-actions">
-                            <a href="#" class="calm-btn-sm">Google Maps</a>
-                            <a href="#" class="calm-btn-sm">Sitio de la Municipalidad</a>
-                        </div>
-                    </div>
-                </div>
+              <div class="amenity-card">
+                  <div class="amenity-header">
+                      <div class="amenity-icon">
+                          <i class="fas ${getIcon(item.categoria)}"></i>
+                      </div>
+                      <div>
+                          <h5 class="amenity-title">${item.titulo}</h5>
+                      </div>
+                  </div>
+                  <p style="color: var(--calm-text-light); margin-bottom: 16px;">Elige alguna de las siguientes opciones para ver la información.</p>
+                  <div class="amenity-actions">
+                      <a href="${item.link1 || '#'}" class="calm-btn-sm" target="_blank">Google Maps</a>
+                      <a href="${item.link1 || '#'}" class="calm-btn-sm" target="_blank">Sitio de la Municipalidad</a>
+                  </div>
+              </div>
+          </div>
         `;
         container.insertAdjacentHTML("beforeend", html);
       });
     }
 
-    // ---- Al terminar de cargar toda la página ----
-    window.onload = function () {
+    // ---- Cuando los datos estén cargados ----
+    document.addEventListener('dataLoaded', function () {
       // Renderizar los servicios iniciales
       renderAmenities2(window.globalEventData);
-    };
+    });
   </script>
 
 </body>

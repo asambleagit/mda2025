@@ -1,0 +1,332 @@
+[
+  {
+    "categoria": "farmacia",
+    "localidad": "bernardo",
+    "titulo": "Farmacias en San Bernardo",
+    "link1": "https://lacosta.gob.ar/salud/"
+  },
+  {
+    "categoria": "farmacia",
+    "localidad": "ajo",
+    "titulo": "Farmacias en Mar de Ajó",
+    "link1": "https://lacosta.gob.ar/salud/"
+  },
+  {
+    "categoria": "farmacia",
+    "localidad": "teresita",
+    "titulo": "Farmacias en Santa Teresita",
+    "link1": "https://www.google.com/maps/search/farmacias+santa+teresita"
+  },
+  {
+    "categoria": "farmacia",
+    "localidad": "tuyu",
+    "titulo": "Farmacias en Mar del Tuyú",
+    "link1": "https://www.google.com/maps/search/farmacias+mar+del+tuyu"
+  },
+  {
+    "categoria": "farmacia",
+    "localidad": "costa",
+    "titulo": "Farmacias en Costa del Este",
+    "link1": "https://www.google.com/maps/search/farmacias+costa+del+este"
+  },
+  {
+    "categoria": "farmacia",
+    "localidad": "aguas",
+    "titulo": "Farmacias en Aguas Verdes",
+    "link1": "https://www.google.com/maps/search/farmacias+aguas+verdes"
+  },
+  {
+    "categoria": "farmacia",
+    "localidad": "lucila",
+    "titulo": "Farmacias en Lucila del Mar",
+    "link1": "https://www.google.com/maps/search/farmacias+lucila+del+mar"
+  },
+  {
+    "categoria": "farmacia",
+    "localidad": "atlantis",
+    "titulo": "Farmacias en Nueva Atlantis",
+    "link1": "https://www.google.com/maps/search/farmacias+nueva+atlantis"
+  },
+  {
+    "categoria": "farmacia",
+    "localidad": "medanos",
+    "titulo": "Farmacias en Punta Medanos",
+    "link1": "https://www.google.com/maps/search/farmacias+punta+medanos"
+  },
+  {
+    "categoria": "farmacia",
+    "localidad": "pinamar",
+    "titulo": "Farmacias en Pinamar",
+    "link1": "https://www.google.com/maps/search/farmacias+pinamar"
+  },
+  {
+    "categoria": "farmacia",
+    "localidad": "carilo",
+    "titulo": "Farmacias en Cariló",
+    "link1": "https://www.google.com/maps/search/farmacias+carilo"
+  },
+  {
+    "categoria": "hotel",
+    "localidad": "bernardo",
+    "titulo": "Hoteles en San Bernardo",
+    "link1": "https://www.google.com/maps/search/hoteles+san+bernardo"
+  },
+  {
+    "categoria": "hotel",
+    "localidad": "ajo",
+    "titulo": "Hoteles en Mar de Ajó",
+    "link1": "https://www.google.com/maps/search/hoteles+mar+de+ajo"
+  },
+  {
+    "categoria": "hotel",
+    "localidad": "teresita",
+    "titulo": "Hoteles en Santa Teresita",
+    "link1": "https://www.google.com/maps/search/hoteles+santa+teresita"
+  },
+  {
+    "categoria": "hotel",
+    "localidad": "tuyu",
+    "titulo": "Hoteles en Mar del Tuyú",
+    "link1": "https://www.google.com/maps/search/hoteles+mar+del+tuyu"
+  },
+  {
+    "categoria": "hotel",
+    "localidad": "costa",
+    "titulo": "Hoteles en Costa del Este",
+    "link1": "https://www.google.com/maps/search/hoteles+costa+del+este"
+  },
+  {
+    "categoria": "hotel",
+    "localidad": "aguas",
+    "titulo": "Hoteles en Aguas Verdes",
+    "link1": "https://www.google.com/maps/search/hoteles+aguas+verdes"
+  },
+  {
+    "categoria": "hotel",
+    "localidad": "lucila",
+    "titulo": "Hoteles en Lucila del Mar",
+    "link1": "https://www.google.com/maps/search/hoteles+lucila+del+mar"
+  },
+  {
+    "categoria": "hotel",
+    "localidad": "atlantis",
+    "titulo": "Hoteles en Nueva Atlantis",
+    "link1": "https://www.google.com/maps/search/hoteles+nueva+atlantis"
+  },
+  {
+    "categoria": "hotel",
+    "localidad": "medanos",
+    "titulo": "Hoteles en Punta Medanos",
+    "link1": "https://www.google.com/maps/search/hoteles+punta+medanos"
+  },
+  {
+    "categoria": "hotel",
+    "localidad": "pinamar",
+    "titulo": "Hoteles en Pinamar",
+    "link1": "https://www.google.com/maps/search/hoteles+pinamar"
+  },
+  {
+    "categoria": "hotel",
+    "localidad": "carilo",
+    "titulo": "Hoteles en Cariló",
+    "link1": "https://www.google.com/maps/search/hoteles+carilo"
+  },
+  {
+    "categoria": "restaurante",
+    "localidad": "ajo",
+    "titulo": "Restaurantes en Mar de Ajó",
+    "link1": "https://www.google.com/maps/search/restaurantes+mar+de+ajo"
+  },
+  {
+    "categoria": "restaurante",
+    "localidad": "bernardo",
+    "titulo": "Restaurantes en San Bernardo",
+    "link1": "https://www.google.com/maps/search/restaurantes+san+bernardo"
+  },
+  {
+    "categoria": "restaurante",
+    "localidad": "teresita",
+    "titulo": "Restaurantes en Santa Teresita",
+    "link1": "https://www.google.com/maps/search/restaurantes+santa+teresita"
+  },
+  {
+    "categoria": "restaurante",
+    "localidad": "tuyu",
+    "titulo": "Restaurantes en Mar del Tuyú",
+    "link1": "https://www.google.com/maps/search/restaurantes+mar+del+tuyu"
+  },
+  {
+    "categoria": "restaurante",
+    "localidad": "costa",
+    "titulo": "Restaurantes en Costa del Este",
+    "link1": "https://www.google.com/maps/search/restaurantes+costa+del+este"
+  },
+  {
+    "categoria": "restaurante",
+    "localidad": "aguas",
+    "titulo": "Restaurantes en Aguas Verdes",
+    "link1": "https://www.google.com/maps/search/restaurantes+aguas+verdes"
+  },
+  {
+    "categoria": "restaurante",
+    "localidad": "lucila",
+    "titulo": "Restaurantes en Lucila del Mar",
+    "link1": "https://www.google.com/maps/search/restaurantes+lucila+del+mar"
+  },
+  {
+    "categoria": "restaurante",
+    "localidad": "atlantis",
+    "titulo": "Restaurantes en Nueva Atlantis",
+    "link1": "https://www.google.com/maps/search/restaurantes+nueva+atlantis"
+  },
+  {
+    "categoria": "restaurante",
+    "localidad": "medanos",
+    "titulo": "Restaurantes en Punta Medanos",
+    "link1": "https://www.google.com/maps/search/restaurantes+punta+medanos"
+  },
+  {
+    "categoria": "restaurante",
+    "localidad": "pinamar",
+    "titulo": "Restaurantes en Pinamar",
+    "link1": "https://www.google.com/maps/search/restaurantes+pinamar"
+  },
+  {
+    "categoria": "restaurante",
+    "localidad": "carilo",
+    "titulo": "Restaurantes en Cariló",
+    "link1": "https://www.google.com/maps/search/restaurantes+carilo"
+  },
+  {
+    "categoria": "centroSalud",
+    "localidad": "bernardo",
+    "titulo": "Centros de Salud en San Bernardo",
+    "link1": "https://lacosta.gob.ar/salud/"
+  },
+  {
+    "categoria": "centroSalud",
+    "localidad": "ajo",
+    "titulo": "Centros de Salud en Mar de Ajó",
+    "link1": "https://lacosta.gob.ar/salud/"
+  },
+  {
+    "categoria": "centroSalud",
+    "localidad": "teresita",
+    "titulo": "Centros de Salud en Santa Teresita",
+    "link1": "https://www.google.com/maps/search/centros+de+salud+santa+teresita"
+  },
+  {
+    "categoria": "centroSalud",
+    "localidad": "tuyu",
+    "titulo": "Centros de Salud en Mar del Tuyú",
+    "link1": "https://www.google.com/maps/search/centros+de+salud+mar+del+tuyu"
+  },
+  {
+    "categoria": "centroSalud",
+    "localidad": "costa",
+    "titulo": "Centros de Salud en Costa del Este",
+    "link1": "https://www.google.com/maps/search/centros+de+salud+costa+del+este"
+  },
+  {
+    "categoria": "centroSalud",
+    "localidad": "aguas",
+    "titulo": "Centros de Salud en Aguas Verdes",
+    "link1": "https://www.google.com/maps/search/centros+de+salud+aguas+verdes"
+  },
+  {
+    "categoria": "centroSalud",
+    "localidad": "lucila",
+    "titulo": "Centros de Salud en Lucila del Mar",
+    "link1": "https://www.google.com/maps/search/centros+de+salud+lucila+del+mar"
+  },
+  {
+    "categoria": "centroSalud",
+    "localidad": "atlantis",
+    "titulo": "Centros de Salud en Nueva Atlantis",
+    "link1": "https://www.google.com/maps/search/centros+de+salud+nueva+atlantis"
+  },
+  {
+    "categoria": "centroSalud",
+    "localidad": "medanos",
+    "titulo": "Centros de Salud en Punta Medanos",
+    "link1": "https://www.google.com/maps/search/centros+de+salud+punta+medanos"
+  },
+  {
+    "categoria": "centroSalud",
+    "localidad": "pinamar",
+    "titulo": "Centros de Salud en Pinamar",
+    "link1": "https://www.google.com/maps/search/centros+de+salud+pinamar"
+  },
+  {
+    "categoria": "centroSalud",
+    "localidad": "carilo",
+    "titulo": "Centros de Salud en Cariló",
+    "link1": "https://www.google.com/maps/search/centros+de+salud+carilo"
+  },
+  {
+    "categoria": "cajero",
+    "localidad": "bernardo",
+    "titulo": "Cajeros Automáticos en San Bernardo",
+    "link1": "https://www.google.com/maps/search/cajeros+automaticos+san+bernardo"
+  },
+  {
+    "categoria": "cajero",
+    "localidad": "ajo",
+    "titulo": "Cajeros Automáticos en Mar de Ajó",
+    "link1": "https://www.google.com/maps/search/cajeros+automaticos+mar+de+ajo"
+  },
+  {
+    "categoria": "cajero",
+    "localidad": "teresita",
+    "titulo": "Cajeros Automáticos en Santa Teresita",
+    "link1": "https://www.google.com/maps/search/cajeros+automaticos+santa+teresita"
+  },
+  {
+    "categoria": "cajero",
+    "localidad": "tuyu",
+    "titulo": "Cajeros Automáticos en Mar del Tuyú",
+    "link1": "https://www.google.com/maps/search/cajeros+automaticos+mar+del+tuyu"
+  },
+  {
+    "categoria": "cajero",
+    "localidad": "costa",
+    "titulo": "Cajeros Automáticos en Costa del Este",
+    "link1": "https://www.google.com/maps/search/cajeros+automaticos+costa+del+este"
+  },
+  {
+    "categoria": "cajero",
+    "localidad": "aguas",
+    "titulo": "Cajeros Automáticos en Aguas Verdes",
+    "link1": "https://www.google.com/maps/search/cajeros+automaticos+aguas+verdes"
+  },
+  {
+    "categoria": "cajero",
+    "localidad": "lucila",
+    "titulo": "Cajeros Automáticos en Lucila del Mar",
+    "link1": "https://www.google.com/maps/search/cajeros+automaticos+lucila+del+mar"
+  },
+  {
+    "categoria": "cajero",
+    "localidad": "atlantis",
+    "titulo": "Cajeros Automáticos en Nueva Atlantis",
+    "link1": "https://www.google.com/maps/search/cajeros+automaticos+nueva+atlantis"
+  },
+  {
+    "categoria": "cajero",
+    "localidad": "medanos",
+    "titulo": "Cajeros Automáticos en Punta Medanos",
+    "link1": "https://www.google.com/maps/search/cajeros+automaticos+punta+medanos"
+  },
+  {
+    "categoria": "cajero",
+    "localidad": "pinamar",
+    "titulo": "Cajeros Automáticos en Pinamar",
+    "link1": "https://www.google.com/maps/search/cajeros+automaticos+pinamar"
+  },
+  {
+    "categoria": "cajero",
+    "localidad": "carilo",
+    "titulo": "Cajeros Automáticos en Cariló",
+    "link1": "https://www.google.com/maps/search/cajeros+automaticos+carilo"
+  }
+]

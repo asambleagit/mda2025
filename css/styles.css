@@ -1,4 +1,24 @@
 /* Variables de color */
+/* Paleta colores verde combinada con morado.
+#1C4D6D Azul Titulo
+#699171 Verde subtitulo
+#878889 Gris
+#3C5D4E Verde oscuro
+#40665B Verde intermedio
+#CAD5B5 Verde claro 
+#E0E5CA Verde muy claro
+#A2D9D0 Celeste claro
+#DCF8F8 Celeste muy claro
+#1D2427 Casi negro
+#D6CDAE Bronce
+#B2BAA4 bronce oscuro
+*/
+
+/*Gradiente 
+linear-gradient(to bottom, #DCF8F8, #A2D9D0, #E0E5CA) Verde/amarillo
+linear-gradient(to right,#B2BAA4 0,#D6CDAE 10%, #B2BAA4 100% ) Bronce / Bronce oscuro
+linear-gradient(to right, #A2D9D0 0, #DCF8F8 10%, #DCF8F8 100%) 
+*/
 :root {
     --text-dark: #1f2937;
     --white: #ffffff;
@@ -8,11 +28,11 @@
     --bgseccion-dentro: #d6f1f5;
     --textseccion-dentro: #1c6697;
 
-    --bgseccion-fuera: #cceae8;
+    --bgseccion-fuera:linear-gradient(to right,#B2BAA4 0%,#D6CDAE 10%, #D6CDAE 100%);
     --textseccion-fuera: #539091;
 
-    --bgseccion-info: #c7a9c1;
-    --textseccion-info: #4d0e40;
+    --bgseccion-info: linear-gradient(to right, #A2D9D0 0, #E0E5CA 10%, #E0E5CA 100%);
+    --textseccion-info: #539091;
 }
 
 /* Reset */
@@ -225,11 +245,6 @@ body {
     font-size: 14px;
 }
 
-.quick-accessServ-title {
-    font-weight: bold;
-    color: var(--textseccion-fuera);
-    margin-top: 10px;
-}
 
 /* FAQ */
 .faq-item {
@@ -260,7 +275,80 @@ body {
 .faq-item.active .faq-answer {
     display: block;
 }
+/*Seccion servicios */
+.icon-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #f0f4ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: #3b5bfd;
+    }
 
+    .hover-card {
+      transition: all 0.3s ease;
+      border-radius: 1rem;
+    }
+
+    .hover-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+/* Chips*/
+ .chip-track {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      /* Firefox */
+    }
+
+    .chip-track::-webkit-scrollbar {
+      display: none;
+    }
+
+
+
+    /* Chips en mobile (2 visibles) */
+    .chip-item {
+      flex: 0 0 40%;
+      scroll-snap-align: start;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: transform .2s ease, box-shadow .2s ease;
+
+
+    }
+
+    .chip-item:hover {
+
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .chip-item.active {
+      background-color: #64c7c3;
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(100, 199, 195, 0.2);
+    }
+
+
+
+    /* En pantallas medianas (desktop) → distribución normal */
+    @media (min-width: 768px) {
+      .chip-track {
+        overflow-x: visible;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .chip-item {
+        flex: unset;
+
+        /* tamaño natural */
+      }
+    }
 /* Botón subir */
 .scroll-top-btn {
     position: fixed;
