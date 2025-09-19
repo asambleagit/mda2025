@@ -42,12 +42,12 @@
 
   <section class="roundedDownEffect">
   </section>
-  <section class="content-section" style="background: white; padding: 10px 0; position: relative; z-index: 2;">
+  <section class="content-section" style="background: white;  position: relative; z-index: 2;">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-sx-12">
           <div class="content-card"
-            style="background: rgba(255,255,255,0.9); padding: 20px; border-radius: 20px;  backdrop-filter: blur(10px);">
+            style="background: rgba(255,255,255,0.9);  border-radius: 20px;  backdrop-filter: blur(10px);">
 
             <!-- Contenido principal -->
             <div class="row">
@@ -63,7 +63,7 @@
                 </p>
 
                 <div
-                  style="background: linear-gradient(135deg, var(--calm-light), var(--calm-accent)); padding: 20px; border-radius: 15px; margin: 25px 0; border-left: 5px solid var(--calm-secondary);">
+                  style="background: linear-gradient(135deg, var(--calm-light), var(--calm-accent)); padding: 20px; border-radius: 15px; margin: 15px 0; border-left: 5px solid var(--calm-secondary);">
                   <p style="color: var(--calm-text); font-size: 1.05rem; margin: 0; line-height: 1.6;">
                     <i class="fas fa-info-circle me-2" style="color: var(--calm-secondary);"></i>
                     Si desea más orientación puede dirigirse a los distintos <strong>Puntos de Información</strong>
@@ -81,13 +81,13 @@
   <section class="roundedUpEffect">    
   </section>
   <!--Botones seccion-->
-  <div class="container my-5">
+  <div class="container my-4">
     <div class="row g-3 justify-content-center">
       
       <div class="col-12 col-md-5">
         <a href="#information"
           class="btn btn-primary info-btn btn-lg w-100 d-flex align-items-center justify-content-start px-4 py-4 flex-column align-items-start"
-          style="border-radius: 10px; box-shadow: 0 4px 18px rgba(37,99,235,0.07); font-size: 1.2rem; background:var(--bgseccion-info); color: var(--text-dark); border: 2px solid var(--seccion-info) !important; gap: 2px;">
+           style="border-radius: 10px; box-shadow: 0 4px 18px rgba(37,99,235,0.07); font-size: 1.2rem; background:var(--bgseccion-info); color: var(--textseccion-fuera); border: 2px solid  #c3e7ec !important; gap: 2px;">
           <div class="d-flex align-items-center w-100" style="gap: 0;">
             <i class="fas fa-info-circle" style="font-size: 2.5rem; color: var(--textseccion-info);"></i>
             <span
@@ -102,11 +102,11 @@
       <div class="col-12 col-md-5">
         <a href="#departamentos"
           class="btn btn-primary dentro-btn btn-lg w-100 d-flex align-items-center justify-content-start px-4 py-4 flex-column align-items-start"
-          style="border-radius: 10px; box-shadow: 0 4px 18px rgba(37,99,235,0.07); font-size: 1.2rem; background:var(--bgseccion-info); color: #1c6697; border: 2px solid  #c3e7ec !important; gap: 2px;">
+           style="border-radius: 10px; box-shadow: 0 4px 18px rgba(37,99,235,0.07); font-size: 1.2rem; background:var(--bgseccion-info); color: var(--textseccion-fuera); border: 2px solid  #c3e7ec !important; gap: 2px;">
           <div class="d-flex align-items-center w-100" style="gap: 0;">
-            <i class="fas fa-info-circle" style="font-size: 2.5rem; color: #1c6697;"></i>
+            <i class="fas fa-info-circle" style="font-size: 2.5rem; color:var(--textseccion-fuera);"></i>
             <span
-              style="display: inline-block; width: 4px; height: 35px; background: #1c6697; border-radius: 4px; margin: 0 18px;"></span>
+              style="display: inline-block; width: 4px; height: 35px; background:var(--textseccion-fuera);  border-radius: 4px; margin: 0 18px;"></span>
             <span style="font-size: 1.2rem; font-weight: 600;">Dependencias</span>
           </div>
           <span class="text-muted small ps-1" style="font-size: 0.9rem; margin-top: 3px;">
@@ -184,7 +184,11 @@
 
   <!--Seccion Informacion-->
   <section id="information">
-    <div id="como-llegar" class="container-fluid py-4 " style="background: var(--bgseccion-info);">
+    <div id="como-llegar" class="container-fluid py-4 " style="background: white;">
+      <div class="text-center ">
+        <h1 class="fw-bold mb-4" style="color: var(--text-dark);">Información</h1>
+      </div>
+      <hr class="linea-sombreada">
       <div class="text-center ">
         <h2 class="fw-bold mb-4" style="color: var(--text-dark);">Cómo llegar</h2>
       </div>
@@ -229,7 +233,7 @@
 
     </div>
 
-    <div id="Estacionamiento" class="container-fluid py-4 " style="background: var(--bgseccion-info);">
+    <div id="Estacionamiento" class="container-fluid py-4 " style="background: white;">
       <div class="text-center">
         <h2 class="fw-bold mb-2" style="color: var(--text-dark);">Estacionamiento</h2>
         <p class="text-muted mb-0">El estadio cuenta con amplias áreas de estacionamiento gratuito para todos los
@@ -237,7 +241,7 @@
           personas con discapacidad y acceso adaptado.</p>
       </div>
     </div>
-    <div id="Transporte" class="container-fluid py-4 " style="background: var(--bgseccion-info);">
+    <div id="Transporte" class="container-fluid py-4 " style="background: white;">
       <div class="text-center">
         <h2 class="fw-bold mb-2" style="color: var(--text-dark);">Transporte</h2>
         <p class="text-muted mb-0">Varias empresas ofrecen servicios de transporte desde Buenos Aires y otras ciudades
@@ -288,7 +292,11 @@
   </section> -->
   <!-- Dependencias-->
   <section id="departamentos" class="faq">
-    <div class="container-fluid py-5" style="background-color: var(--bgseccion-dentro);">
+    <div class="container-fluid py-5" style="background-color: #f0f4ff;">
+       <div class="text-center ">
+        <h1 class="fw-bold mb-4" style="color: var(--text-dark);">Departamentos e Instalaciones</h1>
+      </div>
+      <hr class="linea-sombreada">
       <div class="text-center mb-4">
         <h2 class="fw-bold mb-2" style="color: var(--textseccion-dentro);">Departamentos</h2>
         <p class="text-muted mb-0">Ubicación de departamentos dentro del estadio</p>
@@ -366,7 +374,7 @@
 
   <!-- Instalaciones-->
   <section id="instalaciones" class="faq">
-    <div class="container-fluid py-5" style="background-color: var(--bgseccion-dentro);">
+    <div class="container-fluid py-5" style="background-color: #f0f4ff;">
 
       <div class="text-center mb-4">
         <h2 class="fw-bold mb-2" style="color: var(--textseccion-dentro);">Instalaciones</h2>
@@ -457,6 +465,10 @@
     <section id="Servicios" class="py-5">
 
         <div class="container my-5">
+           <div class="text-center ">
+        <h1 class="fw-bold mb-4" style="color: var(--text-dark);">Servicios cercanos</h1>
+      </div>
+      <hr class="linea-sombreada">
             <div class="row justify-content-center text-center">
                 <h4 class="fw-bold mb-2">Consultá los servicios según tu asamblea</h4>
                 <h6 class="text-muted mb-4">¿A cuál asistirás?</h6>

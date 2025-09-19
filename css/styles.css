@@ -68,6 +68,16 @@ body {
   /*background: var(--body-back-effects) !important;*/
 }
 
+.linea-sombreada {
+  width: 100%;
+  height: 2px;                /* grosor de la línea */
+  background: #333;           /* color base */
+  border: none;               /* quitar borde por defecto */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* sombra */
+  margin-bottom: 5%;
+}
+
+
 /* Portada Section */
 .hero {
   background: #ffffff;
@@ -177,8 +187,7 @@ body {
 /* Efecto redondeado hacia arriba */
 .roundedUpEffect {
   /*background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);*/
-  background: white;
-  
+  background: white;  
   min-height: 3vh;
   display: flex;
   align-items: center;
@@ -196,10 +205,11 @@ body {
   height: 100%;
   /* Este es el color/gradiente del círculo */
   /*background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);*/
-  background: white;
+  background: var(--textseccion-info);
   /*clip-path: circle(50% at 50% 50%);*/
   /*clip-path: polygon(100% 70%, 100% 0%, 0% 0%, 0% 70%, 50% 100%);*/
   clip-path: ellipse(80% 90% at 49% 100%);
+  opacity: 0.1;
   z-index: 1;
 }
 
