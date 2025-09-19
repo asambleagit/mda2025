@@ -810,8 +810,8 @@
                   </div>
                   <p style="color: var(--calm-text-light); margin-bottom: 16px;">Elige alguna de las siguientes opciones para ver la información.</p>
                   <div class="amenity-actions">
-                      <a href="${item.link1 || '#'}" class="calm-btn-sm" target="_blank">Google Maps</a>
-                      <a href="${item.link1 || '#'}" class="calm-btn-sm" target="_blank">Sitio de la Municipalidad</a>
+                      ${item.link1 ? `<a href="${item.link1}" class="calm-btn-sm" target="_blank">Google Maps</a>` : ''}
+                      ${item.link2 ? `<a href="${item.link2}" class="calm-btn-sm" target="_blank">Sitio de la Municipalidad</a>` : ''}
                   </div>
               </div>
           </div>
