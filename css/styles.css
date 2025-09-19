@@ -33,6 +33,19 @@ linear-gradient(to right, #A2D9D0 0, #DCF8F8 10%, #DCF8F8 100%)
 
     --bgseccion-info: linear-gradient(to right, #A2D9D0 0, #E0E5CA 10%, #E0E5CA 100%);
     --textseccion-info: #539091;
+
+    
+  --calm-primary: #2D5AA0;
+  --calm-secondary: #4A90A4;
+  --calm-accent: #85CDCA;
+  --calm-light: #B8E6E1;
+  --calm-cream: #F7F5F3;
+  --calm-white: #FFFFFF;
+  --calm-text: #2C3E50;
+  --calm-text-light: #718096;
+  --calm-green: #68C3A3;
+  --calm-sunset: #F093FB;
+  --calm-sunrise: #F5D020;
 }
 
 /* Reset */
@@ -349,6 +362,107 @@ body {
         /* tamaño natural */
       }
     }
+    /* Servicios */
+  @media (max-width: 576px){
+    .amenity-card {
+      width: 95%;
+      margin-left: 3%;
+    }
+    #amenities-list {
+  max-height: 500px; /* ajustá el valor según el alto real de 2 cards */
+  overflow-y: auto;
+  padding-right: 8px; /* opcional, evita que el scroll tape contenido */
+}
+
+/* Opcional: estilizar el scroll */
+#amenities-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+#amenities-list::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+  }
+.amenity-card {
+  
+  background: var(--calm-white);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  margin-bottom: 1%;
+  border-left: 4px solid var(--calm-accent);
+}
+
+.amenity-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.amenity-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.amenity-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--calm-light), var(--calm-accent));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--calm-primary);
+  margin-right: 16px;
+}
+
+.amenity-title {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--calm-text);
+  margin: 0;
+}
+
+.amenity-meta {
+  color: var(--calm-text-light);
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.amenity-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.calm-btn-sm {
+  background: transparent;
+  border: 1px solid var(--calm-accent);
+  color: var(--calm-primary);
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.calm-btn-sm:hover {
+  background: var(--calm-accent);
+  color: white;
+}
+
+.calm-btn-emergency {
+  background: #FF6B6B;
+  border: 1px solid #FF6B6B;
+  color: white;
+}
+
+.calm-btn-emergency:hover {
+  background: #FF5252;
+  color: white;
+}
 /* Botón subir */
 .scroll-top-btn {
     position: fixed;
