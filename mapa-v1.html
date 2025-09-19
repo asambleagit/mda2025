@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Mapa Interactivo - Asamblea 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #f0f0f0;
+      margin: 0;
+      height: 100vh;
+    }
+
+    /* Contenedor de los botones */
+    #menu {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 10px 0;
+    }
+
+    #menu button {
+      background: none;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+      transition: color 0.3s, transform 0.2s;
+    }
+
+    #menu button:hover {
+      color: #0077cc;
+      transform: scale(1.1);
+    }
+
+    .material-symbols-outlined {
+      font-size: 30px; /* tamaño del ícono */
+      color: black;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    svg {
+      border: 1px solid #ccc;
+      width: 80vw;
+      height: 90vh;
+      background: white;
+    }
+
+    @keyframes pulseHighlight {
+      0% {
+        opacity: 0.9;
+      }
+      50% {
+       
+        opacity: 0.5;
+      }
+      100% {
+      
+        opacity: 0.9;
+      }
+    }
+
+    .highlight {
+      animation: pulseHighlight 2s ease-in-out 10; /* 2 repeticiones */
+      transform-origin: center;
+    }
+
+    #coords,
+    #size,
+    #rot {
+      margin: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+    <div id="menu">
+    <button onclick="highlightElement('principal')">Entrada Principal</button>
+    <button onclick="alert('Entrada Secundaria')">Entrada Secundaria</button>
+    <button onclick="alert('Primeros Auxilios Anillo')">Primeros Auxilios Anillo</button>
+    <button onclick="alert('Guardarropas Anillo')">Guardarropas Anillo</button>
+  </div>
+    <div id="coords">Coordenadas: (x: -, y: -)</div>
+    <div id="size">Size: (w: -, h: -)</div>
+    <div id="rot">Rotation: (g: -)</div>
+    <svg id="mapa" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+        <!-- Fondo verde (campo/área circundante) -->
+        <rect width="800" height="600" fill="#4a7c59" />
+
+        <!-- Caminos principales -->
+        <!-- Camino perimetral exterior -->
+        <path
+            d="M 100 150 Q 100 100 150 100 L 650 100 Q 700 100 700 150 L 700 450 Q 700 500 650 500 L 150 500 Q 100 500 100 450 Z"
+            fill="none" stroke="#8b7355" stroke-width="12" opacity="0.8" />
+
+        <!-- Camino interior circular alrededor del estadio -->
+        <circle cx="400" cy="300" r="180" fill="none" stroke="#a0896b" stroke-width="8" />
+
+        <!-- Caminos de acceso -->
+        <!-- Acceso norte -->
+        <path d="M 400 120 L 400 180" stroke="#8b7355" stroke-width="6" />
+
+        <!-- Acceso este -->
+        <path d="M 580 300 L 520 300" stroke="#8b7355" stroke-width="6" />
+
+        <!-- Acceso sur -->
+        <path d="M 400 480 L 400 420" stroke="#8b7355" stroke-width="6" />
+
+        <!-- Acceso oeste -->
+        <path d="M 220 300 L 280 300" stroke="#8b7355" stroke-width="6" />
+<!-- Acceso oeste -->
+        <rect x="280" y="230" width="240" height="200" rx="30" ry="30" fill="#e8e8e8" stroke="#666" stroke-width="2"
+            transform="rotate(-25,400,300)" />
+
+
+
+
+        <!-- Estadio circular 
+        <circle cx="400" cy="300" r="120" fill="#e8e8e8" stroke="#666" stroke-width="2"/>-->
+       
+        <!-- Segmentos del techo del estadio (simulando la estructura radial) -->
+        <g fill="#d0d0d0" stroke="#999" stroke-width="1" transform="rotate(8,400,300)" >
+            <path d="M 400 300 L 400 180 A 120 120 0 0 1 484.85 240 Z" fill="#f0f0f0" />
+            <path d="M 400 300 L 484.85 240 A 120 120 0 0 1 515.15 360 Z" fill="#e0e0e0" />
+            <path d="M 400 300 L 515.15 360 A 120 120 0 0 1 400 420 Z" fill="#f0f0f0" />
+            <path d="M 400 300 L 400 420 A 120 120 0 0 1 315.15 360 Z" fill="#e0e0e0" />
+            <path d="M 400 300 L 315.15 360 A 120 120 0 0 1 284.85 240 Z" fill="#f0f0f0" />
+            <path d="M 400 300 L 250 240 A 120 120 0 0 1 400 150 Z" fill="#e0e0e0" />
+
+        </g>
+        <rect x="340" y="240" width="120" height="130" rx="20" ry="20" fill="#d8d8d8" stroke="#555" stroke-width="2"
+            transform="rotate(-25,400,300)" />
+        <!--<rect x="220" y="120" width="400" height="360" fill="none" stroke="#a0896b" stroke-width="8" />-->
+
+        <!-- Sectores -->
+       
+       <g id="principal" transform="translate(371.08111572265625,85.9522705078125) rotate(4)">
+      <!-- Polígono -->
+      <polygon id="principal-shape"
+        points="86.33340454101562,72.73101806640625 104.390869140625,82.58055114746094 125.73147583007812,94.89244079589844 84.69180297851562,144.1400604248047 55.53689082450346,133.28853797880825 66.63436889648438,61.23991394042969"
+        fill="green" stroke="black" stroke-width="2" opacity="0.9" />
+
+      <!-- Ícono centrado -->
+      <foreignObject x="65" y="90" width="40" height="40">
+        <span class="material-symbols-outlined">directions_walk</span>
+      </foreignObject>
+    </g>
+      <g id="hexGroups" transform="translate(208.681884765625,160.92185974121094) rotate(4) rotate(0)"><polygon id="hexs" points="60.44134521484375,65.91351318359375 101.18667602539062,83.37580871582031 125.73147583007812,94.89244079589844 120.30938720703125,115.79512023925781 57.530975341796875,104.91261291503906 55.698944091796875,84.945068359375" fill="green" stroke="black" stroke-width="2" opacity="0.9"/></g>
+      <g id="hexGroups" transform="translate(433.0352783203125,230.2606964111328) rotate(4) rotate(0)"><polygon id="hexs" points="51.512847900390625,74.25367736816406 83.5238037109375,69.32890319824219 85.1654052734375,112.83097839355469 73.67428588867188,134.9923858642578 48.22967529296875,119.39732360839844 58.079193115234375,94.77351379394531" fill="blue" stroke="black" stroke-width="2" opacity="0.7"/></g>
+      <g id="hexGroups" transform="translate(279.3058776855469,256.7430419921875) rotate(4) rotate(0)"><polygon id="hexs" points="81.30245971679688,96.1981201171875 93.61434936523438,113.43478393554688 108.38864135742188,123.28433227539062 101.82229614257812,148.72891235351562 78.84005737304688,134.77542114257812 62.4241943359375,121.64273071289062" fill="red" stroke="black" stroke-width="2" opacity="0.7"/></g>
+
+        <!-- Campo interior 
+  <circle cx="400" cy="300" r="80" fill="#2d5016" stroke="#1a2e0a" stroke-width="1"/>-->
+
+        <!-- Líneas del campo 
+  <circle cx="400" cy="300" r="40" fill="none" stroke="#4a7c2a" stroke-width="1" opacity="0.7"/>
+  <circle cx="400" cy="300" r="8" fill="none" stroke="#4a7c2a" stroke-width="1" opacity="0.7"/>-->
+
+        <!-- Estacionamientos/áreas auxiliares -->
+        <rect x="120" y="350" width="60" height="40" fill="#b8a082" stroke="#8b7355" stroke-width="1" />
+        <rect x="620" y="220" width="40" height="60" fill="#b8a082" stroke="#8b7355" stroke-width="1" />
+        <rect x="320" y="520" width="80" height="30" fill="#b8a082" stroke="#8b7355" stroke-width="1" />
+
+        <!-- Vegetación/áreas verdes -->
+        <ellipse cx="190" cy="200" rx="25" ry="20" fill="#2d4a1e" opacity="0.8" />
+        <ellipse cx="620" cy="400" rx="30" ry="25" fill="#2d4a1e" opacity="0.8" />
+        <ellipse cx="400" cy="520" rx="20" ry="15" fill="#2d4a1e" opacity="0.8" />
+
+        <!-- Entrada principal (más ancha) -->
+        <rect x="395" y="115" width="10" height="10" fill="#8b7355" />
+
+        <!-- Líneas divisorias de los caminos -->
+        <path d="M 400 120 L 400 180" stroke="#a0896b" stroke-width="1" stroke-dasharray="3,3" opacity="0.6" />
+        <path d="M 580 300 L 520 300" stroke="#a0896b" stroke-width="1" stroke-dasharray="3,3" opacity="0.6" />
+        <path d="M 400 480 L 400 420" stroke="#a0896b" stroke-width="1" stroke-dasharray="3,3" opacity="0.6" />
+        <path d="M 220 300 L 280 300" stroke="#a0896b" stroke-width="1" stroke-dasharray="3,3" opacity="0.6" />
+
+        <!-- Guardarropas 
+        <g id="guardarropas" transform="translate(700,300)">
+            <rect width="150" height="80" fill="lightblue" />
+            <text x="75" y="45" font-size="8" text-anchor="middle">Guardarropas</text>
+        </g>
+
+
+        <g id="hexGroup" transform="translate(359.6660461425781,87.97648620605469) rotate(0)">
+            <polygon id="hex"
+                points="86.33340454101562,72.73101806640625 104.390869140625,82.58055114746094 125.73147583007812,94.89244079589844 84.69180297851562,144.1400604248047 55.53689082450346,133.28853797880825 66.63436889648438,61.23991394042969"
+                fill="orange" stroke="black" stroke-width="2" opacity="0.7" />
+        </g>-->
+
+
+
+    </svg>
+    
+  <script>
+    function highlightElement(id) {
+      const element = document.querySelector(`#${id} polygon`);
+      if (!element) return;
+
+      // Eliminar cualquier animación previa
+      element.classList.remove("highlight");
+
+      // Escuchar cuando termine la animación para poder reutilizar
+      element.addEventListener("animationend", () => {
+        element.classList.remove("highlight");
+      }, { once: true });
+
+      // Forzar reflow (resetea el estado interno del navegador)
+      void element.offsetWidth;
+
+      // Volver a aplicar la animación
+      element.classList.add("highlight");
+    }
+  </script>
+    <script>
+        const svg = document.getElementById("mapa");
+        const coords = document.getElementById("coords");
+        const size = document.getElementById("size");
+        const rot = document.getElementById("rot");
+        let selected = null;
+        let offset = { x: 0, y: 0 };
+        let selectedTransform = { x: 0, y: 0, rot: 0 };
+
+        function parseTransform(transform) {
+            const match = /translate\(([-\d.]+),([-\d.]+)\)\s*rotate\(([-\d.]*)\)/.exec(transform);
+            if (match) {
+                return { x: parseFloat(match[1]), y: parseFloat(match[2]), rot: parseFloat(match[3]) || 0 };
+            }
+            const match2 = /translate\(([-\d.]+),([-\d.]+)\)/.exec(transform);
+            if (match2) {
+                return { x: parseFloat(match2[1]), y: parseFloat(match2[2]), rot: 0 };
+            }
+            return { x: 0, y: 0, rot: 0 };
+        }
+
+        svg.addEventListener("mousedown", e => {
+            if (e.target.tagName === "rect" || e.target.tagName === "text") {
+                selected = e.target.parentNode;
+                selectedTransform = parseTransform(selected.getAttribute("transform") || "translate(0,0)");
+                const pt = svg.createSVGPoint();
+                pt.x = e.clientX;
+                pt.y = e.clientY;
+                const svgP = pt.matrixTransform(svg.getScreenCTM().inverse());
+                offset.x = svgP.x - selectedTransform.x;
+                offset.y = svgP.y - selectedTransform.y;
+            }
+        });
+
+        svg.addEventListener("mousemove", e => {
+            if (selected) {
+                const pt = svg.createSVGPoint();
+                pt.x = e.clientX;
+                pt.y = e.clientY;
+                const svgP = pt.matrixTransform(svg.getScreenCTM().inverse());
+                selectedTransform.x = svgP.x - offset.x;
+                selectedTransform.y = svgP.y - offset.y;
+                selected.setAttribute("transform", `translate(${selectedTransform.x},${selectedTransform.y}) rotate(${selectedTransform.rot})`);
+                coords.textContent = `<text x="${Math.round(selectedTransform.x)}" y="${Math.round(selectedTransform.y)}" font-size="8" text-anchor="middle">Guardarropas</text>`;
+
+            }
+        });
+
+        svg.addEventListener("mouseup", () => { selected = null; });
+        svg.addEventListener("mouseleave", () => { selected = null; });
+
+        // Zoom (agrandar/achicar)
+        svg.addEventListener("wheel", e => {
+            if (selected) {
+                e.preventDefault();
+                const rect = selected.querySelector("rect");
+                let w = parseFloat(rect.getAttribute("width"));
+                let h = parseFloat(rect.getAttribute("height"));
+                if (e.deltaY < 0) { // zoom in
+                    w *= 1.1;
+                    h *= 1.1;
+                } else { // zoom out
+                    w *= 0.9;
+                    h *= 0.9;
+                }
+                rect.setAttribute("width", w);
+                rect.setAttribute("height", h);
+                size.textContent = `<rect width=${w} height=${h} fill="lightblue"/>`;
+            }
+
+        });
+
+        // Rotar con tecla R
+        document.addEventListener("keydown", e => {
+            if (selected && e.key.toLowerCase() === "r") {
+                selectedTransform.rot += 1;
+                selected.setAttribute("transform", `translate(${selectedTransform.x},${selectedTransform.y}) rotate(${selectedTransform.rot})`);
+                rot.textContent = `<g id="guardarropas" transform="translate(${selectedTransform.x},${selectedTransform.y}) rotate(${selectedTransform.rot})">             
+         ${coords.textContent}
+         ${size.textContent}
+            </g>`;
+            }
+            if (selected && e.key.toLowerCase() === "e") {
+                selectedTransform.rot -= 1;
+                selected.setAttribute("transform", `translate(${selectedTransform.x},${selectedTransform.y}) rotate(${selectedTransform.rot})`);
+                rot.textContent = `<g id="guardarropas" transform="translate(${selectedTransform.x},${selectedTransform.y}) rotate(${selectedTransform.rot})">             
+         ${coords.textContent}
+         ${size.textContent}
+            </g>`;
+            }
+        });
+
+    </script>
+    <script>
+        const hexGroup = document.getElementById("hexGroup");
+        const hex = document.getElementById("hex");
+        let selectedGroup = null;
+        let selectedHandle = null;
+        let offset2 = { x: 0, y: 0 };
+        let transform = { x: 300, y: 200, rot: 0 };
+
+        // === Crear handles ===
+        function createHandles() {
+            const pts = hex.getAttribute("points").split(" ").map(p => {
+                const [x, y] = p.split(",").map(Number);
+                return { x, y };
+            });
+            pts.forEach((pt, i) => {
+                const c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                c.setAttribute("cx", pt.x);
+                c.setAttribute("cy", pt.y);
+                c.setAttribute("r", 6);
+                c.setAttribute("fill", "red");
+                c.style.cursor = "move";
+                c.dataset.index = i;
+                hexGroup.appendChild(c);
+            });
+        }
+        createHandles();
+
+        // === Actualizar hexágono desde los handles ===
+        function updateHex() {
+            const circles = hexGroup.querySelectorAll("circle");
+            const newPoints = Array.from(circles).map(c => {
+                return `${c.getAttribute("cx")},${c.getAttribute("cy")}`;
+            }).join(" ");
+            hex.setAttribute("points", newPoints);
+            logPolygon(); // 🔥 loggear cada vez que cambia
+        }
+
+        // === Mostrar el HTML actualizado del polygon ===
+        function logPolygon(tra) {
+            if (tra) {
+                rot.textContent = `<g id="hexGroup" transform="${tra} rotate(0)"><polygon id="hex" points="${hex.getAttribute("points")}" fill="orange" stroke="black" stroke-width="2" opacity="0.7"/></g>`;
+            }
+        }
+
+        // === Parse transform de un grupo ===
+        function parseTransform(transformStr) {
+            const match = /translate\(([-\d.]+),([-\d.]+)\)\s*rotate\(([-\d.]*)\)/.exec(transformStr);
+            if (match) {
+                return { x: parseFloat(match[1]), y: parseFloat(match[2]), rot: parseFloat(match[3]) || 0 };
+            }
+            return { x: 0, y: 0, rot: 0 };
+        }
+
+        // === Selección y arrastre ===
+        svg.addEventListener("mousedown", e => {
+            if (e.target.tagName === "circle") {
+                selectedHandle = e.target;
+            } else if (e.target.tagName === "polygon") {
+                selectedGroup = hexGroup;
+                transform = parseTransform(hexGroup.getAttribute("transform"));
+                const pt = svg.createSVGPoint();
+                pt.x = e.clientX; pt.y = e.clientY;
+                const svgP = pt.matrixTransform(svg.getScreenCTM().inverse());
+                offset2.x = svgP.x - transform.x;
+                offset2.y = svgP.y - transform.y;
+            }
+        });
+
+        svg.addEventListener("mousemove", e => {
+            if (selectedHandle) {
+                const pt = svg.createSVGPoint();
+                pt.x = e.clientX; pt.y = e.clientY;
+                const svgP = pt.matrixTransform(svg.getScreenCTM().inverse());
+                selectedHandle.setAttribute("cx", svgP.x - transform.x);
+                selectedHandle.setAttribute("cy", svgP.y - transform.y);
+                updateHex();
+            } else if (selectedGroup) {
+                const pt = svg.createSVGPoint();
+                pt.x = e.clientX; pt.y = e.clientY;
+                const svgP = pt.matrixTransform(svg.getScreenCTM().inverse());
+                transform.x = svgP.x - offset2.x;
+                transform.y = svgP.y - offset2.y;
+                hexGroup.setAttribute("transform", `translate(${transform.x},${transform.y}) rotate(${transform.rot})`);
+                logPolygon(`translate(${transform.x},${transform.y}) rotate(${transform.rot})`);
+            }
+        });
+
+        svg.addEventListener("mouseup", () => { selectedHandle = null; selectedGroup = null; });
+        svg.addEventListener("mouseleave", () => { selectedHandle = null; selectedGroup = null; });
+
+        // === Zoom con rueda ===
+        svg.addEventListener("wheel", e => {
+            if (hexGroup && !selectedHandle) {
+                e.preventDefault();
+                const poly = hex;
+                const pts = poly.getAttribute("points").split(" ").map(p => p.split(",").map(Number));
+                let factor = (e.deltaY < 0) ? 1.1 : 0.9;
+                const newPts = pts.map(([x, y]) => [x * factor, y * factor]);
+                poly.setAttribute("points", newPts.map(p => p.join(",")).join(" "));
+                const circles = hexGroup.querySelectorAll("circle");
+                newPts.forEach(([x, y], i) => {
+                    circles[i].setAttribute("cx", x);
+                    circles[i].setAttribute("cy", y);
+                });
+                logPolygon();
+            }
+        });
+
+        // === Rotar con R/E ===
+        document.addEventListener("keydown", e => {
+            if (e.key.toLowerCase() === "r") {
+                transform.rot += 2;
+                hexGroup.setAttribute("transform", `translate(${transform.x},${transform.y}) rotate(${transform.rot})`);
+                logPolygon(`translate(${transform.x},${transform.y}) rotate(${transform.rot})`);
+            }
+            if (e.key.toLowerCase() === "e") {
+                transform.rot -= 2;
+                hexGroup.setAttribute("transform", `translate(${transform.x},${transform.y}) rotate(${transform.rot})`);
+                logPolygon(`translate(${transform.x},${transform.y}) rotate(${transform.rot})`);
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
