@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Mapa Interactivo - Asamblea 2025</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #f0f0f0;
+            margin: 0;
+            height: 100vh;
+        }
+
+        svg {
+            border: 1px solid #ccc;
+            width: 80vw;
+            height: 90vh;
+            background: white;
+        }
+
+        #coords {
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        #size {
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        #rot {
+            margin: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="coords">Coordenadas: (x: -, y: -)</div>
+    <div id="size">Size: (w: -, h: -)</div>
+    <div id="rot">Rotation: (g: -)</div>
+    <svg id="mapa" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+        <!-- Fondo verde (campo/área circundante) -->
+        <rect width="800" height="600" fill="#4a7c59" />
+
+        <!-- Caminos principales -->
+        <!-- Camino perimetral exterior -->
+        <path
+            d="M 100 150 Q 100 100 150 100 L 650 100 Q 700 100 700 150 L 700 450 Q 700 500 650 500 L 150 500 Q 100 500 100 450 Z"
+            fill="none" stroke="#8b7355" stroke-width="12" opacity="0.8" />
+
+        <!-- Camino interior circular alrededor del estadio -->
+        <circle cx="400" cy="300" r="180" fill="none" stroke="#a0896b" stroke-width="8" />
+
+        <!-- Caminos de acceso -->
+        <!-- Acceso norte -->
+        <path d="M 400 120 L 400 180" stroke="#8b7355" stroke-width="6" />
+
+        <!-- Acceso este -->
+        <path d="M 580 300 L 520 300" stroke="#8b7355" stroke-width="6" />
+
+        <!-- Acceso sur -->
+        <path d="M 400 480 L 400 420" stroke="#8b7355" stroke-width="6" />
+
+        <!-- Acceso oeste -->
+        <path d="M 220 300 L 280 300" stroke="#8b7355" stroke-width="6" />
+
+        <rect x="280" y="230" width="240" height="200" rx="30" ry="30" fill="#e8e8e8" stroke="#666" stroke-width="2"
+            transform="rotate(-25,400,300)" />
+
+
+
+
+        <!-- Estadio circular 
+        <circle cx="400" cy="300" r="120" fill="#e8e8e8" stroke="#666" stroke-width="2"/>-->
+       
+        <!-- Segmentos del techo del estadio (simulando la estructura radial) -->
+        <g fill="#d0d0d0" stroke="#999" stroke-width="1" transform="rotate(8,400,300)" >
+            <path d="M 400 300 L 400 180 A 120 120 0 0 1 484.85 240 Z" fill="#f0f0f0" />
+            <path d="M 400 300 L 484.85 240 A 120 120 0 0 1 515.15 360 Z" fill="#e0e0e0" />
+            <path d="M 400 300 L 515.15 360 A 120 120 0 0 1 400 420 Z" fill="#f0f0f0" />
+            <path d="M 400 300 L 400 420 A 120 120 0 0 1 315.15 360 Z" fill="#e0e0e0" />
+            <path d="M 400 300 L 315.15 360 A 120 120 0 0 1 284.85 240 Z" fill="#f0f0f0" />
+            <path d="M 400 300 L 284.85 240 A 120 120 0 0 1 400 180 Z" fill="#e0e0e0" />
+
+        </g>
+        <rect x="340" y="240" width="120" height="130" rx="20" ry="20" fill="#d8d8d8" stroke="#555" stroke-width="2"
+            transform="rotate(-25,400,300)" />
+        <rect x="220" y="120" width="360" height="360" fill="none" stroke="#a0896b" stroke-width="8" />
+
+        <!-- Sectores -->
+         <g id="guarda" transform="translate(388.58929443359375,306.86669921875) rotate(-24)"> <text x="389" y="307" font-size="8" text-anchor="middle">Guardarropas</text> <rect width=34.315188682441516 height=18.3014339639688 fill="lightblue"/> </g>
+<g id="guardarropas" transform="translate(353.08258056640625,260.3005676269531) rotate(-25)"> <text x="353" y="260" font-size="8" text-anchor="middle">Guardarropas</text> <rect width=56.956623190335016 height=30.376865701512017 fill="lightblue"/> </g>
+<g id="guardarropas" transform="translate(328.6353759765625,211.98828125) rotate(-23)"> <text x="329" y="212" font-size="8" text-anchor="middle">Guardarropas</text> <rect width=48.748663736920996 height=25.999287326357877 fill="lightblue"/> </g>
+<g id="guardarropas" transform="translate(374.0373840332031,358.08935546875) rotate(-27)"> <text x="374" y="358" font-size="8" text-anchor="middle">Guardarropas</text> <rect width=32.96303333075049 height=17.580284443066915 fill="lightblue"/> </g>
+<g id="hexGroups" transform="translate(366.6510009765625,281.1075439453125) rotate(0) rotate(0)"><polygon id="hexs" points="68.27810668945312,83.50289916992188 78.7554931640625,103.87557983398438 90.39700317382812,128.32278442382812 25.78656005859375,135.30767822265625 25.78656005859375,119.59164428710938 25.78656005859375,104.4576416015625" fill="orange" stroke="black" stroke-width="2" opacity="0.7"/></g>
+<g id="hexGroups" transform="translate(405.6500549316406,231.0489959716797) rotate(0) rotate(0)"><polygon id="hexs" points="75.26309204101562,130.0690155029297 92.72537231445312,145.20298767089844 78.1734619140625,159.17283630371094 56.0545654296875,175.47096252441406 35.681884765625,131.23316955566406 60.711181640625,118.42750549316406" fill="orange" stroke="black" stroke-width="2" opacity="0.7"/></g>
+<g id="hexGroups" transform="translate(380.6207580566406,94.84315490722656) rotate(0) rotate(0)"><polygon id="hexs" points="72.35269165039062,105.62181091308594 83.41213989257812,117.84541320800781 92.725341796875,128.32276916503906 63.03948974609375,143.45677185058594 48.487579345703125,128.32278442382812 57.218719482421875,100.38311767578125" fill="orange" stroke="black" stroke-width="2" opacity="0.7"/></g>
+<g id="hexGroups" transform="translate(413.217041015625,130.34982299804688) rotate(0) rotate(0)"><polygon id="hexs" points="70.6064453125,105.62181091308594 74.68096923828125,120.17372131347656 60.711151123046875,125.99449157714844 43.248870849609375,135.3076934814453 30.44317626953125,110.86050415039062 60.711151123046875,95.14442443847656" fill="orange" stroke="black" stroke-width="2" opacity="0.7"/></g>
+<g id="hexGroups" transform="translate(242.66873168945312,197.87063598632812) rotate(0) rotate(0)"><polygon id="hexs" points="45.57720947265625,95.72653198242188 78.75552368164062,85.83123779296875 94.47158813476562,122.50201416015625 117.17254638671875,167.90396118164062 92.14328002929688,184.7841796875 68.27816772460938,145.78506469726562" fill="orange" stroke="black" stroke-width="2" opacity="0.7"/></g>
+<g id="hexGroups" transform="translate(219.3857421875,162.94607543945312) rotate(0) rotate(0)"><polygon id="hexs" points="78.09805297851562,67.13444519042969 101.96316528320312,84.0146484375 94.97824096679688,96.8203125 83.33673095703125,91.58163452148438 70.53106689453125,86.92503356933594 74.6055908203125,76.44766235351562" fill="orange" stroke="black" stroke-width="2" opacity="0.7"/></g>
+<g id="hexGroups" transform="translate(407.3962707519531,117.54415893554688) rotate(0) rotate(0)"><polygon id="hexs" points="78.1734619140625,86.41326904296875 84.5762939453125,92.23403930664062 83.41217041015625,102.71141052246094 71.77066040039062,101.54725646972656 56.63665771484375,84.08497619628906 65.3677978515625,80.59251403808594" fill="orange" stroke="black" stroke-width="2" opacity="0.7"/></g>
+<g id="hexGroups" transform="translate(201.34136962890625,176.91590881347656) rotate(0) rotate(0)"><polygon id="hexs" points="92.14324951171875,78.26423645019531 112.51589965820312,85.24916076660156 111.933837890625,95.72651672363281 105.531005859375,102.12937927246094 85.74041748046875,98.63691711425781 88.06869506835938,77.10008239746094" fill="orange" stroke="black" stroke-width="2" opacity="0.7"/></g>
+        <!-- Campo interior 
+  <circle cx="400" cy="300" r="80" fill="#2d5016" stroke="#1a2e0a" stroke-width="1"/>-->
+
+        <!-- Líneas del campo 
+  <circle cx="400" cy="300" r="40" fill="none" stroke="#4a7c2a" stroke-width="1" opacity="0.7"/>
+  <circle cx="400" cy="300" r="8" fill="none" stroke="#4a7c2a" stroke-width="1" opacity="0.7"/>-->
+
+        <!-- Estacionamientos/áreas auxiliares -->
+        <rect x="120" y="350" width="60" height="40" fill="#b8a082" stroke="#8b7355" stroke-width="1" />
+        <rect x="620" y="220" width="40" height="60" fill="#b8a082" stroke="#8b7355" stroke-width="1" />
+        <rect x="320" y="520" width="80" height="30" fill="#b8a082" stroke="#8b7355" stroke-width="1" />
+
+        <!-- Vegetación/áreas verdes -->
+        <ellipse cx="190" cy="200" rx="25" ry="20" fill="#2d4a1e" opacity="0.8" />
+        <ellipse cx="620" cy="400" rx="30" ry="25" fill="#2d4a1e" opacity="0.8" />
+        <ellipse cx="400" cy="520" rx="20" ry="15" fill="#2d4a1e" opacity="0.8" />
+
+        <!-- Entrada principal (más ancha) -->
+        <rect x="395" y="115" width="10" height="10" fill="#8b7355" />
+
+        <!-- Líneas divisorias de los caminos -->
+        <path d="M 400 120 L 400 180" stroke="#a0896b" stroke-width="1" stroke-dasharray="3,3" opacity="0.6" />
+        <path d="M 580 300 L 520 300" stroke="#a0896b" stroke-width="1" stroke-dasharray="3,3" opacity="0.6" />
+        <path d="M 400 480 L 400 420" stroke="#a0896b" stroke-width="1" stroke-dasharray="3,3" opacity="0.6" />
+        <path d="M 220 300 L 280 300" stroke="#a0896b" stroke-width="1" stroke-dasharray="3,3" opacity="0.6" />
+
+        <!-- Guardarropas -->
+        <g id="guardarropas" transform="translate(700,300)">
+            <rect width="150" height="80" fill="lightblue" />
+            <text x="75" y="45" font-size="8" text-anchor="middle">Guardarropas</text>
+        </g>
+
+
+        <g id="hexGroup" transform="translate(359.6660461425781,87.97648620605469) rotate(0)">
+            <polygon id="hex"
+                points="86.33340454101562,72.73101806640625 104.390869140625,82.58055114746094 125.73147583007812,94.89244079589844 84.69180297851562,144.1400604248047 55.53689082450346,133.28853797880825 66.63436889648438,61.23991394042969"
+                fill="orange" stroke="black" stroke-width="2" opacity="0.7" />
+        </g>
+
+
+
+    </svg>
+    <!-- Dialog oculto -->
+<div id="dialog" 
+     style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%);
+            background:white; border:1px solid #999; padding:20px; border-radius:8px; 
+            box-shadow:0px 0px 10px rgba(0,0,0,0.3);">
+  <h3>Información del Guardarropas</h3>
+  <p>Aquí puedes mostrar más detalles: ubicación, capacidad, responsable, etc.</p>
+  <button onclick="closeDialog()">Cerrar</button>
+</div>
+
+<style>
+  /* Efecto hover (al pasar el mouse) */
+  #guarda:hover rect {
+    fill: deepskyblue;
+  }
+</style>
+
+<script>
+  const rect = document.getElementById("guard");
+
+  rect.addEventListener("click", () => {
+    // Si ya está en rojo, vuelve al azul claro
+    if (rect.getAttribute("fill") === "red") {
+      rect.setAttribute("fill", "lightblue");
+    } else {
+      rect.setAttribute("fill", "red");
+    }
+  });
+</script>
+<script>
+  const guardarropas = document.getElementById("guarda");
+  const dialog = document.getElementById("dialog");
+
+  guardarropas.addEventListener("click", () => {
+    dialog.style.display = "block";
+  });
+
+  function closeDialog() {
+    dialog.style.display = "none";
+  }
+</script>
+    <script>
+        const svg = document.getElementById("mapa");
+        const coords = document.getElementById("coords");
+        const size = document.getElementById("size");
+        const rot = document.getElementById("rot");
+        let selected = null;
+        let offset = { x: 0, y: 0 };
+        let selectedTransform = { x: 0, y: 0, rot: 0 };
+
+        function parseTransform(transform) {
+            const match = /translate\(([-\d.]+),([-\d.]+)\)\s*rotate\(([-\d.]*)\)/.exec(transform);
+            if (match) {
+                return { x: parseFloat(match[1]), y: parseFloat(match[2]), rot: parseFloat(match[3]) || 0 };
+            }
+            const match2 = /translate\(([-\d.]+),([-\d.]+)\)/.exec(transform);
+            if (match2) {
+                return { x: parseFloat(match2[1]), y: parseFloat(match2[2]), rot: 0 };
+            }
+            return { x: 0, y: 0, rot: 0 };
+        }
+
+        svg.addEventListener("mousedown", e => {
+            if (e.target.tagName === "rect" || e.target.tagName === "text") {
+                selected = e.target.parentNode;
+                selectedTransform = parseTransform(selected.getAttribute("transform") || "translate(0,0)");
+                const pt = svg.createSVGPoint();
+                pt.x = e.clientX;
+                pt.y = e.clientY;
+                const svgP = pt.matrixTransform(svg.getScreenCTM().inverse());
+                offset.x = svgP.x - selectedTransform.x;
+                offset.y = svgP.y - selectedTransform.y;
+            }
+        });
+
+        svg.addEventListener("mousemove", e => {
+            if (selected) {
+                const pt = svg.createSVGPoint();
+                pt.x = e.clientX;
+                pt.y = e.clientY;
+                const svgP = pt.matrixTransform(svg.getScreenCTM().inverse());
+                selectedTransform.x = svgP.x - offset.x;
+                selectedTransform.y = svgP.y - offset.y;
+                selected.setAttribute("transform", `translate(${selectedTransform.x},${selectedTransform.y}) rotate(${selectedTransform.rot})`);
+                coords.textContent = `<text x="${Math.round(selectedTransform.x)}" y="${Math.round(selectedTransform.y)}" font-size="8" text-anchor="middle">Guardarropas</text>`;
+
+            }
+        });
+
+        svg.addEventListener("mouseup", () => { selected = null; });
+        svg.addEventListener("mouseleave", () => { selected = null; });
+
+        // Zoom (agrandar/achicar)
+        svg.addEventListener("wheel", e => {
+            if (selected) {
+                e.preventDefault();
+                const rect = selected.querySelector("rect");
+                let w = parseFloat(rect.getAttribute("width"));
+                let h = parseFloat(rect.getAttribute("height"));
+                if (e.deltaY < 0) { // zoom in
+                    w *= 1.1;
+                    h *= 1.1;
+                } else { // zoom out
+                    w *= 0.9;
+                    h *= 0.9;
+                }
+                rect.setAttribute("width", w);
+                rect.setAttribute("height", h);
+                size.textContent = `<rect width=${w} height=${h} fill="lightblue"/>`;
+            }
+
+        });
+
+        // Rotar con tecla R
+        document.addEventListener("keydown", e => {
+            if (selected && e.key.toLowerCase() === "r") {
+                selectedTransform.rot += 1;
+                selected.setAttribute("transform", `translate(${selectedTransform.x},${selectedTransform.y}) rotate(${selectedTransform.rot})`);
+                rot.textContent = `<g id="guardarropas" transform="translate(${selectedTransform.x},${selectedTransform.y}) rotate(${selectedTransform.rot})">             
+         ${coords.textContent}
+         ${size.textContent}
+            </g>`;
+            }
+            if (selected && e.key.toLowerCase() === "e") {
+                selectedTransform.rot -= 1;
+                selected.setAttribute("transform", `translate(${selectedTransform.x},${selectedTransform.y}) rotate(${selectedTransform.rot})`);
+                rot.textContent = `<g id="guardarropas" transform="translate(${selectedTransform.x},${selectedTransform.y}) rotate(${selectedTransform.rot})">             
+         ${coords.textContent}
+         ${size.textContent}
+            </g>`;
+            }
+        });
+
+    </script>
+     <!-- Guardarropas
+   <script>
+        const hexGroup = document.getElementById("hexGroup");
+        const hex = document.getElementById("hex");
+        let selectedGroup = null;
+        let selectedHandle = null;
+        let offset2 = { x: 0, y: 0 };
+        let transform = { x: 300, y: 200, rot: 0 };
+
+        // === Crear handles ===
+        function createHandles() {
+            const pts = hex.getAttribute("points").split(" ").map(p => {
+                const [x, y] = p.split(",").map(Number);
+                return { x, y };
+            });
+            pts.forEach((pt, i) => {
+                const c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                c.setAttribute("cx", pt.x);
+                c.setAttribute("cy", pt.y);
+                c.setAttribute("r", 6);
+                c.setAttribute("fill", "red");
+                c.style.cursor = "move";
+                c.dataset.index = i;
+                hexGroup.appendChild(c);
+            });
+        }
+        createHandles();
+
+        // === Actualizar hexágono desde los handles ===
+        function updateHex() {
+            const circles = hexGroup.querySelectorAll("circle");
+            const newPoints = Array.from(circles).map(c => {
+                return `${c.getAttribute("cx")},${c.getAttribute("cy")}`;
+            }).join(" ");
+            hex.setAttribute("points", newPoints);
+            logPolygon(); // 🔥 loggear cada vez que cambia
+        }
+
+        // === Mostrar el HTML actualizado del polygon ===
+        function logPolygon(tra) {
+            if (tra) {
+                rot.textContent = `<g id="hexGroup" transform="${tra} rotate(0)"><polygon id="hex" points="${hex.getAttribute("points")}" fill="orange" stroke="black" stroke-width="2" opacity="0.7"/></g>`;
+            }
+        }
+
+        // === Parse transform de un grupo ===
+        function parseTransform(transformStr) {
+            const match = /translate\(([-\d.]+),([-\d.]+)\)\s*rotate\(([-\d.]*)\)/.exec(transformStr);
+            if (match) {
+                return { x: parseFloat(match[1]), y: parseFloat(match[2]), rot: parseFloat(match[3]) || 0 };
+            }
+            return { x: 0, y: 0, rot: 0 };
+        }
+
+        // === Selección y arrastre ===
+        svg.addEventListener("mousedown", e => {
+            if (e.target.tagName === "circle") {
+                selectedHandle = e.target;
+            } else if (e.target.tagName === "polygon") {
+                selectedGroup = hexGroup;
+                transform = parseTransform(hexGroup.getAttribute("transform"));
+                const pt = svg.createSVGPoint();
+                pt.x = e.clientX; pt.y = e.clientY;
+                const svgP = pt.matrixTransform(svg.getScreenCTM().inverse());
+                offset2.x = svgP.x - transform.x;
+                offset2.y = svgP.y - transform.y;
+            }
+        });
+
+        svg.addEventListener("mousemove", e => {
+            if (selectedHandle) {
+                const pt = svg.createSVGPoint();
+                pt.x = e.clientX; pt.y = e.clientY;
+                const svgP = pt.matrixTransform(svg.getScreenCTM().inverse());
+                selectedHandle.setAttribute("cx", svgP.x - transform.x);
+                selectedHandle.setAttribute("cy", svgP.y - transform.y);
+                updateHex();
+            } else if (selectedGroup) {
+                const pt = svg.createSVGPoint();
+                pt.x = e.clientX; pt.y = e.clientY;
+                const svgP = pt.matrixTransform(svg.getScreenCTM().inverse());
+                transform.x = svgP.x - offset2.x;
+                transform.y = svgP.y - offset2.y;
+                hexGroup.setAttribute("transform", `translate(${transform.x},${transform.y}) rotate(${transform.rot})`);
+                logPolygon(`translate(${transform.x},${transform.y}) rotate(${transform.rot})`);
+            }
+        });
+
+        svg.addEventListener("mouseup", () => { selectedHandle = null; selectedGroup = null; });
+        svg.addEventListener("mouseleave", () => { selectedHandle = null; selectedGroup = null; });
+
+        // === Zoom con rueda ===
+        svg.addEventListener("wheel", e => {
+            if (hexGroup && !selectedHandle) {
+                e.preventDefault();
+                const poly = hex;
+                const pts = poly.getAttribute("points").split(" ").map(p => p.split(",").map(Number));
+                let factor = (e.deltaY < 0) ? 1.1 : 0.9;
+                const newPts = pts.map(([x, y]) => [x * factor, y * factor]);
+                poly.setAttribute("points", newPts.map(p => p.join(",")).join(" "));
+                const circles = hexGroup.querySelectorAll("circle");
+                newPts.forEach(([x, y], i) => {
+                    circles[i].setAttribute("cx", x);
+                    circles[i].setAttribute("cy", y);
+                });
+                logPolygon();
+            }
+        });
+
+        // === Rotar con R/E ===
+        document.addEventListener("keydown", e => {
+            if (e.key.toLowerCase() === "r") {
+                transform.rot += 2;
+                hexGroup.setAttribute("transform", `translate(${transform.x},${transform.y}) rotate(${transform.rot})`);
+                logPolygon(`translate(${transform.x},${transform.y}) rotate(${transform.rot})`);
+            }
+            if (e.key.toLowerCase() === "e") {
+                transform.rot -= 2;
+                hexGroup.setAttribute("transform", `translate(${transform.x},${transform.y}) rotate(${transform.rot})`);
+                logPolygon(`translate(${transform.x},${transform.y}) rotate(${transform.rot})`);
+            }
+        });
+    </script> -->
+
+
+</body>
+
+</html>
