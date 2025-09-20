@@ -5,7 +5,7 @@
             "label": "Start Web Server",
             "type": "shell",
             "command": "python",
-            "args": ["-m", "http.server", "8080"],
+            "args": ["-m", "http.server", "8000"],
             "group": "build",
             "presentation": {
                 "echo": true,
