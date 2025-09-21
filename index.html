@@ -892,9 +892,7 @@
                 x.localidad?.toLowerCase().includes(localidadFilter.toLowerCase()) &&
                 x.categoria === parentFilter
             );
-            debugger;
             if (currentAssembly && filteredList) {
-              debugger;
               filteredList = filteredList.filter(item => {
                 if (currentAssembly === 'asamblea1') {
                   return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
