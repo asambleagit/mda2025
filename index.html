@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Asamblea Adoración Pura 2025 | Estadio de la Costa, Mar de Ajó</title>
-  <meta name="description"
-    content="Únase a nosotros en la Asamblea Adoración Pura el 19 de octubre de 2025 en el Estadio de la Costa, Mar de Ajó, Buenos Aires. Un evento espiritual transformador para toda la familia." />
+  <title>Departamento de Información y Servicio Voluntario | Estadio de la Costa, Mar de Ajó</title>
+  
   <meta name="keywords"
     content="Asamblea Adoración Pura, Mar de Ajó, Buenos Aires, evento religioso, adoración, octubre 2025" />
   <link href="css/styles.css" rel="stylesheet" />
@@ -927,17 +926,24 @@
                   <div class="amenity-actions">
                     ${
                       item.categoria === 'hotel'
-                        ? (currentAssembly === 'asamblea1' && item.link1
-                            ? `<a href="${item.link1}" class="calm-btn-sm" target="_blank">Google Maps</a>`
-                            : currentAssembly === 'asamblea2' && item.link2
-                            ? `<a href="${item.link2}" class="calm-btn-sm" target="_blank">Google Maps</a>`
-                            : '')
-                        : `
-                            ${item.link1 ? `<a href="${item.link1}" class="calm-btn-sm" target="_blank">Google Maps</a>` : ''}
-                            ${item.link2 ? `<a href="${item.link2}" class="calm-btn-sm" target="_blank">Sitio de la Municipalidad</a>` : ''}
-                          `
+                        ? (
+                            (currentAssembly === 'asamblea1' && item.link1)
+                              ? `<a href="${item.link1}" class="calm-btn-sm" target="_blank">Google Maps</a>`
+                              : (currentAssembly === 'asamblea2' && item.link2)
+                                ? `<a href="${item.link2}" class="calm-btn-sm" target="_blank">Google Maps</a>`
+                                : `<span>No existe información disponible, realiza la búsqueda en localidades cercanas</span>`
+                          )
+                        : (
+                            (item.link1 || item.link2)
+                              ? `
+                                  ${item.link1 ? `<a href="${item.link1}" class="calm-btn-sm" target="_blank">Google Maps</a>` : ''}
+                                  ${item.link2 ? `<a href="${item.link2}" class="calm-btn-sm" target="_blank">Sitio de la Municipalidad</a>` : ''}
+                                `
+                              : `<span>No existe información disponible, realiza la búsqueda en localidades cercanas</span>`
+                          )
                     }
                   </div>
+
 
               </div>
           </div>
