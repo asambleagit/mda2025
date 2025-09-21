@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Asamblea Adoración Pura 2025 | Estadio de la Costa, Mar de Ajó</title>
-  <meta name="description"
-    content="Únase a nosotros en la Asamblea Adoración Pura el 19 de octubre de 2025 en el Estadio de la Costa, Mar de Ajó, Buenos Aires. Un evento espiritual transformador para toda la familia." />
+  <title>Departamento de Información y Servicio Voluntario | Estadio de la Costa, Mar de Ajó</title>
+  
   <meta name="keywords"
     content="Asamblea Adoración Pura, Mar de Ajó, Buenos Aires, evento religioso, adoración, octubre 2025" />
   <link href="css/styles.css" rel="stylesheet" />
@@ -35,7 +34,7 @@
   </section>
   <section class="roundedUpHeroEffect">
     <div class="hero-image-container text-center mt-4">
-      <img src="Image/logo1.png" alt="Hero" class="hero-animated-img">
+      <img src="Image/logo1-min.png" alt="Hero" class="hero-animated-img">
     </div>
   </section>
 
@@ -755,7 +754,7 @@
       selectedCard.style.border = '1px solid #dee2e6';
 
       // Mensaje en consola (debug)
-      console.log(`Asamblea seleccionada: ${assemblyId}`);
+      //console.log(`Asamblea seleccionada: ${assemblyId}`);
 
       // Disparar un evento personalizado para notificar a otros componentes
       const event = new CustomEvent('assemblyChanged', {
@@ -862,7 +861,9 @@
                 x.localidad?.toLowerCase().includes(localidadFilter.toLowerCase()) &&
                 x.categoria === parentFilter
             );
-            if (currentAssembly) {
+            debugger;
+            if (currentAssembly && filteredList) {
+              debugger;
               filteredList = filteredList.filter(item => {
                 if (currentAssembly === 'asamblea1') {
                   return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
@@ -899,7 +900,7 @@
           if (localidadFilter === "all") {
             // Mostrar todo si no hay filtros
             let filteredList = window.globalEventData;
-            if (currentAssembly) {
+            if (currentAssembly && filteredList) {
               filteredList = filteredList.filter(item => {
                 if (currentAssembly === 'asamblea1') {
                   return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
@@ -914,7 +915,7 @@
           else {
             // Filtrar solo por localidad
             let filteredList = window.globalEventData.filter(x => x.localidad?.toLowerCase().includes(localidadFilter.toLowerCase()));
-            if (currentAssembly) {
+            if (currentAssembly && filteredList) {
               filteredList = filteredList.filter(item => {
                 if (currentAssembly === 'asamblea1') {
                   return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
@@ -931,7 +932,7 @@
           if (localidadFilter === "all") {
             // Filtrar solo por categoría
             let filteredList = window.globalEventData.filter(i => i.categoria === parentFilter);
-            if (currentAssembly) {
+            if (currentAssembly && filteredList) {
               filteredList = filteredList.filter(item => {
                 if (currentAssembly === 'asamblea1') {
                   return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
@@ -950,7 +951,7 @@
                 x.localidad?.toLowerCase().includes(localidadFilter.toLowerCase()) &&
                 x.categoria === parentFilter
             );
-            if (currentAssembly) {
+            if (currentAssembly && filteredList) {
               filteredList = filteredList.filter(item => {
                 if (currentAssembly === 'asamblea1') {
                   return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
@@ -980,9 +981,11 @@
 
     // ---- Renderizado de servicios (amenities) ----
     function renderAmenities2(amenitiesData) {
+      if(!amenitiesData){return;}
       const container = document.getElementById("amenities-list");
+      const activeAssemblyCard = document.querySelector('.assembly-card.active');
+      const currentAssembly = activeAssemblyCard ? activeAssemblyCard.dataset.assembly : null;
       container.innerHTML = ""; // Limpiar la lista antes de renderizar
-
       amenitiesData.forEach((item) => {
         if (item.actions) {
           // (Opcional) Renderizar botones adicionales si el servicio tiene acciones definidas
@@ -993,7 +996,6 @@
             )
             .join("");
         }
-
         // Plantilla HTML de cada servicio
         const html = `
            <div class="col-lg-${amenitiesData.length == 1 ? "12" : "6"} amenity-item-wrapper" data-category="${item.categoria}">
@@ -1008,9 +1010,27 @@
                   </div>
                   <p style="color: var(--calm-text-light); margin-bottom: 16px;">Elige alguna de las siguientes opciones para ver la información.</p>
                   <div class="amenity-actions">
-                      ${item.link1 ? `<a href="${item.link1}" class="calm-btn-sm" target="_blank">Google Maps</a>` : ''}
-                      ${item.link2 ? `<a href="${item.link2}" class="calm-btn-sm" target="_blank">Sitio de la Municipalidad</a>` : ''}
+                    ${
+                      item.categoria === 'hotel'
+                        ? (
+                            (currentAssembly === 'asamblea1' && item.link1)
+                              ? `<a href="${item.link1}" class="calm-btn-sm" target="_blank">Google Maps</a>`
+                              : (currentAssembly === 'asamblea2' && item.link2)
+                                ? `<a href="${item.link2}" class="calm-btn-sm" target="_blank">Google Maps</a>`
+                                : `<span>No existe información disponible, realiza la búsqueda en localidades cercanas</span>`
+                          )
+                        : (
+                            (item.link1 || item.link2)
+                              ? `
+                                  ${item.link1 ? `<a href="${item.link1}" class="calm-btn-sm" target="_blank">Google Maps</a>` : ''}
+                                  ${item.link2 ? `<a href="${item.link2}" class="calm-btn-sm" target="_blank">Sitio de la Municipalidad</a>` : ''}
+                                `
+                              : `<span>No existe información disponible, realiza la búsqueda en localidades cercanas</span>`
+                          )
+                    }
                   </div>
+
+
               </div>
           </div>
         `;
@@ -1035,19 +1055,19 @@
       let filteredList = window.globalEventData;
 
       // Filtrar por categoría si no es "all"
-      if (categoryFilter !== "all") {
+      if (categoryFilter !== "all" && filteredList) {
         filteredList = filteredList.filter(i => i.categoria === categoryFilter);
       }
 
       // Filtrar por localidad si no es "all"
-      if (localityFilter !== "all") {
+      if (localityFilter !== "all" && filteredList) {
         filteredList = filteredList.filter(x => x.localidad?.toLowerCase().includes(localityFilter.toLowerCase()));
       }
 
       // Filtrar por asamblea
-      if (selectedAssembly === 'asamblea1') {
+      if (selectedAssembly === 'asamblea1' && filteredList) {
         filteredList = filteredList.filter(item => item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea);
-      } else if (selectedAssembly === 'asamblea2') {
+      } else if (selectedAssembly === 'asamblea2' && filteredList) {
         filteredList = filteredList.filter(item => item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea);
       }
 
