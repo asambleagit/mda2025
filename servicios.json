@@ -3,14 +3,14 @@
     "categoria": "farmacia",
     "localidad": "bernardo",
     "titulo": "Farmacias en San Bernardo",
-    "link1": "https://lacosta.gob.ar/salud/",
+    "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
   {
     "categoria": "farmacia",
     "localidad": "ajo",
     "titulo": "Farmacias en Mar de Ajó",
-    "link1": "https://lacosta.gob.ar/salud/",
+    "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
   {
@@ -18,6 +18,7 @@
     "localidad": "teresita",
     "titulo": "Farmacias en Santa Teresita",
     "link1": "https://www.google.com/maps/search/farmacias+santa+teresita",
+    "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
   {
@@ -25,6 +26,7 @@
     "localidad": "tuyu",
     "titulo": "Farmacias en Mar del Tuyú",
     "link1": "https://www.google.com/maps/search/farmacias+mar+del+tuyu",
+    "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
   {
@@ -32,6 +34,7 @@
     "localidad": "costa",
     "titulo": "Farmacias en Costa del Este",
     "link1": "https://www.google.com/maps/search/farmacias+costa+del+este",
+    "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
   {
@@ -39,6 +42,7 @@
     "localidad": "aguas",
     "titulo": "Farmacias en Aguas Verdes",
     "link1": "https://www.google.com/maps/search/farmacias+aguas+verdes",
+    "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
   {
@@ -46,6 +50,7 @@
     "localidad": "lucila",
     "titulo": "Farmacias en Lucila del Mar",
     "link1": "https://www.google.com/maps/search/farmacias+lucila+del+mar",
+    "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
   {
@@ -53,6 +58,7 @@
     "localidad": "atlantis",
     "titulo": "Farmacias en Nueva Atlantis",
     "link1": "https://www.google.com/maps/search/farmacias+nueva+atlantis",
+    "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
   {
@@ -60,6 +66,7 @@
     "localidad": "medanos",
     "titulo": "Farmacias en Punta Medanos",
     "link1": "https://www.google.com/maps/search/farmacias+punta+medanos",
+    "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
   {
@@ -67,6 +74,7 @@
     "localidad": "pinamar",
     "titulo": "Farmacias en Pinamar",
     "link1": "https://www.google.com/maps/search/farmacias+pinamar",
+    "link2" : "https://pinamar.gob.ar/salud/",
     "asamblea": "both"
   },
   {
@@ -246,7 +254,7 @@
     "categoria": "centroSalud",
     "localidad": "bernardo",
     "titulo": "Centros de Salud en San Bernardo",
-    "link1": "https://lacosta.gob.ar/salud/",
+    "link2": "https://lacosta.gob.ar/salud/",
     "asamblea": "both"
   },
   {
@@ -254,6 +262,7 @@
     "localidad": "ajo",
     "titulo": "Centros de Salud en Mar de Ajó",
     "link1": "https://lacosta.gob.ar/salud/",
+    "link2": "https://lacosta.gob.ar/salud/",
     "asamblea": "both"
   },
   {
@@ -261,6 +270,7 @@
     "localidad": "teresita",
     "titulo": "Centros de Salud en Santa Teresita",
     "link1": "https://www.google.com/maps/search/centros+de+salud+santa+teresita",
+    "link2": "https://lacosta.gob.ar/salud/",
     "asamblea": "both"
   },
   {
@@ -268,6 +278,7 @@
     "localidad": "tuyu",
     "titulo": "Centros de Salud en Mar del Tuyú",
     "link1": "https://www.google.com/maps/search/centros+de+salud+mar+del+tuyu",
+    "link2": "https://lacosta.gob.ar/salud/",
     "asamblea": "both"
   },
   {
@@ -275,6 +286,7 @@
     "localidad": "costa",
     "titulo": "Centros de Salud en Costa del Este",
     "link1": "https://www.google.com/maps/search/centros+de+salud+costa+del+este",
+    "link2": "https://lacosta.gob.ar/salud/",
     "asamblea": "both"
   },
   {
@@ -282,6 +294,7 @@
     "localidad": "aguas",
     "titulo": "Centros de Salud en Aguas Verdes",
     "link1": "https://www.google.com/maps/search/centros+de+salud+aguas+verdes",
+    "link2": "https://lacosta.gob.ar/salud/",
     "asamblea": "both"
   },
   {
@@ -289,6 +302,7 @@
     "localidad": "lucila",
     "titulo": "Centros de Salud en Lucila del Mar",
     "link1": "https://www.google.com/maps/search/centros+de+salud+lucila+del+mar",
+    "link2": "https://lacosta.gob.ar/salud/",
     "asamblea": "both"
   },
   {
@@ -296,6 +310,7 @@
     "localidad": "atlantis",
     "titulo": "Centros de Salud en Nueva Atlantis",
     "link1": "https://www.google.com/maps/search/centros+de+salud+nueva+atlantis",
+    "link2": "https://lacosta.gob.ar/salud/",
     "asamblea": "both"
   },
   {
@@ -303,6 +318,7 @@
     "localidad": "medanos",
     "titulo": "Centros de Salud en Punta Medanos",
     "link1": "https://www.google.com/maps/search/centros+de+salud+punta+medanos",
+    "link2": "https://lacosta.gob.ar/salud/",
     "asamblea": "both"
   },
   {
@@ -310,6 +326,7 @@
     "localidad": "pinamar",
     "titulo": "Centros de Salud en Pinamar",
     "link1": "https://www.google.com/maps/search/centros+de+salud+pinamar",
+    "link2" : "https://pinamar.gob.ar/salud/",
     "asamblea": "both"
   },
   {
