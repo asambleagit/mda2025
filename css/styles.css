@@ -515,6 +515,7 @@ body {
   cursor: pointer;
   opacity: 0.6;
   transition: background-color 0.3s ease, opacity 0.3s ease;
+  z-index: 1000;
 }
 
 /* Animación de cambio de color suave */
