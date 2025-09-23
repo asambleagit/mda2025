@@ -1,57 +1,41 @@
-/* Variables de color */
-/* Paleta colores verde combinada con morado.
-#1C4D6D Azul Titulo
-#699171 Verde subtitulo
-#878889 Gris
-#3C5D4E Verde oscuro
-#40665B Verde intermedio
-#CAD5B5 Verde claro 
-#E0E5CA Verde muy claro
-#A2D9D0 Celeste claro
-#DCF8F8 Celeste muy claro
-#1D2427 Casi negro
-#D6CDAE Bronce
-#B2BAA4 bronce oscuro
-*/
 
-/*Gradiente 
-linear-gradient(to bottom, #DCF8F8, #A2D9D0, #E0E5CA) Verde/amarillo
-linear-gradient(to right,#B2BAA4 0,#D6CDAE 10%, #B2BAA4 100% ) Bronce / Bronce oscuro
-linear-gradient(to right, #A2D9D0 0, #DCF8F8 10%, #DCF8F8 100%) 
-*/
+
 :root {
-  --text-dark: #1f2937;
+  --dark: #1f2937;
   --white: #ffffff;
+  --verdeOscuro: #539091;
+  --verdeClaro: #ccdddd;
+  --azulOscuro: #1c6697;
+  --azulClaro: #f0f4ff;
+  --beigeOscuro: #aca58f;
+  --beigeClaro: #c7c3b4;
+  --calm-secondary: #4a90a4;
+  --calm-text: #2c3e50;
 
-  --calm-accent: #85CDCA;
-  --calm-light: #B8E6E1;
+  --calm-accent: #85cdca;
+  --calm-light: #b8e6e1;
 
   --body-back-effects: #1c4975;
 
-  --bgseccion-dentro:  #f0f4ff;;
-  --textseccion-dentro: #1c6697;
 
-  --bgseccion-fuera: linear-gradient(to right, #B2BAA4 0%, #D6CDAE 10%, #D6CDAE 100%);
-  --textseccion-fuera: #539091;
+  --bgportada-color: linear-gradient(
+    135deg,
+    var(--calm-light),
+    var(--calm-accent)
+  );
 
-  --bgseccion-info: linear-gradient(to right, #A2D9D0 0, #E0E5CA 10%, #E0E5CA 100%);
-  --textseccion-info: #539091;
+  --calm-primary: #2d5aa0;
+  
 
-  --bgportada-color: linear-gradient(135deg, var(--calm-light), var(--calm-accent));
-
-
-  --calm-primary: #2D5AA0;
-  --calm-secondary: #4A90A4;
- 
-   --calm-accent: #85CDCA;
-  --calm-light: #B8E6E1;
-  --calm-cream: #F7F5F3;
-  --calm-white: #FFFFFF;
-  --calm-text: #2C3E50;
+  --calm-accent: #85cdca;
+  --calm-light: #b8e6e1;
+  --calm-cream: #f7f5f3;
+  --calm-white: #ffffff;
+  
   --calm-text-light: #718096;
-  --calm-green: #68C3A3;
-  --calm-sunset: #F093FB;
-  --calm-sunrise: #F5D020;
+  --calm-green: #68c3a3;
+  --calm-sunset: #f093fb;
+  --calm-sunrise: #f5d020;
 }
 
 /* Reset */
@@ -70,13 +54,12 @@ body {
 
 .linea-sombreada {
   width: 100%;
-  height: 1px;                /* grosor de la línea */
-  background: #333;           /* color base */
-  border: none;               /* quitar borde por defecto */
-  
+  height: 1px; /* grosor de la línea */
+  background: #333; /* color base */
+  border: none; /* quitar borde por defecto */
+
   margin-bottom: 5%;
 }
-
 
 /* Portada Section */
 .hero {
@@ -138,7 +121,7 @@ body {
 }
 
 .roundedDownEffect::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -146,7 +129,7 @@ body {
   height: 100%;
   /* Este es el color/gradiente del círculo */
   /*background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);*/
-  background: var(--textseccion-info);
+  background: var(--verdeOscuro);
   /*clip-path: circle(50% at 50% 50%);*/
   /*clip-path: polygon(100% 70%, 100% 0%, 0% 0%, 0% 70%, 50% 100%);*/
   clip-path: ellipse(55% 70% at 49% 0%);
@@ -163,11 +146,10 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
-
 }
 
 .roundedUpHeroEffect::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -175,28 +157,26 @@ body {
   height: 100%;
   /* Este es el color/gradiente del círculo */
   /*background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);*/
-  background: var(--textseccion-info);
+  background: var(--verdeOscuro);
   /*clip-path: circle(50% at 50% 50%);*/
   /*clip-path: polygon(100% 70%, 100% 0%, 0% 0%, 0% 70%, 50% 100%);*/
   opacity: 0.3;
   clip-path: ellipse(70% 60% at 50% 100%);
-
 }
 
 /* Efecto redondeado hacia arriba */
 .roundedUpEffect {
   /*background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);*/
-  background: white;  
+  background: white;
   min-height: 3vh;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
-
 }
 
 .roundedUpEffect::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -204,7 +184,7 @@ body {
   height: 100%;
   /* Este es el color/gradiente del círculo */
   /*background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);*/
-  background: var(--textseccion-info);
+  background: var(--verdeOscuro);
   /*clip-path: circle(50% at 50% 50%);*/
   /*clip-path: polygon(100% 70%, 100% 0%, 0% 0%, 0% 70%, 50% 100%);*/
   clip-path: ellipse(80% 90% at 49% 100%);
@@ -222,7 +202,7 @@ body {
   transition: all 0.3s ease;
 }
 .info-btn:hover {
-  box-shadow: 0 8px 14px rgba(0,0,0,0.2), 0 3px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
   transition: all 0.2s ease-in-out;
 }
@@ -234,7 +214,6 @@ body {
 .dentro-btn {
   background: white;
   color: var(--textseccion-dentro);
-  
 }
 
 .fuera-btn {
@@ -246,43 +225,35 @@ body {
   background-color: whitesmoke;
   color: black;
 }
-
-/* Quick Access */
-.quick-access-icon {
-  width: 100px;
-  height: 100px;
-  background-color: #f0f0f0;
-  border-radius: 50%;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  transition: all 0.3s ease;
-  cursor: pointer;
+/* Seccion como llegar*/
+.cardUbicacion {
+  max-width: 540px;
+  height: auto; /* valor base */
+  min-height: 150px;
 }
 
-.quick-access-icon:hover {
-  border: 2px solid var(--textseccion-info);
-  transform: scale(1.1);
+/* Pantallas grandes */
+@media (min-width: 1200px) {
+  .cardUbicacion {
+    height: 190px;
+  }
 }
 
-.quick-access-icon img {
-  width: 60%;
-  height: auto;
+/* Tablets */
+@media (max-width: 991px) {
+  .cardUbicacion {
+    height: auto;
+    min-height: 170px;
+  }
 }
 
-.quick-accessInfo-title {
-  font-weight: bold;
-  color: var(--textseccion-info);
-  margin-top: 10px;
+/* Celulares */
+@media (max-width: 576px) {
+  .cardUbicacion {
+    height: auto;
+    min-height: 200px; /* un poquito más para dar aire */
+  }
 }
-
-.quick-access-subtitle {
-  color: #555;
-  font-size: 14px;
-}
-
 
 /* FAQ */
 .faq-item {
@@ -350,30 +321,34 @@ body {
   display: none;
 }
 
-
-
 /* Chips en mobile (2 visibles) */
 .chip-item {
   flex: 0 0 40%;
   scroll-snap-align: start;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: transform .2s ease, box-shadow .2s ease;
-
-
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .chip-item:hover {
-
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
-.chip-item.active {
-  background-color: #64c7c3;
-  color: #fff;
-  box-shadow: 0 8px 18px rgba(100, 199, 195, 0.2);
+
+/* Mobile: reducir espacio lateral */
+@media (max-width: 768px) {
+  .chip-carousel-container {
+    padding: 0 0.8rem; /* 🔹 menos espacio en los costados */
+  }
+
+  .chip-item {
+    flex: 0 0 45%; /* 🔹 ocupa un poquito más (antes 40%) */
+  }
 }
-
-
+.chip-item.active {
+  background-color: #586464;
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(125, 141, 140, 0.2);
+}
 
 /* En pantallas medianas (desktop) → distribución normal */
 @media (min-width: 768px) {
@@ -390,109 +365,79 @@ body {
   }
 }
 
-/* Servicios */
-@media (max-width: 576px) {
-  .amenity-card {
-    width: 95%;
-    margin-left: 3%;
-  }
-
-  #amenities-list {
-    max-height: 500px;
-    /* ajustá el valor según el alto real de 2 cards */
-    overflow-y: auto;
-    padding-right: 8px;
-    /* opcional, evita que el scroll tape contenido */
-  }
-
-  /* Opcional: estilizar el scroll */
-  #amenities-list::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  #amenities-list::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-  }
+/* Reseteo general para evitar scroll horizontal */
+.amenity-header {
+  display: flex;
+  align-items: center; /* 🔹 centra verticalmente icono y título */
+  gap: 12px;           /* 🔹 espacio entre icono y título */
+  margin-bottom: 12px;
+}
+#amenities-list {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* 🔹 bloquea scroll horizontal */
+  margin: 0;
+  padding: 0 8px; /* un poco de aire */
+  box-sizing: border-box;
 }
 
 .amenity-card {
-
   background: var(--calm-white);
   border-radius: 16px;
   padding: 24px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
-  margin-bottom: 1%;
+  margin-bottom: 16px; /* más estándar */
   border-left: 4px solid #aca58f;
+  border-top: 1px solid var(--beigeClaro);
+  border-bottom: 1px solid var(--beigeClaro);
+  border-right: 1px solid var(--beigeClaro);
+  width: 100%;         /* 🔹 ocupar siempre ancho completo */
+  max-width: 100%;     /* 🔹 nunca exceder */
+  box-sizing: border-box;
 }
+.amenity-icon { width: 40px; height: 40px; border-radius: 8px; background: #aca58f; display: flex; align-items: center; justify-content: center; color: var(--white); margin-right: 16px; }
 
 .amenity-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
+.amenity-title { font-weight: 500; font-size: 1.1rem; color: var(--calm-text); margin: 0; } .amenity-meta { color: var(--calm-text-light); font-size: 0.9rem; margin-bottom: 12px; } .amenity-actions { display: flex; gap: 8px; flex-wrap: wrap; }
 
-.amenity-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 12px;
+/* Mobile: que no se desplace */
+@media (max-width: 576px) {
+  .amenity-card {
+    width: 100% !important; /* 🔹 elimina el 95% que te generaba exceso */
+    margin: 0 auto 16px;     /* 🔹 centrado limpio */
+  }
 }
 
-.amenity-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  background: #aca58f;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--calm-primary);
-  margin-right: 16px;
-}
-
-.amenity-title {
-  font-weight: 500;
-  font-size: 1.1rem;
-  color: var(--calm-text);
-  margin: 0;
-}
-
-.amenity-meta {
-  color: var(--calm-text-light);
-  font-size: 0.9rem;
-  margin-bottom: 12px;
-}
-
-.amenity-actions {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
 
 .calm-btn-sm {
-  background: transparent;
-  border: 1px solid var(--calm-accent);
-  color: var(--calm-primary);
+  background:rgb(240, 238, 234);
+  border: 2px solid var(--beigeOscuro);
+  color: var(--black);
   padding: 6px 16px;
   font-size: 0.85rem;
-  border-radius: 15px;
+  font-weight: 600;
+  border-radius: 8px;
   transition: all 0.3s ease;
   text-decoration: none;
 }
 
 .calm-btn-sm:hover {
-  background: var(--calm-accent);
-  color: white;
+  background:var(--beigeOscuro);
+  color:white;
 }
 
 .calm-btn-emergency {
-  background: #FF6B6B;
-  border: 1px solid #FF6B6B;
+  background: #ff6b6b;
+  border: 1px solid #ff6b6b;
   color: white;
 }
 
 .calm-btn-emergency:hover {
-  background: #FF5252;
+  background: #ff5252;
   color: white;
 }
 
@@ -551,7 +496,6 @@ body {
 @media (max-width: 992px) {
   .hero {
     padding-left: 8%;
-    
   }
 
   .hero h1 {
@@ -570,7 +514,7 @@ body {
 @media (max-width: 768px) {
   .hero {
     padding-left: 5%;
-    
+
     text-align: center;
   }
 
@@ -604,7 +548,6 @@ body {
 
   .hero p {
     font-size: 0.9rem;
-
   }
 
   .hero-animated-img {
@@ -613,14 +556,12 @@ body {
 }
 
 @media (max-width: 400px) {
-  
   .hero h1 {
     font-size: 2rem;
   }
 
   .hero p {
     font-size: 0.85rem;
-    
   }
 
   .hero-animated-img {
