@@ -20,6 +20,30 @@ function toggleFAQ(element) {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
+    // ---- Load global event data from servicios.json ----
+    async function loadGlobalEventData() {
+        try {
+            const response = await fetch('servicios.json');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            window.globalEventData = data;
+            console.log('Global event data loaded successfully:', data.length, 'items');
+
+            // Dispatch event to notify other components that data is loaded
+            const event = new CustomEvent('dataLoaded');
+            document.dispatchEvent(event);
+        } catch (error) {
+            console.error('Error loading global event data:', error);
+            // Set empty array as fallback to prevent further errors
+            window.globalEventData = [];
+        }
+    }
+
+    // Load data immediately
+    loadGlobalEventData();
+
     // ---- Smooth scrolling (desplazamiento suave al hacer click en un enlace con #) ----
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {

@@ -3,333 +3,411 @@
     "categoria": "farmacia",
     "localidad": "bernardo",
     "titulo": "Farmacias en San Bernardo",
-    "link1": "https://lacosta.gob.ar/salud/",
+    "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
   {
     "categoria": "farmacia",
     "localidad": "ajo",
     "titulo": "Farmacias en Mar de Ajó",
-    "link1": "https://lacosta.gob.ar/salud/",
+    "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
   {
     "categoria": "farmacia",
     "localidad": "teresita",
     "titulo": "Farmacias en Santa Teresita",
-    "link1": "https://www.google.com/maps/search/farmacias+santa+teresita"
+    "link1": "https://www.google.com/maps/search/farmacias+santa+teresita",
+    "link2": "https://lacosta.gob.ar/farmacias/",
+    "asamblea": "both"
   },
   {
     "categoria": "farmacia",
     "localidad": "tuyu",
     "titulo": "Farmacias en Mar del Tuyú",
-    "link1": "https://www.google.com/maps/search/farmacias+mar+del+tuyu"
+    "link1": "https://www.google.com/maps/search/farmacias+mar+del+tuyu",
+    "link2": "https://lacosta.gob.ar/farmacias/",
+    "asamblea": "both"
   },
   {
     "categoria": "farmacia",
     "localidad": "costa",
     "titulo": "Farmacias en Costa del Este",
-    "link1": "https://www.google.com/maps/search/farmacias+costa+del+este"
+    "link1": "https://www.google.com/maps/search/farmacias+costa+del+este",
+    "link2": "https://lacosta.gob.ar/farmacias/",
+    "asamblea": "both"
   },
   {
     "categoria": "farmacia",
     "localidad": "aguas",
     "titulo": "Farmacias en Aguas Verdes",
-    "link1": "https://www.google.com/maps/search/farmacias+aguas+verdes"
+    "link1": "https://www.google.com/maps/search/farmacias+aguas+verdes",
+    "link2": "https://lacosta.gob.ar/farmacias/",
+    "asamblea": "both"
   },
   {
     "categoria": "farmacia",
     "localidad": "lucila",
     "titulo": "Farmacias en Lucila del Mar",
-    "link1": "https://www.google.com/maps/search/farmacias+lucila+del+mar"
+    "link1": "https://www.google.com/maps/search/farmacias+lucila+del+mar",
+    "link2": "https://lacosta.gob.ar/farmacias/",
+    "asamblea": "both"
   },
   {
     "categoria": "farmacia",
     "localidad": "atlantis",
     "titulo": "Farmacias en Nueva Atlantis",
-    "link1": "https://www.google.com/maps/search/farmacias+nueva+atlantis"
+    "link1": "https://www.google.com/maps/search/farmacias+nueva+atlantis",
+    "link2": "https://lacosta.gob.ar/farmacias/",
+    "asamblea": "both"
   },
   {
     "categoria": "farmacia",
     "localidad": "medanos",
     "titulo": "Farmacias en Punta Medanos",
-    "link1": "https://www.google.com/maps/search/farmacias+punta+medanos"
+    "link1": "https://www.google.com/maps/search/farmacias+punta+medanos",
+    "link2": "https://lacosta.gob.ar/farmacias/",
+    "asamblea": "both"
   },
   {
     "categoria": "farmacia",
     "localidad": "pinamar",
     "titulo": "Farmacias en Pinamar",
-    "link1": "https://www.google.com/maps/search/farmacias+pinamar"
+    "link1": "https://www.google.com/maps/search/farmacias+pinamar",
+    "link2" : "https://pinamar.gob.ar/salud/",
+    "asamblea": "both"
   },
   {
     "categoria": "farmacia",
     "localidad": "carilo",
     "titulo": "Farmacias en Cariló",
-    "link1": "https://www.google.com/maps/search/farmacias+carilo"
+    "link1": "https://www.google.com/maps/search/farmacias+carilo",
+    "asamblea": "both"
   },
   {
     "categoria": "hotel",
     "localidad": "bernardo",
     "titulo": "Hoteles en San Bernardo",
-    "link1": "https://www.google.com/maps/search/hoteles+san+bernardo"
+    "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
+    "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
+    "asamblea": "both"
   },
   {
     "categoria": "hotel",
     "localidad": "ajo",
     "titulo": "Hoteles en Mar de Ajó",
-    "link1": "https://www.google.com/maps/search/hoteles+mar+de+ajo"
+    "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
+    "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
+    "asamblea": "both"
   },
   {
     "categoria": "hotel",
     "localidad": "teresita",
     "titulo": "Hoteles en Santa Teresita",
-    "link1": "https://www.google.com/maps/search/hoteles+santa+teresita"
+    "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
+    "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
+    "asamblea": "both"
   },
   {
     "categoria": "hotel",
     "localidad": "tuyu",
     "titulo": "Hoteles en Mar del Tuyú",
-    "link1": "https://www.google.com/maps/search/hoteles+mar+del+tuyu"
+    "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
+    "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
+    "asamblea": "both"
   },
   {
     "categoria": "hotel",
     "localidad": "costa",
     "titulo": "Hoteles en Costa del Este",
-    "link1": "https://www.google.com/maps/search/hoteles+costa+del+este"
+    "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
+    "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
+    "asamblea": "both"
   },
   {
     "categoria": "hotel",
     "localidad": "aguas",
     "titulo": "Hoteles en Aguas Verdes",
-    "link1": "https://www.google.com/maps/search/hoteles+aguas+verdes"
+    "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
+    "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
+    "asamblea": "both"
   },
   {
     "categoria": "hotel",
     "localidad": "lucila",
     "titulo": "Hoteles en Lucila del Mar",
-    "link1": "https://www.google.com/maps/search/hoteles+lucila+del+mar"
+    "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
+    "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
+    "asamblea": "both"
   },
   {
     "categoria": "hotel",
     "localidad": "atlantis",
     "titulo": "Hoteles en Nueva Atlantis",
-    "link1": "https://www.google.com/maps/search/hoteles+nueva+atlantis"
+    "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
+    "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
+    "asamblea": "both"
   },
   {
     "categoria": "hotel",
     "localidad": "medanos",
     "titulo": "Hoteles en Punta Medanos",
-    "link1": "https://www.google.com/maps/search/hoteles+punta+medanos"
+    "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
+    "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
+    "asamblea": "both"
   },
   {
     "categoria": "hotel",
     "localidad": "pinamar",
     "titulo": "Hoteles en Pinamar",
-    "link1": "https://www.google.com/maps/search/hoteles+pinamar"
+    "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
+    "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
+    "asamblea": "both"
   },
   {
     "categoria": "hotel",
     "localidad": "carilo",
     "titulo": "Hoteles en Cariló",
-    "link1": "https://www.google.com/maps/search/hoteles+carilo"
+    "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
+    "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
+    "asamblea": "both"
   },
   {
     "categoria": "restaurante",
     "localidad": "ajo",
     "titulo": "Restaurantes en Mar de Ajó",
-    "link1": "https://www.google.com/maps/d/u/3/edit?mid=1EAYDtdGsB4k_65Zd9SJ8v59WT4embqs&usp=sharing",
-    "link2": "https://www.google.com/maps/search/restaurantes+mar+de+ajo"
+    "link1": "https://www.google.com/maps/search/Restaurantes/@-36.7223556,-56.7301053,13z/data=!3m1!4b1!4m11!2m10!3m6!1sRestaurantes!2sMar+de+Aj%C3%B3,+Provincia+de+Buenos+Aires!3s0x959c6f6f95f89931:0x5a52f7f5112fcddb!4m2!1d-56.6750185!2d-36.7232497!5m1!4e8!6e5?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "asamblea": "both"
   },
   {
     "categoria": "restaurante",
     "localidad": "bernardo",
     "titulo": "Restaurantes en San Bernardo",
-    "link1": "https://www.google.com/maps/search/restaurantes+san+bernardo"
+    "link1": "https://www.google.com/maps/search/Restaurantes/@-36.6930025,-56.7000987,15z/data=!3m1!4b1!4m11!2m10!3m6!1sRestaurantes!2sSan+Bernardo+del+Tuy%C3%BA,+Provincia+de+Buenos+Aires!3s0x959c6f1ade43b00f:0x9aa5de59374eafef!4m2!1d-56.6791979!2d-36.6863655!5m1!4e8!6e5?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "asamblea": "both"
   },
   {
     "categoria": "restaurante",
     "localidad": "teresita",
     "titulo": "Restaurantes en Santa Teresita",
-    "link1": "https://www.google.com/maps/search/restaurantes+santa+teresita"
+    "link1": "https://www.google.com/maps/search/Restaurantes/@-36.5389352,-56.7131234,15z/data=!3m1!4b1!4m11!2m10!3m6!1sRestaurantes!2sB7107+Santa+Teresita,+Provincia+de+Buenos+Aires!3s0x959c131d84c3cc7f:0x8b862911d58aa6d3!4m2!1d-56.690912!2d-36.544327!5m1!4e8!6e5?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "asamblea": "both"
   },
   {
     "categoria": "restaurante",
     "localidad": "tuyu",
     "titulo": "Restaurantes en Mar del Tuyú",
-    "link1": "https://www.google.com/maps/search/restaurantes+mar+del+tuyu"
+    "link1": "https://www.google.com/maps/search/Restaurantes/@-36.5750549,-56.7225113,14z/data=!3m1!4b1!4m11!2m10!3m6!1sRestaurantes!2sMar+del+Tuy%C3%BA,+Provincia+de+Buenos+Aires!3s0x959c6cd763fb79e3:0xd3893a5e7763e7b8!4m2!1d-56.6903726!2d-36.5772754!5m1!4e8!6e5?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "asamblea": "both"
   },
   {
     "categoria": "restaurante",
     "localidad": "costa",
     "titulo": "Restaurantes en Costa del Este",
-    "link1": "https://www.google.com/maps/search/restaurantes+costa+del+este"
+    "link1": "https://www.google.com/maps/search/Restaurantes/@-36.6078934,-56.7092823,15z/data=!3m1!4b1!4m11!2m10!3m6!1sRestaurantes!2sCosta+del+Este,+Provincia+de+Buenos+Aires!3s0x959c6d027514303d:0xc21269a639ab464!4m2!1d-56.6880228!2d-36.6087864!5m1!4e8!6e5?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "asamblea": "both"
   },
   {
     "categoria": "restaurante",
     "localidad": "aguas",
     "titulo": "Restaurantes en Aguas Verdes",
-    "link1": "https://www.google.com/maps/search/restaurantes+aguas+verdes"
+    "link1": "https://www.google.com/maps/search/Restaurantes/@-36.6364922,-56.7065542,15z/data=!3m1!4b1!4m11!2m10!3m6!1sRestaurantes!2sAguas+Verdes,+Provincia+de+Buenos+Aires!3s0x959c6c36a4aaec1b:0x510582f2ba629ee!4m2!1d-56.6889712!2d-36.6373461!5m1!4e8!6e5?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "asamblea": "both"
   },
   {
     "categoria": "restaurante",
     "localidad": "lucila",
     "titulo": "Restaurantes en Lucila del Mar",
-    "link1": "https://www.google.com/maps/search/restaurantes+lucila+del+mar"
+    "link1": "https://www.google.com/maps/search/Restaurantes/@-36.6602343,-56.6891336,16z/data=!3m1!4b1!4m11!2m10!3m6!1sRestaurantes!2sLa+Lucila+del+Mar,+Provincia+de+Buenos+Aires!3s0x959c6e9ae556c58b:0xbfcb017ad35caa2!4m2!1d-56.6837553!2d-36.6593154!5m1!4e8!6e5?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "asamblea": "both"
   },
   {
     "categoria": "restaurante",
     "localidad": "atlantis",
     "titulo": "Restaurantes en Nueva Atlantis",
-    "link1": "https://www.google.com/maps/search/restaurantes+nueva+atlantis"
+    "link1": "https://www.google.com/maps/search/Restaurantes/@-36.7608992,-56.6990109,15z/data=!3m1!4b1!4m11!2m10!3m6!1sRestaurantes!2sNueva+Atlantis,+Provincia+de+Buenos+Aires!3s0x959c65b37d474eef:0x3354b326053dede2!4m2!1d-56.6795297!2d-36.7628111!5m1!4e8!6e5?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "asamblea": "both"
   },
   {
     "categoria": "restaurante",
     "localidad": "medanos",
     "titulo": "Restaurantes en Punta Medanos",
-    "link1": "https://www.google.com/maps/search/restaurantes+punta+medanos"
+    "link1": "https://www.google.com/maps/search/Restaurantes/@-36.6116522,-56.6917227,17z/data=!3m1!4b1!4m11!2m10!3m6!1sRestaurantes!2sMedanos+del+este,+Av.+4+98,+B7108+Costa+del+Este,+Provincia+de+Buenos+Aires!3s0x959c6d0005c2d99d:0x8bc9705ab0e1dcb4!4m2!1d-56.6868518!2d-36.6116523!5m1!4e8!6e5?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "asamblea": "both"
   },
   {
     "categoria": "restaurante",
     "localidad": "pinamar",
     "titulo": "Restaurantes en Pinamar",
-    "link1": "https://www.google.com/maps/search/restaurantes+pinamar"
+    "link1": "https://www.google.com/maps/search/Restaurantes/@-37.0981125,-56.8804857,14z/data=!3m1!4b1!4m11!2m10!3m6!1sRestaurantes!2sPinamar,+Provincia+de+Buenos+Aires!3s0x959c9ce568f79a97:0xb3445704438c8419!4m2!1d-56.8607055!2d-37.1145662!5m1!4e8!6e5?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "asamblea": "both"
   },
   {
     "categoria": "restaurante",
     "localidad": "carilo",
     "titulo": "Restaurantes en Cariló",
-    "link1": "https://www.google.com/maps/search/restaurantes+carilo"
+    "link1": "https://www.google.com/maps/search/Restaurantes/@-37.161965,-56.9110871,15z/data=!3m1!4b1!4m8!2m7!3m6!1sRestaurantes!2sB7167+Caril%C3%B3,+Provincia+de+Buenos+Aires!3s0x959c9dea8f61a8d3:0x866158090365a6c5!4m2!1d-56.9030558!2d-37.164258?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "asamblea": "both"
   },
   {
     "categoria": "centroSalud",
     "localidad": "bernardo",
     "titulo": "Centros de Salud en San Bernardo",
-    "link1": "https://lacosta.gob.ar/salud/"
+    "link1" : "https://www.google.com/maps/search/Hospital+Modular+Santa+Mar%C3%ADa+de+Oro+N%C2%B0+1199++CAPS+San+Bernardo++Falkner+entre+Madariaga+y+Jujuy++2257+466419+%2F+2246+510309/@-36.6930016,-56.7000987,15z/data=!3m1!4b1!4m7!2m6!3m5!2sSan+Bernardo+del+Tuy%C3%BA,+Provincia+de+Buenos+Aires!3s0x959c6f1ade43b00f:0x9aa5de59374eafef!4m2!1d-56.6791979!2d-36.6863655?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "link2": "https://lacosta.gob.ar/salud/",
+    "asamblea": "both"
   },
   {
     "categoria": "centroSalud",
     "localidad": "ajo",
     "titulo": "Centros de Salud en Mar de Ajó",
-    "link1": "https://lacosta.gob.ar/salud/"
+    "link1": "https://www.google.com/maps/search/Hospital++Av.+Libertador+N%C2%BA+1780++107+%2F+2257+420159+%2F+423307++Centro+de+Diagn%C3%B3stico+de+La+Costa++La+Marejada+e%2F+Av.+Libertador+y+Los+Andes++2257+609075++CAPS+Villa+Clelia++G%C3%BCiraldes+499++2257+604674+%2F2257+648924++CAPS+Mar+de+Aj%C3%B3+Norte++Sarmiento+598++2257+604676+%2F+2254+590671++CAPS+Eva+Per%C3%B3n++Cramer+y+Pueyrred%C3%B3n++2257+604673+%2F+2257+542521/@-36.6930007,-56.7000987,15z/data=!3m1!4b1!4m7!2m6!3m5!2sSan+Bernardo+del+Tuy%C3%BA,+Provincia+de+Buenos+Aires!3s0x959c6f1ade43b00f:0x9aa5de59374eafef!4m2!1d-56.6791979!2d-36.6863655?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "link2": "https://lacosta.gob.ar/salud/",
+    "asamblea": "both"
   },
   {
     "categoria": "centroSalud",
     "localidad": "teresita",
     "titulo": "Centros de Salud en Santa Teresita",
-    "link1": "https://www.google.com/maps/search/centros+de+salud+santa+teresita"
+    "link1": "https://www.google.com/maps/search/centros+de+salud+santa+teresita",
+    "link2": "https://lacosta.gob.ar/salud/",
+    "asamblea": "both"
   },
   {
     "categoria": "centroSalud",
     "localidad": "tuyu",
     "titulo": "Centros de Salud en Mar del Tuyú",
-    "link1": "https://www.google.com/maps/search/centros+de+salud+mar+del+tuyu"
+    "link1": "https://www.google.com/maps/place/Unidad+sanitaria/@-36.5759802,-56.6889406,18.25z/data=!4m10!1m2!2m1!1sUnidad+Sanitaria+Mar+del+Tuy%C3%BA++Calle+74+e%2F+1+y+Costanera!3m6!1s0x959c6d6ea1feda7d:0x150499ee03394f1f!8m2!3d-36.5759603!4d-56.6880404!15sCjlVbmlkYWQgU2FuaXRhcmlhIE1hciBkZWwgVHV5w7ogIENhbGxlIDc0IGUvIDEgeSBDb3N0YW5lcmFaOSI3dW5pZGFkIHNhbml0YXJpYSBtYXIgZGVsIHR1ecO6IGNhbGxlIDc0IGUgMSB5IGNvc3RhbmVyYZIBCGhvc3BpdGFsmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU50ZG1SaGJXUlJFQUWqAZ0BEAEqOyI3dW5pZGFkIHNhbml0YXJpYSBtYXIgZGVsIHR1ecO6IGNhbGxlIDc0IGUgMSB5IGNvc3RhbmVyYSgOMh8QASIbEX2zDlSPl8yusdssNWgffiJqE2fRn55wPnPRMjsQAiI3dW5pZGFkIHNhbml0YXJpYSBtYXIgZGVsIHR1ecO6IGNhbGxlIDc0IGUgMSB5IGNvc3RhbmVyYeABAPoBBAgAEEg!16s%2Fg%2F11j84tsjlt?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "link2": "https://lacosta.gob.ar/salud/",
+    "asamblea": "both"
   },
   {
     "categoria": "centroSalud",
     "localidad": "costa",
     "titulo": "Centros de Salud en Costa del Este",
-    "link1": "https://www.google.com/maps/search/centros+de+salud+costa+del+este"
+    "link1": "https://www.google.com/maps/search/Unidad+Sanitaria+Costa+Azul+(Centro+Comunitario)++Catamarca+y+Moreno/@-36.6705026,-56.6854815,17z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "link2": "https://lacosta.gob.ar/salud/",
+    "asamblea": "both"
   },
   {
     "categoria": "centroSalud",
     "localidad": "aguas",
     "titulo": "Centros de Salud en Aguas Verdes",
-    "link1": "https://www.google.com/maps/search/centros+de+salud+aguas+verdes"
+    "link1": "https://www.google.com/maps/place/Unidad+Sanitaria+Aguas+Verdes/@-36.6353346,-56.6962652,16.25z/data=!4m6!3m5!1s0x959c6c35821e6429:0xc15f950ab8d4ea19!8m2!3d-36.6348967!4d-56.6913766!16s%2Fg%2F11f1167l89?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "link2": "https://lacosta.gob.ar/salud/",
+    "asamblea": "both"
   },
   {
     "categoria": "centroSalud",
     "localidad": "lucila",
     "titulo": "Centros de Salud en Lucila del Mar",
-    "link1": "https://www.google.com/maps/search/centros+de+salud+lucila+del+mar"
+    "link1": "https://www.google.com/maps/place/Unidad+Sanitaria+Lucila+Del+Mar/@-36.658179,-56.6840045,17z/data=!3m1!4b1!4m6!3m5!1s0x959c6e9a43bf362d:0x68173c7149691226!8m2!3d-36.658179!4d-56.6814296!16s%2Fg%2F11cny0_9g3?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "link2": "https://lacosta.gob.ar/salud/",
+    "asamblea": "both"
   },
   {
     "categoria": "centroSalud",
     "localidad": "atlantis",
     "titulo": "Centros de Salud en Nueva Atlantis",
-    "link1": "https://www.google.com/maps/search/centros+de+salud+nueva+atlantis"
+    "link1": "https://www.google.com/maps/place/SEDE+MUNICIPAL+NUEVA+ATLANTIS/@-36.7635728,-56.6828488,20z/data=!4m9!1m2!2m1!1sCAPS+Nueva+Atlantis++Rold%C3%A1n+890!3m5!1s0x959c65b0a56e0807:0xdf91368825d6161c!8m2!3d-36.7633903!4d-56.6829686!16s%2Fg%2F11j4f1g67l?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "link2": "https://lacosta.gob.ar/salud/",
+    "asamblea": "both"
   },
   {
     "categoria": "centroSalud",
     "localidad": "medanos",
     "titulo": "Centros de Salud en Punta Medanos",
-    "link1": "https://www.google.com/maps/search/centros+de+salud+punta+medanos"
+    "asamblea": "both"
   },
   {
     "categoria": "centroSalud",
     "localidad": "pinamar",
     "titulo": "Centros de Salud en Pinamar",
-    "link1": "https://www.google.com/maps/search/centros+de+salud+pinamar"
+    "link1": "https://www.google.com/maps/search/+Hospital+de+Pinamar+Av.+Shaw+255/@-37.1096697,-56.8686983,17z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "link2" : "https://pinamar.gob.ar/salud/",
+    "asamblea": "both"
   },
   {
     "categoria": "centroSalud",
     "localidad": "carilo",
     "titulo": "Centros de Salud en Cariló",
-    "link1": "https://www.google.com/maps/search/centros+de+salud+carilo"
+    "asamblea": "both"
   },
   {
     "categoria": "cajero",
     "localidad": "bernardo",
     "titulo": "Cajeros Automáticos en San Bernardo",
-    "link1": "https://www.google.com/maps/search/cajeros+automaticos+san+bernardo"
+    "link1": "https://www.google.com/maps/search/cajeros+automaticos+san+bernardo",
+    "asamblea": "both"
   },
   {
     "categoria": "cajero",
     "localidad": "ajo",
     "titulo": "Cajeros Automáticos en Mar de Ajó",
-    "link1": "https://www.google.com/maps/search/cajeros+automaticos+mar+de+ajo"
+    "link1": "https://www.google.com/maps/search/cajeros+automaticos+mar+de+ajo",
+    "asamblea": "both"
   },
   {
     "categoria": "cajero",
     "localidad": "teresita",
     "titulo": "Cajeros Automáticos en Santa Teresita",
-    "link1": "https://www.google.com/maps/search/cajeros+automaticos+santa+teresita"
+    "link1": "https://www.google.com/maps/search/cajeros+automaticos+santa+teresita",
+    "asamblea": "both"
   },
   {
     "categoria": "cajero",
     "localidad": "tuyu",
     "titulo": "Cajeros Automáticos en Mar del Tuyú",
-    "link1": "https://www.google.com/maps/search/cajeros+automaticos+mar+del+tuyu"
+    "link1": "https://www.google.com/maps/search/cajeros+automaticos+mar+del+tuyu",
+    "asamblea": "both"
   },
   {
     "categoria": "cajero",
     "localidad": "costa",
     "titulo": "Cajeros Automáticos en Costa del Este",
-    "link1": "https://www.google.com/maps/search/cajeros+automaticos+costa+del+este"
+    "link1": "https://www.google.com/maps/search/cajeros+automaticos+costa+del+este",
+    "asamblea": "both"
   },
   {
     "categoria": "cajero",
     "localidad": "aguas",
     "titulo": "Cajeros Automáticos en Aguas Verdes",
-    "link1": "https://www.google.com/maps/search/cajeros+automaticos+aguas+verdes"
+    "link1": "https://www.google.com/maps/search/cajeros+automaticos+aguas+verdes",
+    "asamblea": "both"
   },
   {
     "categoria": "cajero",
     "localidad": "lucila",
     "titulo": "Cajeros Automáticos en Lucila del Mar",
-    "link1": "https://www.google.com/maps/search/cajeros+automaticos+lucila+del+mar"
+    "link1": "https://www.google.com/maps/search/cajeros+automaticos+lucila+del+mar",
+    "asamblea": "both"
   },
   {
     "categoria": "cajero",
     "localidad": "atlantis",
     "titulo": "Cajeros Automáticos en Nueva Atlantis",
-    "link1": "https://www.google.com/maps/search/cajeros+automaticos+nueva+atlantis"
+    "link1": "https://www.google.com/maps/search/cajeros+automaticos+nueva+atlantis",
+    "asamblea": "both"
   },
   {
     "categoria": "cajero",
     "localidad": "medanos",
     "titulo": "Cajeros Automáticos en Punta Medanos",
-    "link1": "https://www.google.com/maps/search/cajeros+automaticos+punta+medanos"
+    "link1": "https://www.google.com/maps/search/cajeros+automaticos+punta+medanos",
+    "asamblea": "both"
   },
   {
     "categoria": "cajero",
     "localidad": "pinamar",
     "titulo": "Cajeros Automáticos en Pinamar",
-    "link1": "https://www.google.com/maps/search/cajeros+automaticos+pinamar"
+    "link1": "https://www.google.com/maps/search/cajeros+automaticos+pinamar",
+    "asamblea": "both"
   },
   {
     "categoria": "cajero",
     "localidad": "carilo",
     "titulo": "Cajeros Automáticos en Cariló",
-    "link1": "https://www.google.com/maps/search/cajeros+automaticos+carilo"
+    "link1": "https://www.google.com/maps/search/cajeros+automaticos+carilo",
+    "asamblea": "both"
   }
 ]

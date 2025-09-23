@@ -28,7 +28,7 @@ linear-gradient(to right, #A2D9D0 0, #DCF8F8 10%, #DCF8F8 100%)
 
   --body-back-effects: #1c4975;
 
-  --bgseccion-dentro: #d6f1f5;
+  --bgseccion-dentro:  #f0f4ff;;
   --textseccion-dentro: #1c6697;
 
   --bgseccion-fuera: linear-gradient(to right, #B2BAA4 0%, #D6CDAE 10%, #D6CDAE 100%);
@@ -70,10 +70,10 @@ body {
 
 .linea-sombreada {
   width: 100%;
-  height: 2px;                /* grosor de la línea */
+  height: 1px;                /* grosor de la línea */
   background: #333;           /* color base */
   border: none;               /* quitar borde por defecto */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* sombra */
+  
   margin-bottom: 5%;
 }
 
@@ -221,25 +221,30 @@ body {
   gap: 2px;
   transition: all 0.3s ease;
 }
+.info-btn:hover {
+  box-shadow: 0 8px 14px rgba(0,0,0,0.2), 0 3px 6px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+  transition: all 0.2s ease-in-out;
+}
 
 .btn-section:hover {
   transform: translateY(-2px) scale(1.02);
 }
 
 .dentro-btn {
-  background: var(--bgseccion-dentro);
+  background: white;
   color: var(--textseccion-dentro);
-  border-color: #c3e7ec !important;
+  
 }
 
 .fuera-btn {
-  background: var(--bgseccion-fuera);
+  background: white;
   color: var(--textseccion-fuera);
 }
 
 .info-btn {
-  background: var(--bgseccion-info);
-  color: var(--text-dark);
+  background-color: whitesmoke;
+  color: black;
 }
 
 /* Quick Access */
@@ -419,7 +424,7 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
   margin-bottom: 1%;
-  border-left: 4px solid var(--calm-accent);
+  border-left: 4px solid #aca58f;
 }
 
 .amenity-card:hover {
@@ -437,7 +442,7 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 8px;
-  background: linear-gradient(135deg, var(--calm-light), var(--calm-accent));
+  background: #aca58f;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -510,6 +515,7 @@ body {
   cursor: pointer;
   opacity: 0.6;
   transition: background-color 0.3s ease, opacity 0.3s ease;
+  z-index: 1000;
 }
 
 /* Animación de cambio de color suave */
@@ -545,7 +551,7 @@ body {
 @media (max-width: 992px) {
   .hero {
     padding-left: 8%;
-    padding-top: 8%;
+    
   }
 
   .hero h1 {
@@ -564,7 +570,7 @@ body {
 @media (max-width: 768px) {
   .hero {
     padding-left: 5%;
-    padding-top: 5%;
+    
     text-align: center;
   }
 
@@ -592,12 +598,13 @@ body {
   }
 
   .hero h1 {
-    font-size: 1rem;
+    font-size: 2rem;
     line-height: 1.3;
   }
 
   .hero p {
     font-size: 0.9rem;
+
   }
 
   .hero-animated-img {
@@ -606,12 +613,14 @@ body {
 }
 
 @media (max-width: 400px) {
+  
   .hero h1 {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 
   .hero p {
     font-size: 0.85rem;
+    
   }
 
   .hero-animated-img {
