@@ -18,8 +18,42 @@ function toggleFAQ(element) {
     }
 }
 
+function openFaqVoluntario(event) {
+    event.preventDefault(); // evita que salte directo con el anchor
+
+    const faq = document.getElementById("faq-voluntario");
+    const questionBtn = document.getElementById("faq-question");
+
+    // Hacer scroll suave hasta la sección
+    faq.scrollIntoView({ behavior: "smooth" });
+
+    // Abrir el toggle si aún no está abierto
+    toggleFAQ(questionBtn);
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
+
+    const scrollBtn = document.getElementById("scrollBtn");
+    const startSection = document.getElementById("startScroll");
+
+    // Oculto el botón al inicio
+    scrollBtn.style.display = "none";
+
+    window.addEventListener("scroll", () => {
+      const startPosition = startSection.offsetTop; // posición de la sección
+      if (window.scrollY >= startPosition) {
+        scrollBtn.style.display = "flex"; // mostrar
+      } else {
+        scrollBtn.style.display = "none"; // ocultar
+      }
+    });
+
+     // Al hacer click, volver a la sección
+      scrollBtn.addEventListener("click", () => {
+        startSection.scrollIntoView({ behavior: "smooth" });
+      });
+
     // ---- Load global event data from servicios.json ----
     async function loadGlobalEventData() {
         try {

@@ -123,7 +123,7 @@
                   style="background: white; padding: 20px; border-radius: 15px; margin: 15px 0; border-left: 5px solid var(--calm-secondary);">
                   <p style="color: var(--calm-text); font-size: 13px; margin: 0; line-height: 1.2; text-align: center;">
                     <i class="fas fa-info-circle me-2" style="color: var(--calm-secondary);"></i>
-                    <strong>Mar de Ajó 2</strong>, (30 de octubre al 2 de noviembre de
+                    <strong>Mar de Ajó 2</strong>, (31 de octubre al 2 de noviembre de
                     2025)
                   </p>
                 </div>
@@ -135,7 +135,7 @@
       </div>
     </div>
   </section>
-  <section class="roundedUpEffect">
+  <section id="startScroll" class="roundedUpEffect">
   </section>
   <!--Botones seccion-->
   <div class="container my-4">
@@ -310,6 +310,7 @@
                 <div class="btn-group" role="group" aria-label="Basic example">
 
                   <a href="#faq-voluntario" target="_blank" class="btn btn-primary btn-sm"
+                    onclick="openFaqVoluntario(event)"
                     style="margin-top: 5px; background-color: var(--verdeOscuro); border-color: var(--verdeOscuro);">
                     Saber más
 
@@ -653,7 +654,7 @@
           </div>
         </div>
         <div id="faq-voluntario" class="faq-item">
-          <button class="faq-question" onclick="toggleFAQ(this)">
+          <button id="faq-question" class="faq-question" onclick="toggleFAQ(this)">
             <span class="material-symbols-outlined me-2" style="color: var(--azulOscuro); font-size: 1.5rem;">Info
             </span>
             Informacion y Servicio Voluntario
@@ -809,7 +810,7 @@
                 <img src="Image/logo1.png" alt="Logo" style="width: 48px; height: 48px;">
               </div>
               <h5 class="assembly-title fw-semibold mb-1">Mar de Ajó 2</h5>
-              <p class="assembly-date text-muted small">25 al 27 de Octubre</p>
+              <p class="assembly-date text-muted small">31 de Octubre al 2 de Noviembre</p>
             </div>
           </div>
         </div>
@@ -899,7 +900,7 @@
   </section>
 
   <!-- Botón fijo esquina inferior derecha -->
-  <button class="scroll-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+  <button id="scrollBtn" class="scroll-top-btn"
     onmouseover="this.style.backgroundColor='#145072';" onmouseout="this.style.backgroundColor='#1c6697';">
     ↑
   </button>
