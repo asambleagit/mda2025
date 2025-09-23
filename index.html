@@ -1,5 +1,5 @@
 <html lang="es">
-
+<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +10,7 @@
     content="Asamblea Adoración Pura, Mar de Ajó, Buenos Aires, evento religioso, adoración, octubre 2025" />
   <link href="css/styles.css" rel="stylesheet" />
   <!-- Bootstrap CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
 
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
@@ -21,11 +21,20 @@
   <!-- Material Symbols -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
-
-</head>
-
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 <body>
+  <script src="js/script-complete.js"></script>
+  <script src="js/location-handler.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!--script src="script.js?v=1.6.4"></script-->
+  <!--script src="plano.js?v=1.2.4"></script-->
+  <script src="js/plano.js"></script>  
+
+  
   <!-- Hero Section -->
   <section id="home" class="hero">
     <h1 style="text-align: center">ASAMBLEAS REGIONALES MAR DE AJÓ 2025</h1>
@@ -436,7 +445,9 @@
               recomienda reservar con anticipación en días de alta demanda.
             </p>
             <div class="amenity-actions mt-2">
-                <a href="#ubicacion-banos" class="calm-btn-sm" onclick="showLocation('mapa-pb-v2.html')">Ubicación</a>
+                <a href="#ubicacion-banos-pb" class="calm-btn-sm"  onclick="plano(0,'departamentos','Baños')">Ubicación PB.</a>
+                <a href="#ubicacion-banos-pa" class="calm-btn-sm"  onclick="plano(1,'departamentos','Baños')">Ubicación PA.</a>
+
                 <a href="#info-banos" class="calm-btn-sm" onclick="showInfo('bautismo')">Información</a>
               </div>          
           </div>
@@ -593,394 +604,7 @@
     onmouseover="this.style.backgroundColor='#145072';" onmouseout="this.style.backgroundColor='#1c6697';">
     ↑
   </button>
-  <script src="js/script.js"></script>
-  <script src="js/location-handler.js"> </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const track = document.getElementById('chipTrack');
-      const prevBtn = document.querySelector('.chip-prev');
-      const nextBtn = document.querySelector('.chip-next');
-
-      function goNext() {
-        track.scrollBy({ left: track.clientWidth, behavior: 'smooth' });
-      }
-      function goPrev() {
-        track.scrollBy({ left: -track.clientWidth, behavior: 'smooth' });
-      }
-
-      prevBtn.addEventListener('click', goPrev);
-      nextBtn.addEventListener('click', goNext);
-    });
-  </script>
-
-  <script>
-    // Cargamos los servicios desde un archivo JSON externo
-    fetch('./servicios.json')
-      .then(response => response.json())
-      .then(data => {
-        // Guardamos los servicios en una variable global accesible en toda la página
-        window.globalEventData = data;
-
-        // Notificar que los datos están cargados
-        document.dispatchEvent(new Event('dataLoaded'));
-      })
-      .catch(error => console.error('Error loading servicios.json:', error));
-  </script>
-
-  <script>
-    // ---- Smooth scrolling (desplazamiento suave al hacer click en un enlace con #) ----
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault(); // Evitamos el comportamiento por defecto del enlace
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          // Desplazamiento suave hacia la sección objetivo
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-
-    // ---- Seleccionar una asamblea (tarjeta) ----
-    function selectAssembly(assemblyId) {
-      const wrapper = document.querySelector('.assembly-cards-wrapper');
-
-      // Agregar clase para indicar que hay una selección activa
-      wrapper.classList.add('has-selection');
-
-      // Quitar clase 'active' y estilos de botón de todas las cards, pero mantener rounded-pill
-      document.querySelectorAll('.assembly-card').forEach(card => {
-        card.classList.remove('active', 'btn', 'btn-light');
-        card.classList.add('rounded-pill'); // Always rounded
-        card.style.backgroundColor = '';
-        card.style.color = '';
-        card.style.border = '';
-      });
-
-      // Marcar la card seleccionada como 'active' y aplicar estilos de botón
-      const selectedCard = document.querySelector(`[data-assembly="${assemblyId}"]`);
-      selectedCard.classList.add('active', 'btn', 'btn-light');
-      selectedCard.style.backgroundColor = '#f8f9fa'; // Similar to btn-light
-      selectedCard.style.color = '#212529';
-      selectedCard.style.border = '1px solid #dee2e6';
-
-      // Mensaje en consola (debug)
-      console.log(`Asamblea seleccionada: ${assemblyId}`);
-
-      // Disparar un evento personalizado para notificar a otros componentes
-      const event = new CustomEvent('assemblyChanged', {
-        detail: { assemblyId: assemblyId }
-      });
-      document.dispatchEvent(event);
-    }
-
-    // ---- Resetear selección (volver al estado inicial) ----
-    function resetAssemblySelection() {
-      const wrapper = document.querySelector('.assembly-cards-wrapper');
-      wrapper.classList.remove('has-selection');
-
-      // Quitar la clase 'active' de todas las cards
-      document.querySelectorAll('.assembly-card').forEach(card => {
-        card.classList.remove('active');
-      });
-    }
-
-    // Estado inicial: sin ninguna asamblea seleccionada
-    document.addEventListener('DOMContentLoaded', function () {
-      // console.log('Selector de asambleas inicializado sin selección');
-
-      // Auto seleccionar asamblea1 si la fecha actual es anterior al 21 de Octubre de 2025
-      const currentDate = new Date();
-      const cutoffDate = new Date('2025-10-21T00:00:00');
-      if (currentDate < cutoffDate) {
-        selectAssembly('asamblea1');
-      } else {
-        selectAssembly('asamblea2');
-      }
-    });
-
-    // ---- Filtro por categoría de servicios ----
-    document.querySelectorAll('.filter-tab').forEach(btn => {
-      btn.addEventListener('click', function () {
-        if (!window.globalEventData) return; // Esperar a que los datos estén cargados
-
-        // Quitar 'active' de todos los filtros y aplicar solo al seleccionado
-        document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-
-        const parentFilter = this.dataset.filter; // Categoría seleccionada
-        const localidadTab = document.querySelector(".filter-localidad-tab.active");
-        const localidadFilter = localidadTab.dataset.filter;
-
-        // Obtener la asamblea seleccionada
-        const activeAssemblyCard = document.querySelector('.assembly-card.active');
-        const currentAssembly = activeAssemblyCard ? activeAssemblyCard.dataset.assembly : null;
-
-        // Mostrar todos los servicios si se selecciona "all"
-        if (parentFilter === "all") {
-          if (localidadFilter === "all") {
-            // Mostrar todo si no hay filtros
-            let filteredList = window.globalEventData;
-            if (currentAssembly) {
-              filteredList = filteredList.filter(item => {
-                if (currentAssembly === 'asamblea1') {
-                  return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
-                } else if (currentAssembly === 'asamblea2') {
-                  return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
-                }
-                return true;
-              });
-            }
-            renderAmenities2(filteredList);
-          }
-          else {
-            // Filtrar solo por localidad
-            let filteredList = window.globalEventData.filter(x => x.localidad?.toLowerCase().includes(localidadFilter.toLowerCase()));
-            if (currentAssembly) {
-              filteredList = filteredList.filter(item => {
-                if (currentAssembly === 'asamblea1') {
-                  return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
-                } else if (currentAssembly === 'asamblea2') {
-                  return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
-                }
-                return true;
-              });
-            }
-            renderAmenities2(filteredList);
-          }
-        }
-        else {
-          if (localidadFilter === "all") {
-            // Filtrar solo por categoría
-            let filteredList = window.globalEventData.filter(i => i.categoria === parentFilter);
-            if (currentAssembly) {
-              filteredList = filteredList.filter(item => {
-                if (currentAssembly === 'asamblea1') {
-                  return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
-                } else if (currentAssembly === 'asamblea2') {
-                  return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
-                }
-                return true;
-              });
-            }
-            renderAmenities2(filteredList);
-          }
-          else {
-            // Filtrar por localidad Y categoría
-            let filteredList = window.globalEventData.filter(
-              x =>
-                x.localidad?.toLowerCase().includes(localidadFilter.toLowerCase()) &&
-                x.categoria === parentFilter
-            );
-            if (currentAssembly) {
-              filteredList = filteredList.filter(item => {
-                if (currentAssembly === 'asamblea1') {
-                  return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
-                } else if (currentAssembly === 'asamblea2') {
-                  return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
-                }
-                return true;
-              });
-            }
-            renderAmenities2(filteredList);
-          }
-        }
-      });
-    });
-
-    // ---- Filtro por localidad ----
-    document.querySelectorAll('.filter-localidad-tab').forEach(btn => {
-      btn.addEventListener('click', function () {
-        if (!window.globalEventData) return; // Esperar a que los datos estén cargados
-
-        // Quitar 'active' de todos los filtros de localidad y aplicar solo al seleccionado
-        document.querySelectorAll('.filter-localidad-tab').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-
-        const filterParentTab = document.querySelector(".filter-tab.active");
-        const localidadFilter = this.dataset.filter; // Localidad seleccionada
-        const parentFilter = filterParentTab.dataset.filter; // Categoría activa
-
-        // Obtener la asamblea seleccionada
-        const activeAssemblyCard = document.querySelector('.assembly-card.active');
-        const currentAssembly = activeAssemblyCard ? activeAssemblyCard.dataset.assembly : null;
-
-        if (parentFilter === "all") {
-          if (localidadFilter === "all") {
-            // Mostrar todo si no hay filtros
-            let filteredList = window.globalEventData;
-            if (currentAssembly) {
-              filteredList = filteredList.filter(item => {
-                if (currentAssembly === 'asamblea1') {
-                  return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
-                } else if (currentAssembly === 'asamblea2') {
-                  return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
-                }
-                return true;
-              });
-            }
-            renderAmenities2(filteredList);
-          }
-          else {
-            // Filtrar solo por localidad
-            let filteredList = window.globalEventData.filter(x => x.localidad?.toLowerCase().includes(localidadFilter.toLowerCase()));
-            if (currentAssembly) {
-              filteredList = filteredList.filter(item => {
-                if (currentAssembly === 'asamblea1') {
-                  return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
-                } else if (currentAssembly === 'asamblea2') {
-                  return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
-                }
-                return true;
-              });
-            }
-            renderAmenities2(filteredList);
-          }
-        }
-        else {
-          if (localidadFilter === "all") {
-            // Filtrar solo por categoría
-            let filteredList = window.globalEventData.filter(i => i.categoria === parentFilter);
-            if (currentAssembly) {
-              filteredList = filteredList.filter(item => {
-                if (currentAssembly === 'asamblea1') {
-                  return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
-                } else if (currentAssembly === 'asamblea2') {
-                  return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
-                }
-                return true;
-              });
-            }
-            renderAmenities2(filteredList);
-          }
-          else {
-            // Filtrar por localidad Y categoría
-            let filteredList = window.globalEventData.filter(
-              x =>
-                x.localidad?.toLowerCase().includes(localidadFilter.toLowerCase()) &&
-                x.categoria === parentFilter
-            );
-            if (currentAssembly) {
-              filteredList = filteredList.filter(item => {
-                if (currentAssembly === 'asamblea1') {
-                  return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
-                } else if (currentAssembly === 'asamblea2') {
-                  return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
-                }
-                return true;
-              });
-            }
-            renderAmenities2(filteredList);
-          }
-        }
-      });
-    });
-
-    // ---- Función para obtener icono según categoría ----
-    function getIcon(categoria) {
-      switch (categoria) {
-        case 'farmacia': return 'fa-pills';
-        case 'hotel': return 'fa-hotel';
-        case 'restaurante': return 'fa-utensils';
-        case 'centroSalud': return 'fa-hospital';
-        case 'cajero': return 'fa-credit-card';
-        default: return 'fa-home';
-      }
-    }
-
-    // ---- Renderizado de servicios (amenities) ----
-    function renderAmenities2(amenitiesData) {
-      const container = document.getElementById("amenities-list");
-      container.innerHTML = ""; // Limpiar la lista antes de renderizar
-
-      amenitiesData.forEach((item) => {
-        if (item.actions) {
-          // (Opcional) Renderizar botones adicionales si el servicio tiene acciones definidas
-          const actions = item.actions
-            .map(
-              (action) =>
-                `<button class="btn btn-sm btn-outline-primary">${action.label}</button>`,
-            )
-            .join("");
-        }
-
-        // Plantilla HTML de cada servicio
-        const html = `
-           <div class="col-lg-${amenitiesData.length == 1 ? "12" : "6"} amenity-item-wrapper" data-category="${item.categoria}">
-              <div class="amenity-card">
-                  <div class="amenity-header">
-                      <div class="amenity-icon">
-                          <i class="fas ${getIcon(item.categoria)}"></i>
-                      </div>
-                      <div>
-                          <h5 class="amenity-title">${item.titulo}</h5>
-                      </div>
-                  </div>
-                  <p style="color: var(--calm-text-light); margin-bottom: 16px;">Elige alguna de las siguientes opciones para ver la información.</p>
-                  <div class="amenity-actions">
-                      ${item.link1 ? `<a href="${item.link1}" class="calm-btn-sm" target="_blank">Google Maps</a>` : ''}
-                      ${item.link2 ? `<a href="${item.link2}" class="calm-btn-sm" target="_blank">Sitio de la Municipalidad</a>` : ''}
-                  </div>
-              </div>
-          </div>
-        `;
-        container.insertAdjacentHTML("beforeend", html);
-      });
-    }
-
-    // ---- Cuando los datos estén cargados ----
-    document.addEventListener('dataLoaded', function () {
-      // Renderizar los servicios iniciales
-      renderAmenities2(window.globalEventData);
-    });
-
-    // ---- Manejar selección de asamblea y filtrar servicios ----
-    document.addEventListener('assemblyChanged', function (e) {
-      const selectedAssembly = e.detail.assemblyId;
-
-      // Obtener los filtros activos actuales
-      const categoryFilter = document.querySelector(".filter-tab.active")?.dataset.filter || "all";
-      const localityFilter = document.querySelector(".filter-localidad-tab.active")?.dataset.filter || "all";
-
-      let filteredList = window.globalEventData;
-
-      // Filtrar por categoría si no es "all"
-      if (categoryFilter !== "all") {
-        filteredList = filteredList.filter(i => i.categoria === categoryFilter);
-      }
-
-      // Filtrar por localidad si no es "all"
-      if (localityFilter !== "all") {
-        filteredList = filteredList.filter(x => x.localidad?.toLowerCase().includes(localityFilter.toLowerCase()));
-      }
-
-      // Filtrar por asamblea
-      if (selectedAssembly === 'asamblea1') {
-        filteredList = filteredList.filter(item => item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea);
-      } else if (selectedAssembly === 'asamblea2') {
-        filteredList = filteredList.filter(item => item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea);
-      }
-
-      renderAmenities2(filteredList);
-    });
-
-    // ---- Inicializar selección de asamblea y disparar evento para filtrar servicios ----
-    document.addEventListener('DOMContentLoaded', function () {
-      const currentDate = new Date();
-      const cutoffDate = new Date('2025-10-21T00:00:00');
-      let initialAssembly = 'asamblea1';
-      if (currentDate >= cutoffDate) {
-        initialAssembly = 'asamblea2';
-      }
-      selectAssembly(initialAssembly);
-      const event = new CustomEvent('assemblyChanged', { detail: { assemblyId: initialAssembly } });
-      document.dispatchEvent(event);
-    });
-  </script>
 
 
 </body>
