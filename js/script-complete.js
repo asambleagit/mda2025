@@ -320,9 +320,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ---- Renderizado de servicios (amenities) ----
     function renderAmenities2(amenitiesData) {
+      if (!amenitiesData) { return; }
       const container = document.getElementById("amenities-list");
+      const activeAssemblyCard = document.querySelector('.assembly-card.active');
+      const currentAssembly = activeAssemblyCard ? activeAssemblyCard.dataset.assembly : null;
       container.innerHTML = ""; // Limpiar la lista antes de renderizar
-
       amenitiesData.forEach((item) => {
         if (item.actions) {
           // (Opcional) Renderizar botones adicionales si el servicio tiene acciones definidas
@@ -333,7 +335,6 @@ document.addEventListener('DOMContentLoaded', function() {
             )
             .join("");
         }
-
         // Plantilla HTML de cada servicio
         const html = `
            <div class="col-lg-${amenitiesData.length == 1 ? "12" : "6"} amenity-item-wrapper" data-category="${item.categoria}">
@@ -348,9 +349,26 @@ document.addEventListener('DOMContentLoaded', function() {
                   </div>
                   <p style="color: var(--calm-text-light); margin-bottom: 16px;">Elige alguna de las siguientes opciones para ver la información.</p>
                   <div class="amenity-actions">
-                      ${item.link1 ? `<a href="${item.link1}" class="calm-btn-sm" target="_blank">Google Maps</a>` : ''}}
-                      ${item.link2 ? `<a href="${item.link2}" class="calm-btn-sm" target="_blank">Sitio de la Municipalidad</a>` : ''}}
+                    ${item.categoria === 'hotel'
+            ? (
+              (currentAssembly === 'asamblea1' && item.link1)
+                ? `<a href="${item.link1}" class="calm-btn-sm" target="_blank">Google Maps</a>`
+                : (currentAssembly === 'asamblea2' && item.link2)
+                  ? `<a href="${item.link2}" class="calm-btn-sm" target="_blank">Google Maps</a>`
+                  : `<span>No existe información disponible, realiza la búsqueda en localidades cercanas</span>`
+            )
+            : (
+              (item.link1 || item.link2)
+                ? `
+                                  ${item.link1 ? `<a href="${item.link1}" class="calm-btn-sm" target="_blank">Google Maps</a>` : ''}
+                                  ${item.link2 ? `<a href="${item.link2}" class="calm-btn-sm" target="_blank">Sitio de la Municipalidad</a>` : ''}
+                                `
+                : `<span>No existe información disponible, realiza la búsqueda en localidades cercanas</span>`
+            )
+          }
                   </div>
+
+
               </div>
           </div>
         `;
