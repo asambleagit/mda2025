@@ -8,7 +8,7 @@
   --azulOscuro: #1c6697;
   --azulClaro: #f0f4ff;
   --beigeOscuro: #aca58f;
-  --beigeClaro: #c7c3b4;
+  --beigeClaro: #e4decb;
   --calm-secondary: #4a90a4;
   --calm-text: #2c3e50;
 
@@ -64,7 +64,7 @@ body {
 /* Portada Section */
 .hero {
   background: #ffffff;
-  min-height: 11vh;
+  min-height: 3vh;
   display: flex;
   padding-left: 10%;
   padding-top: 5%;
@@ -255,6 +255,25 @@ body {
   }
 }
 
+/*Titulos secciones*/
+.title-section {
+  background: var(--verdeClaro);
+  padding: 1% 0;   /* arriba y abajo */
+}
+@media (max-width: 768px) {
+  .title-section {
+    height: 15vh; /* tablet */
+  }
+}
+
+@media (max-width: 576px) {
+  .title-section {
+    height: auto; /* en mobile, que se adapte al contenido */
+    padding: 4% 0;
+  }
+}
+
+
 /* FAQ */
 .faq-item {
   background: white;
@@ -275,7 +294,14 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.faq-question {
+  color: #000 !important; /* por defecto, texto negro */
+}
 
+.faq-text {
+  color: #000 !important; 
+  -webkit-text-fill-color: #000; /* Safari iOS fuerza color negro */
+}
 .faq-answer {
   padding: 0 25px 25px;
   display: none;
@@ -286,6 +312,42 @@ body {
 }
 
 /*Seccion servicios */
+.emergency-card {
+  background:white;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 12px 8px;
+  text-align: center;
+  transition: transform 0.2s;
+  height: 90px; /* más bajo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.emergency-card:hover {
+  transform: translateY(-4px);
+}
+
+.emergency-card i {
+  font-size: 22px;
+  color:var(--beigeOscuro);
+  margin-bottom: 4px;
+}
+
+.emergency-card h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color:var(--beigeOscuro);
+}
+
+.emergency-card p {
+  margin: 0;
+  font-size: 12px;
+  color: #555;
+}
+
 .icon-circle {
   width: 60px;
   height: 60px;
@@ -307,6 +369,7 @@ body {
   transform: translateY(-6px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
+
 
 /* Chips*/
 .chip-track {
@@ -364,6 +427,8 @@ body {
     /* tamaño natural */
   }
 }
+
+
 
 /* Reseteo general para evitar scroll horizontal */
 .amenity-header {
