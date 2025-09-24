@@ -3,6 +3,7 @@
     "categoria": "farmacia",
     "localidad": "bernardo",
     "titulo": "Farmacias en San Bernardo",
+    "link1" : "https://www.google.com/maps/search/Farmacias/@-36.6929985,-56.7103986,14z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
     "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
@@ -10,14 +11,15 @@
     "categoria": "farmacia",
     "localidad": "ajo",
     "titulo": "Farmacias en Mar de Ajó",
-    "link2": "https://lacosta.gob.ar/farmacias/",
+    "link1" : "https://www.google.com/maps/search/Farmacias/@-36.7223248,-56.7668478,13z?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
+    "link2" : "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
   {
     "categoria": "farmacia",
     "localidad": "teresita",
     "titulo": "Farmacias en Santa Teresita",
-    "link1": "https://www.google.com/maps/search/farmacias+santa+teresita",
+    "link1": "https://www.google.com/maps/search/Farmacias/@-36.5389312,-56.7234234,14z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
     "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
@@ -25,7 +27,7 @@
     "categoria": "farmacia",
     "localidad": "tuyu",
     "titulo": "Farmacias en Mar del Tuyú",
-    "link1": "https://www.google.com/maps/search/farmacias+mar+del+tuyu",
+    "link1": "https://www.google.com/maps/search/Farmacias/@-36.5750549,-56.7225113,14z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
     "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
@@ -33,7 +35,7 @@
     "categoria": "farmacia",
     "localidad": "costa",
     "titulo": "Farmacias en Costa del Este",
-    "link1": "https://www.google.com/maps/search/farmacias+costa+del+este",
+    "link1": "https://www.google.com/maps/search/Farmacias/@-36.6078856,-56.7493659,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
     "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
@@ -41,7 +43,7 @@
     "categoria": "farmacia",
     "localidad": "aguas",
     "titulo": "Farmacias en Aguas Verdes",
-    "link1": "https://www.google.com/maps/search/farmacias+aguas+verdes",
+    "link1": "https://www.google.com/maps/search/Farmacias/@-36.6364844,-56.7466378,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
     "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
@@ -49,7 +51,7 @@
     "categoria": "farmacia",
     "localidad": "lucila",
     "titulo": "Farmacias en Lucila del Mar",
-    "link1": "https://www.google.com/maps/search/farmacias+lucila+del+mar",
+    "link1": "https://www.google.com/maps/search/Farmacias/@-36.6602326,-56.7045832,14z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
     "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
@@ -57,7 +59,7 @@
     "categoria": "farmacia",
     "localidad": "atlantis",
     "titulo": "Farmacias en Nueva Atlantis",
-    "link1": "https://www.google.com/maps/search/farmacias+nueva+atlantis",
+    "link1": "https://www.google.com/maps/search/Farmacias/@-36.7608925,-56.7299104,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
     "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
@@ -65,15 +67,13 @@
     "categoria": "farmacia",
     "localidad": "medanos",
     "titulo": "Farmacias en Punta Medanos",
-    "link1": "https://www.google.com/maps/search/farmacias+punta+medanos",
-    "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
   {
     "categoria": "farmacia",
     "localidad": "pinamar",
     "titulo": "Farmacias en Pinamar",
-    "link1": "https://www.google.com/maps/search/farmacias+pinamar",
+    "link1": "https://www.google.com/maps/search/Farmacias/@-37.0981125,-56.8804857,14z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
     "link2" : "https://pinamar.gob.ar/salud/",
     "asamblea": "both"
   },
@@ -81,13 +81,14 @@
     "categoria": "farmacia",
     "localidad": "carilo",
     "titulo": "Farmacias en Cariló",
-    "link1": "https://www.google.com/maps/search/farmacias+carilo",
+    "link1": "https://www.google.com/maps/search/Farmacias/@-37.161965,-56.9110871,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
     "asamblea": "both"
   },
   {
     "categoria": "hotel",
     "localidad": "bernardo",
     "titulo": "Hoteles en San Bernardo",
+    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento.",
     "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
     "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
     "asamblea": "both"
@@ -96,6 +97,7 @@
     "categoria": "hotel",
     "localidad": "ajo",
     "titulo": "Hoteles en Mar de Ajó",
+    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento.",
     "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
     "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
     "asamblea": "both"
@@ -104,6 +106,7 @@
     "categoria": "hotel",
     "localidad": "teresita",
     "titulo": "Hoteles en Santa Teresita",
+    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento.",
     "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
     "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
     "asamblea": "both"
@@ -112,6 +115,7 @@
     "categoria": "hotel",
     "localidad": "tuyu",
     "titulo": "Hoteles en Mar del Tuyú",
+    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento.",
     "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
     "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
     "asamblea": "both"
@@ -120,6 +124,7 @@
     "categoria": "hotel",
     "localidad": "costa",
     "titulo": "Hoteles en Costa del Este",
+    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento.",
     "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
     "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
     "asamblea": "both"
@@ -128,6 +133,7 @@
     "categoria": "hotel",
     "localidad": "aguas",
     "titulo": "Hoteles en Aguas Verdes",
+    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento.",
     "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
     "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
     "asamblea": "both"
@@ -136,6 +142,7 @@
     "categoria": "hotel",
     "localidad": "lucila",
     "titulo": "Hoteles en Lucila del Mar",
+    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento.",
     "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
     "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
     "asamblea": "both"
@@ -144,6 +151,7 @@
     "categoria": "hotel",
     "localidad": "atlantis",
     "titulo": "Hoteles en Nueva Atlantis",
+    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento.",
     "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
     "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
     "asamblea": "both"
@@ -152,6 +160,7 @@
     "categoria": "hotel",
     "localidad": "medanos",
     "titulo": "Hoteles en Punta Medanos",
+    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento.",
     "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
     "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
     "asamblea": "both"
@@ -160,6 +169,7 @@
     "categoria": "hotel",
     "localidad": "pinamar",
     "titulo": "Hoteles en Pinamar",
+    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento.",
     "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
     "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
     "asamblea": "both"
@@ -168,6 +178,7 @@
     "categoria": "hotel",
     "localidad": "carilo",
     "titulo": "Hoteles en Cariló",
+    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento.",
     "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
     "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
     "asamblea": "both"
@@ -269,7 +280,7 @@
     "categoria": "centroSalud",
     "localidad": "teresita",
     "titulo": "Centros de Salud en Santa Teresita",
-    "link1": "https://www.google.com/maps/search/centros+de+salud+santa+teresita",
+    "link1": "https://maps.app.goo.gl/EHfKRSayBbzwE2FB6",
     "link2": "https://lacosta.gob.ar/salud/",
     "asamblea": "both"
   },

@@ -3,18 +3,14 @@ function toggleFAQ(element) {
     const faqItem = element.parentElement;
     const isActive = faqItem.classList.contains("active");
 
-    // Close all FAQ items
-    document.querySelectorAll(".faq-item").forEach((item) => {
-        item.classList.remove("active");
-        item.querySelector(".fa-chevron-down").style.transform =
-            "rotate(0deg)";
-    });
-
-    // Open clicked item if it wasn't active
-    if (!isActive) {
+    if (isActive) {
+        // Si ya estaba abierto, lo cerramos
+        faqItem.classList.remove("active");
+        element.querySelector(".fa-chevron-down").style.transform = "rotate(0deg)";
+    } else {
+        // Si estaba cerrado, lo abrimos
         faqItem.classList.add("active");
-        element.querySelector(".fa-chevron-down").style.transform =
-            "rotate(180deg)";
+        element.querySelector(".fa-chevron-down").style.transform = "rotate(180deg)";
     }
 }
 
@@ -381,6 +377,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <h5 class="amenity-title">${item.titulo}</h5>
                       </div>
                   </div>
+                  ${item.aviso ? '<p style="color: var(--calm-text-light); margin-bottom: 16px;"><strong>' + item.aviso + '</strong></p>' : ''}
                   <p style="color: var(--calm-text-light); margin-bottom: 16px;">Elige alguna de las siguientes opciones para ver la información.</p>
                   <div class="amenity-actions">
                     ${item.categoria === 'hotel'
