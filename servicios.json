@@ -3,7 +3,7 @@
     "categoria": "farmacia",
     "localidad": "bernardo",
     "titulo": "Farmacias en San Bernardo",
-    "link1" : "https://www.google.com/maps/search/Farmacias/@-36.6929985,-56.7103986,14z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
+    "link1" : "https://maps.app.goo.gl/5se9JKaeVGesEFjo8",
     "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
@@ -11,7 +11,7 @@
     "categoria": "farmacia",
     "localidad": "ajo",
     "titulo": "Farmacias en Mar de Ajó",
-    "link1" : "https://www.google.com/maps/search/Farmacias/@-36.7223248,-56.7668478,13z?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
+    "link1" : "https://maps.app.goo.gl/Ks9vU9MXHf2VUYaR7",
     "link2" : "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
@@ -19,7 +19,7 @@
     "categoria": "farmacia",
     "localidad": "teresita",
     "titulo": "Farmacias en Santa Teresita",
-    "link1": "https://www.google.com/maps/search/Farmacias/@-36.5389312,-56.7234234,14z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
+    "link1": "https://maps.app.goo.gl/dsbM2dZTJF9EuNx16",
     "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
@@ -27,7 +27,7 @@
     "categoria": "farmacia",
     "localidad": "tuyu",
     "titulo": "Farmacias en Mar del Tuyú",
-    "link1": "https://www.google.com/maps/search/Farmacias/@-36.5750549,-56.7225113,14z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
+    "link1": "https://maps.app.goo.gl/dzD8gKxhKukqX2y98",
     "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
@@ -35,7 +35,7 @@
     "categoria": "farmacia",
     "localidad": "costa",
     "titulo": "Farmacias en Costa del Este",
-    "link1": "https://www.google.com/maps/search/Farmacias/@-36.6078856,-56.7493659,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
+    "link1": "https://maps.app.goo.gl/D3yAkP4qN8Vt8PMV8",
     "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
@@ -43,7 +43,7 @@
     "categoria": "farmacia",
     "localidad": "aguas",
     "titulo": "Farmacias en Aguas Verdes",
-    "link1": "https://www.google.com/maps/search/Farmacias/@-36.6364844,-56.7466378,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
+    "link1": "https://maps.app.goo.gl/SYBdeZAuqTu8EM3M7",
     "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
@@ -51,7 +51,7 @@
     "categoria": "farmacia",
     "localidad": "lucila",
     "titulo": "Farmacias en Lucila del Mar",
-    "link1": "https://www.google.com/maps/search/Farmacias/@-36.6602326,-56.7045832,14z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
+    "link1": "https://maps.app.goo.gl/MCCgt9PSzsLNZM436",
     "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
@@ -59,7 +59,7 @@
     "categoria": "farmacia",
     "localidad": "atlantis",
     "titulo": "Farmacias en Nueva Atlantis",
-    "link1": "https://www.google.com/maps/search/Farmacias/@-36.7608925,-56.7299104,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D",
+    "link1": "https://maps.app.goo.gl/CZaEVc9wdHbqgFg59",
     "link2": "https://lacosta.gob.ar/farmacias/",
     "asamblea": "both"
   },
@@ -419,6 +419,82 @@
     "localidad": "carilo",
     "titulo": "Cajeros Automáticos en Cariló",
     "link1": "https://www.google.com/maps/search/cajeros+automaticos+carilo",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "cajero",
+    "localidad": "bernardo",
+    "titulo": "Mercados en San Bernardo",
+    "link1": "https://maps.app.goo.gl/FX3JoAkzyMUR1WwR8",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "comercio",
+    "localidad": "ajo",
+    "titulo": "Mercados en Mar de Ajó",
+    "link1": "https://maps.app.goo.gl/nrZypnmwk5qTwWFP9",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "comercio",
+    "localidad": "teresita",
+    "titulo": "Mercados en Santa Teresita",
+    "link1": "https://maps.app.goo.gl/tiZS2t6E7dLWoMkT9",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "comercio",
+    "localidad": "tuyu",
+    "titulo": "Mercados en Mar del Tuyú",
+    "link1": "https://maps.app.goo.gl/sneDVHwDJDzcd1am9",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "comercio",
+    "localidad": "costa",
+    "titulo": "Mercados en Costa del Este",
+    "link1": "https://maps.app.goo.gl/7HePbHQAB6x6mKJZ7",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "comercio",
+    "localidad": "aguas",
+    "titulo": "Mercados en Aguas Verdes",
+    "link1": "https://maps.app.goo.gl/oceLqGRrpdyquVow5",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "comercio",
+    "localidad": "lucila",
+    "titulo": "Mercados en Lucila del Mar",
+    "link1": "https://maps.app.goo.gl/vQnxWqktBJiP5q826",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "comercio",
+    "localidad": "atlantis",
+    "titulo": "Mercados en Nueva Atlantis",
+    "link1": "https://maps.app.goo.gl/MAMXkhMDqDorAsRP8",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "comercio",
+    "localidad": "medanos",
+    "titulo": "Mercados en Punta Medanos",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "comercio",
+    "localidad": "pinamar",
+    "titulo": "Mercados en Pinamar",
+    "link1": "https://maps.app.goo.gl/JPYq1ANgxMjGqsJf8",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "comercio",
+    "localidad": "carilo",
+    "titulo": "Mercados en Cariló",
+    "link1": "https://maps.app.goo.gl/igmEnrDffc5QZiDdA",
     "asamblea": "both"
   }
 ]
