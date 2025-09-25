@@ -5,6 +5,7 @@
     "titulo": "Farmacias en San Bernardo",
     "link1" : "https://maps.app.goo.gl/5se9JKaeVGesEFjo8",
     "link2": "https://lacosta.gob.ar/farmacias/",
+    "link3": "https://venialacosta.com/farmacias-de-turno.php",
     "asamblea": "both"
   },
   {
@@ -13,6 +14,7 @@
     "titulo": "Farmacias en Mar de Ajó",
     "link1" : "https://maps.app.goo.gl/Ks9vU9MXHf2VUYaR7",
     "link2" : "https://lacosta.gob.ar/farmacias/",
+    "link3": "https://venialacosta.com/farmacias-de-turno.php",
     "asamblea": "both"
   },
   {
@@ -21,6 +23,7 @@
     "titulo": "Farmacias en Santa Teresita",
     "link1": "https://maps.app.goo.gl/dsbM2dZTJF9EuNx16",
     "link2": "https://lacosta.gob.ar/farmacias/",
+    "link3": "https://venialacosta.com/farmacias-de-turno.php",
     "asamblea": "both"
   },
   {
@@ -29,6 +32,7 @@
     "titulo": "Farmacias en Mar del Tuyú",
     "link1": "https://maps.app.goo.gl/dzD8gKxhKukqX2y98",
     "link2": "https://lacosta.gob.ar/farmacias/",
+    "link3": "https://venialacosta.com/farmacias-de-turno.php",
     "asamblea": "both"
   },
   {
@@ -37,6 +41,7 @@
     "titulo": "Farmacias en Costa del Este",
     "link1": "https://maps.app.goo.gl/D3yAkP4qN8Vt8PMV8",
     "link2": "https://lacosta.gob.ar/farmacias/",
+    "link3": "https://venialacosta.com/farmacias-de-turno.php",
     "asamblea": "both"
   },
   {
@@ -45,6 +50,7 @@
     "titulo": "Farmacias en Aguas Verdes",
     "link1": "https://maps.app.goo.gl/SYBdeZAuqTu8EM3M7",
     "link2": "https://lacosta.gob.ar/farmacias/",
+    "link3": "https://venialacosta.com/farmacias-de-turno.php",
     "asamblea": "both"
   },
   {
@@ -53,6 +59,7 @@
     "titulo": "Farmacias en Lucila del Mar",
     "link1": "https://maps.app.goo.gl/MCCgt9PSzsLNZM436",
     "link2": "https://lacosta.gob.ar/farmacias/",
+    "link3": "https://venialacosta.com/farmacias-de-turno.php",
     "asamblea": "both"
   },
   {
@@ -61,12 +68,14 @@
     "titulo": "Farmacias en Nueva Atlantis",
     "link1": "https://maps.app.goo.gl/CZaEVc9wdHbqgFg59",
     "link2": "https://lacosta.gob.ar/farmacias/",
+    "link3": "https://venialacosta.com/farmacias-de-turno.php",
     "asamblea": "both"
   },
   {
     "categoria": "farmacia",
     "localidad": "medanos",
     "titulo": "Farmacias en Punta Medanos",
+    "link3": "https://venialacosta.com/farmacias-de-turno.php",
     "asamblea": "both"
   },
   {
@@ -187,77 +196,76 @@
     "categoria": "restaurante",
     "localidad": "ajo",
     "titulo": "Restaurantes en Mar de Ajó",
-    "link1": "https://www.google.com/maps/search/Restaurantes/@-36.7223556,-56.7301053,13z/data=!3m1!4b1!4m11!2m10!3m6!1sRestaurantes!2sMar+de+Aj%C3%B3,+Provincia+de+Buenos+Aires!3s0x959c6f6f95f89931:0x5a52f7f5112fcddb!4m2!1d-56.6750185!2d-36.7232497!5m1!4e8!6e5?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "link1": "https://maps.app.goo.gl/1ypvya2mDL5sXN9u9",
     "asamblea": "both"
   },
   {
     "categoria": "restaurante",
     "localidad": "bernardo",
     "titulo": "Restaurantes en San Bernardo",
-    "link1": "https://www.google.com/maps/search/Restaurantes/@-36.6930025,-56.7000987,15z/data=!3m1!4b1!4m11!2m10!3m6!1sRestaurantes!2sSan+Bernardo+del+Tuy%C3%BA,+Provincia+de+Buenos+Aires!3s0x959c6f1ade43b00f:0x9aa5de59374eafef!4m2!1d-56.6791979!2d-36.6863655!5m1!4e8!6e5?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "link1": "https://maps.app.goo.gl/sn1rTLCAyMHEpbMv8",
     "asamblea": "both"
   },
   {
     "categoria": "restaurante",
     "localidad": "teresita",
     "titulo": "Restaurantes en Santa Teresita",
-    "link1": "https://www.google.com/maps/search/Restaurantes/@-36.5389352,-56.7131234,15z/data=!3m1!4b1!4m11!2m10!3m6!1sRestaurantes!2sB7107+Santa+Teresita,+Provincia+de+Buenos+Aires!3s0x959c131d84c3cc7f:0x8b862911d58aa6d3!4m2!1d-56.690912!2d-36.544327!5m1!4e8!6e5?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "link1": "https://maps.app.goo.gl/Xuz8pe3xMVx4GrD86",
     "asamblea": "both"
   },
   {
     "categoria": "restaurante",
     "localidad": "tuyu",
     "titulo": "Restaurantes en Mar del Tuyú",
-    "link1": "https://www.google.com/maps/search/Restaurantes/@-36.5750549,-56.7225113,14z/data=!3m1!4b1!4m11!2m10!3m6!1sRestaurantes!2sMar+del+Tuy%C3%BA,+Provincia+de+Buenos+Aires!3s0x959c6cd763fb79e3:0xd3893a5e7763e7b8!4m2!1d-56.6903726!2d-36.5772754!5m1!4e8!6e5?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "link1": "https://maps.app.goo.gl/4Dqp6HcBaA8A1w7V7",
     "asamblea": "both"
   },
   {
     "categoria": "restaurante",
     "localidad": "costa",
     "titulo": "Restaurantes en Costa del Este",
-    "link1": "https://www.google.com/maps/search/Restaurantes/@-36.6078934,-56.7092823,15z/data=!3m1!4b1!4m11!2m10!3m6!1sRestaurantes!2sCosta+del+Este,+Provincia+de+Buenos+Aires!3s0x959c6d027514303d:0xc21269a639ab464!4m2!1d-56.6880228!2d-36.6087864!5m1!4e8!6e5?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "link1": "https://maps.app.goo.gl/JwFoqh9kF8mFSb7t8",
     "asamblea": "both"
   },
   {
     "categoria": "restaurante",
     "localidad": "aguas",
     "titulo": "Restaurantes en Aguas Verdes",
-    "link1": "https://www.google.com/maps/search/Restaurantes/@-36.6364922,-56.7065542,15z/data=!3m1!4b1!4m11!2m10!3m6!1sRestaurantes!2sAguas+Verdes,+Provincia+de+Buenos+Aires!3s0x959c6c36a4aaec1b:0x510582f2ba629ee!4m2!1d-56.6889712!2d-36.6373461!5m1!4e8!6e5?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "link1": "https://maps.app.goo.gl/hBS7NuZppeLyu1zF7",
     "asamblea": "both"
   },
   {
     "categoria": "restaurante",
     "localidad": "lucila",
     "titulo": "Restaurantes en Lucila del Mar",
-    "link1": "https://www.google.com/maps/search/Restaurantes/@-36.6602343,-56.6891336,16z/data=!3m1!4b1!4m11!2m10!3m6!1sRestaurantes!2sLa+Lucila+del+Mar,+Provincia+de+Buenos+Aires!3s0x959c6e9ae556c58b:0xbfcb017ad35caa2!4m2!1d-56.6837553!2d-36.6593154!5m1!4e8!6e5?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "link1": "https://maps.app.goo.gl/zt2WH12QrCpvQ3d9A",
     "asamblea": "both"
   },
   {
     "categoria": "restaurante",
     "localidad": "atlantis",
     "titulo": "Restaurantes en Nueva Atlantis",
-    "link1": "https://www.google.com/maps/search/Restaurantes/@-36.7608992,-56.6990109,15z/data=!3m1!4b1!4m11!2m10!3m6!1sRestaurantes!2sNueva+Atlantis,+Provincia+de+Buenos+Aires!3s0x959c65b37d474eef:0x3354b326053dede2!4m2!1d-56.6795297!2d-36.7628111!5m1!4e8!6e5?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "link1": "https://maps.app.goo.gl/yjkoy8ieJ6LxmtRbA",
     "asamblea": "both"
   },
   {
     "categoria": "restaurante",
     "localidad": "medanos",
     "titulo": "Restaurantes en Punta Medanos",
-    "link1": "https://www.google.com/maps/search/Restaurantes/@-36.6116522,-56.6917227,17z/data=!3m1!4b1!4m11!2m10!3m6!1sRestaurantes!2sMedanos+del+este,+Av.+4+98,+B7108+Costa+del+Este,+Provincia+de+Buenos+Aires!3s0x959c6d0005c2d99d:0x8bc9705ab0e1dcb4!4m2!1d-56.6868518!2d-36.6116523!5m1!4e8!6e5?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
     "asamblea": "both"
   },
   {
     "categoria": "restaurante",
     "localidad": "pinamar",
     "titulo": "Restaurantes en Pinamar",
-    "link1": "https://www.google.com/maps/search/Restaurantes/@-37.0981125,-56.8804857,14z/data=!3m1!4b1!4m11!2m10!3m6!1sRestaurantes!2sPinamar,+Provincia+de+Buenos+Aires!3s0x959c9ce568f79a97:0xb3445704438c8419!4m2!1d-56.8607055!2d-37.1145662!5m1!4e8!6e5?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "link1": "https://maps.app.goo.gl/Uar1PziCi13cr63n9",
     "asamblea": "both"
   },
   {
     "categoria": "restaurante",
     "localidad": "carilo",
     "titulo": "Restaurantes en Cariló",
-    "link1": "https://www.google.com/maps/search/Restaurantes/@-37.161965,-56.9110871,15z/data=!3m1!4b1!4m8!2m7!3m6!1sRestaurantes!2sB7167+Caril%C3%B3,+Provincia+de+Buenos+Aires!3s0x959c9dea8f61a8d3:0x866158090365a6c5!4m2!1d-56.9030558!2d-37.164258?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D",
+    "link1": "https://maps.app.goo.gl/2ASi6QZj3t6X3YrJ6",
     "asamblea": "both"
   },
   {
@@ -422,7 +430,7 @@
     "asamblea": "both"
   },
   {
-    "categoria": "cajero",
+    "categoria": "comercio",
     "localidad": "bernardo",
     "titulo": "Mercados en San Bernardo",
     "link1": "https://maps.app.goo.gl/FX3JoAkzyMUR1WwR8",
@@ -495,6 +503,78 @@
     "localidad": "carilo",
     "titulo": "Mercados en Cariló",
     "link1": "https://maps.app.goo.gl/igmEnrDffc5QZiDdA",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "combustible",
+    "localidad": "bernardo",
+    "titulo": "Estaciones de Servicio en San Bernardo",
+    "link1": "https://maps.app.goo.gl/2JvS73ZmrnXFXkKk6",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "combustible",
+    "localidad": "ajo",
+    "titulo": "Estaciones de Servicio en Mar de Ajó",
+    "link1": "https://maps.app.goo.gl/uKAJWKR8Zn5Nwd328",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "combustible",
+    "localidad": "teresita",
+    "titulo": "Estaciones de Servicio en Santa Teresita",
+    "link1": "https://maps.app.goo.gl/EdfK9W38CHyET5Xd8",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "combustible",
+    "localidad": "tuyu",
+    "titulo": "Estaciones de Servicio en Mar del Tuyú",
+    "link1": "https://maps.app.goo.gl/pAvN1jFa5Hp9Lzpg7",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "combustible",
+    "localidad": "costa",
+    "titulo": "Estaciones de Servicio en Costa del Este",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "combustible",
+    "localidad": "aguas",
+    "titulo": "Estaciones de Servicio en Aguas Verdes",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "combustible",
+    "localidad": "lucila",
+    "titulo": "Estaciones de Servicio en Lucila del Mar",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "combustible",
+    "localidad": "atlantis",
+    "titulo": "Estaciones de Servicio en Nueva Atlantis",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "combustible",
+    "localidad": "medanos",
+    "titulo": "Estaciones de Servicio en Punta Medanos",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "combustible",
+    "localidad": "pinamar",
+    "titulo": "Estaciones de Servicio en Pinamar",
+    "link1": "https://maps.app.goo.gl/aJJe5D6A3SdS8vyB6",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "combustible",
+    "localidad": "carilo",
+    "titulo": "Estaciones de Servicio en Cariló",
+    "link1": "https://maps.app.goo.gl/ifi8xT8W1Nk3PKQD9",
     "asamblea": "both"
   }
 ]

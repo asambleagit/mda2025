@@ -381,22 +381,36 @@ document.addEventListener('DOMContentLoaded', function() {
                   <p style="color: var(--calm-text-light); margin-bottom: 16px;">Elige alguna de las siguientes opciones para ver la información.</p>
                   <div class="amenity-actions">
                     ${item.categoria === 'hotel'
-            ? (
-              (currentAssembly === 'asamblea1' && item.link1)
-                ? `<a href="${item.link1}" class="calm-btn-sm" target="_blank">Google Maps</a>`
-                : (currentAssembly === 'asamblea2' && item.link2)
-                  ? `<a href="${item.link2}" class="calm-btn-sm" target="_blank">Google Maps</a>`
-                  : `<span>No existe información disponible, realiza la búsqueda en localidades cercanas</span>`
-            )
-            : (
-              (item.link1 || item.link2)
-                ? `
-                                  ${item.link1 ? `<a href="${item.link1}" class="calm-btn-sm" target="_blank">Google Maps</a>` : ''}
-                                  ${item.link2 ? `<a href="${item.link2}" class="calm-btn-sm" target="_blank">Sitio de la Municipalidad</a>` : ''}
-                                `
-                : `<span>No existe información disponible, realiza la búsqueda en localidades cercanas</span>`
-            )
-          }
+                        ? (
+                          (currentAssembly === 'asamblea1' && item.link1)
+                            ? `<a href="${item.link1}" class="calm-btn-sm" target="_blank">Google Maps</a>`
+                            : (currentAssembly === 'asamblea2' && item.link2)
+                              ? `<a href="${item.link2}" class="calm-btn-sm" target="_blank">Google Maps</a>`
+                              : `<span>No existe información disponible, realiza la búsqueda en localidades cercanas</span>`
+                        )
+                        : 
+                        item.categoria === 'farmacia' ? 
+                        (
+                          (item.link1 || item.link2 || item.link3)
+                            ? `
+                                              
+                                              ${item.link1 ? `<a href="${item.link1}" class="calm-btn-sm" target="_blank">Google Maps</a>` : ''}
+                                              ${item.link2 ? `<a href="${item.link2}" class="calm-btn-sm" target="_blank">Sitio de la Municipalidad</a>` : ''}                                             
+                                              ${item.link3 ? `<a href="${item.link3}" class="calm-btn-sm" target="_blank">Farmacias de Turno</a>` : ''}
+
+                                            `
+                            : `<span>No existe información disponible, realiza la búsqueda en localidades cercanas</span>`
+                        )
+                        :
+                        (
+                          (item.link1 || item.link2)
+                            ? `
+                                              ${item.link1 ? `<a href="${item.link1}" class="calm-btn-sm" target="_blank">Google Maps</a>` : ''}
+                                              ${item.link2 ? `<a href="${item.link2}" class="calm-btn-sm" target="_blank">Sitio de la Municipalidad</a>` : ''}
+                                            `
+                            : `<span>No existe información disponible, realiza la búsqueda en localidades cercanas</span>`
+                        )
+                      }
                   </div>
 
 
