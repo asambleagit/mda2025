@@ -101,7 +101,7 @@ body {
   object-fit: contain;
   transition: filter 2s ease-in-out;
   animation: colorShift 5s infinite alternate;
-  margin-bottom: -5%;
+  margin-bottom: -3%;
   opacity: 0.7;
 
   /* Difuminar base */
@@ -626,7 +626,7 @@ body {
   }
 
   .hero-animated-img {
-    width: 50%;
+    width: 70%;
   }
 }
 
@@ -640,6 +640,6 @@ body {
   }
 
   .hero-animated-img {
-    width: 50%;
+    width: 70%;
   }
 }
