@@ -40,10 +40,10 @@
 @font-face {
   font-family: 'WTMannaSans';
   src: url('fonts/WTMannaSans.woff2') format('woff2'),
-       url('fonts/WTMannaSans.woff') format('woff'),
-       url('fonts/WTMannaSans.ttf') format('truetype');
+       url('fonts/WTMannaSans.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Reset */
@@ -54,7 +54,7 @@
 }
 
 body {
-  font-family: 'WTMannaSans', Roboto, 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, 'Arial Unicode MS', sans-serif;
+  
   
   line-height: 1.6;
   color: var(--text-dark);
@@ -81,7 +81,7 @@ section {
   background: #ffffff;
   min-height: 3vh;
   display: flex;
-  padding-left: 10%;
+ 
   
   flex-direction: column;
   /* Explicitly set to row */
@@ -93,8 +93,8 @@ section {
 }
 
 .hero h1 {
-  
-font-size: 3rem;
+  font-family: 'WTMannaSans', Roboto, 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, 'Arial Unicode MS', sans-serif;
+font-size: 40px;
   font-weight: 700;
   color: var(--calm-text);
   text-align: center;
@@ -412,21 +412,35 @@ font-size: 3rem;
   margin-bottom: 12px;
 }
 #amenities-list {
-  width: 100%;
+   width: 100%;
   max-width: 100%;
-  overflow-x: hidden; /* 🔹 bloquea scroll horizontal */
+  overflow-x: hidden; /* bloquea scroll horizontal */
+  overflow-y: auto;   /* habilita scroll vertical */
   margin: 0;
-  padding: 0 8px; /* un poco de aire */
+  padding: 0 8px;
   box-sizing: border-box;
+  border-bottom: 1px solid var(--beigeClaro);
+  /* Altura aproximada para mostrar 3 cards */
+  max-height: calc(3 * (200px + 16px)); /* altura card + margin-bottom */
+  /* Ajusta 200px según tu altura de card real */
+  ;
+}
+#amenities-list::-webkit-scrollbar {
+  width: 8px;
 }
 
+#amenities-list::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
 .amenity-card {
   background: var(--calm-white);
   border-radius: 16px;
   padding: 24px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
-  margin-bottom: 16px; /* más estándar */
+  margin-bottom: 8px; /* más estándar */
+  
   border-left: 4px solid #aca58f;
   border-top: 1px solid var(--beigeClaro);
   border-bottom: 1px solid var(--beigeClaro);
@@ -443,7 +457,11 @@ font-size: 3rem;
 }
 .amenity-title { font-weight: 500; font-size: 1.1rem; color: var(--calm-text); margin: 0; } .amenity-meta { color: var(--calm-text-light); font-size: 0.9rem; margin-bottom: 12px; } .amenity-actions { display: flex; gap: 8px; flex-wrap: wrap; }
 
-
+#Encuesta {
+  background: white;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* sombra solo arriba */
+  
+}
 
 .calm-btn-sm {
   background:rgb(240, 238, 234);
@@ -594,12 +612,13 @@ font-size: 3rem;
   .chip-item {
     flex: 0 0 45%; /* 🔹 ocupa un poquito más (antes 40%) */
   }
+
 }
 
 @media (max-width: 576px) {
-  .page-wrapper{
-    margin: 3%;
-  }
+ .portada{
+  padding: 4%;
+ }
   .hero {
     padding-left: 3%;
   }
