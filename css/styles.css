@@ -37,6 +37,14 @@
   --calm-sunset: #f093fb;
   --calm-sunrise: #f5d020;
 }
+@font-face {
+  font-family: 'WTMannaSans';
+  src: url('fonts/WTMannaSans.woff2') format('woff2'),
+       url('fonts/WTMannaSans.woff') format('woff'),
+       url('fonts/WTMannaSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* Reset */
 * {
@@ -46,12 +54,19 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'WTMannaSans', Roboto, 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, 'Arial Unicode MS', sans-serif;
+  
   line-height: 1.6;
   color: var(--text-dark);
-  /*background: var(--body-back-effects) !important;*/
+ 
 }
 
+section {
+  width: 100%;         /* que ocupe todo el ancho disponible */
+  max-width: 1200px;   /* opcional: un límite para pantallas muy grandes */
+  margin: 0 auto;      /* centra el contenido */
+ 
+}
 .linea-sombreada {
   width: 100%;
   height: 1px; /* grosor de la línea */
@@ -78,9 +93,16 @@ body {
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  
+font-size: 3rem;
   font-weight: 700;
   color: var(--calm-text);
+  text-align: center;
+  white-space: nowrap; /* Desktop: una línea */
+
+}
+.line-break-mobile {
+  display: none;
 }
 
 .hero p {
@@ -243,45 +265,12 @@ body {
   min-height: 150px;
 }
 
-/* Pantallas grandes */
-@media (min-width: 1200px) {
-  .cardUbicacion {
-    height: 190px;
-  }
-}
 
-/* Tablets */
-@media (max-width: 991px) {
-  .cardUbicacion {
-    height: auto;
-    min-height: 170px;
-  }
-}
-
-/* Celulares */
-@media (max-width: 576px) {
-  .cardUbicacion {
-    height: auto;
-    min-height: 200px; /* un poquito más para dar aire */
-  }
-}
 
 /*Titulos secciones*/
 .title-section {
   background: var(--verdeClaro);
   padding: 1% 0;   /* arriba y abajo */
-}
-@media (max-width: 768px) {
-  .title-section {
-    height: 15vh; /* tablet */
-  }
-}
-
-@media (max-width: 576px) {
-  .title-section {
-    height: auto; /* en mobile, que se adapte al contenido */
-    padding: 4% 0;
-  }
 }
 
 
@@ -406,38 +395,12 @@ body {
 .chip-item:hover {
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
-
-
-/* Mobile: reducir espacio lateral */
-@media (max-width: 768px) {
-  .chip-carousel-container {
-    padding: 0 0.8rem; /* 🔹 menos espacio en los costados */
-  }
-
-  .chip-item {
-    flex: 0 0 45%; /* 🔹 ocupa un poquito más (antes 40%) */
-  }
-}
 .chip-item.active {
   background-color: #586464;
   color: #fff;
   box-shadow: 0 8px 18px rgba(125, 141, 140, 0.2);
 }
 
-/* En pantallas medianas (desktop) → distribución normal */
-@media (min-width: 768px) {
-  .chip-track {
-    overflow-x: visible;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .chip-item {
-    flex: unset;
-
-    /* tamaño natural */
-  }
-}
 
 
 
@@ -480,13 +443,6 @@ body {
 }
 .amenity-title { font-weight: 500; font-size: 1.1rem; color: var(--calm-text); margin: 0; } .amenity-meta { color: var(--calm-text-light); font-size: 0.9rem; margin-bottom: 12px; } .amenity-actions { display: flex; gap: 8px; flex-wrap: wrap; }
 
-/* Mobile: que no se desplace */
-@media (max-width: 576px) {
-  .amenity-card {
-    width: 100% !important; /* 🔹 elimina el 95% que te generaba exceso */
-    margin: 0 auto 16px;     /* 🔹 centrado limpio */
-  }
-}
 
 
 .calm-btn-sm {
@@ -556,6 +512,25 @@ body {
 
 
 /* Media Queries para responsividad */
+@media (min-width: 992px) {
+  html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #f1f1f1 !important;
+  }
+
+  .page-wrapper {
+    background-color:white !important;
+    width: 70%;              /* 80% del ancho */
+    margin: auto;            /* centra horizontalmente */
+    box-shadow: 0 0 24px rgba(0,0,0,0.18); /* sombra más ancha y notoria */
+    display: flex;           /* para centrar el contenido */
+    flex-direction: column;
+    justify-content: center; /* centra verticalmente */
+    align-items: center;     /* centra horizontalmente */
+   
+  }
+}
 @media (max-width: 1200px) {
   .hero h1 {
     font-size: 2.2rem;
@@ -609,9 +584,22 @@ body {
   .hero-animated-img {
     width: 30%;
   }
+  .title-section {
+    height: 15vh; /* tablet */
+  }
+   .chip-carousel-container {
+    padding: 0 0.8rem; /* 🔹 menos espacio en los costados */
+  }
+
+  .chip-item {
+    flex: 0 0 45%; /* 🔹 ocupa un poquito más (antes 40%) */
+  }
 }
 
 @media (max-width: 576px) {
+  .page-wrapper{
+    margin: 3%;
+  }
   .hero {
     padding-left: 3%;
   }
@@ -628,6 +616,19 @@ body {
   .hero-animated-img {
     width: 70%;
   }
+  .title-section {
+    height: auto; /* en mobile, que se adapte al contenido */
+    padding: 4% 0;
+  }
+  .cardUbicacion {
+    height: auto;
+    min-height: 200px; /* un poquito más para dar aire */
+  }
+  .amenity-card {
+    width: 100% !important; /* 🔹 elimina el 95% que te generaba exceso */
+    margin: 0 auto 16px;     /* 🔹 centrado limpio */
+  }
+  
 }
 
 @media (max-width: 400px) {
@@ -641,5 +642,46 @@ body {
 
   .hero-animated-img {
     width: 70%;
+  }
+}
+
+/* En pantallas medianas (desktop) → distribución normal */
+@media (min-width: 768px) {
+  
+  .chip-track {
+    overflow-x: visible;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .chip-item {
+    flex: unset;
+
+    /* tamaño natural */
+  }
+}
+/* Pantallas grandes */
+@media (min-width: 1200px) {
+  .cardUbicacion {
+    height: 190px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 991px) {
+  .cardUbicacion {
+    height: auto;
+    min-height: 170px;
+  }
+}
+
+/* Pantallas pequeñas (iPhone Pro Max ~428px) */
+@media (max-width: 430px) {
+  .hero-title {
+    font-size: 2rem;        /* tamaño más cómodo */
+    white-space: normal;     /* permite salto de línea */
+  }
+  .line-break-mobile {
+    display: inline;        /* muestra el salto de línea */
   }
 }
