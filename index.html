@@ -37,10 +37,12 @@
   <!--script src="plano.js?v=1.2.4"></script-->
   <script src="js/plano.js"></script>
 
-
+<div class="click-counter" id="clickCounter" style="display: none;">
+        Clics: <span id="clickCount">0</span>/10
+    </div>
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <div class="hero-image-container text-center">
+    <div id="heroImage" class="hero-image-container text-center">
       <img src="Image/logo1-v2-min.png" alt="Hero" class="hero-animated-img">
     </div>
     <h1 style="text-align: center; font-family: 'Cabin', sans-serif;">
@@ -1038,5 +1040,120 @@
   </button>
 
 </body>
+
+<script>
+        let clickCount = 0;
+        const maxClicks = 10;
+        const heroImage = document.getElementById('heroImage');
+        const clickCountDisplay = document.getElementById('clickCount');
+        const clickCounter = document.getElementById('clickCounter');
+        const secretPage = document.getElementById('secretPage');
+
+        // Símbolos de notas musicales
+        const musicalNotes = ['♪', '♫', '♬', '♩', '♭', '♮', '♯', '𝄞', '𝄢'];
+
+        heroImage.addEventListener('click', function(e) {
+            clickCount++;
+            
+            // Actualizar contador
+            clickCountDisplay.textContent = clickCount;
+            clickCounter.classList.add('pulse');
+            
+            setTimeout(() => {
+                clickCounter.classList.remove('pulse');
+            }, 300);
+
+            // Agregar efecto de ripple
+            heroImage.classList.add('clicked');
+            setTimeout(() => {
+                heroImage.classList.remove('clicked');
+            }, 600);
+
+            // Crear notas musicales
+            createMusicalNotes(e);
+
+            if(clickCount >= 3){
+              clickCounter.style.display = '';
+            }
+            // Si se alcanzaron 10 clics, abrir página específica y resetear
+            if (clickCount >= maxClicks) {
+              window.open('https://www.jw.org/es/biblioteca/musica-canciones/canciones-originales/Hacer-tu-voluntad-canci%C3%B3n-de-la-asamblea-regional-del-2025/', '_blank');                    
+                setTimeout(() => {                    
+                    // Resetear el contador después de abrir la página
+                    clickCount = 0;
+                    clickCountDisplay.textContent = '0';
+                    clickCounter.style.display = 'none';
+                }, 1000);
+            }
+        });
+
+        function createMusicalNotes(e) {
+            const containerRect = heroImage.getBoundingClientRect();
+            const numNotes = Math.random() * 6 + 4; // 4-10 notas
+
+            for (let i = 0; i < numNotes; i++) {
+                setTimeout(() => {
+                    const note = document.createElement('div');
+                    note.className = 'musical-note';
+                    
+                    // Texto de la nota
+                    note.textContent = musicalNotes[Math.floor(Math.random() * musicalNotes.length)];
+                    
+                    // Posición inicial cerca del click
+                    const offsetX = (Math.random() - 0.5) * 100;
+                    const offsetY = (Math.random() - 0.5) * 50;
+                    note.style.left = (containerRect.left + containerRect.width/2 + offsetX) + 'px';
+                    note.style.top = (containerRect.top + containerRect.height/2 + offsetY) + 'px';
+                    
+                    // Tamaños aleatorios
+                    const sizeRandom = Math.random();
+                    if (sizeRandom > 0.7) {
+                        note.classList.add('large');
+                    } else if (sizeRandom > 0.4) {
+                        note.classList.add('medium');
+                    }
+                    
+                    // Animación aleatoria
+                    if (Math.random() > 0.6) {
+                        note.classList.add('bounce');
+                    }
+                    
+                    // Velocidad de caída aleatoria
+                    const fallDuration = Math.random() * 2 + 2; // 2-4 segundos
+                    note.style.animationDuration = fallDuration + 's';
+                    
+                    document.body.appendChild(note);
+                    
+                    // Eliminar nota después de la animación
+                    setTimeout(() => {
+                        if (document.body.contains(note)) {
+                            document.body.removeChild(note);
+                        }
+                    }, fallDuration * 1000);
+                    
+                }, i * 100); // Escalonar la aparición
+            }
+        }
+
+        function goBack() {
+            secretPage.style.display = 'none';
+            clickCount = 0;
+            clickCountDisplay.textContent = '0';
+        }
+
+        // Prevenir selección de texto durante los clics rápidos
+        heroImage.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+
+        // Efecto adicional en hover
+        heroImage.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
+        });
+
+        heroImage.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+    </script>
 
 </html>
