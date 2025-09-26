@@ -1,3 +1,10 @@
+function incrementMetric(name) {
+  fetch(`/mda/api/${name}?tk=asdOlmjINKdmn`)
+    .catch(err => {
+      console.error(err);
+    });
+}
+
 // FAQ Toggle
 function toggleFAQ(element) {
     const faqItem = element.parentElement;
@@ -29,7 +36,7 @@ function openFaqVoluntario(event) {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-
+    incrementMetric("INIT_PAGE");
     const scrollBtn = document.getElementById("scrollBtn");
     const startSection = document.getElementById("startScroll");
 
