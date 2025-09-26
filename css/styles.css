@@ -699,7 +699,7 @@ font-size: 3rem;
         .musical-note {
             position: absolute;
             font-size: 20px;
-            color: #4A90E2;
+            color: var(--verdeOscuro);
             opacity: 0.8;
             pointer-events: none;
             z-index: 500;
@@ -708,12 +708,17 @@ font-size: 3rem;
 
         .musical-note.large {
             font-size: 35px;
-            color: #E24A4A;
+            color: var(--calm-text);
         }
 
         .musical-note.medium {
             font-size: 28px;
-            color: #4AE24A;
+            color: var(--beigeOscuro);
+        }
+
+        .musical-note.small {
+            font-size: 10px;
+            color: var(--calm-green);
         }
 
         @keyframes fallAndFade {

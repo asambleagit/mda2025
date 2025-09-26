@@ -1097,53 +1097,56 @@
     }
   });
 
-  function createMusicalNotes(e) {
-    const containerRect = heroImage.getBoundingClientRect();
-    const numNotes = Math.random() * 6 + 4; // 4-10 notas
+  function createMusicalNotes() {
+  const containerRect = heroImage.getBoundingClientRect();
+  const numNotes = Math.random() * 10 + 10; // 4-10 notas
 
-    for (let i = 0; i < numNotes; i++) {
+  for (let i = 0; i < numNotes; i++) {
+    setTimeout(() => {
+      const note = document.createElement('div');
+      note.className = 'musical-note';
+
+      // Texto de la nota
+      note.textContent = musicalNotes[Math.floor(Math.random() * musicalNotes.length)];
+
+      // Posición inicial aleatoria dentro de la imagen
+      const posX = containerRect.left + Math.random() * containerRect.width;
+      const posY = containerRect.top + Math.random() * containerRect.height;
+      note.style.left = posX + 'px';
+      note.style.top = posY + 'px';
+
+      // Tamaños aleatorios
+      const sizeRandom = Math.random();
+      if (sizeRandom > 0.7) {
+        note.classList.add('large');
+      } else if (sizeRandom > 0.4) {
+        note.classList.add('medium');
+      } else {
+        note.classList.add('small');
+      }
+
+      // Animación aleatoria
+      if (Math.random() > 0.6) {
+        note.classList.add('bounce');
+      }
+
+      // Velocidad de caída aleatoria
+      const fallDuration = Math.random() * 2 + 2; // 2-4 segundos
+      note.style.animationDuration = fallDuration + 's';
+
+      document.body.appendChild(note);
+
+      // Eliminar nota después de la animación
       setTimeout(() => {
-        const note = document.createElement('div');
-        note.className = 'musical-note';
-
-        // Texto de la nota
-        note.textContent = musicalNotes[Math.floor(Math.random() * musicalNotes.length)];
-
-        // Posición inicial cerca del click
-        const offsetX = (Math.random() - 0.5) * 100;
-        const offsetY = (Math.random() - 0.5) * 50;
-        note.style.left = (containerRect.left + containerRect.width / 2 + offsetX) + 'px';
-        note.style.top = (containerRect.top + containerRect.height / 2 + offsetY) + 'px';
-
-        // Tamaños aleatorios
-        const sizeRandom = Math.random();
-        if (sizeRandom > 0.7) {
-          note.classList.add('large');
-        } else if (sizeRandom > 0.4) {
-          note.classList.add('medium');
+        if (document.body.contains(note)) {
+          document.body.removeChild(note);
         }
+      }, fallDuration * 1000);
 
-        // Animación aleatoria
-        if (Math.random() > 0.6) {
-          note.classList.add('bounce');
-        }
-
-        // Velocidad de caída aleatoria
-        const fallDuration = Math.random() * 2 + 2; // 2-4 segundos
-        note.style.animationDuration = fallDuration + 's';
-
-        document.body.appendChild(note);
-
-        // Eliminar nota después de la animación
-        setTimeout(() => {
-          if (document.body.contains(note)) {
-            document.body.removeChild(note);
-          }
-        }, fallDuration * 1000);
-
-      }, i * 100); // Escalonar la aparición
-    }
+    }, i * 100); // Escalonar la aparición
   }
+}
+
 
   function goBack() {
     secretPage.style.display = 'none';
