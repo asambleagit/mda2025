@@ -1,3 +1,10 @@
+function incrementMetric(name) {
+  fetch(`/mda/api/${name}?tk=asdOlmjINKdmn`)
+    .catch(err => {
+      console.error(err);
+    });
+}
+
 // FAQ Toggle
 function toggleFAQ(element) {
     const faqItem = element.parentElement;
@@ -29,7 +36,7 @@ function openFaqVoluntario(event) {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-
+    incrementMetric("INIT_PAGE");
     const scrollBtn = document.getElementById("scrollBtn");
     const startSection = document.getElementById("startScroll");
 
@@ -374,7 +381,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <i class="fas ${getIcon(item.categoria)}"></i>
                       </div>
                       <div>
-                          <h5 class="amenity-title">${item.titulo}</h5>
+                          <h5 class="amenity-title">${item.categoria === 'restaurante' && item.convenio ? 'Convenio Especial con ' + item.titulo : item.titulo}</h5>
                       </div>
                   </div>
                   ${item.aviso ? '<p style="color: var(--calm-text-light); margin-bottom: 16px;"><strong>' + item.aviso + '</strong></p>' : ''}
@@ -400,6 +407,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
                                             `
                             : `<span>No existe información disponible, realiza la búsqueda en localidades cercanas</span>`
+                        )
+                        
+                        :
+
+                        item.categoria === 'restaurante' ? 
+                        (
+                          (item.convenio)
+                            ? `
+                                              ${item.descuento ? '<p style="color: var(--calm-text-light); margin-bottom: 16px;">Descuento: <strong>' + item.descuento + '</strong></p>' : ''}
+                                              ${item.menu ? '<p style="color: var(--calm-text-light); margin-bottom: 16px;">Menú: <strong>' + item.menu + '</strong></p>' : ''}
+                                              ${item.dir ? '<p style="color: var(--calm-text-light); margin-bottom: 16px;">Dirección: <strong>' + item.dir.toUpperCase() + '</strong></p>' : ''}
+                                              ${item.url ? `<p> <a href="${item.url}" class="calm-btn-sm" target="_blank">Publicidad del Menú</a></p>` : ''}
+                                              ${item.link1 ? `<p> <a href="${item.link1}" class="calm-btn-sm" target="_blank">Google Maps</a></p>` : ''}
+                                              ${item.tel ? `<p> <a href="tel:${item.tel}" class="calm-btn-sm" target="_blank">Teléfono</a></p>` : ''}
+
+                                            `
+                            : 
+                            (item.link1)
+                            ? `
+                                              ${item.link1 ? `<a href="${item.link1}" class="calm-btn-sm" target="_blank">Google Maps</a>` : ''}
+
+                                            `
+                            :
+                            `<span>No existe información disponible, realiza la búsqueda en localidades cercanas</span>`
                         )
                         :
                         (
