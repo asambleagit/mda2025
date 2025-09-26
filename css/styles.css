@@ -37,14 +37,7 @@
   --calm-sunset: #f093fb;
   --calm-sunrise: #f5d020;
 }
-@font-face {
-  font-family: 'WTMannaSans';
-  src: url('fonts/WTMannaSans.woff2') format('woff2'),
-       url('fonts/WTMannaSans.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+
 
 /* Reset */
 * {
@@ -54,7 +47,6 @@
 }
 
 body {
-  
   
   line-height: 1.6;
   color: var(--text-dark);
@@ -93,10 +85,10 @@ section {
 }
 
 .hero h1 {
-  font-family: 'WTMannaSans', Roboto, 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, 'Arial Unicode MS', sans-serif;
-font-size: 40px;
+  font-family:  'Noto Sans',Roboto, 'Helvetica Neue', Helvetica, Arial, 'Arial Unicode MS', sans-serif;
+  font-size: 2.5rem;
   font-weight: 700;
-  color: var(--calm-text);
+  color: var(--azulOscuro);
   text-align: center;
   white-space: nowrap; /* Desktop: una línea */
 
@@ -588,7 +580,7 @@ font-size: 40px;
   }
 
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 1rem;
     text-align: center;
   }
 
@@ -619,12 +611,10 @@ font-size: 40px;
  .portada{
   padding: 4%;
  }
-  .hero {
-    padding-left: 3%;
-  }
+ 
 
   .hero h1 {
-    font-size: 2rem;
+    font-size:0.8rem;
     line-height: 1.3;
   }
 
@@ -650,19 +640,7 @@ font-size: 40px;
   
 }
 
-@media (max-width: 400px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
 
-  .hero p {
-    font-size: 0.85rem;
-  }
-
-  .hero-animated-img {
-    width: 70%;
-  }
-}
 
  /* Efecto de click Android */
         .hero-animated-img:active {
@@ -892,10 +870,28 @@ font-size: 40px;
 /* Pantallas pequeñas (iPhone Pro Max ~428px) */
 @media (max-width: 430px) {
   .hero-title {
-    font-size: 2rem;        /* tamaño más cómodo */
+    font-size:1.8rem;       
     white-space: normal;     /* permite salto de línea */
   }
   .line-break-mobile {
     display: inline;        /* muestra el salto de línea */
+  }
+}
+@media (max-width: 414px) { 
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero p{
+    font-size: 1rem;
+  }
+ }
+ @media (max-width: 390px) {
+  h1 {
+    font-size: 1.3rem; /* ejemplo título */
+  }
+}
+@media (min-width: 768px) and (max-width: 812px) {
+  h1 {
+    font-size: 2.2rem; /* más grande en modo tablet */
   }
 }
