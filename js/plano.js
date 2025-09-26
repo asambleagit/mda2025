@@ -35,6 +35,12 @@ document.addEventListener('DOMContentLoaded', async () => {
      * Fetches config and SVG, then initializes the application.
      */
     async function initializeMap() {
+        const mapContainer = document.getElementById('map');
+        if (!mapContainer) {
+            console.log('Map container not found, skipping map initialization');
+            return;
+        }
+
         try {
             // Fetch configuration
             const response = await fetch('plano-config.json?v=1');

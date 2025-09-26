@@ -33,7 +33,7 @@
     "defaultView": {
         "floor": 0,
         "layer": "departamentos",
-        "initialElement": "paredesPB",
+        "initialElement": "basePB",
         "overviewElement": "paredesPB"
     },
     "printSettings": {
