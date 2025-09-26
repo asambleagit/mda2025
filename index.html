@@ -39,6 +39,10 @@
     <script src="js/plano.js"></script>
 
 
+    <div class="click-counter" id="clickCounter" style="display: none;">
+      Clics: <span id="clickCount">0</span>/10
+    </div>
+
     <!-- Hero Section -->
     <section class="portada">
       <section id="home" class="hero">
@@ -1112,9 +1116,9 @@
     }
   });
 
-  function createMusicalNotes(e) {
+  function createMusicalNotes() {
     const containerRect = heroImage.getBoundingClientRect();
-    const numNotes = Math.random() * 6 + 4; // 4-10 notas
+    const numNotes = Math.random() * 10 + 10; // 4-10 notas
 
     for (let i = 0; i < numNotes; i++) {
       setTimeout(() => {
@@ -1124,11 +1128,11 @@
         // Texto de la nota
         note.textContent = musicalNotes[Math.floor(Math.random() * musicalNotes.length)];
 
-        // Posición inicial cerca del click
-        const offsetX = (Math.random() - 0.5) * 100;
-        const offsetY = (Math.random() - 0.5) * 50;
-        note.style.left = (containerRect.left + containerRect.width / 2 + offsetX) + 'px';
-        note.style.top = (containerRect.top + containerRect.height / 2 + offsetY) + 'px';
+        // Posición inicial aleatoria dentro de la imagen
+        const posX = containerRect.left + Math.random() * containerRect.width;
+        const posY = containerRect.top + Math.random() * containerRect.height;
+        note.style.left = posX + 'px';
+        note.style.top = posY + 'px';
 
         // Tamaños aleatorios
         const sizeRandom = Math.random();
@@ -1136,6 +1140,8 @@
           note.classList.add('large');
         } else if (sizeRandom > 0.4) {
           note.classList.add('medium');
+        } else {
+          note.classList.add('small');
         }
 
         // Animación aleatoria
@@ -1159,6 +1165,7 @@
       }, i * 100); // Escalonar la aparición
     }
   }
+
 
   function goBack() {
     secretPage.style.display = 'none';
