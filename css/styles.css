@@ -645,6 +645,196 @@ font-size: 3rem;
   }
 }
 
+ /* Efecto de click Android */
+        .hero-animated-img:active {
+            transform: scale(0.95);
+        }
+
+        .hero-animated-img.clicked {
+            animation: ripple 0.6s ease-out;
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(74, 144, 226, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 30px rgba(74, 144, 226, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(74, 144, 226, 0);
+            }
+        }
+
+        /* Contador visual */
+        .click-counter {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(74, 144, 226, 0.9);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .click-counter.pulse {
+            animation: counterPulse 0.3s ease;
+        }
+
+        @keyframes counterPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Notas musicales */
+        .musical-note {
+            position: absolute;
+            font-size: 20px;
+            color: #4A90E2;
+            opacity: 0.8;
+            pointer-events: none;
+            z-index: 500;
+            animation: fallAndFade 3s ease-in forwards;
+        }
+
+        .musical-note.large {
+            font-size: 35px;
+            color: #E24A4A;
+        }
+
+        .musical-note.medium {
+            font-size: 28px;
+            color: #4AE24A;
+        }
+
+        @keyframes fallAndFade {
+            0% {
+                transform: translateY(-50px) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(calc(100vh + 50px)) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Efecto de partículas adicional */
+        .musical-note.bounce {
+            animation: bounceAndFall 4s ease-out forwards;
+        }
+
+        @keyframes bounceAndFall {
+            0% {
+                transform: translateY(-50px) rotate(0deg) scale(1);
+                opacity: 1;
+            }
+            10% {
+                transform: translateY(-30px) rotate(36deg) scale(1.1);
+            }
+            20% {
+                transform: translateY(-10px) rotate(72deg) scale(1);
+            }
+            30% {
+                transform: translateY(10px) rotate(108deg) scale(0.9);
+            }
+            100% {
+                transform: translateY(calc(100vh + 50px)) rotate(720deg) scale(0.5);
+                opacity: 0;
+            }
+        }
+
+        /* Página de destino oculta */
+        .secret-page {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            text-align: center;
+            animation: slideIn 1s ease-out;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .secret-page h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff;
+            }
+            to {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+            }
+        }
+
+        .secret-page p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .back-button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero-animated-img {
+                width: 50%;
+            }
+            .click-counter {
+                top: 10px;
+                right: 10px;
+                padding: 8px 16px;
+                font-size: 1rem;
+            }
+        }
+
 /* En pantallas medianas (desktop) → distribución normal */
 @media (min-width: 768px) {
   
