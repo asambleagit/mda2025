@@ -100,7 +100,7 @@
             "title": "Guardarropa y objetos perdidos",
             "content": "<p>Todos los artículos extraviados se deben entregar en este departamento. Si ha perdido algo, vaya a ese lugar para buscar su pertenencia. También se debe llevar a este departamento a los niños que se hayan perdido.</p>"
         },
-        "Baños": {
+        "wc": {
             "title": "Baños",
             "content": "<p>Es importante <strong>cuidar el consumo de agua,</strong>   porque en eventos de uso intensivo se puede agotar el suministro.</p>"
         },
