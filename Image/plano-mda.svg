@@ -23,15 +23,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#4e4e4e"
      inkscape:document-units="mm"
-     inkscape:zoom="1.7638889"
-     inkscape:cx="3475.8425"
-     inkscape:cy="924.37795"
+     inkscape:zoom="0.88194445"
+     inkscape:cx="3350.5512"
+     inkscape:cy="947.33858"
      inkscape:window-width="1366"
      inkscape:window-height="697"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="icoLactantesPB"
+     inkscape:current-layer="layPlantaBaja"
      showguides="false" />
   <defs
      id="defs1">
@@ -35846,18 +35846,6 @@
          id="path10140" />
     </g>
     <g
-       opacity="0.350006"
-       id="g10143"
-       clip-path="url(#clipPath10144)"
-       transform="matrix(0.38818219,0,0,0.31657536,-80.973523,-1174.65)">
-      <path
-         d="M 0,0 47.489,46.723 118.723,-14.745 68.936,-66.383 Z"
-         style="fill:#009fe3;fill-opacity:1;fill-rule:nonzero;stroke:#e30613;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,2516.0528,4491.9467)"
-         clip-path="url(#clipPath10142)"
-         id="path10143" />
-    </g>
-    <g
        inkscape:label="icoLactantesPB"
        id="icoLactantesPB"
        class="icoBox"
@@ -35881,8 +35869,8 @@
 
           <path
    id="hlLactantesPB"
-   d="m 1657.625,2075.8908 14.9957,11.8072 -91.5892,75.6445 -62.3425,-47.4016 94.1103,-75.3447 z"
-   style="display:inline;fill:none;fill-opacity:0;stroke:#ff8613;stroke-width:5.00056;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;paint-order:fill markers stroke;stop-color:#000000"
+   d="m 1657.625,2075.8908 14.9957,11.8072 -94.5958,78.6511 -59.3359,-50.4082 94.1103,-75.3447 z"
+   style="display:none;fill:none;fill-opacity:0;stroke:#ff8613;stroke-width:5.00056;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;paint-order:fill markers stroke;stop-color:#000000"
    sodipodi:nodetypes="cccccc" />
 
           <text
@@ -37939,6 +37927,68 @@
        d="m 323.60459,368.60042 2.94529,0.22514 z"
        id="path83"
        sodipodi:nodetypes="ccc" />
+    <g
+       id="icoPrimerosAuxiliosPB"
+       class="icoBox"
+       style="display:inline;vector-effect:non-scaling-stroke;fill:#ffffff;fill-rule:evenodd;stroke:#0016aa;stroke-width:58.5937;stroke-linecap:square;stroke-linejoin:round;-inkscape-stroke:hairline;paint-order:stroke fill markers"
+       transform="matrix(0.26458333,0,0,0.26458333,537.68625,-292.70854)">
+          <path
+   id="hlPrimerosAuxiliosPB"
+   d="m 1581.3672,2067.4774 v 0 0 l -95.9814,80.3494 -66.1102,-53.8583 95.4967,-78.9262 z"
+   style="display:none;fill:#000000;fill-opacity:0;stroke:#ff8613;stroke-width:5.00056;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;paint-order:fill markers stroke;stop-color:#000000"
+   sodipodi:nodetypes="ccccccc" />
+
+          <rect
+   id="rect1697"
+   width="24.9"
+   height="24.9"
+   x="1485.8951"
+   y="2061.2676"
+   class="icoDepartamentos"
+   ry="5.3000002"
+   style="fill:#0c5c10;stroke:none;stroke-width:3433.22" />
+
+          <path
+   id="path1-3"
+   d="m 1495.8952,2081.1674 c -0.2,0 -0.4,0 -0.6,-0.2 a 0.8,0.8 0 0 1 -0.2,-0.6 v -3.3 h -3.4 a 0.5,0.5 0 0 1 -0.5,-0.3 0.8,0.8 0 0 1 -0.3,-0.6 v -5 c 0,-0.2 0,-0.4 0.3,-0.5 0.1,-0.2 0.3,-0.3 0.5,-0.3 h 3.4 v -3.3 c 0,-0.2 0,-0.4 0.2,-0.6 l 0.6,-0.2 h 5 c 0.2,0 0.4,0 0.6,0.2 l 0.2,0.6 v 3.3 h 3.3 c 0.3,0 0.5,0.1 0.6,0.3 0.2,0.1 0.2,0.3 0.2,0.6 v 5 c 0,0.2 0,0.4 -0.2,0.5 -0.1,0.2 -0.3,0.3 -0.6,0.3 h -3.3 v 3.3 c 0,0.2 0,0.4 -0.2,0.6 l -0.6,0.2 z m 0.8,-1.6 h 3.3 v -4.2 h 4.2 v -3.3 h -4.2 v -4.2 h -3.3 v 4.2 h -4.1 v 3.3 h 4.1 z m 1.7,-5.9 z"
+   class="icoIcon"
+   style="fill:#ffffff;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;paint-order:stroke fill markers;stop-color:#000000" />
+
+          <text
+   id="lblPrimerosAuxiliosPB"
+   x="1445.329"
+   y="2105.6692"
+   class="lblEtiqueta"
+   style="font-size:10.42px;font-family:Cabin;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;vector-effect:none;fill:#000000;stroke:#ffffff;stroke-width:4.00045;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:0.754839;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000"><tspan
+     sodipodi:role="line"
+     id="tspan10"
+     x="1445.329"
+     y="2105.6692">Primeros auxilios</tspan></text>
+
+          <path
+   inkscape:label="intPrimerosAuxiliosPB"
+   id="intPrimerosAuxiliosPB"
+   d="m 1582.4779,2068.352 -95.4889,78.2433 60.811,-61.7953 v -31 l -125.6535,37.4173 93.62,-75.3922 z"
+   style="display:inline;vector-effect:none;fill:none;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000"
+   sodipodi:nodetypes="ccccccc" />
+
+        </g>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:2.065"
+       d="m 895.2,247.5 36.29998,29.4"
+       id="path1" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:2.065"
+       d="M 957.89998,254.1 931.2,276.30001"
+       id="path3" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:2.065"
+       d="m 921.29998,225.3 36,28.5"
+       id="path21" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:2.065"
+       d="m 895.2,247.2 25.79999,-21.6"
+       id="path22" />
   </g>
   <g
      inkscape:groupmode="layer"
