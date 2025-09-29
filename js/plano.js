@@ -415,17 +415,23 @@ document.addEventListener('DOMContentLoaded', async () => {
             return;
         }
 
-        const svgHeight = svgElement.viewBox.baseVal.height;
-
-        // Convert SVG bbox coordinates to Leaflet LatLngBounds.
-        const southWest = L.latLng(svgHeight - (bbox.y + bbox.height), bbox.x);
-        const northEast = L.latLng(svgHeight - bbox.y, bbox.x + bbox.width);
-        const elementBounds = L.latLngBounds(southWest, northEast);
-
         // --- DYNAMIC PADDING CALCULATION ---
         const topPadding = dom.mapHeaderPanel?.offsetHeight || 0;
         // const rightPadding = document.querySelector('.vertical-toolbar')?.offsetWidth || 0;
         const bottomPadding = dom.mainOffcanvasElement.classList.contains('show') ? dom.mainOffcanvasElement.offsetHeight : 0;
+
+        // Get SVG dimensions for coordinate conversion
+        const svgHeight = svgElement.viewBox.baseVal.height;
+
+        // Convert SVG bbox coordinates to Leaflet LatLngBounds.
+        // const southWest = L.latLng(svgHeight - (bbox.y + bbox.height), bbox.x);
+        // const northEast = L.latLng(svgHeight - bbox.y, bbox.x + bbox.width);
+
+        const southWest = L.latLng((bbox.y - bbox.height) - bottomPadding, bbox.x);
+        const northEast = L.latLng(bbox.y + topPadding, bbox.x + bbox.width);
+
+        const elementBounds = L.latLngBounds(southWest, northEast);
+
 
         const flyToBoundsOptions = {
             maxZoom: config.mapSettings.zoom.maxZoom,
