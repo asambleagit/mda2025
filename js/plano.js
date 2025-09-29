@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             config = await response.json();
             
             // Fetch SVG
-            const svgResponse = await fetch(config.svgSettings.url);
+            const svgResponse =     await fetch(config.svgSettings.url);
             const svgText = await svgResponse.text();
             const parser = new DOMParser();
             const svgDoc = parser.parseFromString(svgText, 'image/svg+xml');

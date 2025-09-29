@@ -50,13 +50,8 @@
     },
     "layers": {
         "departamentos": {
-            "id": "DepartamentosInstalaciones",
+            "id": "DeptoInst",
             "name": "Instalaciones y departamentos",
-            "interactive": true
-        },
-        "alimentos": {
-            "id": "GuardaAlimentos",
-            "name": "Guardado de alimentos",
             "interactive": true
         },
         "evacuacion": {
@@ -88,10 +83,6 @@
             "title": "Acomodadores",
             "content": "<p>Los acomodadores están para ayudarle. Coopere con ellos en todo y siga sus instrucciones sobre el estacionamiento, la circulación por los pasillos, la reserva de asientos y otros asuntos.</p>"
         },
-        "GuardaAlimentos": {
-            "title": "Punto de guardado de alimentos",
-            "content": "<p>Es <a href='#guardaAlimentos'>donde se pueden guardar los alimentos</a> durante el programa. Recuerde que <strong>no se debe ingresar a los auditorios con alimentos o bebidas.</strong></p><p>Por favor, forme fila de la manera que se indica en los siguientes planos:</p><ul><li><a href=\"javascript:plano(0,'alimentos')\" class=\"plano-link\">Planta baja</a></li><li><a href=\"javascript:plano(1,'alimentos')\" class=\"plano-link\">Planta alta</a></li></ul>"
-        },
         "Guardaropas": {
             "title": "Guardarropa y objetos perdidos",
             "content": "<p>Todos los artículos extraviados se deben entregar en este departamento. Si ha perdido algo, vaya a ese lugar para buscar su pertenencia. También se debe llevar a este departamento a los niños que se hayan perdido.</p>"
@@ -108,10 +99,6 @@
             "title": "Piscina de bautismo",
             "content": "<p>El bautismo se hará en el <a href=\"javascript:plano(0,'departamentos','Bautismo')\" class='plano-link'>patio cubierto.</a></p>    <p>Los candidatos se deben ubicar <a href=\"javascript:plano(1,'departamentos','Bautismo')\" class='plano-link'>en las primeras filas </a>en la sesión del sábado por la mañana.</p>"
         },
-        "Ascensores": {
-            "title": "Ascensores",
-            "content": "<p>No se debe usar en caso de evacuación.</p><p>Padres, cuiden que sus hijos no jueguen con con ellos. Si se usan excesivamente, el sistema hidráulico se sobrecalienta y dejan de funcionar.</p>"
-        },
         "PrimerosAuxilios": {
             "title": "Primeros auxilios y lactantes",
             "content": "<p>Tenga en cuenta que los primeros auxilios son <strong>solamente para casos de emergencia.</strong></p>"
@@ -121,7 +108,7 @@
         },
         "Escaleras": {
             "title": "Escaleras a planta alta",
-            "content": "<p>Para acceder al auditorio principal</p>"
+            "content": "<p>Para acceder al auditorio superior</p>"
         },
         "Patio": {
             "title": "Galería cubierta y patios exteriores",
@@ -194,26 +181,6 @@
         "EvacuacionAuxiliarFrente": {
             "title": "Sector del frente (mirando a la pantalla)",
             "content": "<p>Se dirigirán hacia la puerta que está al frente a la derecha y saldrán hacia la izquierda por la salida de emergencia de la cocina.</p>"
-        },
-        "AlimentosFilaRetirar": {
-            "title": "Fila para retirar alimentos",
-            "content": "<p>Forme fila en el auditorio hacia la puerta de acceso al punto de guardado. Para agilizar el proceso, siga las instrucciones de los hermanos que organizan la fila. No regrese al auditorio con los alimentos.</p>"
-        },
-        "AlimentosFilaGuardar": {
-            "title": "Fila para guardar alimentos",
-            "content": "<p>Forme fila por el pasillo que da al punto de guardado. Para agilizar el proceso, siga las instrucciones de los hermanos que organizan la fila. No ingrese al auditorio con los alimentos.</p>"
-        },
-        "AlimentosHabilitado": {
-            "title": "Área habilitada para consumir alimentos",
-            "content": "<p>En los vestíbulos y exteriores del predio se pueden consumir alimentos. No se pueden ingresar alimentos ni bebidas a los auditorios.</p>"
-        },
-        "AlimentosRestringido": {
-            "title": "Área no habilitada para consumir alimentos",
-            "content": "<p><strong>No se debe ingresar a los auditorios con alimentos ni bebidas (incluído mate).</strong></p>"
-        },
-        "AlimentosPuntoGuarda": {
-            "title": "Punto de guardado de alimentos",
-            "content": "<p>Es <a href='#guardaAlimentos'>donde se pueden guardar los alimentos</a> durante el programa. Recuerde que <strong>no se debe ingresar a los auditorios con alimentos o bebidas.</strong></p><p>Por favor, forme fila de la manera que se indica."
         }
     },
     "zoomSettings": {

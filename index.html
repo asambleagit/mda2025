@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
+  <!--meta http-equiv="Expires" content="0"-->
 
   <title>Departamento de Información y Servicio Voluntario | Estadio de la Costa, Mar de Ajó</title>
 
@@ -47,8 +47,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <!--script src="script.js?v=1.6.4"></script-->
-    <!--script src="plano.js?v=1.2.4"></script-->
-    <script src="js/plano.js"></script>
+    <script src="js/plano.js?v=1.2.4"></script>
+    <!--script src="js/plano.js"></script-->
 
 
     <div class="click-counter" id="clickCounter" style="display: none;">
@@ -689,13 +689,10 @@
             </button>
             <div class="faq-answer">
               <p class="small mb-0">
-                Todos los artículos extraviados se deben entregar en este departamento. Si has perdido algo, dirígete a
-                este
-                lugar para buscar tu pertenencia.
+                Todos los artículos extraviados se deben entregar en este departamento. Si has perdido algo, dirígete a este lugar para buscar tu pertenencia.
               </p>
               <p class="small mb-0">
-                También se debe llevar a este departamento a los niños que se hayan
-                perdido.</p>
+                También se debe llevar a este departamento a los niños que se hayan perdido.</p>
               <br>
               <p class="small mb-0">
                 Ubicación:
@@ -751,9 +748,13 @@
             </button>
             <div class="faq-answer">
               <p class="small mb-0">
-                Este sector esta preparado para atender las necesidades de los más pequeños. Encontrarás agua caliente,
+                Este sector esta preparado para atender las necesidades de los más pequeños. <br/>Encontrarás agua caliente,
                 cambiadores y otros insumos necesarios.
               </p>
+              <div class="amenity-actions mt-2"></div>
+              <a href="#ubicacion-lactantes" class="calm-btn-sm"
+                        onclick="plano(0,'departamentos','Lactantes')">Ubicación</a>
+              </div>
             </div>
           </div>
           <div id="faq-voluntario" class="faq-item">
@@ -823,7 +824,7 @@
             </button>
             <div class="faq-answer">
               <p class="small mb-0">
-                El estadio cuenta con baños en planta baja.
+                El estadio cuenta con baños en ambas plantas.
               </p>
               <p class="small mb-0">Es importante cuidar el consumo de agua, porque en eventos
                 de uso intensivo se puede agotar el suministro.</p>
@@ -842,9 +843,9 @@
                     </p>
                     <div class="amenity-actions mt-2">
                       <a href="#ubicacion-banos-pb" class="calm-btn-sm"
-                        onclick="plano(0,'departamentos','wc')">Ubicación PB.</a>
+                        onclick="plano(0,'departamentos','wc')">Ubicación PB</a>
                       <a href="#ubicacion-banos-pa" class="calm-btn-sm"
-                        onclick="plano(1,'departamentos','wc')">Ubicación PA.</a>
+                        onclick="plano(1,'departamentos','wc')">Ubicación PA</a>
 
                       <a href="#info-banos" class="calm-btn-sm" onclick="showInfo('bautismo')">Información</a>
                     </div>
