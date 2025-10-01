@@ -530,4 +530,21 @@ document.addEventListener('DOMContentLoaded', function() {
       prevBtn.addEventListener('click', goPrev);
       nextBtn.addEventListener('click', goNext);
     }
+
+    // ---- Carousel functionality ----
+    const trackLocal = document.getElementById('chipLocalTrack');
+    const prevBtnLocal = document.querySelector('.chip-local-prev');
+    const nextBtnLocal = document.querySelector('.chip-local-next');
+
+    if (trackLocal && prevBtnLocal && nextBtnLocal) {
+      function goNextLocal() {
+        trackLocal.scrollBy({ left: trackLocal.clientWidth, behavior: 'smooth' });
+      }
+      function goPrevLocal() {
+        trackLocal.scrollBy({ left: -trackLocal.clientWidth, behavior: 'smooth' });
+      }
+
+      prevBtnLocal.addEventListener('click', goPrevLocal);
+      nextBtnLocal.addEventListener('click', goNextLocal);
+    }
 });

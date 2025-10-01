@@ -308,7 +308,7 @@
             <div class="carousel-item text-center">
               <div class="ratio ratio-16x9">
                  <iframe 
-                  src="https://vimeo.com/1123540068?badge=0&autopause=0&player_id=0&app_id=58479&loop=1" 
+                  src="https://player.vimeo.com/video/1123540068?badge=0&autopause=0&player_id=0&app_id=58479&loop=1" 
                   frameborder="0" 
                   allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
                   referrerpolicy="strict-origin-when-cross-origin" 
@@ -775,11 +775,11 @@
               </p>
               <p>
                 También se debe llevar a este departamento a los niños que se hayan
-                perdido.</p>
-              <br>
-              <p>
-                Ubicación:
-              </p>
+                perdido.</p>             
+              <div class="amenity-actions mt-2">
+                <a href="#ubicacion-bautismo" class="calm-btn-sm"
+                  onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
+              </div>
             </div>
           </div>
           <div class="faq-item">
@@ -796,12 +796,10 @@
                 instrucciones sobre el
                 estacionamiento, la circulación por los pasillos, la reserva de asientos y otros
                 asuntos.</p>
-              <p>
-                Los encontrarás distribuídos en todo el estadio.
-              </p>
-              <p>
-                Hay un puesto permanente de acomodadores en (completar)
-              </p>
+              <div class="amenity-actions mt-2">
+                <a href="#ubicacion-bautismo" class="calm-btn-sm"
+                  onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
+              </div>
             </div>
           </div>
 
@@ -822,6 +820,10 @@
                 para
                 caminar, busca la ayuda de los acomodadores más cercanos a ti.
               </p>
+              <div class="amenity-actions mt-2">
+                <a href="#ubicacion-bautismo" class="calm-btn-sm"
+                  onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
+              </div>
             </div>
           </div>
 
@@ -838,6 +840,10 @@
                 agua caliente,
                 cambiadores y otros insumos necesarios.
               </p>
+              <div class="amenity-actions mt-2">
+                <a href="#ubicacion-bautismo" class="calm-btn-sm"
+                  onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
+              </div>
             </div>
           </div>
           <div id="faq-voluntario" class="faq-item">
@@ -854,6 +860,10 @@
                 oficina central ubicada en Planta Baja.
                 También puedes recibir más información en los puntos mobiles identificados con ...
               </p>
+              <div class="amenity-actions mt-2">
+                <a href="#ubicacion-bautismo" class="calm-btn-sm"
+                  onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
+              </div>
             </div>
           </div>
         </div>
@@ -870,6 +880,57 @@
         </div>
 
         <div class="col-lg-10 mx-auto">
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+              <i class="material-symbols-outlined me-2" style="color: var(--azulOscuro);">water</i>
+              <span class="faq-text">Auditorio Principal</span>
+              <i class="fas fa-chevron-down ms-auto"></i>
+            </button>
+
+            <div class="faq-answer">
+              <p>El auditorio principal cuenta con 800 sillas blancas reservadas para personas con necesidades especiales. Agradecemos que solo 1 o 2 acompañantes reserven en estos sectores.</p>
+              <div class="amenity-actions mt-2">
+                <a href="#wc" class="calm-btn-sm"
+                  onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+              <i class="material-symbols-outlined me-2" style="color: var(--azulOscuro);">water</i>
+              <span class="faq-text">Gradas</span>
+              <i class="fas fa-chevron-down ms-auto"></i>
+            </button>
+
+            <div class="faq-answer">
+              <p>Las gradas del estadio tienen capacidad para acomodar a 7000 mil personas. Las gradas son de cemento y no cuentan con respaldar. Se anima a llevar algun elemento personal si desean mayor comodidad.</p>
+              <div class="amenity-actions mt-2">
+                <a href="#wc" class="calm-btn-sm"
+                  onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
+              </div>
+            </div>
+          </div>
+          
+          
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+              <i class="material-symbols-outlined me-2" style="color: var(--azulOscuro);">water</i>
+              <span class="faq-text">Sanitarios</span>
+              <i class="fas fa-chevron-down ms-auto"></i>
+            </button>
+
+            <div class="faq-answer">
+              <p>Existen sanitarios distribuidos en la zona norte al estadio y zona sur.</p>
+              <div class="amenity-actions mt-2">
+                <a href="#wc" class="calm-btn-sm"
+                  onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
+              </div>
+            </div>
+          </div>
+
           <div class="faq-item">
             <button class="faq-question" onclick="toggleFAQ(this)">
               <i class="material-symbols-outlined me-2" style="color: var(--azulOscuro);">water</i>
@@ -883,22 +944,8 @@
                 mañana</p>
               <div class="amenity-actions mt-2">
                 <a href="#ubicacion-bautismo" class="calm-btn-sm"
-                  onclick="showLocation('mapa-pb-v2.html')">Ubicación</a>
-                <a href="#info-bautismo" class="calm-btn-sm" onclick="showInfo('bautismo')">Información</a>
+                  onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
               </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ(this)">
-              <i class="material-symbols-outlined me-2" style="color: var(--azulOscuro);">groups</i>
-              <span class="faq-text">Vestíbulo</span>
-              <i class="fas fa-chevron-down ms-auto"></i>
-            </button>
-            <div class="faq-answer">
-              <p>
-
-              </p>
             </div>
           </div>
           <!--
@@ -1102,7 +1149,7 @@
       <!--Carrousel Localidades-->
       <div class="chip-carousel-container d-flex align-items-center">
         <!-- Flecha izquierda -->
-        <button class="chip-prev btn btn-light d-md-none me-2" aria-label="Anterior">
+        <button class="chip-local-prev btn btn-light d-md-none me-2" aria-label="Anterior">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
             <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" />
@@ -1110,7 +1157,7 @@
         </button>
 
         <!-- Carrusel de chips -->
-        <div class="filter-localidad-tabs chip-track flex-grow-1 d-flex gap-3" id="chipTrack">
+        <div class="filter-localidad-tabs chip-track flex-grow-1 d-flex gap-3" id="chipLocalTrack">
           <button class="filter-localidad-tab chip-item active btn rounded-pill btn-light" data-filter="all">Todas
             las
             localidades</button>
@@ -1132,7 +1179,7 @@
         </div>
 
         <!-- Flecha derecha -->
-        <button class="chip-next btn btn-light d-md-none ms-2" aria-label="Siguiente">
+        <button class="chip-local-next btn btn-light d-md-none ms-2" aria-label="Siguiente">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
             <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" />
