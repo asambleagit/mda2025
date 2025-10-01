@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <!--meta http-equiv="Expires" content="0"-->
+
+  <title>Departamento de Información y Servicio Voluntario | Estadio de la Costa, Mar de Ajó</title>
+
+  <meta name="keywords"
+    content="Asamblea Adoración Pura, Mar de Ajó, Buenos Aires, evento religioso, adoración, octubre 2025" />
+  <link href="css/styles.css" rel="stylesheet" />
+  <link href="css/plano.css" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <script src="js/script-complete.js"></script>
+    <script src="js/assembly-selector.js"></script>
+    <script src="js/location-handler.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!--script src="script.js?v=1.6.4"></script-->
+    <script src="js/plano.js?v=1.2.4"></script>
+    <!--script src="js/plano.js"></script-->
+
+
+    <div class="click-counter" id="clickCounter" style="display: none;">
+      Clics: <span id="clickCount">0</span>/10
+    </div>
+
+    <!-- Hero Section -->
+    <section class="portada">
+      <section id="home" class="hero">
+        <div id="heroImage" class="hero-image-container text-center">
+          <img src="Image/logo1-v2-min.png" alt="Hero" class="hero-animated-img">
+        </div>
+        <h1>
+          Asambleas Regionales
+        </h1>
+        <h1>
+          Mar de Ajó 2025
+        </h1>
+        <p style="text-align: center; max-width: 100%;">
+          Departamento de Información y Servicio Voluntario
+        </p>
+      </section>
+      <section class="roundedUpHeroEffect" style="margin-top: 3%;"></section>
+      <section class="roundedDownEffect"></section>
+
+
+
+      <section class="content-section" style="background: white;  position: relative; z-index: 2; padding-top: 5%;">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sx-12">
+              <div class="content-card"
+                style="background: rgba(255,255,255,0.9);  border-radius: 20px;  backdrop-filter: blur(10px); ">
+
+                <!-- Contenido principal -->
+                <div class="row">
+                  <div class="col-md-12">
+                    <p
+                      style="color: var(--calm-text); font-size: 1.5rem;   text-align: center; padding-left: 5%; padding-right: 5%;">                     
+                      <strong
+                        style="color: var(--azulOscuro);">Gracias por su visita!</strong>
+                    </p>
+                    
+                    <p
+                      style="color: var(--calm-text); font-size: 1.5rem;  text-align: center; padding-left: 5%; padding-right: 5%;">                     
+                      El sitio se encuentra en proceso de ajuste final y, en unos días, estará disponible.
+                    </p>
+                    <p
+                      style="color: var(--calm-text); font-size: 1.4rem; text-align: center; padding-left: 5%; padding-right: 5%;">                     
+                      Agradecemos su comprensión y paciencia, y confiamos en que muy pronto este recurso les será de gran ayuda.
+                    </p>
+                    
+                    <div style="display: flex; gap: 15px;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="content-card"
+                style="background: rgba(255,255,255,0.9); border-radius: 20px; backdrop-filter: blur(10px);">
+
+                <!-- Contenido principal -->
+                <div class="row">
+                  <div class="col-6">
+                    <div
+                      style="background: white; padding: 20px; border-radius: 15px; margin: 15px 0; border-left: 5px solid var(--calm-secondary);">
+                      <p
+                        style="color: var(--calm-text); font-size: 13px; margin: 0; line-height: 1.2; text-align: center;">
+                        <i class="fas fa-info-circle me-2" style="color: var(--calm-secondary);"></i>
+                        <strong>Mar de Ajó 1</strong>, (17 al 19 de octubre de 2025)
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div
+                      style="background: white; padding: 20px; border-radius: 15px; margin: 15px 0; border-left: 5px solid var(--calm-secondary);">
+                      <p
+                        style="color: var(--calm-text); font-size: 13px; margin: 0; line-height: 1.2; text-align: center;">
+                        <i class="fas fa-info-circle me-2" style="color: var(--calm-secondary);"></i>
+                        <strong>Mar de Ajó 2</strong>, (31 de octubre al 2 de noviembre de
+                        2025)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <section id="startScroll" class="roundedUpEffect"></section>
+    </section>
+    
+</body>
+
+<script>
+  let clickCount = 0;
+  const maxClicks = 10;
+  const heroImage = document.getElementById('heroImage');
+  const clickCountDisplay = document.getElementById('clickCount');
+  const clickCounter = document.getElementById('clickCounter');
+  const secretPage = document.getElementById('secretPage');
+
+  // Símbolos de notas musicales
+  const musicalNotes = ['♪', '♫', '♬', '♩', '♭', '♮', '♯', '𝄞', '𝄢'];
+
+  heroImage.addEventListener('click', function (e) {
+    clickCount++;
+
+    // Actualizar contador
+    clickCountDisplay.textContent = clickCount;
+    clickCounter.classList.add('pulse');
+
+    setTimeout(() => {
+      clickCounter.classList.remove('pulse');
+    }, 300);
+
+    // Agregar efecto de ripple
+    heroImage.classList.add('clicked');
+    setTimeout(() => {
+      heroImage.classList.remove('clicked');
+    }, 600);
+
+    // Crear notas musicales
+    createMusicalNotes(e);
+
+    if (clickCount >= 3) {
+      clickCounter.style.display = '';
+    }
+    // Si se alcanzaron 10 clics, abrir página específica y resetear
+    if (clickCount >= maxClicks) {
+      incrementMetric("LOGO_MAX_CLICK");
+      window.open('https://www.jw.org/es/biblioteca/musica-canciones/canciones-originales/Hacer-tu-voluntad-canci%C3%B3n-de-la-asamblea-regional-del-2025/', '_blank');
+      setTimeout(() => {
+        // Resetear el contador después de abrir la página
+        clickCount = 0;
+        clickCountDisplay.textContent = '0';
+        clickCounter.style.display = 'none';
+      }, 1000);
+    }
+  });
+
+  function createMusicalNotes() {
+    const containerRect = heroImage.getBoundingClientRect();
+    const numNotes = Math.random() * 10 + 10; // 4-10 notas
+
+    for (let i = 0; i < numNotes; i++) {
+      setTimeout(() => {
+        const note = document.createElement('div');
+        note.className = 'musical-note';
+
+        // Texto de la nota
+        note.textContent = musicalNotes[Math.floor(Math.random() * musicalNotes.length)];
+
+        // Posición inicial aleatoria dentro de la imagen
+        const posX = containerRect.left + Math.random() * containerRect.width;
+        const posY = containerRect.top + Math.random() * containerRect.height;
+        note.style.left = posX + 'px';
+        note.style.top = posY + 'px';
+
+        // Tamaños aleatorios
+        const sizeRandom = Math.random();
+        if (sizeRandom > 0.7) {
+          note.classList.add('large');
+        } else if (sizeRandom > 0.4) {
+          note.classList.add('medium');
+        } else {
+          note.classList.add('small');
+        }
+
+        // Animación aleatoria
+        if (Math.random() > 0.6) {
+          note.classList.add('bounce');
+        }
+
+        // Velocidad de caída aleatoria
+        const fallDuration = Math.random() * 2 + 2; // 2-4 segundos
+        note.style.animationDuration = fallDuration + 's';
+
+        document.body.appendChild(note);
+
+        // Eliminar nota después de la animación
+        setTimeout(() => {
+          if (document.body.contains(note)) {
+            document.body.removeChild(note);
+          }
+        }, fallDuration * 1000);
+
+      }, i * 100); // Escalonar la aparición
+    }
+  }
+
+
+  function goBack() {
+    secretPage.style.display = 'none';
+    clickCount = 0;
+    clickCountDisplay.textContent = '0';
+  }
+
+  // Prevenir selección de texto durante los clics rápidos
+  heroImage.addEventListener('selectstart', function (e) {
+    e.preventDefault();
+  });
+
+  // Efecto adicional en hover
+  heroImage.addEventListener('mouseenter', function () {
+    this.style.transform = 'scale(1.05)';
+  });
+
+  heroImage.addEventListener('mouseleave', function () {
+    this.style.transform = 'scale(1)';
+  });
+</script>
+
+</html>
