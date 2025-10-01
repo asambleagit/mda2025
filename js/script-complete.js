@@ -381,11 +381,12 @@ document.addEventListener('DOMContentLoaded', function() {
                           <i class="fas ${getIcon(item.categoria)}"></i>
                       </div>
                       <div>
-                          <h5 class="amenity-title">${item.categoria === 'restaurante' && item.convenio ? 'Convenio Especial con ' + item.titulo : item.titulo}</h5>
+                          <h5 class="amenity-title">${item.categoria === 'restaurante' && item.convenio ? item.titulo : item.titulo}</h5>
                       </div>
-                  </div>
+                  </div>                 
                   ${item.aviso ? '<p style="color: var(--calm-text-light); margin-bottom: 16px;"><strong>' + item.aviso + '</strong></p>' : ''}
-                  <p style="color: var(--calm-text-light); margin-bottom: 16px;">Elige alguna de las siguientes opciones para ver la información.</p>
+                  ${item.categoria === 'restaurante' && item.convenio ? '<p style="color: var(--calm-text-light); margin-bottom: 16px;">Presentando tu tarjeta de la asamblea puedes acceder a la siguiente promoción. </p>' : 
+                    '<p style="color: var(--calm-text-light); margin-bottom: 16px;">Elige alguna de las siguientes opciones para ver la información.</p>'}                  
                   <div class="amenity-actions">
                     ${item.categoria === 'hotel'
                         ? (
