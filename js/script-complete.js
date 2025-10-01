@@ -385,7 +385,7 @@ document.addEventListener('DOMContentLoaded', function() {
                       </div>
                   </div>                 
                   ${item.aviso ? '<p style="color: var(--calm-text-light); margin-bottom: 16px;"><strong>' + item.aviso + '</strong></p>' : ''}
-                  ${item.categoria === 'restaurante' && item.convenio ? '<p style="color: var(--calm-text-light); margin-bottom: 16px;">Presentando tu tarjeta de la asamblea puedes acceder a la siguiente promoción. </p>' : 
+                  ${item.categoria === 'restaurante' && item.convenio ? '<p style="color: var(--calm-text-light); margin-bottom: 16px;">Presentando tu tarjeta de la asamblea "Adoración Pura" puedes acceder a la siguiente promoción. </p>' : 
                     '<p style="color: var(--calm-text-light); margin-bottom: 16px;">Elige alguna de las siguientes opciones para ver la información.</p>'}                  
                   <div class="amenity-actions">
                     ${item.categoria === 'hotel'
