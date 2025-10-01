@@ -273,30 +273,31 @@
         <div id="Estacionamiento" class="container-fluid py-4 " style="background: white;">
           <div class="text-center">
             <h2 class="fw-bold mb-2" style="color: var(--dark);">Estacionamiento</h2>
-            <p class="text-muted mb-0" align="left">Los siguientes son puntos de ingresos que se sugieren para llegar al Estadio de la Costa,
-                    dependiendo
-                    si se trasladan desde del sur o desde el norte de la localidad de Mar de Ajó. Puedes ver los siguientes videos para mayor orientación.</p>
+            <p class="text-muted mb-0" align="left">Los siguientes son puntos de ingresos que se sugieren para llegar al
+              Estadio de la Costa,
+              dependiendo
+              si se trasladan desde del sur o desde el norte de la localidad de Mar de Ajó. Puedes ver los siguientes
+              videos para mayor orientación.</p>
           </div>
         </div>
 
         <!--  Carrusel de Videos -->
         <!-- 🎥 Carrusel de Videos con Leyendas Debajo -->
-        <div id="carouselVideos" class="carousel slide my-5" data-bs-interval="false">
+        <!-- ✅ Versión Desktop: Carousel -->
+        <div id="carouselVideos" class="carousel slide my-5 d-none d-md-block" data-bs-interval="false">
           <div class="carousel-inner rounded shadow" style="max-width: 800px; margin: auto;">
 
             <!-- Video 1 -->
             <div class="carousel-item active text-center">
               <div class="ratio ratio-16x9">
-                <iframe 
-                  src="https://player.vimeo.com/video/1123540012?badge=0&autopause=0&player_id=0&app_id=58479&loop=1" 
-                  frameborder="0" 
-                  allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media;" 
-                  referrerpolicy="strict-origin-when-cross-origin" 
-                  style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                <iframe
+                  src="https://player.vimeo.com/video/1123540012?badge=0&autopause=0&player_id=0&app_id=58479&loop=1"
+                  frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media;"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  style="position:absolute;top:0;left:0;width:100%;height:100%;"
                   title="Acceso desde Mar de Ajó - Zona Sur">
-              </iframe>
+                </iframe>
               </div>
-              <!-- Leyenda debajo -->
               <div class="mt-3">
                 <h5 class="fw-bold" style="color: var(--dark);">Acceso desde Mar de Ajó - Zona Sur</h5>
                 <p style="color:white">Consejos útiles para los asistentes.</p>
@@ -306,16 +307,14 @@
             <!-- Video 2 -->
             <div class="carousel-item text-center">
               <div class="ratio ratio-16x9">
-                 <iframe 
-                  src="https://player.vimeo.com/video/1123540068?badge=0&autopause=0&player_id=0&app_id=58479&loop=1" 
-                  frameborder="0" 
-                  allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-                  referrerpolicy="strict-origin-when-cross-origin" 
-                  style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                <iframe
+                  src="https://player.vimeo.com/video/1123540068?badge=0&autopause=0&player_id=0&app_id=58479&loop=1"
+                  frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  style="position:absolute;top:0;left:0;width:100%;height:100%;"
                   title="Acceso desde San Bernardo - Zona Norte">
-              </iframe>
+                </iframe>
               </div>
-              <!-- Leyenda debajo -->
               <div class="mt-3">
                 <h5 class="fw-bold" style="color: var(--dark);">Acceso desde San Bernardo - Zona Norte</h5>
                 <p style="color:white">Consejos útiles para los asistentes.</p>
@@ -340,6 +339,60 @@
             <button type="button" data-bs-target="#carouselVideos" data-bs-slide-to="1"></button>
           </div>
         </div>
+
+
+        <!-- ✅ Versión Mobile: Tabs -->
+        <div class="d-block d-md-none my-5" style="max-width: 800px; margin:auto;">
+          <!-- Nav tabs -->
+          <ul class="nav nav-pills justify-content-center mb-3" id="videoTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="tab-sur" data-bs-toggle="tab" data-bs-target="#videoSur" type="button"
+                role="tab">Acceso Sur</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab-norte" data-bs-toggle="tab" data-bs-target="#videoNorte" type="button"
+                role="tab">Acceso Norte</button>
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <!-- Video Sur -->
+            <div class="tab-pane fade show active text-center" id="videoSur" role="tabpanel">
+              <div class="ratio ratio-16x9">
+                <iframe
+                  src="https://player.vimeo.com/video/1123540012?badge=0&autopause=0&player_id=0&app_id=58479&loop=1"
+                  frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media;"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                  title="Acceso desde Mar de Ajó - Zona Sur">
+                </iframe>
+              </div>
+              <div class="mt-3">
+                <h5 class="fw-bold" style="color: var(--dark);">Acceso desde Mar de Ajó - Zona Sur</h5>
+                <p style="color:white">Consejos útiles para los asistentes.</p>
+              </div>
+            </div>
+
+            <!-- Video Norte -->
+            <div class="tab-pane fade text-center" id="videoNorte" role="tabpanel">
+              <div class="ratio ratio-16x9">
+                <iframe
+                  src="https://player.vimeo.com/video/1123540068?badge=0&autopause=0&player_id=0&app_id=58479&loop=1"
+                  frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                  title="Acceso desde San Bernardo - Zona Norte">
+                </iframe>
+              </div>
+              <div class="mt-3">
+                <h5 class="fw-bold" style="color: var(--dark);">Acceso desde San Bernardo - Zona Norte</h5>
+                <p style="color:white">Consejos útiles para los asistentes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div id="Transporte" class="container-fluid py-4 " style="background: white;">
           <div class="text-center">
             <h2 class="fw-bold mb-2" style="color: var(--dark);">Medios de Transporte</h2>
@@ -774,10 +827,10 @@
               </p>
               <p>
                 También se debe llevar a este departamento a los niños que se hayan
-                perdido.</p>             
+                perdido.</p>
               <div class="amenity-actions mt-2">
-                <a href="#ubicacion-bautismo" class="calm-btn-sm"
-                  onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
+                <a href="#ubicacion-bautismo" class="calm-btn-sm" onclick="showLocation('mapa-pb-v2.html')">Ver en
+                  Mapa</a>
               </div>
             </div>
           </div>
@@ -796,8 +849,8 @@
                 estacionamiento, la circulación por los pasillos, la reserva de asientos y otros
                 asuntos.</p>
               <div class="amenity-actions mt-2">
-                <a href="#ubicacion-bautismo" class="calm-btn-sm"
-                  onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
+                <a href="#ubicacion-bautismo" class="calm-btn-sm" onclick="showLocation('mapa-pb-v2.html')">Ver en
+                  Mapa</a>
               </div>
             </div>
           </div>
@@ -820,8 +873,8 @@
                 caminar, busca la ayuda de los acomodadores más cercanos a ti.
               </p>
               <div class="amenity-actions mt-2">
-                <a href="#ubicacion-bautismo" class="calm-btn-sm"
-                  onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
+                <a href="#ubicacion-bautismo" class="calm-btn-sm" onclick="showLocation('mapa-pb-v2.html')">Ver en
+                  Mapa</a>
               </div>
             </div>
           </div>
@@ -840,8 +893,8 @@
                 cambiadores y otros insumos necesarios.
               </p>
               <div class="amenity-actions mt-2">
-                <a href="#ubicacion-bautismo" class="calm-btn-sm"
-                  onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
+                <a href="#ubicacion-bautismo" class="calm-btn-sm" onclick="showLocation('mapa-pb-v2.html')">Ver en
+                  Mapa</a>
               </div>
             </div>
           </div>
@@ -860,8 +913,8 @@
                 También puedes recibir más información en los puntos mobiles identificados con ...
               </p>
               <div class="amenity-actions mt-2">
-                <a href="#ubicacion-bautismo" class="calm-btn-sm"
-                  onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
+                <a href="#ubicacion-bautismo" class="calm-btn-sm" onclick="showLocation('mapa-pb-v2.html')">Ver en
+                  Mapa</a>
               </div>
             </div>
           </div>
@@ -888,10 +941,10 @@
             </button>
 
             <div class="faq-answer">
-              <p>El auditorio principal cuenta con 800 sillas blancas reservadas para personas con necesidades especiales. Agradecemos que solo 1 o 2 acompañantes reserven en estos sectores.</p>
+              <p>El auditorio principal cuenta con 800 sillas blancas reservadas para personas con necesidades
+                especiales. Agradecemos que solo 1 o 2 acompañantes reserven en estos sectores.</p>
               <div class="amenity-actions mt-2">
-                <a href="#wc" class="calm-btn-sm"
-                  onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
+                <a href="#wc" class="calm-btn-sm" onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
               </div>
             </div>
           </div>
@@ -904,15 +957,15 @@
             </button>
 
             <div class="faq-answer">
-              <p>Las gradas del estadio tienen capacidad para acomodar a 7000 mil personas. Las gradas son de cemento y no cuentan con respaldar. Se anima a llevar algun elemento personal si desean mayor comodidad.</p>
+              <p>Las gradas del estadio tienen capacidad para acomodar a 7000 mil personas. Las gradas son de cemento y
+                no cuentan con respaldar. Se anima a llevar algun elemento personal si desean mayor comodidad.</p>
               <div class="amenity-actions mt-2">
-                <a href="#wc" class="calm-btn-sm"
-                  onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
+                <a href="#wc" class="calm-btn-sm" onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
               </div>
             </div>
           </div>
-          
-          
+
+
 
           <div class="faq-item">
             <button class="faq-question" onclick="toggleFAQ(this)">
@@ -924,8 +977,7 @@
             <div class="faq-answer">
               <p>Existen sanitarios distribuidos en la zona norte al estadio y zona sur.</p>
               <div class="amenity-actions mt-2">
-                <a href="#wc" class="calm-btn-sm"
-                  onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
+                <a href="#wc" class="calm-btn-sm" onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
               </div>
             </div>
           </div>
@@ -942,8 +994,8 @@
                 sábado por la
                 mañana</p>
               <div class="amenity-actions mt-2">
-                <a href="#ubicacion-bautismo" class="calm-btn-sm"
-                  onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
+                <a href="#ubicacion-bautismo" class="calm-btn-sm" onclick="showLocation('mapa-pb-v2.html')">Ver en
+                  Mapa</a>
               </div>
             </div>
           </div>

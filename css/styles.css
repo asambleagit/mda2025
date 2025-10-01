@@ -256,12 +256,27 @@ section {
   height: auto; /* valor base */
   min-height: 150px;
 }
-.carousel-control-prev,
-.carousel-control-next {
-  height: 70%;      /* solo cubre el alto del video, no el texto */
-  top: 15%;         /* centrado */
+
+/* Tabs de videos en mobile */
+#videoTabs .nav-link {
+  color: var(--dark);              /* texto oscuro */
+  font-weight: 600;
+  border-radius: 20px;             /* esquinas redondeadas */
+  padding: 0.5rem 1.2rem;
+  background-color: #f1f1f1;       /* fondo gris claro */
+  margin: 0 5px;
+  transition: all 0.3s ease;
 }
 
+#videoTabs .nav-link.active {
+  background-color: var(--verdeOscuro); /* color de tu paleta */
+  color: white;                         /* texto blanco */
+}
+
+#videoTabs .nav-link:hover {
+  background-color: var(--verdeOscuro);
+  color: white;
+}
 
 /*Titulos secciones*/
 .title-section {
