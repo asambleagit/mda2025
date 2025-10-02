@@ -21,9 +21,9 @@
 <body>
   <section id="servicios" class="servicios" style=" background-color: var(--bgseccion-dentro)">
     <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="display-4 fw-bold text-primary">Servicios Locales</h2>
-        <p class="lead text-muted">
+      <div class="text-center mb-5" style="padding: 3rem 0;">
+        <h2 class="display-4 fw-bold text-primary" style="margin-bottom: 1.5rem; letter-spacing: -0.02em;">Servicios Locales</h2>
+        <p class="lead text-muted" style="font-size: 1.25rem; font-weight: 300; margin-bottom: 0;">
           Consulta los servicios según tu asamblea
         </p>
       </div>
@@ -46,24 +46,22 @@
       <div class="filter-tabs">
         <button class="filter-tab active" data-filter="all">Todos los servicios</button>
         <button class="filter-tab" data-filter="restaurante">Restaurantes</button>
-        <button class="filter-tab" data-filter="hotel">Alojamientos</button>
-        <button class="filter-tab" data-filter="centroSalud">Centros de Salud</button>
-        <button class="filter-tab" data-filter="farmacia">Farmacias</button>
+        <button class="filter-tab" data-filter="hotel">Alojamiento</button>
+        <button class="filter-tab" data-filter="centroSalud">Centro Salud</button>
+        <button class="filter-tab" data-filter="farmacia">Farmacia</button>
         <button class="filter-tab" data-filter="cajero">Cajeros Automáticos</button>
       </div>
       <div class="filter-localidad-tabs">
         <button class="filter-localidad-tab active" data-filter="all">Todas las localidades</button>
         <button class="filter-localidad-tab" data-filter="teresita">Santa Teresita</button>
         <button class="filter-localidad-tab" data-filter="tuyu">Mar del Tuyú</button>
-        <button class="filter-localidad-tab" data-filter="tuyu">Mar del Tuyú</button>
         <button class="filter-localidad-tab" data-filter="costa">Costa del Este</button>
         <button class="filter-localidad-tab" data-filter="aguas">Aguas Verdes</button>
         <button class="filter-localidad-tab" data-filter="lucila">Lucila del Mar</button>
         <button class="filter-localidad-tab" data-filter="bernardo">San Bernardo</button>
         <button class="filter-localidad-tab" data-filter="ajo">Mar de Ajó</button>
-        <button class="filter-localidad-tab" data-filter="ajo">Mar de Ajó</button>
         <button class="filter-localidad-tab" data-filter="atlantis">Nueva Atlantis</button>
-        <button class="filter-localidad-tab" data-filter="medanos">Punta Medanos</button>
+        <button class="filter-localidad-tab" data-filter="medanos">Punta Médanos</button>
         <button class="filter-localidad-tab" data-filter="pinamar">Pinamar</button>
         <button class="filter-localidad-tab" data-filter="carilo">Cariló</button>
       </div>
@@ -74,17 +72,18 @@
   </section>
 
   <script>
-    // Cargamos los servicios desde un archivo JSON externo
-    fetch('./servicios.json')
+    // Cargar datos de servicios desde archivo JSON
+    fetch('./servicios.js')
       .then(response => response.json())
       .then(data => {
-        // Guardamos los servicios en una variable global accesible en toda la página
+        // Asignar los datos cargados a la variable global
         window.globalEventData = data;
-
-        // Notificar que los datos están cargados
-        document.dispatchEvent(new Event('dataLoaded'));
+        // Notificar que los datos están listos
+        window.dispatchEvent(new CustomEvent('dataLoaded'));
       })
-      .catch(error => console.error('Error loading servicios.json:', error));
+      .catch(error => {
+        console.error('Error al cargar servicios.js:', error);
+      });
   </script>
 
   <script>
@@ -156,7 +155,11 @@
     // ---- Filtro por categoría de servicios ----
     document.querySelectorAll('.filter-tab').forEach(btn => {
       btn.addEventListener('click', function () {
-        if (!window.globalEventData) return; // Esperar a que los datos estén cargados
+        // Verificar que los datos estén disponibles
+        if (!window.globalEventData) {
+          console.warn('Datos de servicios no disponibles aún');
+          return;
+        }
 
         // Quitar 'active' de todos los filtros y aplicar solo al seleccionado
         document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
@@ -188,7 +191,11 @@
     // ---- Filtro por localidad ----
     document.querySelectorAll('.filter-localidad-tab').forEach(btn => {
       btn.addEventListener('click', function () {
-        if (!window.globalEventData) return; // Esperar a que los datos estén cargados
+        // Verificar que los datos estén disponibles
+        if (!window.globalEventData) {
+          console.warn('Datos de servicios no disponibles aún');
+          return;
+        }
 
         // Quitar 'active' de todos los filtros de localidad y aplicar solo al seleccionado
         document.querySelectorAll('.filter-localidad-tab').forEach(b => b.classList.remove('active'));
@@ -205,7 +212,7 @@
           }
           else {
             // Filtrar solo por localidad
-            let filteredList = window.globalEventData.filter(x => x.localidad?.toLowerCase().includes(localidadFilter.toLowerCase()));
+            let filteredList = window.globalEventData.filter(x => x.localidad.toLowerCase().includes(localidadFilter));
             renderAmenities2(filteredList);
           }
         }
@@ -261,13 +268,13 @@
               <div class="amenity-card">
                   <div class="amenity-header">
                       <div class="amenity-icon">
-                          <i class="fas ${getIcon(item.categoria)}"></i>
+                          <i class="fas ${item.icon || 'fa-home'}"></i>
                       </div>
                       <div>
                           <h5 class="amenity-title">${item.titulo}</h5>
                       </div>
                   </div>
-                  <p style="color: var(--calm-text-light); margin-bottom: 16px;">Elige alguna de las siguientes opciones para ver la información.</p>
+                  <p style="color: var(--calm-text-light); margin-bottom: 16px;">Elije alguna de las siguientes opciones para ver la informacion.</p>
                   <div class="amenity-actions">
                       <a href="${item.link1 || '#'}" class="calm-btn-sm" target="_blank">Google Maps</a>
                       <a href="${item.link1 || '#'}" class="calm-btn-sm" target="_blank">Sitio de la Municipalidad</a>
@@ -279,11 +286,20 @@
       });
     }
 
-    // ---- Cuando los datos estén cargados ----
-    document.addEventListener('dataLoaded', function () {
+    // ---- Esperar a que los datos estén disponibles ----
+    window.addEventListener('dataLoaded', function () {
+      console.log('Datos de servicios cargados, renderizando servicios iniciales');
       // Renderizar los servicios iniciales
       renderAmenities2(window.globalEventData);
     });
+
+    // ---- Fallback por si los datos ya están disponibles ----
+    window.onload = function () {
+      if (window.globalEventData) {
+        console.log('Datos ya disponibles, renderizando servicios iniciales');
+        renderAmenities2(window.globalEventData);
+      }
+    };
   </script>
 
 </body>
