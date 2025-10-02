@@ -13,11 +13,11 @@ function toggleFAQ(element) {
     if (isActive) {
         // Si ya estaba abierto, lo cerramos
         faqItem.classList.remove("active");
-        element.querySelector(".fa-chevron-down").style.transform = "rotate(0deg)";
+        element.querySelector(".arrowRotate").style.transform = "rotate(0deg)";
     } else {
         // Si estaba cerrado, lo abrimos
         faqItem.classList.add("active");
-        element.querySelector(".fa-chevron-down").style.transform = "rotate(180deg)";
+        element.querySelector(".arrowRotate").style.transform = "rotate(180deg)";
     }
 }
 
@@ -346,12 +346,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // ---- Función para obtener icono según categoría ----
     function getIcon(categoria) {
       switch (categoria) {
-        case 'farmacia': return 'fa-pills';
-        case 'hotel': return 'fa-hotel';
-        case 'restaurante': return 'fa-utensils';
-        case 'centroSalud': return 'fa-hospital';
-        case 'cajero': return 'fa-credit-card';
-        default: return 'fa-home';
+        case 'farmacia': return 'pill';
+        case 'hotel': return 'apartment';
+        case 'restaurante': return 'restaurant';
+        case 'centroSalud': return 'home_health';
+        case 'cajero': return 'credit_card';
+        default: return 'home';
       }
     }
 
@@ -378,7 +378,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <div class="amenity-card">
                   <div class="amenity-header">
                       <div class="amenity-icon">
-                          <i class="fas ${getIcon(item.categoria)}"></i>
+                          <span class="material-symbols-outlined">${getIcon(item.categoria)}</span>
                       </div>
                       <div>
                           <h5 class="amenity-title">${item.categoria === 'restaurante' && item.convenio ? item.titulo : item.titulo}</h5>
