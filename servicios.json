@@ -9,7 +9,7 @@
     "descuento": "",
     "menu": "$20000",
     "tel": "3516750780",
-    "url": "./Image/menu-los-angeles.jpg",
+    "url": "https://asambleagit.github.io/mda2025/Image/menu-los-angeles.jpg",
     "flyer": "Imagen de WhatsApp 2025-09-15 a las 16.39.54_f8744e45.jpg",
     "dir": "Calle 40 N°347 - Santa Teresita",
     "convenio" : true
@@ -121,7 +121,7 @@
     "descuento": "",
     "menu": "$25000 (Plato principal + bebida sin alcohol por persona)",
     "tel": "2246586461",
-    "url": "menu-barra-bosque",
+    "url": "https://asambleagit.github.io/mda2025/menu-barra-bosque.pdf",
     "flyer": "La Barra del Bosque CDE .pdf",
     "dir": "Las camelias  N°228 - Costa del este",
     "convenio" : true
@@ -135,7 +135,7 @@
     "descuento": "",
     "menu": "$12000 (Plato principal + bebida sin alcohol por persona)",
     "tel": "1159979455",
-    "url": "menu-turnedo",
+    "url": "https://asambleagit.github.io/mda2025/menu-turnedo.jpeg",
     "flyer": "Turnedo LM .jpeg",
     "dir": "Av 1 esquina Tucuman - Lucila del Mar",
     "convenio" : true
@@ -163,7 +163,7 @@
     "descuento": "",
     "menu": "$24000 (Incluye Plato principal + postre + bebida)",
     "tel": "",
-    "url": "menu-inocencio",
+    "url": "https://asambleagit.github.io/mda2025/menu-inocencio.jpg",
     "flyer": "Inocencio jgp.jpg",
     "dir": "Av. Costanera Sur 164 - Mar de Ajó,",
     "convenio" : true
