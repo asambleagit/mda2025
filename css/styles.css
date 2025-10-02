@@ -221,7 +221,25 @@ p {
   opacity: 0.1;
   z-index: 1;
 }
+/* Botones ocultos por defecto */
+/* Botones ocultos por defecto */
+  .font-buttons {
+    display: none !important; /* asegurar que se oculte */
+    margin-bottom: 10px;
+  }
 
+  .font-buttons button {
+    margin: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+
+  /* Mostrar botones solo en pantallas <= 768px */
+  @media (max-width: 768px) {
+    .font-buttons {
+      display: block !important;
+    }
+  }
 /* Botones Home */
 .btn-section {
   border-radius: 10px;
@@ -847,7 +865,7 @@ p {
   }
 }
 @media (max-width: 575px) { /* Mobile */
-  body { font-size: 0.95rem; }
+  body { font-size: 1rem; }
   h1 { font-size: 1.8rem; }
   .assembly-title {
     font-size: 15px; /* ~16px */
