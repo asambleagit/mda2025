@@ -1,0 +1,369 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Asamblea Adoración Pura 2025 | Estadio de la Costa, Mar de Ajó
+    </title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <!-- Icons-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <style>
+        :root {
+            --text-dark: #1f2937;
+            --white: #ffffff;
+            --bgseccion-dentro: #d6f1f5;
+            --textseccion-dentro: #1c6697;
+            --bgseccion-fuera: #cceae8;
+            --textseccion-fuera: #539091;
+            --calm-primary: #2D5AA0;
+            --calm-secondary: #4A90A4;
+            --calm-accent: #85CDCA;
+            --calm-light: #B8E6E1;
+            --calm-cream: #F7F5F3;
+            --calm-white: #FFFFFF;
+            --calm-text: #2C3E50;
+            --calm-text-light: #718096;
+            --calm-green: #68C3A3;
+            --calm-sunset: #F093FB;
+            --calm-sunrise: #F5D020;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            line-height: 1.6;
+            background: #1c4975;
+        }
+
+        /* Portada Section */
+        .hero {
+            background: #ffffff;
+            height: 40vh;
+            display: flex;
+            padding-left: 25%;
+            flex-direction: column;
+            /* Explicitly set to row */
+            align-items: right;
+            justify-content: center;
+            /* Changed from 'right' to 'flex-end' for better browser compatibility */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image-container {
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            z-index: 1;
+        }
+
+        .hero-animated-img {
+            width: 40%;
+            object-fit: contain;
+            transition: filter 2s ease-in-out;
+            animation: colorShift 5s infinite alternate;
+        }
+
+        /* Efecto redondeado hacia abajo */
+        .roundedDownEffect {
+            /*background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);*/
+            background: #1c4975;
+            min-height: 5vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .roundedDownEffect::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Este es el color/gradiente del círculo */
+            /*background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);*/
+            background: var(--bgseccion-dentro);
+            /*clip-path: circle(50% at 50% 50%);*/
+            /*clip-path: polygon(100% 70%, 100% 0%, 0% 0%, 0% 70%, 50% 100%);*/
+            clip-path: ellipse(55% 70% at 49% 0%);
+            z-index: 1;
+        }
+        /* Efecto redondeado hacia arriba para portada */
+        .roundedUpHeroEffect {
+            /*background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);*/
+            background: #ffffff;
+            min-height: 5vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+
+        }
+        .roundedUpHeroEffect::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Este es el color/gradiente del círculo */
+            /*background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);*/
+            background: var(--bgseccion-dentro);
+            /*clip-path: circle(50% at 50% 50%);*/
+            /*clip-path: polygon(100% 70%, 100% 0%, 0% 0%, 0% 70%, 50% 100%);*/
+            clip-path: ellipse(70% 60% at 50% 100%);
+
+        }
+        /* Efecto redondeado hacia arriba */
+        .roundedUpEffect {
+            /*background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);*/
+            background: #1c4975;
+            min-height: 5vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+
+        }
+        .roundedUpEffect::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Este es el color/gradiente del círculo */
+            /*background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 50%, #1e617a 100%);*/
+            background: var(--bgseccion-dentro);
+            /*clip-path: circle(50% at 50% 50%);*/
+            /*clip-path: polygon(100% 70%, 100% 0%, 0% 0%, 0% 70%, 50% 100%);*/
+            clip-path: ellipse(80% 90% at 49% 100%);
+            z-index: 1;
+        }
+
+        /* Contenedor de botones principales */
+        .menu-container {
+            height: 30vh;
+        }
+
+        /* Botones principales */
+        .dentro-btn:hover {
+            box-shadow: 0 8px 32px rgba(37, 99, 235, 0.15);
+            transform: translateY(-2px) scale(1.02);
+            transition: all 0.2s;
+            background: #eaf8fa !important;
+            color: var(--textseccion-dentro) !important;
+        }
+
+        .fuera-btn:hover {
+            box-shadow: 0 8px 32px rgba(37, 99, 235, 0.15);
+            transform: translateY(-2px) scale(1.02);
+            transition: all 0.2s;
+            background: #eaf8fa !important;
+            color: var(--textseccion-fuera) !important;
+        }       
+
+        /* Figura animada */
+        .square {
+            width: 80px;
+            height: 80px;
+            border: 3px solid #333;
+            animation: rotateSquare 4s linear infinite;
+        }
+
+        /* Efectos animados */
+        @keyframes gentleRotate {
+            from {
+                transform: translateY(-50%) rotate(0deg);
+            }
+
+            to {
+                transform: translateY(-50%) rotate(360deg);
+            }
+        }
+
+        /* Animación de cambio de color suave */
+        @keyframes colorShift {
+            0% {
+                filter: hue-rotate(0deg) brightness(1);
+            }
+
+            50% {
+                filter: hue-rotate(90deg) brightness(1.1);
+            }
+
+            100% {
+                filter: hue-rotate(180deg) brightness(1);
+            }
+        }       
+
+        @keyframes rotateSquare {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+
+<body>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1 style="text-align: left">Asambleas Mar de Ajó</h1>
+        <h1 style="text-align: left">2025</h1>
+        <p style="text-align: left; max-width: 100%;">
+            En Octubre se celebrará la serie de asambleas regionales
+            "Adoración pura" en el Estadio de la Costa de Mar de Ajó. Este
+            sitio contiene información importante para los asistentes.
+        </p>
+    </section>
+    <section class="roundedUpHeroEffect">
+        <div class="hero-image-container text-center mt-4">
+            <img src="Image/logo1.png" alt="Hero" class="hero-animated-img">
+        </div>
+    </section>
+    <section class="roundedDownEffect">
+
+    </section>
+
+    <!--Botones seccion-->
+    <div class="container menu-container homeButton my-5">
+        <div class="row g-3 justify-content-center">
+            <div class="col-12 col-md-5">
+                <a href="#inside"
+                    class="btn btn-primary dentro-btn btn-lg w-100 d-flex align-items-center justify-content-start px-4 py-4 flex-column align-items-start"
+                    style="border-radius: 10px; box-shadow: 0 4px 18px rgba(37,99,235,0.07); font-size: 1.2rem; background: #d6f1f5; color: #1c6697; border: 2px solid  #c3e7ec !important; gap: 2px;">
+                    <div class="d-flex align-items-center w-100" style="gap: 0;">
+                        <i class="fas fa-info-circle" style="font-size: 2.5rem; color: #1c6697;"></i>
+                        <span
+                            style="display: inline-block; width: 4px; height: 35px; background: #1c6697; border-radius: 4px; margin: 0 18px;"></span>
+                        <span style="font-size: 1.2rem; font-weight: 600;">Dependencias</span>
+                    </div>
+                    <span class="text-muted small ps-1" style="font-size: 0.9rem; margin-top: 3px;">
+                        Departamentos e instalaciones dentro del estadio
+                    </span>
+                </a>
+            </div>
+
+            <div class="col-12 col-md-5">
+                <a href="#outside"
+                    class="btn btn-primary fuera-btn btn-lg w-100 d-flex align-items-center justify-content-start px-4 py-4 flex-column align-items-start"
+                    style="border-radius: 10px; box-shadow: 0 4px 18px rgba(37,99,235,0.07); font-size: 1.2rem; background:var(--bgseccion-fuera); color: var(--textseccion-fuera); border: 2px solid  #c3e7ec !important; gap: 2px;">
+                    <div class="d-flex align-items-center w-100" style="gap: 0;">
+                        <i class="fas fa-concierge-bell" style="font-size: 2.5rem; color:var(--textseccion-fuera);"></i>
+                        <span
+                            style="display: inline-block; width: 4px; height: 35px; background:var(--textseccion-fuera); border-radius: 4px; margin: 0 18px;"></span>
+                        <span style="font-size: 1.2rem; font-weight: 600;">Servicios</span>
+                    </div>
+                    <span class="text-muted small ps-1" style="font-size: 0.9rem; margin-top: 3px;">
+                        Información de utilidad fuera del estadio
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <section class="roundedUpEffect"></section>
+
+    <script>
+        function selectAssembly(assemblyId) {
+            const wrapper = document.querySelector('.assembly-cards-wrapper');
+
+            // Agregar clase para indicar que hay una selección
+            wrapper.classList.add('has-selection');
+
+            // Remover clase active de todas las cards
+            document.querySelectorAll('.assembly-card').forEach(card => {
+                card.classList.remove('active');
+            });
+
+            // Agregar clase active a la card seleccionada
+            document.querySelector(`[data-assembly="${assemblyId}"]`).classList.add('active');
+
+            // Aquí puedes agregar lógica adicional para cargar los servicios específicos de cada asamblea
+            console.log(`Asamblea seleccionada: ${assemblyId}`);
+
+            // Opcional: Trigger event para otros componentes
+            const event = new CustomEvent('assemblyChanged', {
+                detail: { assemblyId: assemblyId }
+            });
+            document.dispatchEvent(event);
+        }
+
+        // Función para resetear a estado inicial (opcional)
+        function resetAssemblySelection() {
+            const wrapper = document.querySelector('.assembly-cards-wrapper');
+            wrapper.classList.remove('has-selection');
+
+            document.querySelectorAll('.assembly-card').forEach(card => {
+                card.classList.remove('active');
+            });
+        }
+
+        // Estado inicial: sin selección
+        document.addEventListener('DOMContentLoaded', function () {
+            // Inicializar sin selección - ambas en mismo nivel horizontal
+            console.log('Selector de asambleas inicializado sin selección');
+        });
+
+        // Botones
+        document.getElementById('btn6-normal').addEventListener('click', function () {
+            this.classList.toggle('active');
+
+            // Actualizar texto
+            if (this.classList.contains('active')) {
+                this.textContent = 'Button 6 Active';
+            } else {
+                this.textContent = 'Button 6';
+            }
+
+            // Efecto de click
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 150);
+        });
+
+        document.getElementById('btn13-normal').addEventListener('click', function () {
+            this.classList.toggle('active');
+
+            // Actualizar texto
+            if (this.classList.contains('active')) {
+                this.textContent = 'Button 13 Active';
+            } else {
+                this.textContent = 'Button 13';
+            }
+
+            // Efecto de click
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 150);
+        });
+
+        // Efecto de click para botones de ejemplo
+        document.querySelectorAll('.btn.active').forEach(btn => {
+            btn.addEventListener('click', function () {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</head>

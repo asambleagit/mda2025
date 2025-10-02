@@ -410,7 +410,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         const bbox = element.getBBox();
-        
         if (bbox.width === 0 || bbox.height === 0) {
             console.warn(`Element #${elementId} has zero dimensions. Cannot fit bounds.`);
             return;
@@ -425,10 +424,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         const svgHeight = svgElement.viewBox.baseVal.height;
 
         // Convert SVG bbox coordinates to Leaflet LatLngBounds.
-        const southWest = L.latLng(svgHeight - (bbox.y + bbox.height), bbox.x);
-        const northEast = L.latLng(svgHeight - bbox.y, bbox.x + bbox.width);
+        // const southWest = L.latLng(svgHeight - (bbox.y + bbox.height), bbox.x);
+        // const northEast = L.latLng(svgHeight - bbox.y, bbox.x + bbox.width);
 
-        const elementBounds = L.latLngBounds(northEast, southWest);
+        const southWest = L.latLng((bbox.y - bbox.height) - bottomPadding, bbox.x);
+        const northEast = L.latLng(bbox.y + topPadding, bbox.x + bbox.width);
+
+        const elementBounds = L.latLngBounds(southWest, northEast);
 
 
         const flyToBoundsOptions = {

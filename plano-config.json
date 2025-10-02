@@ -16,14 +16,14 @@
         ],
         "initialZoom": -2,
         "minZoom": -2,
-        "maxZoom": 10,
+        "maxZoom": 1,
         "zoomSnap": 0.1,
         "panOnlyWhenZoomed": true,
         "overviewAnimationDelay": 250,
         "zoom": {
-            "maxScale": 5,
+            "maxScale": 4,
             "padding": 0.15,
-            "maxZoom": 4,
+            "maxZoom": 2,
             "fitBoundsPadding": [
                 50,
                 50

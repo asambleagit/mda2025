@@ -1,24 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>
-    Departamento de Información y Servicio Voluntario
-  </title>
-  <meta name="description"
-    content="Departamento de Información y Servicio Voluntario" />
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <!--meta http-equiv="Expires" content="0"-->
+
+  <title>Departamento de Información y Servicio Voluntario | Estadio de "La Costa", Mar de Ajó</title>
+
+  <meta name="keywords"
+    content="Asamblea Adoración pura, Mar de Ajó, Buenos Aires, evento religioso, adoración, octubre 2025" />
+  <link href="css/styles.css" rel="stylesheet" />
+  <link href="css/plano.css" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
+
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <!-- Icons-->
+
+  <!-- Material Symbols -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
 </head>
 
 <body>
@@ -39,25 +56,42 @@
     </div>
 
     <!-- Hero Section -->
+
+    <section id="home" class="hero">
+      <div id="heroImage" class="hero-image-container text-center">
+        <img src="Image/logo1-v2-min.png" alt="Hero" class="hero-animated-img">
+      </div>
+      <h1>
+        ¡Bienvenidos a las Asambleas Regionales
+      </h1>
+      <h1>
+        “Adoración pura” – Mar de Ajó 2025!
+      </h1>
+      <p style="text-align: center; max-width: 100%;">
+        Departamento de Información y Servicio Voluntario
+      </p>
+    </section>
+
+    <section class="roundedUpHeroEffect" style="margin-top: 3%;"></section>
+    <section class="roundedDownEffect"></section>
     <section class="portada">
-      <section id="home" class="hero">
-        <div id="heroImage" class="hero-image-container text-center">
-          <img src="Image/logo1-v2-min.png" alt="Hero" class="hero-animated-img">
-        </div>
-        <h1>
-          Asambleas Regionales <span class="line-break-mobile"><br></span> Mar de Ajó 2025
-        </h1>
-        <p style="text-align: center; max-width: 100%;">
-          Departamento de Información y Servicio Voluntario
-        </p>
-      </section>
-      <section class="roundedUpHeroEffect" style="margin-top: 3%;"></section>
-      <section class="roundedDownEffect"></section>
-
-
-
       <section class="content-section" style="background: white;  position: relative; z-index: 2; padding-top: 5%;">
+        <!--Botones Tamaño letra-->
         <div class="container">
+          <div class="d-block d-md-none " style="max-width: 800px; margin:auto;">
+            <!-- Nav tabs -->
+            <ul class="nav nav-pills justify-content-center mb-3" id="videoTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="tab-sur" data-bs-toggle="tab" type="button" role="tab"
+                  onclick="cambiarLetra('normal')">Letra normal</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-norte" data-bs-toggle="tab" type="button" role="tab"
+                  onclick="cambiarLetra('grande')">Letra grande</button>
+              </li>
+            </ul>
+          </div>
+
           <div class="row justify-content-center">
             <div class="col-sx-12">
               <div class="content-card"
@@ -66,26 +100,25 @@
                 <!-- Contenido principal -->
                 <div class="row">
                   <div class="col-md-12">
-                    <p
-                      style="color: var(--calm-text); font-size: 1rem; line-height: 1.5; margin-bottom: 25px; text-align: justify;">
-                      En octubre se celebrará la serie de asambleas regionales <strong
-                        style="color: var(--azulOscuro);">"Adoración
-                        Pura"</strong> en el
-                      Estadio de "La Costa" de
-                      Mar de Ajó, Buenos Aires. Este sitio ayuda a explicar dónde están situados los
-                      distintos departamentos
-                      dentro del predio y cómo llegar a los hoteles, centros comerciales, restaurantes,
-                      farmacias,
-                      estaciones de servicio, cajeros automáticos, etc., tanto en la ciudad de la asamblea
-                      como en los
-                      alrededores.
+                    <p style="color: black; line-height: 1.5; margin-bottom: 25px; text-align: justify;">
+                      En pocos días compartiremos juntos esta ocasión especial en el Estadio de “La Costa”.
+                      Este sitio ha sido preparado para brindar orientación práctica: encontrarás la ubicación
+                      de los distintos departamentos dentro del estadio, así como de servicios y puntos de interés, en
+                      la ciudad de la asamblea y en los alrededores.
+                    </p>
+
+                    <p style="color: black;  line-height: 1.5; margin-bottom: 25px; text-align: justify;">
+                      Que este recurso sea de ayuda para que todos podamos concentrarnos en lo más
+                      importante: adorar juntos a Jehová.
                     </p>
 
 
                     <div
                       style="padding: 20px; border-radius: 15px; margin: 5px 0; border-left: 5px solid var(--calm-secondary);">
                       <p style="color: var(--calm-text); font-size:14px; margin: 0; line-height: 1.6;">
-                        <i class="fas fa-info-circle me-2" style="color: var(--calm-secondary);"></i>
+                        <span class="material-symbols-outlined me-2"
+                          style="color: var(--calm-secondary); font-size: 20px; vertical-align: middle;">
+                          info</span>
                         Si deseas más orientación puedes dirigirte a los distintos <strong>Puntos de
                           Información</strong>
                         dentro del estadio o abordar a un voluntario del <strong>Departamento de
@@ -111,7 +144,9 @@
                       style="background: white; padding: 20px; border-radius: 15px; margin: 15px 0; border-left: 5px solid var(--calm-secondary);">
                       <p
                         style="color: var(--calm-text); font-size: 13px; margin: 0; line-height: 1.2; text-align: center;">
-                        <i class="fas fa-info-circle me-2" style="color: var(--calm-secondary);"></i>
+                        <span class="material-symbols-outlined me-2"
+                          style="color: var(--calm-secondary); font-size: 20px; vertical-align: middle;">
+                          info</span>
                         <strong>Mar de Ajó 1</strong>, (17 al 19 de octubre de 2025)
                       </p>
                     </div>
@@ -122,7 +157,9 @@
                       style="background: white; padding: 20px; border-radius: 15px; margin: 15px 0; border-left: 5px solid var(--calm-secondary);">
                       <p
                         style="color: var(--calm-text); font-size: 13px; margin: 0; line-height: 1.2; text-align: center;">
-                        <i class="fas fa-info-circle me-2" style="color: var(--calm-secondary);"></i>
+                        <span class="material-symbols-outlined me-2"
+                          style="color: var(--calm-secondary); font-size: 20px; vertical-align: middle;">
+                          info</span>
                         <strong>Mar de Ajó 2</strong>, (31 de octubre al 2 de noviembre de
                         2025)
                       </p>
@@ -149,7 +186,8 @@
             class="btn info-btn btn-lg w-100 d-flex align-items-center justify-content-start px-4 py-4 flex-column align-items-start"
             style="border-radius: 10px; box-shadow: 0 6px 10px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.1); font-size: 1.2rem; border: 3px solid var(--verdeOscuro)!important; gap: 2px;">
             <div class="d-flex align-items-center w-100" style="gap: 0;">
-              <i class="fas fa-info-circle" style="font-size: 2.5rem; color: var(--verdeOscuro);"></i>
+              <span class="material-symbols-outlined" style="font-size: 3rem; color: var(--verdeOscuro);">
+                info</span>
               <span
                 style="display: inline-block; width: 4px; height: 35px; background:var(--verdeOscuro); border-radius: 4px; margin: 0 18px;"></span>
               <span style="font-size: 1.2rem; font-weight: 600; color: var(--verdeOscuro);">Información</span>
@@ -164,7 +202,8 @@
             class="btn dentro-btn btn-lg w-100 d-flex align-items-center justify-content-start px-4 py-4 flex-column align-items-start"
             style="border-radius: 10px; box-shadow: 0 6px 10px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.1); font-size: 1.2rem; color: var(--azulOscuro); border: 3px solid var(--azulOscuro) !important; gap: 2px;">
             <div class="d-flex align-items-center w-100" style="gap: 0;">
-              <i class="fas fa-info-circle" style="font-size: 2.5rem; color:var(--azulOscuro);"></i>
+              <span class="material-symbols-outlined" style="font-size: 3rem; color: var(--azulOscuro);">
+                dashboard</span>
               <span
                 style="display: inline-block; width: 4px; height: 35px; background:var(--azulOscuro);  border-radius: 4px; margin: 0 18px;"></span>
               <span style="font-size: 1.2rem; font-weight: 600; color: var(--azulOscuro);">Departamentos</span>
@@ -180,7 +219,8 @@
             class="btn fuera-btn btn-lg w-100 d-flex align-items-center justify-content-start px-4 py-4 flex-column align-items-start"
             style="border-radius: 10px; box-shadow: 0 6px 10px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.1); font-size: 1.2rem; ; color: var(--beigeOscuro); border: 4px solid var(--beigeOscuro) !important; gap: 2px;">
             <div class="d-flex align-items-center w-100" style="gap: 0;">
-              <i class="fas fa-concierge-bell" style="font-size: 2.5rem; color:  var(--beigeOscuro);"></i>
+              <span class="material-symbols-outlined" style="font-size: 3rem; color:var(--beigeOscuro);">
+                room_service</span>
               <span
                 style="display: inline-block; width: 4px; height: 35px; background:var(--beigeOscuro); border-radius: 4px; margin: 0 18px;"></span>
               <span style="font-size: 1.2rem; font-weight: 600; color:var(--beigeOscuro);">Servicios</span>
@@ -190,15 +230,13 @@
             </span>
           </a>
         </div>
-
       </div>
     </div>
 
     <section class="roundedUpEffect"></section>
 
-
     <!--Seccion Informacion-->
-    <section id="information" class="faq" style="border-left:10px solid var(--verdeOscuro)">
+    <section id="information" class="faq" style="border-left:10px solid var(--verdeOscuro);">
 
 
       <div id="como-llegar" class="container-fluid  " style="background: white;">
@@ -206,6 +244,537 @@
           <h1 class="fw-bold mb-4" style="color: var(--dark);">Información</h1>
         </div>
         <hr class="linea-sombreada">
+        <!-- Cómo llegar-->
+        <div class="text-center ">
+          <h2 class="fw-bold mb-4" style="color: var(--dark);">Cómo llegar</h2>
+        </div>
+        <div class="d-flex justify-content-center my-4">
+          <div class="card cardUbicacion">
+            <div class="row g-0 h-100">
+              <!-- Icono a la izquierda -->
+              <div class="col-2 d-flex align-items-center justify-content-center"
+                style="background-color: var(--verdeClaro); border-top-left-radius: 7px; border-bottom-left-radius: 7px;">
+                <span class="material-symbols-outlined" style="font-size: 57px; color: white;">distance</span>
+              </div>
+
+              <!-- Contenido a la derecha -->
+              <div class="col-8">
+                <div class="card-body">
+                  <h5 class="card-title">Estadio de "La Costa"</h5>
+                  <p class="card-text mb-3">
+                    <strong>Dirección:</strong> Ruta Interbalnearia 11, Km 344
+                    Partido de La Costa, Mar de Ajó, Buenos Aires
+                  </p>
+                  <div class="btn-group" role="group" aria-label="Basic example">
+
+                    <a href="https://maps.app.goo.gl/cnWtb8f5neJTAYPT7" target="_blank" class="btn btn-primary btn-sm"
+                      style="margin-top: 5px; background-color: var(--verdeOscuro); border-color: var(--verdeOscuro);">
+                      Abrir ubicación
+
+                    </a>
+                    <a href="https://wa.me/?text=Estadio%20Mar%20de%20Ajó%20-%20Ruta%20Prov.%2011%20km%20344%20%F0%9F%9F%A2%20Ubicación:%20https://maps.app.goo.gl/cnWtb8f5neJTAYPT7"
+                      target="_blank" class="btn btn-primary btn-sm"
+                      style="margin-top: 5px; background-color: var(--verdeOscuro); border-left-color: white !important; border-color: var(--verdeOscuro);">
+                      <span class="material-symbols-outlined" style="font-size: 20px;">
+                        share
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!--Estacionamiento-->
+        <div id="Estacionamiento" class="container-fluid py-4 " style="background: white;">
+          <div class="text-center">
+            <h2 class="fw-bold mb-2" style="color: var(--dark);">Estacionamiento</h2>
+            <p class="text-muted mb-0" align="left">Los siguientes son puntos de ingresos que se sugieren para llegar al
+              estadio de "La Costa",
+              dependiendo
+              si se trasladan desde del sur o desde el norte de la localidad de Mar de Ajó. Puedes ver los siguientes
+              videos para mayor orientación.</p>
+          </div>
+        </div>
+
+        <!--  Carrusel de Videos -->
+        <!-- 🎥 Carrusel de Videos con Leyendas Debajo -->
+        <!-- ✅ Versión Desktop: Carousel -->
+        <div id="carouselVideos" class="carousel slide my-5 d-none d-md-block" data-bs-interval="false">
+          <div class="carousel-inner rounded shadow" style="max-width: 800px; margin: auto;">
+
+            <!-- Video 1 -->
+            <div class="carousel-item active text-center">
+              <div class="ratio ratio-16x9">
+                <iframe
+                  src="https://player.vimeo.com/video/1123540012?badge=0&autopause=0&player_id=0&app_id=58479&loop=1"
+                  frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media;"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                  title="Acceso desde Mar de Ajó - Zona Sur">
+                </iframe>
+              </div>
+              <div class="mt-3">
+                <h5 class="fw-bold" style="color: var(--dark);">Acceso desde Mar de Ajó - Zona Sur</h5>
+                <p style="color:white">Consejos útiles para los asistentes.</p>
+              </div>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="carousel-item text-center">
+              <div class="ratio ratio-16x9">
+                <iframe
+                  src="https://player.vimeo.com/video/1123540068?badge=0&autopause=0&player_id=0&app_id=58479&loop=1"
+                  frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                  title="Acceso desde San Bernardo - Zona Norte">
+                </iframe>
+              </div>
+              <div class="mt-3">
+                <h5 class="fw-bold" style="color: var(--dark);">Acceso desde San Bernardo - Zona Norte</h5>
+                <p style="color:white">Consejos útiles para los asistentes.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controles -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselVideos" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselVideos" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+
+          <!-- Indicadores -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselVideos" data-bs-slide-to="0" class="active"
+              aria-current="true"></button>
+            <button type="button" data-bs-target="#carouselVideos" data-bs-slide-to="1"></button>
+          </div>
+        </div>
+
+
+        <!-- ✅ Versión Mobile: Tabs -->
+        <div class="d-block d-md-none my-5" style="max-width: 800px; margin:auto;">
+          <!-- Nav tabs -->
+          <ul class="nav nav-pills justify-content-center mb-3" id="videoTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="tab-sur" data-bs-toggle="tab" data-bs-target="#videoSur" type="button"
+                role="tab">Acceso Sur</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab-norte" data-bs-toggle="tab" data-bs-target="#videoNorte" type="button"
+                role="tab">Acceso Norte</button>
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <!-- Video Sur -->
+            <div class="tab-pane fade show active text-center" id="videoSur" role="tabpanel">
+              <div class="ratio ratio-16x9">
+                <iframe
+                  src="https://player.vimeo.com/video/1123540012?badge=0&autopause=0&player_id=0&app_id=58479&loop=1"
+                  frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media;"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                  title="Acceso desde Mar de Ajó - Zona Sur">
+                </iframe>
+              </div>
+              <div class="mt-3">
+                <h5 class="fw-bold" style="color: var(--dark);">Acceso desde Mar de Ajó - Zona Sur</h5>
+                <p style="color:white">Consejos útiles para los asistentes.</p>
+              </div>
+            </div>
+
+            <!-- Video Norte -->
+            <div class="tab-pane fade text-center" id="videoNorte" role="tabpanel">
+              <div class="ratio ratio-16x9">
+                <iframe
+                  src="https://player.vimeo.com/video/1123540068?badge=0&autopause=0&player_id=0&app_id=58479&loop=1"
+                  frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                  title="Acceso desde San Bernardo - Zona Norte">
+                </iframe>
+              </div>
+              <div class="mt-3">
+                <h5 class="fw-bold" style="color: var(--dark);">Acceso desde San Bernardo - Zona Norte</h5>
+                <p style="color:white">Consejos útiles para los asistentes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Arreglo especial colectivos-->
+        <div class="highlight-card text-center my-5 p-4">
+          <span class="material-symbols-outlined" style="font-size: 48px; color: #2a7a4f;">announcement</span>
+          <h3 class="mt-3">¡Atención!</h3>
+          <p>Se ha dispuesto un servicio especial de colectivos urbanos para facilitar la llegada al estadio de los
+            asistentes.
+            A continuacion los detalles:</p>
+          <div class="col-lg-10 mx-auto">
+            <!-- FAQ Item -->
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFAQ(this)">
+                <i class="material-symbols-outlined me-2 " style="color: var(--verdeOscuro); ">directions</i>
+                <span class="faq-text">
+                  <p>Inicio de Recorrido en la Lucila</p>
+                </span>
+                <i class="material-symbols-outlined arrowRotate ms-auto">
+                  keyboard_arrow_down
+                </i>
+              </button>
+              <div class="faq-answer">
+                <ul class="mb-2">
+                  <p><strong> 2 colectivos comenzarán su recorrido hacia el estadio de la Costa a las 08:00hs y
+                      08:30hs.</strong></p>
+                  <ol>
+                    <li>
+                      <p>Comienza el recorrido en Calle Salta y Tucumán en la Lucila del Mar</p>
+                    </li>
+                    <li>
+                      El colectivo avanza por Salta, en direccion a la costa, hasta llegar a calle Mendoza
+                    </li>
+                    <li>
+                      El recorrido continua por calle Mendoza hasta convertirse en Av. de la Costa, atravesando la
+                      Lucila,
+                      Costa Azul, San Bernardo y Mar de Ajó hasta llegar a Av. Libertador
+                      San Martin en Mar de Ajó
+                    </li>
+                    <li>El recorrido continua por Av. Libertador San Martin en dirección a Ruta 11 hasta calle Brown
+                    </li>
+                    <li>
+                      Al llegar a Calle Brown gira a la derecha y avanza por camino de tierra hasta llegar al estadio de
+                      La
+                      Costa y finaliza el recorrido.
+                    </li>
+                  </ol>
+                </ul>
+              </div>
+            </div>
+            <!-- FAQ Item -->
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFAQ(this)">
+                <i class="material-symbols-outlined me-2 "
+                  style="color: var(--verdeOscuro); transform: rotate(180deg);">directions</i>
+                <span class="faq-text">Inicio de Recorrido en el estadio de La Costa</span>
+                <i class="material-symbols-outlined arrowRotate ms-auto">
+                  keyboard_arrow_down
+                </i>
+              </button>
+              <div class="faq-answer">
+                <ul class="mb-2">
+                  <strong>2 colectivos comenzarán su recorrido hacia La Lucila a las 17:00hs y 17:30hs.</strong>
+                  <ol>
+                    <li>
+                      Comienza el recorrido en el estadio de La Costa y se dirige por calle Brown hacia Av. Libertador
+                      San
+                      Martin
+                    </li>
+                    <li>
+                      El recorrido continúa por Av. Libertador en dirección a la costa, hasta calle Av. Costanera
+                      (Mendoza)
+                    </li>
+                    <li>
+                      El recorrido continúa por calle Av. Costanera hasta convertirse en Mendoza, atravesando Mar de
+                      Ajó,
+                      San Bernardo, Costa Azul y la Lucila hasta calle Salta en la Lucila.
+
+                    </li>
+                    <li>El recorrido continua por calle Salta en dirección a Ruta 11 hasta calle Tucumán y finaliza el
+                      recorrido</li>
+                  </ol>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <a href="https://www.google.com/maps/d/u/0/edit?mid=1wPRMGe35H75ROBeIGP6BoXUb6xbZSjY&usp=sharing"
+            target="_blank" class="btn btn-primary btn-sm"
+            style="width: 300px;margin-top: 5px; background-color: var(--verdeOscuro); border-color: var(--verdeOscuro); font-size: 1.1rem; font-weight: 500;">
+            Ver Recorrido
+          </a>
+        </div>
+        <div id="Transporte" class="container-fluid py-4 " style="background: white;">
+          <div class="text-center">
+            <h2 class="fw-bold mb-2" style="color: var(--dark);">Medios de Transporte</h2>
+          </div>
+          <div class="col-lg-10 mx-auto">
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFAQ(this)">
+                <i class="material-symbols-outlined me-2 " style="color: var(--verdeOscuro);">directions_car</i>
+                <span class="faq-text">Auto Particular</span>
+                <i class="material-symbols-outlined arrowRotate ms-auto">
+                  keyboard_arrow_down
+                </i>
+              </button>
+              <div class="faq-answer">
+                <div class="highlighted-route p-3 rounded shadow-sm mb-2" style="
+                    background: #fcfafa;
+                    border-left: 5px solid var(--verdeOscuro);
+                    animation: pulseRoute 1s;
+                  ">
+                  <h6 class="fw-bold mb-2">Accesos sugeridos</h6>
+                  <h6>Los siguientes son puntos de ingresos que se sugieren para llegar al estadio de "La Costa",
+                    dependiendo
+                    si se trasladan desde del sur o desde el norte de la localidad de Mar de Ajó.</h6>
+                  <ul class="mb-2">
+                    <li><strong> Acceso desde el Sur hacia Mar de Ajó.</strong></li>
+                    <ol>
+                      <li>
+                        Circulando sobre Ruta 11, al llegar a la rotonda de Mar de Ajó, toma la primer salida a la
+                        derecha
+                      </li>
+                      <li>
+                        Una vez que salgas de la rotonda, dobla nuevamente a la derecha para tomar calle Rawson
+                      </li>
+                      <li>
+                        Haz 50 metros hasta el final de la calle Rawson y gira a la izquierda
+                      </li>
+                      <li>Sigue derecho hasta cruzar toda la Av. Libertador hacia el norte, paralelo a la Ruta 11.</li>
+                      <li>
+                        Luego de cruzar la Av. Libertador ingresarás a un calle de tierra
+                      </li>
+                      <li>
+                        Sigue por ese camino 1500 metros y llegarás al estadio de "La Costa"
+                      </li>
+                    </ol>
+                  </ul>
+                  <ul class="mb-2">
+                    <li><strong>Acceso desde el Norte hacia Mar de Ajó:</strong></li>
+                    <ol>
+                      <li>Vas por la Ruta 11 y cuando llegues a la rotonda de San Bernardo, da una vuelta hacia la
+                        izquierda
+                        y sigue hasta entrar a la Av. San Bernardo a la derecha.</li>
+                      <li>En Av. San Bernardo, ve hacia la costa y toma la primera calle a la derecha: calle Falkner (la
+                        que
+                        está más cerca de la Ruta 11).</li>
+                      <li>Sigue por esa calle 2400 metros y llegarás al estadio de "La Costa".</li>
+                    </ol>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFAQ(this)">
+                <i class="material-symbols-outlined me-2" style="color: var(--verdeOscuro);">directions_bus</i>
+
+                <span class="faq-text">Transporte Urbano</span>
+                <i class="material-symbols-outlined arrowRotate ms-auto">
+                  keyboard_arrow_down
+                </i>
+              </button>
+              <div class="faq-answer">
+                <div class="highlighted-route p-3 rounded shadow-sm mb-2" style="
+                    background: #fcfafa;
+                    border-left: 5px solid var(--verdeOscuro);
+                    animation: pulseRoute 1s;
+                  ">
+                  <h6 class="fw-bold mb-2">Transporte Público</h6>
+                  <h6>A continuación te detallamos los 2 servicios de colectivo que circulan en la zona cercana al
+                    estadio de "La Costa"</h6>
+                  <ul class="mb-2">
+                    <li>El <strong>Colectivo Linea Azul (503)</strong> realiza el trayecto por la <strong>Ruta
+                        11</strong>,
+                      desde San Clemente del Tuyú a Mar de Ajó, e ingresa a las siguientes Localidades:
+                      San Clemente del Tuyú - Las Toninas - Santa Teresita - Mar del Tuyú - Lucila del Mar - San
+                      Bernardo
+                      -
+                      Mar de Ajó </li>
+                    <ul>
+                      <li>
+                        Para conocer <strong>Horarios y Paradas</strong>, consulta el siguiente sitio de CESOP. <em>Ten
+                          en
+                          cuenta que los horarios estan diferenciados entre Semana y Fin de Semana.</em>
+                      </li>
+                      <div class="amenity-actions mt-2">
+                        <a href="https://www.cesop.com.ar/Servicios/Transporte/" target="_blank"
+                          class="calm-btn-sm">Sitio
+                          de CESOP</a>
+                      </div>
+                      <li>
+                        Para conocer el recorrido en tiempo real, puedes descargar la <strong>App</strong> desde el
+                        siguiente playstore de Android.
+                      </li>
+                      <div class="amenity-actions mt-2">
+                        <a href="https://play.google.com/store/apps/details?id=com.visionblo.apps.onewaraway.lacosta"
+                          target="_blank" class="calm-btn-sm">Mi Cole App</a>
+                      </div>
+                      <li>
+                        Para preguntar detalles específicos de recorrido puedes utilizar la opción de
+                        <strong>Chatbot</strong> de CESOP,
+                        realizando tu consulta al siguiente número de Whatsapp
+                      </li>
+                      <div class="amenity-actions mt-2">
+                        <a href="https://wa.me/5492257600000" target="_blank" class="calm-btn-sm">
+                          +54 9 2257 600000
+                        </a>
+                      </div>
+                    </ul>
+                    <ul>
+                      <li>
+                        Si eliges este servicio ten en cuenta de consultar con el chofer la parada más cercana al
+                        estadio de "La Costa"
+                      </li>
+                    </ul>
+                  </ul>
+                  <ul class="mb-2">
+                    <li>El <strong>Colectivo Urbano (502)</strong> realiza el trayecto interno por la <strong>Avenida de
+                        la costa</strong>, cubriendo el trayecto desde Nueva Atlantis a Aguas Verdes:
+                    </li>
+                    <ul>
+                      <li>
+                        Para conocer el recorrido en tiempo real, puedes descargar la <strong>App</strong> desde el
+                        siguiente playstore de Android.
+                      </li>
+                      <div class="amenity-actions mt-2">
+                        <a href="https://play.google.com/store/apps/details?id=com.visionblo.apps.onewaraway.lacosta"
+                          target="_blank" class="calm-btn-sm">Mi Cole App</a>
+                      </div>
+                      <li>
+                        Para preguntar detalles especificos de recorrido puedes utilizar la opción de <strong>Chatbot de
+                          CESOP</strong>,
+                        realizando tu consulta al siguiente número de Whatsapp
+                      </li>
+                      <div class="amenity-actions mt-2">
+                        <a href="https://wa.me/5492257600000" target="_blank" class="calm-btn-sm">
+                          +54 9 2257 600000
+                        </a>
+                      </div>
+                    </ul>
+                    <ul>
+                      <li>
+                        Si eliges este servicio ten en cuenta de consultar con el chofer la parada más cercana al
+                        estadio de "La Costa"
+                      </li>
+                    </ul>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question faq-radius-bottom" onclick="toggleFAQ(this)">
+                <i class="material-symbols-outlined me-2" style="color: var(--verdeOscuro);">directions_car</i>
+                <span class="faq-text">Taxis,Remises</span>
+
+                <i class="material-symbols-outlined arrowRotate ms-auto">
+                  keyboard_arrow_down
+                </i>
+              </button>
+              <div class="faq-answer">
+                <h6>A continuación te facilitamos los números de contacto de empresas de remises en localidades cercanas
+                  a
+                  Mar de Ajó:</h6>
+                <ul class="mb-2">
+                  <li><strong> Costa Azul</strong> </li>
+                  <ul>
+                    <li>
+                      Remis Costa Azul y Lucila - Telefono: <strong>2257-466890</strong>
+                      <div class="amenity-actions mt-2">
+                        <a href="tel:2257466890" target="_blank" class="calm-btn-sm">Llamar</a>
+                      </div>
+                    </li>
+                  </ul>
+                </ul>
+                <ul class="mb-2">
+                  <li><strong>San Berardo</strong> </li>
+                  <ul>
+                    <li>
+                      Bugs Bunny - Telefono: <strong>2257-465365</strong>
+                      <div class="amenity-actions mt-2">
+                        <a href="tel:2257465365" target="_blank" class="calm-btn-sm">LLamar</a>
+                      </div>
+                    </li>
+                    <li>
+                      Alas - Telefono: <strong>2257-420622</strong>
+                      <div class="amenity-actions mt-2">
+                        <a href="tel:2257420622" target="_blank" class="calm-btn-sm">LLamar</a>
+                      </div>
+                    </li>
+                    <li>
+                      Atlantico - Telefono Whatsapp: <strong>2257-667719</strong> - Telefono Fijo:
+                      <strong>2257-463550</strong>
+                      <div class="amenity-actions mt-2">
+                        <a href="tel:2257667719" target="_blank" class="calm-btn-sm">LLamar</a>
+                      </div>
+                      <div class="amenity-actions mt-2">
+                        <a href="https://wa.me/5492257667719" target="_blank" class="calm-btn-sm">
+                          Whatsapp
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      Salta - Telefono: <strong>2257-541254</strong>
+                      <div class="amenity-actions mt-2">
+                        <a href="tel:2257541254" target="_blank" class="calm-btn-sm">LLamar</a>
+                      </div>
+                      <div class="amenity-actions mt-2">
+                        <a href="https://wa.me/5492257541254" target="_blank" class="calm-btn-sm">
+                          Whatsapp
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </ul>
+                <ul class="mb-2">
+                  <li><strong> La Lucila</strong> </li>
+                  <ul>
+                    <li>
+                      La Lucila - Telefono: <strong>2257-462550</strong>
+                      <div class="amenity-actions mt-2">
+                        <a href="tel:+2257422444" target="_blank" class="calm-btn-sm">Llamar</a>
+                      </div>
+                    </li>
+                  </ul>
+                </ul>
+                <ul class="mb-2">
+                  <li><strong>Mar de Ajó</strong> </li>
+                  <ul>
+                    <li>
+                      Arena - Telefono: <strong>2257-422444</strong>
+                      <div class="amenity-actions mt-2">
+                        <a href="tel:+2257422444" target="_blank" class="calm-btn-sm">Llamar</a>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      Stylo - Telefono: <strong>2257-601298</strong>
+                      <div class="amenity-actions mt-2">
+                        <a href="tel:+2257601298" target="_blank" class="calm-btn-sm">Llamar</a>
+                      </div>
+                    </li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFAQ(this)">
+                <i class="material-symbols-outlined me-2" style="color: var(--verdeOscuro);">directions_bus</i>
+                <span class="faq-text">Transportes contratados</span>
+                <i class="material-symbols-outlined arrowRotate ms-auto">
+                  keyboard_arrow_down
+                </i>
+              </button>
+              <div class="faq-answer">
+                <p>Consulta con tu congregación para más información sobre
+                  horarios y puntos de salida.</p>
+                <p>
+
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
         <div class="text-center ">
           <h2 class="fw-bold mb-4" style="color: var(--dark);">Recordatorios</h2>
         </div>
@@ -215,8 +784,8 @@
               <!-- Icono a la izquierda -->
               <div class="col-2 d-flex align-items-center justify-content-center"
                 style="background-color: var(--verdeClaro); border-top-left-radius: 7px; border-bottom-left-radius: 7px;">
-                <img src="https://cdn-icons-png.flaticon.com/512/5607/5607386.png" alt="Ubicación"
-                  style="width: 48px; height: 48px;filter: brightness(0) invert(1); ">
+                <span class="material-symbols-outlined" style="font-size: 55px; color: white;">edit_note</span>
+
               </div>
 
               <!-- Contenido a la derecha -->
@@ -255,8 +824,8 @@
               <!-- Icono a la izquierda -->
               <div class="col-2 d-flex align-items-center justify-content-center"
                 style="background-color: var(--verdeClaro); border-top-left-radius: 7px; border-bottom-left-radius: 7px;">
-                <img src="https://cdn-icons-png.flaticon.com/512/2791/2791460.png" alt="Ubicación"
-                  style="width: 48px; height: 48px;filter: brightness(0) invert(1); ">
+                <span class="material-symbols-outlined" style="font-size: 55px; color: white;">play_circle</span>
+
               </div>
 
               <!-- Contenido a la derecha -->
@@ -296,8 +865,8 @@
               <!-- Icono a la izquierda -->
               <div class="col-2 d-flex align-items-center justify-content-center"
                 style="background-color: var(--verdeClaro); border-top-left-radius: 7px; border-bottom-left-radius: 7px;">
-                <img src="https://cdn-icons-png.flaticon.com/512/2576/2576548.png" alt="Ubicación"
-                  style="width: 48px; height: 48px;filter: brightness(0) invert(1); ">
+                <span class="material-symbols-outlined" style="font-size: 48px; color: white;">handyman</span>
+
               </div>
 
               <!-- Contenido a la derecha -->
@@ -323,337 +892,14 @@
             </div>
           </div>
         </div>
-        <div class="text-center ">
-          <h2 class="fw-bold mb-4" style="color: var(--dark);">Cómo llegar</h2>
-        </div>
-
-        <div class="d-flex justify-content-center my-4">
-          <div class="card cardUbicacion">
-            <div class="row g-0 h-100">
-              <!-- Icono a la izquierda -->
-              <div class="col-2 d-flex align-items-center justify-content-center"
-                style="background-color: var(--verdeClaro); border-top-left-radius: 7px; border-bottom-left-radius: 7px;">
-                <img src="https://cdn-icons-png.flaticon.com/512/67/67347.png" alt="Ubicación"
-                  style="width: 48px; height: 48px;filter: brightness(0) invert(1); ">
-              </div>
-
-              <!-- Contenido a la derecha -->
-              <div class="col-8">
-                <div class="card-body">
-                  <h5 class="card-title">Estadio de "La Costa"</h5>
-                  <p class="card-text mb-3">
-                    <strong>Dirección:</strong> Ruta Interbalnearia 11, Km 344
-                    Partido de La Costa, Mar de Ajó, Buenos Aires
-                  </p>
-                  <div class="btn-group" role="group" aria-label="Basic example">
-
-                    <a href="https://maps.app.goo.gl/cnWtb8f5neJTAYPT7" target="_blank" class="btn btn-primary btn-sm"
-                      style="margin-top: 5px; background-color: var(--verdeOscuro); border-color: var(--verdeOscuro);">
-                      Abrir ubicación
-
-                    </a>
-                    <a href="https://wa.me/?text=Estadio%20Mar%20de%20Ajó%20-%20Ruta%20Prov.%2011%20km%20344%20%F0%9F%9F%A2%20Ubicación:%20https://maps.app.goo.gl/cnWtb8f5neJTAYPT7"
-                      target="_blank" class="btn btn-primary btn-sm"
-                      style="margin-top: 5px; background-color: var(--verdeOscuro); border-left-color: white !important; border-color: var(--verdeOscuro);">
-                      <span class="material-symbols-outlined" style="font-size: 20px;">
-                        share
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-
-      <div id="Transporte" class="container-fluid py-4 " style="background: white;">
-        <div class="text-center">
-          <h2 class="fw-bold mb-2" style="color: var(--dark);">Medios de Transporte</h2>
-        </div>
-        <div class="col-lg-10 mx-auto">
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ(this)">
-              <i class="material-symbols-outlined me-2" style="color: var(--verdeOscuro);">directions_car</i>
-              <span class="faq-text">Auto Particular</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="faq-answer">
-              <div class="highlighted-route p-3 rounded shadow-sm mb-2" style="
-                    background: #fcfafa;
-                    border-left: 5px solid var(--verdeOscuro);
-                    animation: pulseRoute 1s;
-                  ">
-                <h6 class="fw-bold mb-2">Accesos sugeridos</h6>
-                <h6>Los siguientes son puntos de ingresos que se sugieren para llegar al Estadio de la Costa,
-                  dependiendo
-                  si se trasladan desde del sur o desde el norte de la localidad de Mar de Ajó.</h6>
-                <ul class="mb-2">
-                  <li><strong> Acceso desde el Sur hacia Mar de Ajó.</strong></li>
-                  <ol>
-                    <li>
-                      Circulando sobre Ruta 11, al llegar a la rotonda de Mar de Ajó, toma la primer salida a la derecha
-                    </li>
-                    <li>
-                      Una vez que salgas de la rotonda, dobla nuevamente a la derecha para tomar calle Rawson
-                    </li>
-                    <li>
-                      Haz 50 metros hasta el final de la calle Rawson y gira a la izquierda
-                    </li>
-                    <li>Sigue derecho hasta cruzar toda la Av. Libertador hacia el norte, paralelo a la Ruta 11.</li>
-                    <li>
-                      Luego de cruzar la Av. Libertador ingresarás a un calle de tierra
-                    </li>
-                    <li>
-                      Sigue por ese camino 1500 metros y llegarás al Estadio de la Costa
-                    </li>
-                  </ol>
-                </ul>
-                <ul class="mb-2">
-                  <li><strong>Acceso desde el Norte hacia Mar de Ajó:</strong></li>
-                  <ol>
-                    <li>Vas por la Ruta 11 y cuando llegues a la rotonda de San Bernardo, da una vuelta hacia la
-                      izquierda
-                      y sigue hasta entrar a la Av. San Bernardo a la derecha.</li>
-                    <li>En Av. San Bernardo, ve hacia la costa y toma la primera calle a la derecha: calle Falkner (la
-                      que
-                      está más cerca de la Ruta 11).</li>
-                    <li>Sigue por esa calle 2400 metros y llegarás al Estadio de la Costa.</li>
-                  </ol>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ(this)">
-              <i class="material-symbols-outlined me-2" style="color: var(--verdeOscuro);">directions_bus</i>
-
-              <span class="faq-text">Transporte Urbano</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="faq-answer">
-              <div class="highlighted-route p-3 rounded shadow-sm mb-2" style="
-                    background: #fcfafa;
-                    border-left: 5px solid var(--verdeOscuro);
-                    animation: pulseRoute 1s;
-                  ">
-                <h6 class="fw-bold mb-2">Transporte Público</h6>
-                <h6>A continuación te detallamos los 2 servicios de colectivo que circulan en la zona cercana al Estadio
-                  de la Costa</h6>
-                <ul class="mb-2">
-                  <li>El <strong>Colectivo Linea Azul (503)</strong> realiza el trayecto por la <strong>Ruta
-                      11</strong>,
-                    desde San Clemente del Tuyú a Mar de Ajó, e ingresa a las siguientes Localidades:
-                    San Clemente del Tuyú - Las Toninas - Santa Teresita - Mar del Tuyú - Lucila del Mar - San Bernardo
-                    -
-                    Mar de Ajó </li>
-                  <ul>
-                    <li>
-                      Para conocer <strong>Horarios y Paradas</strong>, consulta el siguiente sitio de CESOP. <em>Ten en
-                        cuenta que los horarios estan diferenciados entre Semana y Fin de Semana.</em>
-                    </li>
-                    <div class="amenity-actions mt-2">
-                      <a href="https://www.cesop.com.ar/Servicios/Transporte/" target="_blank" class="calm-btn-sm">Sitio
-                        de CESOP</a>
-                    </div>
-                    <li>
-                      Para conocer el recorrido en tiempo real, puedes descargar la <strong>App</strong> desde el
-                      siguiente playstore de Android.
-                    </li>
-                    <div class="amenity-actions mt-2">
-                      <a href="https://play.google.com/store/apps/details?id=com.visionblo.apps.onewaraway.lacosta"
-                        target="_blank" class="calm-btn-sm">Mi Cole App</a>
-                    </div>
-                    <li>
-                      Para preguntar detalles específicos de recorrido puedes utilizar la opción de
-                      <strong>Chatbot</strong> de CESOP,
-                      realizando tu consulta al siguiente número de Whatsapp
-                    </li>
-                    <div class="amenity-actions mt-2">
-                      <a href="https://wa.me/5492257600000" target="_blank" class="calm-btn-sm">
-                        +54 9 2257 600000
-                      </a>
-                    </div>
-                  </ul>
-                  <ul>
-                    <li>
-                      Si eliges este servicio ten en cuenta de consultar con el chofer la parada más cercana al Estadio
-                      de
-                      la Costa
-                    </li>
-                  </ul>
-                </ul>
-                <ul class="mb-2">
-                  <li>El <strong>Colectivo Urbano (502)</strong> realiza el trayecto interno por la <strong>Avenida de
-                      la costa</strong>, cubriendo el trayecto desde Nueva Atlantis a Aguas Verdes:
-                  </li>
-                  <ul>
-                    <li>
-                      Para conocer el recorrido en tiempo real, puedes descargar la <strong>App</strong> desde el
-                      siguiente playstore de Android.
-                    </li>
-                    <div class="amenity-actions mt-2">
-                      <a href="https://play.google.com/store/apps/details?id=com.visionblo.apps.onewaraway.lacosta"
-                        target="_blank" class="calm-btn-sm">Mi Cole App</a>
-                    </div>
-                    <li>
-                      Para preguntar detalles especificos de recorrido puedes utilizar la opción de <strong>Chatbot de
-                        CESOP</strong>,
-                      realizando tu consulta al siguiente número de Whatsapp
-                    </li>
-                    <div class="amenity-actions mt-2">
-                      <a href="https://wa.me/5492257600000" target="_blank" class="calm-btn-sm">
-                        +54 9 2257 600000
-                      </a>
-                    </div>
-                  </ul>
-                  <ul>
-                    <li>
-                      Si eliges este servicio ten en cuenta de consultar con el chofer la parada más cercana al Estadio
-                      de
-                      la Costa
-                    </li>
-                  </ul>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question faq-radius-bottom" onclick="toggleFAQ(this)">
-              <i class="material-symbols-outlined me-2" style="color: var(--verdeOscuro);">directions_car</i>
-              <span class="faq-text">Taxis,Remises</span>
-
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="faq-answer">
-              <h6>A continuación te facilitamos los números de contacto de empresas de remises en localidades cercanas a
-                Mar de Ajó:</h6>
-              <ul class="mb-2">
-                <li><strong> Costa Azul</strong> </li>
-                <ul>
-                  <li>
-                    Remis Costa Azul y Lucila - Telefono: <strong>2257-466890</strong>
-                    <div class="amenity-actions mt-2">
-                      <a href="tel:2257466890" target="_blank" class="calm-btn-sm">Llamar</a>
-                    </div>
-                  </li>
-                </ul>
-              </ul>
-              <ul class="mb-2">
-                <li><strong>San Berardo</strong> </li>
-                <ul>
-                  <li>
-                    Bugs Bunny - Telefono: <strong>2257-465365</strong>
-                    <div class="amenity-actions mt-2">
-                      <a href="tel:2257465365" target="_blank" class="calm-btn-sm">LLamar</a>
-                    </div>
-                  </li>
-                  <li>
-                    Alas - Telefono: <strong>2257-420622</strong>
-                    <div class="amenity-actions mt-2">
-                      <a href="tel:2257420622" target="_blank" class="calm-btn-sm">LLamar</a>
-                    </div>
-                  </li>
-                  <li>
-                    Atlantico - Telefono Whatsapp: <strong>2257-667719</strong> - Telefono Fijo:
-                    <strong>2257-463550</strong>
-                    <div class="amenity-actions mt-2">
-                      <a href="tel:2257667719" target="_blank" class="calm-btn-sm">LLamar</a>
-                    </div>
-                    <div class="amenity-actions mt-2">
-                      <a href="https://wa.me/5492257667719" target="_blank" class="calm-btn-sm">
-                        Whatsapp
-                      </a>
-                    </div>
-                  </li>
-                  <li>
-                    Salta - Telefono: <strong>2257-541254</strong>
-                    <div class="amenity-actions mt-2">
-                      <a href="tel:2257541254" target="_blank" class="calm-btn-sm">LLamar</a>
-                    </div>
-                    <div class="amenity-actions mt-2">
-                      <a href="https://wa.me/5492257541254" target="_blank" class="calm-btn-sm">
-                        Whatsapp
-                      </a>
-                    </div>
-                  </li>
-                </ul>
-              </ul>
-              <ul class="mb-2">
-                <li><strong> La Lucila</strong> </li>
-                <ul>
-                  <li>
-                    La Lucila - Telefono: <strong>2257-462550</strong>
-                    <div class="amenity-actions mt-2">
-                      <a href="tel:+2257422444" target="_blank" class="calm-btn-sm">Llamar</a>
-                    </div>
-                  </li>
-                </ul>
-              </ul>
-              <ul class="mb-2">
-                <li><strong>Mar de Ajó</strong> </li>
-                <ul>
-                  <li>
-                    Arena - Telefono: <strong>2257-422444</strong>
-                    <div class="amenity-actions mt-2">
-                      <a href="tel:+2257422444" target="_blank" class="calm-btn-sm">Llamar</a>
-                    </div>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    Stylo - Telefono: <strong>2257-601298</strong>
-                    <div class="amenity-actions mt-2">
-                      <a href="tel:+2257601298" target="_blank" class="calm-btn-sm">Llamar</a>
-                    </div>
-                  </li>
-                </ul>
-              </ul>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ(this)">
-              <i class="material-symbols-outlined me-2" style="color: var(--verdeOscuro);">directions_bus</i>
-              <span class="faq-text">Transportes contratados</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="faq-answer">
-              <p>Consulta con tu congregación para más información sobre
-                horarios y puntos de salida.</p>
-              <p>
-
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <div id="Estacionamiento" class="container-fluid py-4 " style="background: white;">
-        <div class="text-center">
-          <h2 class="fw-bold mb-2" style="color: var(--dark);">Estacionamiento</h2>
-          <p class="text-muted mb-0" align="left">El estadio cuenta con amplias áreas de estacionamiento gratuito para
-            todos los
-            asistentes. Se recomienda llegar temprano para asegurar un lugar cercano. Hay espacios reservados para
-            personas con discapacidad y acceso adaptado.</p>
-        </div>
       </div>
       <br>
-
-
     </section>
 
-
-
     <!-- Dependencias-->
-    <section id="departamentos" class="faq" style="border-left:10px solid var(--azulOscuro)" ;>
+    <section id="departamentos" class="faq" style="border-left:10px solid var(--azulOscuro)">
       <div class="container-fluid " style="background-color: white;">
-        <div class="text-center title-section " style="background-color:var(--azulClaro); height: 14vh;">
+        <div class="text-center title-section " style="background-color:var(--azulClaro); height: 12vh;">
           <h1 class="fw-bold " style=" color: var(--dark); ">Departamentos e Instalaciones</h1>
         </div>
         <hr class="linea-sombreada">
@@ -668,18 +914,23 @@
             <button class="faq-question" onclick="toggleFAQ(this)">
               <i class="fa fa-suitcase me-2" style="color: var(--azulOscuro); font-size: 1.2rem;"></i>
               <span class="faq-text">Guardarropa y objetos perdidos</span>
-              <i class="fas fa-chevron-down ms-auto"></i>
+              <i class="material-symbols-outlined arrowRotate ms-auto">
+                keyboard_arrow_down
+              </i>
             </button>
             <div class="faq-answer">
-              <p class="small mb-0">
-                Todos los artículos extraviados se deben entregar en este departamento. Si has perdido algo, dirígete a este lugar para buscar tu pertenencia.
+              <p>
+                Todos los artículos extraviados se deben entregar en este departamento. Si has perdido
+                algo, dirígete a
+                este
+                lugar para buscar tu pertenencia.
               </p>
-              <p class="small mb-0">
-                También se debe llevar a este departamento a los niños que se hayan perdido.</p>
-              <br>
+              <p>
+                También se debe llevar a este departamento a los niños que se hayan
+                perdido.</p>
               <div class="amenity-actions mt-2">
-                <a href="#ubicacion-guardarropas" class="calm-btn-sm"
-                  onclick="plano(0,'departamentos','Guardaropas')">Ubicación</a>
+                <a href="#ubicacion-bautismo" class="calm-btn-sm" onclick="showLocation('mapa-pb-v2.html')">Ver en
+                  Mapa</a>
               </div>
             </div>
           </div>
@@ -688,37 +939,46 @@
               <span class="material-symbols-outlined me-2"
                 style="color: var(--azulOscuro); font-size: 1.3rem;">group</span>
               <span class="faq-text">Acomodadores</span>
-              <i class="fas fa-chevron-down ms-auto"></i>
+              <i class="material-symbols-outlined arrowRotate ms-auto">
+                keyboard_arrow_down
+              </i>
             </button>
             <div class="faq-answer">
-              <p class="small mb-0">
-                Los acomodadores <strong>están para ayudarte.</strong> Coopera con ellos en todo y sigue sus
+              <p>
+                Los acomodadores <strong>están para ayudarte.</strong> Coopera con ellos en todo y sigue
+                sus
                 instrucciones sobre el
-                estacionamiento, la circulación por los pasillos, la reserva de asientos y otros asuntos.</p>
-              <p class="small mb-0">
-                Los encontrarás distribuídos en todo el estadio.
-              </p>
-              <p class="small mb-0">
-                Hay un puesto permanente de acomodadores en (completar)
-              </p>
+                estacionamiento, la circulación por los pasillos, la reserva de asientos y otros
+                asuntos.</p>
+              <div class="amenity-actions mt-2">
+                <a href="#ubicacion-bautismo" class="calm-btn-sm" onclick="showLocation('mapa-pb-v2.html')">Ver en
+                  Mapa</a>
+              </div>
             </div>
           </div>
+
+
+
 
           <div class="faq-item">
             <button class="faq-question" onclick="toggleFAQ(this)">
               <span class="material-symbols-outlined me-2"
                 style="color: var(--azulOscuro); font-size: 1.5rem;">Medication</span>
               <span class="faq-text">Primeros auxilios</span>
-              <i class="fas fa-chevron-down ms-auto"></i>
+              <i class="material-symbols-outlined arrowRotate ms-auto">
+                keyboard_arrow_down
+              </i>
             </button>
             <div class="faq-answer">
-              <p class="small mb-0">
-                Si tienes una emergencia puedes dirigirte a esta ubicación para ser atendido. Si tienes dificultades
-                para caminar, busca la ayuda de los acomodadores más cercanos a ti.
+              <p>
+                Si tienes una emergencia puedes dirigirte a esta ubicación para ser atendido. Si tienes
+                dificultades
+                para
+                caminar, busca la ayuda de los acomodadores más cercanos a ti.
               </p>
               <div class="amenity-actions mt-2">
-                <a href="#ubicacion-primeros-auxilios" class="calm-btn-sm"
-                        onclick="plano(0,'departamentos','PrimerosAuxilios')">Ubicación</a>
+                <a href="#ubicacion-bautismo" class="calm-btn-sm" onclick="showLocation('mapa-pb-v2.html')">Ver en
+                  Mapa</a>
               </div>
             </div>
           </div>
@@ -728,31 +988,42 @@
               <span class="material-symbols-outlined me-2"
                 style="color: var(--azulOscuro); font-size: 1.5rem;">Child_care</span>
               <span class="faq-text">Lactantes</span>
-              <i class="fas fa-chevron-down ms-auto"></i>
+              <i class="material-symbols-outlined arrowRotate ms-auto">
+                keyboard_arrow_down
+              </i>
             </button>
             <div class="faq-answer">
-              <p class="small mb-0">
-                Este sector esta preparado para atender las necesidades de los más pequeños. <br/>Encontrarás agua caliente,
+              <p>
+                Este sector esta preparado para atender las necesidades de los más pequeños. Encontrarás
+                agua caliente,
                 cambiadores y otros insumos necesarios.
               </p>
-              <div class="amenity-actions mt-2"></div>
-              <a href="#ubicacion-lactantes" class="calm-btn-sm"
-                        onclick="plano(0,'departamentos','Lactantes')">Ubicación</a>
-            </div>          
+              <div class="amenity-actions mt-2">
+                <a href="#ubicacion-bautismo" class="calm-btn-sm" onclick="showLocation('mapa-pb-v2.html')">Ver en
+                  Mapa</a>
+              </div>
+            </div>
           </div>
           <div id="faq-voluntario" class="faq-item">
             <button id="faq-question" class="faq-question" onclick="toggleFAQ(this)">
               <span class="material-symbols-outlined me-2" style="color: var(--azulOscuro); font-size: 1.5rem;">Info
               </span>
               <span class="faq-text">Informacion y Servicio Voluntario</span>
-              <i class="fas fa-chevron-down ms-auto"></i>
+              <i class="material-symbols-outlined arrowRotate ms-auto">
+                keyboard_arrow_down
+              </i>
             </button>
             <div class="faq-answer">
-              <p class="small mb-0">
-                Si quieres ofrecer tu ayuda para trabajar en algún departamento de la asamblea, puedes dirigirte a la
+              <p>
+                Si quieres ofrecer tu ayuda para trabajar en algún departamento de la asamblea, puedes
+                dirigirte a la
                 oficina central ubicada en Planta Baja.
                 También puedes recibir más información en los puntos mobiles identificados con ...
               </p>
+              <div class="amenity-actions mt-2">
+                <a href="#ubicacion-bautismo" class="calm-btn-sm" onclick="showLocation('mapa-pb-v2.html')">Ver en
+                  Mapa</a>
+              </div>
             </div>
           </div>
         </div>
@@ -769,45 +1040,90 @@
         </div>
 
         <div class="col-lg-10 mx-auto">
+
           <div class="faq-item">
             <button class="faq-question" onclick="toggleFAQ(this)">
-              <i class="material-symbols-outlined me-2" style="color: var(--azulOscuro);">water</i>
-              <span class="faq-text">Bautismo</span>
-              <i class="fas fa-chevron-down"></i>
+              <i class="material-symbols-outlined me-2  " style="color: var(--azulOscuro);">Groups</i>
+              <span class="faq-text">Auditorio Principal</span>
+              <i class="material-symbols-outlined arrowRotate ms-auto">
+                keyboard_arrow_down
+              </i>
             </button>
+
             <div class="faq-answer">
-              <p class="small mb-0">Los candidatos deben ubicarse en las primeras filas en la sesión del sábado por la
-                mañana</p>
+              <p>El auditorio principal cuenta con sillas reservadas para personas con necesidades especiales.</p>
               <div class="amenity-actions mt-2">
-                <a href="#ubicacion-bautismo" class="calm-btn-sm"
-                  onclick="showLocation('mapa-pb-v2.html')">Ubicación</a>
-                <a href="#info-bautismo" class="calm-btn-sm" onclick="showInfo('bautismo')">Información</a>
+                <a href="#wc" class="calm-btn-sm" onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
               </div>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question" onclick="toggleFAQ(this)">
-              <i class="material-symbols-outlined me-2" style="color: var(--azulOscuro);">groups</i>
-              <span class="faq-text">Vestíbulo</span>
-              <i class="fas fa-chevron-down"></i>
+              <i class="material-symbols-outlined me-2" style="color: var(--azulOscuro);">Groups</i>
+              <span class="faq-text">Gradas</span>
+              <i class="material-symbols-outlined arrowRotate ms-auto">
+                keyboard_arrow_down
+              </i>
             </button>
-            <div class="faq-answer">
-              <p>
 
-              </p>
+            <div class="faq-answer">
+              <p>Las gradas son de cemento y no cuentan con respaldo individual. Se anima a llevar algún elemento
+                personal si desean mayor comodidad.</p>
+              <div class="amenity-actions mt-2">
+                <a href="#wc" class="calm-btn-sm" onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
+              </div>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question" onclick="toggleFAQ(this)">
+              <i class="material-symbols-outlined me-2" style="color: var(--azulOscuro);">Wc</i>
+              <span class="faq-text">Sanitarios</span>
+              <i class="material-symbols-outlined arrowRotate ms-auto">
+                keyboard_arrow_down
+              </i>
+            </button>
+
+            <div class="faq-answer">
+              <p>Existen sanitarios distribuidos en la zona norte al estadio y zona sur.</p>
+              <div class="amenity-actions mt-2">
+                <a href="#wc" class="calm-btn-sm" onclick="showLocation('mapa-pb-v2.html')">Ver en Mapa</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+              <i class="material-symbols-outlined me-2" style="color: var(--azulOscuro);">water</i>
+              <span class="faq-text">Bautismo</span>
+              <i class="material-symbols-outlined arrowRotate ms-auto">
+                keyboard_arrow_down
+              </i>
+            </button>
+
+            <div class="faq-answer">
+              <p>Los candidatos deben ubicarse en las primeras filas en la sesión del
+                sábado por la
+                mañana</p>
+              <div class="amenity-actions mt-2">
+                <a href="#ubicacion-bautismo" class="calm-btn-sm" onclick="showLocation('mapa-pb-v2.html')">Ver en
+                  Mapa</a>
+              </div>
+            </div>
+          </div>
+          <!--
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
               <i class="material-symbols-outlined me-2" style="color: var(--azulOscuro);">wc</i>
               <span class="faq-text">Baños</span>
-              <i class="fas fa-chevron-down"></i>
+              <i class="material-symbols-outlined ms-auto">
+                keyboard_arrow_down
+              </i>
             </button>
             <div class="faq-answer">
               <p class="small mb-0">
-                El estadio cuenta con baños en ambas plantas.
+                El estadio cuenta con baños en planta baja.
               </p>
               <p class="small mb-0">Es importante cuidar el consumo de agua, porque en eventos
                 de uso intensivo se puede agotar el suministro.</p>
@@ -817,18 +1133,19 @@
                   <button class="faq-question" onclick="toggleFAQ(this)">
                     <i class="material-symbols-outlined me-2" style="color: var(--textseccion-dentro);">wc</i>
                     Baños
-                    <i class="fas fa-chevron-down"></i>
+                    <i class="material-symbols-outlined ms-auto">
+                      keyboard_arrow_down
+                    </i>
                   </button>
                   <div class="faq-answer">
                     <p>
-                      Hay disponibilidad de taxis y remises en la ciudad. Se
-                      recomienda reservar con anticipación en días de alta demanda.
+                      Completar
                     </p>
                     <div class="amenity-actions mt-2">
                       <a href="#ubicacion-banos-pb" class="calm-btn-sm"
-                        onclick="plano(0,'departamentos','wc')">Ubicación PB</a>
+                        onclick="plano(0,'departamentos','Baños')">Ubicación PB.</a>
                       <a href="#ubicacion-banos-pa" class="calm-btn-sm"
-                        onclick="plano(1,'departamentos','wc')">Ubicación PA</a>
+                        onclick="plano(1,'departamentos','Baños')">Ubicación PA.</a>
 
                       <a href="#info-banos" class="calm-btn-sm" onclick="showInfo('bautismo')">Información</a>
                     </div>
@@ -838,14 +1155,18 @@
 
                 <div class="faq-item">
                   <button class="faq-question faq-radius-bottom" onclick="toggleFAQ(this)">
-                    <i class="fa-solid fa-bucket" style="color: var(--azulOscuro);"></i>
+                    <span class="material-symbols-outlined me-2"
+                      style="color: var(--azulOscuro);">cleaning_services</span>
 
                     Limpieza
-                    <i class="fas fa-chevron-down"></i>
+                    <i class="material-symbols-outlined ms-auto">
+                      keyboard_arrow_down
+                    </i>
                   </button>
                   <div class="faq-answer">
                     <p class="small mb-0">
-                      El área de limpieza se encuentra en varios puntos del estadio para mantener las instalaciones en
+                      El área de limpieza se encuentra en varios puntos del estadio para mantener
+                      las instalaciones en
                       óptimas
                       condiciones. Si necesitas asistencia, contacta al personal del evento.
                     </p>
@@ -855,15 +1176,12 @@
 
               </div>
 
-            </div>
-
+            </div>-->
+        </div>
     </section>
-
-
 
     <!-- Seccion Servicios -->
     <section id="Servicios" style="border-left:10px solid var(--beigeOscuro);">
-
       <div class="container-fluid ">
         <div class="text-center title-section " style="background-color:var(--beigeClaro); height: 10vh;">
           <h1 class="fw-bold mb-4" style="color: var(--dark);">Servicios cercanos</h1>
@@ -876,7 +1194,9 @@
 
               <div class="col-6 col-md-4">
                 <div class="emergency-card">
-                  <i class="fas fa-car-crash"></i>
+                  <span class="material-symbols-outlined icon-numerosutiles">
+                    local_police
+                  </span>
                   <h3>101</h3>
                   <p>Policía</p>
                 </div>
@@ -884,7 +1204,8 @@
 
               <div class="col-6 col-md-4">
                 <div class="emergency-card">
-                  <i class="fas fa-ambulance"></i>
+                  <span class="material-symbols-outlined icon-numerosutiles">
+                    emergency</span>
                   <h3>107</h3>
                   <p>Emergencia Sanitaria</p>
                 </div>
@@ -892,7 +1213,8 @@
 
               <div class="col-6 col-md-4">
                 <div class="emergency-card">
-                  <i class="fas fa-fire"></i>
+                  <span class="material-symbols-outlined icon-numerosutiles">
+                    mode_heat</span>
                   <h3>100</h3>
                   <p>Bomberos</p>
                 </div>
@@ -900,7 +1222,8 @@
 
               <div class="col-6 col-md-4">
                 <div class="emergency-card">
-                  <i class="fas fa-users"></i>
+                  <span class="material-symbols-outlined icon-numerosutiles">
+                    emergency</span>
                   <h3>911</h3>
                   <p>Emergencias</p>
                 </div>
@@ -908,7 +1231,8 @@
 
               <div class="col-6 col-md-4">
                 <div class="emergency-card">
-                  <i class="fas fa-shield-alt"></i>
+                  <span class="material-symbols-outlined icon-numerosutiles">
+                    security</span>
                   <h3>103</h3>
                   <p>Defensa Civil</p>
                 </div>
@@ -949,7 +1273,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
       <!-- Carrousel Servicios-->
@@ -962,27 +1285,39 @@
               stroke-linejoin="round" />
           </svg>
         </button>
-
         <!-- Carrusel de chips -->
 
         <div class="filter-tabs chip-track flex-grow-1 d-flex gap-3 " id="chipTrack">
-
           <button class="filter-tab active chip-item btn rounded-pill btn-light " data-filter="all">Todos los
             servicios</button>
-          <button class="filter-tab chip-item btn rounded-pill btn-light" data-filter="restaurante"> <i
-              class="fa-solid fa-utensils"></i> Restaurantes</button>
-          <button class="filter-tab chip-item btn rounded-pill btn-light" data-filter="hotel"> <i
-              class="fa-solid fa-hotel"></i> Alojamientos</button>
-          <button class="filter-tab chip-item btn rounded-pill btn-light" data-filter="centroSalud"> <i
-              class="fa-solid fa-hospital"></i> Hospitales</button>
-          <button class="filter-tab chip-item btn rounded-pill btn-light" data-filter="farmacia"><i
-              class="fa-solid fa-pills"></i> Farmacias</button>
-          <button class="filter-tab chip-item btn rounded-pill btn-light" data-filter="cajero"> <i
-              class="fa-solid fa-credit-card"></i>&ensp;&ensp; Cajeros</button>
-          <button class="filter-tab chip-item btn rounded-pill btn-light" data-filter="comercio"> <i
-              class="fa-solid fa-credit-card"></i>&ensp;&ensp; Abastecimiento</button>
-          <button class="filter-tab chip-item btn rounded-pill btn-light" data-filter="combustible"> <i
-              class="fa-solid fa-credit-card"></i>&ensp;&ensp; Combustible</button>
+          <button class="filter-tab chip-item btn rounded-pill btn-light" data-filter="restaurante"> <span
+              class="material-symbols-outlined">
+              restaurant
+            </span> Restaurantes</button>
+          <button class="filter-tab chip-item btn rounded-pill btn-light" data-filter="hotel"> <span
+              class="material-symbols-outlined">
+              apartment
+            </span> Alojamientos</button>
+          <button class="filter-tab chip-item btn rounded-pill btn-light" data-filter="centroSalud"> <span
+              class="material-symbols-outlined">
+              home_health
+            </span> Hospitales</button>
+          <button class="filter-tab chip-item btn rounded-pill btn-light" data-filter="farmacia"><span
+              class="material-symbols-outlined">
+              pill
+            </span> Farmacias</button>
+          <button class="filter-tab chip-item btn rounded-pill btn-light" data-filter="cajero"> <span
+              class="material-symbols-outlined">
+              credit_card
+            </span> Cajeros</button>
+          <button class="filter-tab chip-item btn rounded-pill btn-light" data-filter="comercio"> <span
+              class="material-symbols-outlined">
+              shopping_cart
+            </span> Abastecimiento</button>
+          <button class="filter-tab chip-item btn rounded-pill btn-light" data-filter="combustible"> <span
+              class="material-symbols-outlined">
+              local_gas_station
+            </span> Combustible</button>
         </div>
 
         <!-- Flecha derecha -->
@@ -997,7 +1332,7 @@
       <!--Carrousel Localidades-->
       <div class="chip-carousel-container d-flex align-items-center">
         <!-- Flecha izquierda -->
-        <button class="chip-prev btn btn-light d-md-none me-2" aria-label="Anterior">
+        <button class="chip-local-prev btn btn-light d-md-none me-2" aria-label="Anterior">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
             <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" />
@@ -1005,7 +1340,7 @@
         </button>
 
         <!-- Carrusel de chips -->
-        <div class="filter-localidad-tabs chip-track flex-grow-1 d-flex gap-3" id="chipTrack">
+        <div class="filter-localidad-tabs chip-track flex-grow-1 d-flex gap-3" id="chipLocalTrack">
           <button class="filter-localidad-tab chip-item active btn rounded-pill btn-light" data-filter="all">Todas
             las
             localidades</button>
@@ -1026,165 +1361,316 @@
             Teresita</button>
         </div>
 
-      <!-- Flecha derecha -->
-      <button class="chip-next btn btn-light d-md-none ms-2" aria-label="Siguiente">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-          <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" />
-        </svg>
-      </button>
-    </div>
-    </br></br>
-    <!-- Amenities List -->
-    <div class="row g-4" id="amenities-list"></div>
-  </section>
+        <!-- Flecha derecha -->
+        <button class="chip-local-next btn btn-light d-md-none ms-2" aria-label="Siguiente">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+      </br></br>
+      <!-- Amenities List -->
+      <div class="row g-4" id="amenities-list"></div>
+      <div id="Encuesta" class="container-fluid py-4 "
+        style="background: white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
 
-  <!-- Botón fijo esquina inferior derecha -->
-  <button id="scrollBtn" class="scroll-top-btn" onmouseover="this.style.backgroundColor='#145072';"
-    onmouseout="this.style.backgroundColor='#1c6697';">
-    ↑
-  </button>
-  <!-- Fullscreen Modal -->
-  <div class="modal fade plano-modal-styles" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
-        <div class="modal-body" style="padding: 0;">
-          <!-- Map Header Panel -->
-          <div class="map-header-panel px-3 py-2" id="map-header-panel">
-            <div id="map-title">
-              <div class="dropdown">
-                <i class="material-symbols-outlined" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">map</i>
-                <ul class="dropdown-menu title-dropdown-menu">
-                  <li><a class="dropdown-item d-flex align-items-center gap-2" href="#" id="print-map"><span class="material-symbols-outlined">print</span>Imprimir</a></li>
-                </ul>
-              </div>
-              <div class="map-title-selectors">
+        <div class="text-center">
+          <h2 class="fw-bold mb-2" style="color: var(--dark);">Dejános tu opinión</h2>
+          <p class="text-muted mb-0" align="left">Te animamos a participar de esta encuesta sobre tu
+            experiencia en los
+            alojamientos en lo que has estado</p>
+          <div style="display: flex;justify-content: start;">
+
+
+            <button class="calm-btn-sm mt-2"
+              onclick="window.open('https://forms.gle/A6CWpkCY3zUCkpYdA', '_blank')">Completar
+              encuesta</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Botón fijo esquina inferior derecha -->
+    <button id="scrollBtn" class="scroll-top-btn" onmouseover="this.style.backgroundColor='#145072';"
+      onmouseout="this.style.backgroundColor='#1c6697';">
+      ↑
+    </button>
+    <!-- Fullscreen Modal -->
+    <div class="modal fade plano-modal-styles" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-body" style="padding: 0;">
+            <!-- Map Header Panel -->
+            <div class="map-header-panel px-3 py-2" id="map-header-panel">
+              <div id="map-title">
                 <div class="dropdown">
-                  <div class="title-dropdown-selector" data-bs-toggle="dropdown" aria-expanded="false">
-                    <h5 id="layer-title" class="mb-0"></h5>
-                    <i class="material-symbols-outlined" style="opacity: 0.7;">arrow_drop_down</i>
-                  </div>
-                  <ul class="dropdown-menu title-dropdown-menu" aria-labelledby="layer-selector-btn">
-                    <!-- Layer options will be populated by JS -->
+                  <i class="material-symbols-outlined" data-bs-toggle="dropdown" aria-expanded="false"
+                    style="cursor: pointer;">map</i>
+                  <ul class="dropdown-menu title-dropdown-menu">
+                    <li><a class="dropdown-item d-flex align-items-center gap-2" href="#" id="print-map"><span
+                          class="material-symbols-outlined">print</span>Imprimir</a></li>
                   </ul>
                 </div>
-                <div class="dropdown">
-                  <div class="title-dropdown-selector" data-bs-toggle="dropdown" aria-expanded="false">
-                    <small id="floor-subtitle" class="text-muted"></small>
-                    <i class="material-symbols-outlined" style="opacity: 0.7;">arrow_drop_down</i>
+                <div class="map-title-selectors">
+                  <div class="dropdown">
+                    <div class="title-dropdown-selector" data-bs-toggle="dropdown" aria-expanded="false">
+                      <h5 id="layer-title" class="mb-0"></h5>
+                      <i class="material-symbols-outlined" style="opacity: 0.7;">arrow_drop_down</i>
+                    </div>
+                    <ul class="dropdown-menu title-dropdown-menu" aria-labelledby="layer-selector-btn">
+                      <!-- Layer options will be populated by JS -->
+                    </ul>
                   </div>
-                  <div id="floor-controls" class="dropdown-menu title-dropdown-menu">
-                    <!-- Floor options will be populated by JS -->
+                  <div class="dropdown">
+                    <div class="title-dropdown-selector" data-bs-toggle="dropdown" aria-expanded="false">
+                      <small id="floor-subtitle" class="text-muted"></small>
+                      <i class="material-symbols-outlined" style="opacity: 0.7;">arrow_drop_down</i>
+                    </div>
+                    <div id="floor-controls" class="dropdown-menu title-dropdown-menu">
+                      <!-- Floor options will be populated by JS -->
+                    </div>
                   </div>
                 </div>
               </div>
+              <button id="btn-close-window" type="button" class="btn-close btn-close-white px-2" data-bs-dismiss="modal"
+                aria-label="Close"></button>
             </div>
-            <button id="btn-close-window" type="button" class="btn-close btn-close-white px-2" data-bs-dismiss="modal"
-              aria-label="Close"></button>
-          </div>
 
-          <!-- Vertical Toolbar -->
-          <div class="vertical-toolbar d-flex flex-column position-fixed top-5 end-0 m-2 gap-2">
-            <!-- Floor Controls (Now in Header) -->
+            <!-- Vertical Toolbar -->
+            <div class="vertical-toolbar d-flex flex-column position-fixed top-5 end-0 m-2 gap-2">
+              <!-- Floor Controls (Now in Header) -->
 
-            <!-- Layer Selector (Now in Header) -->
+              <!-- Layer Selector (Now in Header) -->
 
-            <!-- Zoom Controls -->
-            <div class="btn-group-vertical" role="group" aria-label="Zoom controls">
-              <button id="zoom-in" type="button" class="btn"><span class="material-symbols-outlined">add</span></button>
-              <button id="zoom-out" type="button" class="btn"><span class="material-symbols-outlined">remove</span></button>
+              <!-- Zoom Controls -->
+              <div class="btn-group-vertical" role="group" aria-label="Zoom controls">
+                <button id="zoom-in" type="button" class="btn"><span
+                    class="material-symbols-outlined">add</span></button>
+                <button id="zoom-out" type="button" class="btn"><span
+                    class="material-symbols-outlined">remove</span></button>
+              </div>
             </div>
-          </div>
 
-          <div id="map">
-            <!-- Spinner -->
-            <div id="map-loader" class="d-flex justify-content-center align-items-center h-100"
-              style="background-color: #ccc;">
-              <!-- <div class="spinner-border" role="status">
+            <div id="map">
+              <!-- Spinner -->
+              <div id="map-loader" class="d-flex justify-content-center align-items-center h-100"
+                style="background-color: #ccc;">
+                <!-- <div class="spinner-border" role="status">
                                 <span class="visually-hidden">Loading...</span>
                             </div> -->
+              </div>
+            </div>
+
+            <!-- Single Offcanvas -->
+            <div class="offcanvas offcanvas-bottom info-offcanvas" tabindex="-1" id="mainOffcanvas"
+              aria-labelledby="mainOffcanvasLabel" data-bs-backdrop="false">
+              <div class="offcanvas-body text-white" id="mainOffcanvasBody">
+                <h5 class="offcanvas-title" id="mainOffcanvasLabel"></h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                  aria-label="Close"></button>
+                <!-- Content will be dynamically loaded here -->
+              </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
 
-          <!-- Single Offcanvas -->
-          <div class="offcanvas offcanvas-bottom info-offcanvas" tabindex="-1" id="mainOffcanvas"
-            aria-labelledby="mainOffcanvasLabel" data-bs-backdrop="false">
-            <div class="offcanvas-body text-white" id="mainOffcanvasBody">
-              <h5 class="offcanvas-title" id="mainOffcanvasLabel"></h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                aria-label="Close"></button>
-              <!-- Content will be dynamically loaded here -->
+    <!-- 🪟 Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title" id="infoModalLabel">Información</h5>
+              <small id="infoModalSubtitle" class="text-muted">a</small>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <div id="tabla-loading" style="display: none;">Cargando...</div>
+            <div class="table-responsive">
+              <!-- Parking Table -->
+              <table class="table table-sm data-table table-hover" id="tabla-cocheras" style="display:none;">
+                <thead>
+                  <tr>
+                    <th>Nombre y dirección <span class="badge text-bg-success">Distancia</span></th>
+                    <th>Observaciones</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody-cocheras"></tbody>
+              </table>
+              <!-- Parking Table -->
+              <table class="table table-sn data-table table-hover" id="tabla-estacionamiento" style="display:none;">
+                <thead>
+                  <tr>
+                    <th>Dirección <span class="badge text-bg-success">Distancia</span></th>
+                    <th>Observaciones</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody-estacionamiento"></tbody>
+              </table>
+              <!-- Bus Table -->
+              <table class="table data-table table-sm table-hover" id="tabla-colectivos" style="display:none;">
+                <thead>
+                  <tr>
+                    <th>Línea <span class="badge text-bg-light">Ramal</span></th>
+                    <th>Parada más cercana <span class="badge text-bg-success">Distancia</span></th>
+                  </tr>
+                </thead>
+                <tbody id="tbody-colectivos"></tbody>
+              </table>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+    <!-- 🖥️ Video Modal -->
 
-  <!-- 🪟 Modal -->
-  <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div>
-            <h5 class="modal-title" id="infoModalLabel">Información</h5>
-            <small id="infoModalSubtitle" class="text-muted">a</small>
-          </div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body">
-          <div id="tabla-loading" style="display: none;">Cargando...</div>
-          <div class="table-responsive">
-            <!-- Parking Table -->
-            <table class="table table-sm data-table table-hover" id="tabla-cocheras" style="display:none;">
-              <thead>
-                <tr>
-                  <th>Nombre y dirección <span class="badge text-bg-success">Distancia</span></th>
-                  <th>Observaciones</th>
-                </tr>
-              </thead>
-              <tbody id="tbody-cocheras"></tbody>
-            </table>
-            <!-- Parking Table -->
-            <table class="table table-sn data-table table-hover" id="tabla-estacionamiento" style="display:none;">
-              <thead>
-                <tr>
-                  <th>Dirección <span class="badge text-bg-success">Distancia</span></th>
-                  <th>Observaciones</th>
-                </tr>
-              </thead>
-              <tbody id="tbody-estacionamiento"></tbody>
-            </table>
-            <!-- Bus Table -->
-            <table class="table data-table table-sm table-hover" id="tabla-colectivos" style="display:none;">
-              <thead>
-                <tr>
-                  <th>Línea <span class="badge text-bg-light">Ramal</span></th>
-                  <th>Parada más cercana <span class="badge text-bg-success">Distancia</span></th>
-                </tr>
-              </thead>
-              <tbody id="tbody-colectivos"></tbody>
-            </table>
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark border-0">
+          <div class="modal-body p-0">
+            <video id="customVideo" class="w-100" controls playsinline>
+              <source id="videoSource" src="" type="video/mp4">
+              Su navegador no soporta la reproducción de video.
+            </video>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- 🖥️ Video Modal -->
-
-  <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content bg-dark border-0">
-        <div class="modal-body p-0">
-          <video id="customVideo" class="w-100" controls playsinline>
-            <source id="videoSource" src="" type="video/mp4">
-            Su navegador no soporta la reproducción de video.
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
 </body>
+
+<script>
+  let clickCount = 0;
+  const maxClicks = 10;
+  const heroImage = document.getElementById('heroImage');
+  const clickCountDisplay = document.getElementById('clickCount');
+  const clickCounter = document.getElementById('clickCounter');
+  const secretPage = document.getElementById('secretPage');
+
+  // Símbolos de notas musicales
+  const musicalNotes = ['♪', '♫', '♬', '♩', '♭', '♮', '♯', '𝄞', '𝄢'];
+
+  heroImage.addEventListener('click', function (e) {
+    clickCount++;
+
+    // Actualizar contador
+    clickCountDisplay.textContent = clickCount;
+    clickCounter.classList.add('pulse');
+
+    setTimeout(() => {
+      clickCounter.classList.remove('pulse');
+    }, 300);
+
+    // Agregar efecto de ripple
+    heroImage.classList.add('clicked');
+    setTimeout(() => {
+      heroImage.classList.remove('clicked');
+    }, 600);
+
+    // Crear notas musicales
+    createMusicalNotes(e);
+
+    if (clickCount >= 3) {
+      clickCounter.style.display = '';
+    }
+    // Si se alcanzaron 10 clics, abrir página específica y resetear
+    if (clickCount >= maxClicks) {
+      window.open('https://www.jw.org/es/biblioteca/musica-canciones/canciones-originales/Hacer-tu-voluntad-canci%C3%B3n-de-la-asamblea-regional-del-2025/', '_blank');
+      setTimeout(() => {
+        // Resetear el contador después de abrir la página
+        clickCount = 0;
+        clickCountDisplay.textContent = '0';
+        clickCounter.style.display = 'none';
+      }, 1000);
+    }
+  });
+
+  function createMusicalNotes() {
+    const containerRect = heroImage.getBoundingClientRect();
+    const numNotes = Math.random() * 10 + 10; // 4-10 notas
+
+    for (let i = 0; i < numNotes; i++) {
+      setTimeout(() => {
+        const note = document.createElement('div');
+        note.className = 'musical-note';
+
+        // Texto de la nota
+        note.textContent = musicalNotes[Math.floor(Math.random() * musicalNotes.length)];
+
+        // Posición inicial aleatoria dentro de la imagen
+        const posX = containerRect.left + Math.random() * containerRect.width;
+        const posY = containerRect.top + Math.random() * containerRect.height;
+        note.style.left = posX + 'px';
+        note.style.top = posY + 'px';
+
+        // Tamaños aleatorios
+        const sizeRandom = Math.random();
+        if (sizeRandom > 0.7) {
+          note.classList.add('large');
+        } else if (sizeRandom > 0.4) {
+          note.classList.add('medium');
+        } else {
+          note.classList.add('small');
+        }
+
+        // Animación aleatoria
+        if (Math.random() > 0.6) {
+          note.classList.add('bounce');
+        }
+
+        // Velocidad de caída aleatoria
+        const fallDuration = Math.random() * 2 + 2; // 2-4 segundos
+        note.style.animationDuration = fallDuration + 's';
+
+        document.body.appendChild(note);
+
+        // Eliminar nota después de la animación
+        setTimeout(() => {
+          if (document.body.contains(note)) {
+            document.body.removeChild(note);
+          }
+        }, fallDuration * 1000);
+
+      }, i * 100); // Escalonar la aparición
+    }
+  }
+
+
+  function goBack() {
+    secretPage.style.display = 'none';
+    clickCount = 0;
+    clickCountDisplay.textContent = '0';
+  }
+
+  // Prevenir selección de texto durante los clics rápidos
+  heroImage.addEventListener('selectstart', function (e) {
+    e.preventDefault();
+  });
+
+  // Efecto adicional en hover
+  heroImage.addEventListener('mouseenter', function () {
+    this.style.transform = 'scale(1.05)';
+  });
+
+  heroImage.addEventListener('mouseleave', function () {
+    this.style.transform = 'scale(1)';
+  });
+</script>
+<script>
+  function cambiarLetra(tamano) {
+    const parrafos = document.querySelectorAll('p');
+    parrafos.forEach(p => {
+      if (tamano === 'normal') {
+        p.style.fontSize = 'clamp(1rem, 2vw, 1.125rem)';
+      } else if (tamano === 'grande') {
+        p.style.fontSize = 'clamp(1.5rem, 3.5vw, 2rem)';
+      }
+    });
+  }
+</script>
 
 </html>
