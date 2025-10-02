@@ -3,15 +3,15 @@
   {
     "categoria": "restaurante",
     "localidad": "teresita",
-    "titulo": "Hotel Los Angeles/Hotel Gran Continental",
+    "titulo": "Hotel Los Angeles",
     "asamblea": "both",
     "link1": "https://maps.app.goo.gl/hh9TKPbjSAfUbQRJA",
     "descuento": "",
     "menu": "$20000",
     "tel": "3516750780",
-    "url": "",
+    "url": "https://asambleagit.github.io/mda2025/Image/menu-los-angeles.jpg",
     "flyer": "Imagen de WhatsApp 2025-09-15 a las 16.39.54_f8744e45.jpg",
-    "dir": "C. 40 347, B7007/ C. 39 140, B710",
+    "dir": "Calle 40 N°347 - Santa Teresita",
     "convenio" : true
   },
   {
@@ -25,7 +25,7 @@
     "tel": "2257500927",
     "url": "https://www.instagram.com/azopardocafebar?igsh=ZDNvNDZiZjN1MHU2",
     "flyer": "",
-    "dir": "Lebensohn y Azopardo- Mar de Ajó",
+    "dir": "Lebensohn y Azopardo - Mar de Ajó",
     "convenio" : true
   },
   {
@@ -39,7 +39,7 @@
     "tel": "2257466700",
     "url": "https://www.instagram.com/elquinchorestaurant?igsh=MTU2MWhyMG41Mzc3dQ==",
     "flyer": "",
-    "dir": "Catamarca 2205",
+    "dir": "Catamarca N°2205 - San Bernardo",
     "convenio" : true
   },
   {
@@ -53,7 +53,7 @@
     "tel": "2257429429",
     "url": "https://www.instagram.com/bodegonelquincho.ok/?igsh=em4yM2JsMWZvYXk0#",
     "flyer": "",
-    "dir": "Francisco de las Carreras 300",
+    "dir": "Francisco de las Carreras N°300 - San Bernardo",
     "convenio" : true
   },
   {
@@ -63,17 +63,17 @@
     "asamblea": "both",
     "link1": "",
     "descuento": "15%",
-    "menu": "$15900.-",
+    "menu": "$15900",
     "tel": "2257529089",
-    "url": "Promos no acumulables entre si",
+    "url": "",
     "flyer": "",
-    "dir": "",
+    "dir": "Chiozza N°1820 - San Bernardo",
     "convenio" : true
   },
   {
     "categoria": "restaurante",
     "localidad": "bernardo",
-    "titulo": "Aquazul",
+    "titulo": "Hotel Aquazul",
     "asamblea": "both",
     "link1": "https://maps.app.goo.gl/PnSKuqUjHXUM1fNk8",
     "descuento": "10%",
@@ -81,13 +81,13 @@
     "tel": "2257466799",
     "url": "http://www.aquazul.com.ar/",
     "flyer": "",
-    "dir": "Mendoza 4170",
+    "dir": "Mendoza N°4170 - Costa Azul",
     "convenio" : true
   },
   {
     "categoria": "restaurante",
     "localidad": "lucila",
-    "titulo": "Bella Costa",
+    "titulo": "Hotel Bella Costa",
     "asamblea": "both",
     "link1": "",
     "descuento": "",
@@ -95,7 +95,7 @@
     "tel": "",
     "url": "",
     "flyer": "",
-    "dir": "",
+    "dir": "Mendoza N°4648 - La Lucila del mar",
     "convenio" : true
   },
   {
@@ -105,11 +105,11 @@
     "asamblea": "both",
     "link1": "https://maps.app.goo.gl/opD8ibDoEPyFDbVz8",
     "descuento": "",
-    "menu": "15000.-",
+    "menu": "$15000 (Plato principal + bebida sin alcohol por persona)",
     "tel": "",
-    "url": "Plato principal/+ bebida sin alchon por persona",
+    "url": "",
     "flyer": "",
-    "dir": "Calle 2 e/34 y 35 n762 santa teresita",
+    "dir": "Calle 2 N°762 - Santa teresita",
     "convenio" : true
   },
   {
@@ -119,11 +119,11 @@
     "asamblea": "both",
     "link1": "https://maps.app.goo.gl/w6Q2oTX88GSunbQ89",
     "descuento": "",
-    "menu": "$25000",
+    "menu": "$25000 (Plato principal + bebida sin alcohol por persona)",
     "tel": "2246586461",
-    "url": "Plato principal/+ bebida sin alchon por persona",
+    "url": "https://asambleagit.github.io/mda2025/menu-barra-bosque.pdf",
     "flyer": "La Barra del Bosque CDE .pdf",
-    "dir": "Las camelias  N 228",
+    "dir": "Las camelias  N°228 - Costa del este",
     "convenio" : true
   },
   {
@@ -133,11 +133,11 @@
     "asamblea": "both",
     "link1": "https://maps.app.goo.gl/JqefW334xLr2fYw67",
     "descuento": "",
-    "menu": "$12000",
+    "menu": "$12000 (Plato principal + bebida sin alcohol por persona)",
     "tel": "1159979455",
-    "url": "Plato principal/+ bebida sin alchon por persona",
+    "url": "https://asambleagit.github.io/mda2025/menu-turnedo.jpeg",
     "flyer": "Turnedo LM .jpeg",
-    "dir": "Av 1 esquina Tucuman, Lucila del Mar",
+    "dir": "Av 1 esquina Tucuman - Lucila del Mar",
     "convenio" : true
   },
   {
@@ -151,27 +151,27 @@
     "tel": "2257828417",
     "url": "https://www.instagram.com/littosbar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     "flyer": "Littos SB .jpeg",
-    "dir": "Chiozza N° 2257528417",
+    "dir": "Chiozza N°2260 - San Bernarddo",
     "convenio" : true
   },
   {
     "categoria": "restaurante",
     "localidad": "ajo",
-    "titulo": "Gran Playa( Restaurante inocencio)",
+    "titulo": "Inocencio",
     "asamblea": "both",
     "link1": "https://maps.app.goo.gl/N8aXveMxGhkxmPTR8",
     "descuento": "",
-    "menu": "$24000",
+    "menu": "$24000 (Incluye Plato principal + postre + bebida)",
     "tel": "",
-    "url": "incluye plato y postre y bebida",
+    "url": "https://asambleagit.github.io/mda2025/menu-inocencio.jpg",
     "flyer": "Inocencio jgp.jpg",
-    "dir": "Av. Costanera Sur 164, B7109 Mar de Ajó,",
+    "dir": "Av. Costanera Sur 164 - Mar de Ajó,",
     "convenio" : true
   },
   {
     "categoria": "restaurante",
     "localidad": "bernardo",
-    "titulo": "New The Place",
+    "titulo": "Hotel New The Place",
     "asamblea": "both",
     "link1": "",
     "descuento": "",
@@ -179,13 +179,13 @@
     "tel": "2257661033",
     "url": "",
     "flyer": "",
-    "dir": "",
+    "dir": "Andrade N°94 - San Bernardo",
     "convenio" : true
   },
   {
     "categoria": "restaurante",
     "localidad": "bernardo",
-    "titulo": "El Mercado HNOS",
+    "titulo": "El Mercado Hnos",
     "asamblea": "both",
     "link1": "https://maps.app.goo.gl/1pteAn4XBktuoJYZ9",
     "descuento": "15%",
@@ -193,7 +193,7 @@
     "tel": "",
     "url": "https://www.instagram.com/elmercadohnos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     "flyer": "Imagen de WhatsApp 2025-09-19 a las 20.47.53_2b192437.jpg",
-    "dir": "chiozza 2044",
+    "dir": "Chiozza N°2044 - San Bernardo",
     "convenio" : true
   },
   {
@@ -207,7 +207,7 @@
     "tel": "2257527316",
     "url": "https://www.instagram.com/augustopizza?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     "flyer": "menú para dos 1 pizza 2 empanadas 2 bebidas",
-    "dir": "Chiozza 2056, San Bernardo, Buenos Aires, Argentina 7111",
+    "dir": "Chiozza N°2056 - San Bernardo",
     "convenio" : true
   },
   {
@@ -221,7 +221,7 @@
     "tel": "",
     "url": "https://www.instagram.com/cafeterialaprimavera?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     "flyer": "",
-    "dir": "Tucuman y Av San Bernardo",
+    "dir": "Tucuman y Av San Bernardo - San Bernardo",
     "convenio" : true
   },
   {
@@ -235,7 +235,7 @@
     "tel": "",
     "url": "https://www.instagram.com/serafina.sb?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     "flyer": "",
-    "dir": "",
+    "dir": "Chiozza N°2201 - San Bernardo",
     "convenio" : true
   },
   {
@@ -249,21 +249,21 @@
     "tel": "",
     "url": "",
     "flyer": "",
-    "dir": "",
+    "dir": "Querini N°368 - San Bernardo",
     "convenio" : true
   },
   {
     "categoria": "restaurante",
-    "localidad": "bernardo",
-    "titulo": "ALFAJORERIA ESTURION",
+    "localidad": "costa",
+    "titulo": "NOI",
     "asamblea": "both",
-    "link1": "",
+    "link1": "https://maps.app.goo.gl/esKzRvnsi6jVtHWh8",
     "descuento": "15%",
     "menu": "",
     "tel": "",
     "url": "",
     "flyer": "",
-    "dir": "",
+    "dir": "Av Costanera N°179 - Costa del este",
     "convenio" : true
   }
 ,
