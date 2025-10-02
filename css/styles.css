@@ -84,25 +84,29 @@ section {
   position: relative;
   overflow: hidden;
 }
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+}
 
 .hero h1 {
-  font-family:  'Noto Sans',Roboto, 'Helvetica Neue', Helvetica, Arial, 'Arial Unicode MS', sans-serif;
-  font-size: 2.5rem;
+  font-family:  'Noto Sans',Roboto, 'Helvetica Neue', Helvetica, Arial, 'Arial Unicode MS', sans-serif;  
   font-weight: 700;
   color: var(--azulOscuro);
   text-align: center;
-  white-space: nowrap; /* Desktop: una línea */
+  
+  
 
 }
-.line-break-mobile {
-  display: none;
-}
-
 .hero p {
-  font-size: 1.2rem;
+  
   color: var(--calm-text-light);
   margin-bottom: 0;
 }
+
 
 .hero-image-container {
   display: flex;
@@ -587,55 +591,16 @@ section {
    
   }
 }
-@media (max-width: 1200px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
 
-  .hero p {
-    font-size: 1.1rem;
-  }
 
-  .hero-animated-img {
-    width: 30%;
-  }
-}
-
-@media (max-width: 992px) {
-  .hero {
-    padding-left: 8%;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .hero-animated-img {
-    width: 30%;
-  }
-}
 
 @media (max-width: 768px) {
   .hero {
-    padding-left: 5%;
+    
     text-align: center;
   }
 
-  .hero h1 {
-    font-size: 1rem;
-    text-align: center;
-  }
 
-  .hero p {
-    font-size: 0.95rem;
-    text-align: center;
-    max-width: 90%;
-    margin: 0 auto;
-  }
 
   .hero-animated-img {
     width: 30%;
@@ -653,38 +618,7 @@ section {
 
 }
 
-@media (max-width: 576px) {
- .portada{
-  padding: 4%;
- }
- 
 
-  .hero h1 {
-    font-size:0.8rem;
-    line-height: 1.3;
-  }
-
-  .hero p {
-    font-size: 0.9rem;
-  }
-
-  .hero-animated-img {
-    width: 70%;
-  }
-  .title-section {
-    height: auto; /* en mobile, que se adapte al contenido */
-    padding: 4% 0;
-  }
-  .cardUbicacion {
-    height: auto;
-    min-height: 200px; /* un poquito más para dar aire */
-  }
-  .amenity-card {
-    width: 100% !important; /* 🔹 elimina el 95% que te generaba exceso */
-    margin: 0 auto 16px;     /* 🔹 centrado limpio */
-  }
-  
-}
 
 
 
@@ -870,7 +804,7 @@ section {
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
             .hero-animated-img {
                 width: 50%;
@@ -912,32 +846,37 @@ section {
     min-height: 170px;
   }
 }
+@media (max-width: 575px) { /* Mobile */
+  body { font-size: 0.95rem; }
+  h1 { font-size: 1.8rem; }
+  .assembly-title {
+    font-size: 15px; /* ~16px */
+  }
 
-/* Pantallas pequeñas (iPhone Pro Max ~428px) */
-@media (max-width: 430px) {
-  .hero-title {
-    font-size:1.8rem;       
-    white-space: normal;     /* permite salto de línea */
-  }
-  .line-break-mobile {
-    display: inline;        /* muestra el salto de línea */
+  .assembly-date {
+    font-size:14px; /* ~12px */
   }
 }
-@media (max-width: 414px) { 
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-  .hero p{
-    font-size: 1rem;
-  }
- }
- @media (max-width: 390px) {
-  h1 {
-    font-size: 1.3rem; /* ejemplo título */
-  }
+
+@media (min-width: 1200px) { /* Desktop grande */
+  body { font-size: 1.125rem; }
+  h1 { font-size: 3rem; }
 }
-@media (min-width: 768px) and (max-width: 812px) {
-  h1 {
-    font-size: 2.2rem; /* más grande en modo tablet */
+@media (max-width: 390px){
+  .assembly-title {
+    font-size: 14px; /* ~14px */
   }
+  .assembly-date {
+    font-size:13px; 
+  }
+
+}
+@media (max-width: 430px){
+  .assembly-title {
+    font-size: 13px; 
+  }
+  .assembly-date {
+    font-size:12px; 
+  }
+
 }
