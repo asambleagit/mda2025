@@ -5,6 +5,7 @@
   --white: #ffffff;
   --verdeOscuro: #539091;
   --verdeClaro: #ccdddd;
+  --verdebg:#e0f8f8;
   --azulOscuro: #1c6697;
   --azulClaro: #f0f4ff;
   --beigeOscuro: #aca58f;
@@ -277,6 +278,26 @@ section {
   background-color: var(--verdeOscuro);
   color: white;
 }
+.highlight-card {
+  background: linear-gradient(270deg, #ffffff, #e6f4ea, #ffffff);
+  background-size: 600% 600%;
+  animation: gradientMove 10s ease infinite;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin: 0 auto;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.highlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
 
 /*Titulos secciones*/
 .title-section {
@@ -324,6 +345,11 @@ section {
 
 
 /*Seccion servicios */
+.icon-numerosutiles{
+  font-size: 32px; 
+  color: var(--beigeOscuro);
+  font-weight: 600;
+}
 .emergency-card {
   background:white;
   border-radius: 16px;

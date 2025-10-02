@@ -224,6 +224,7 @@ body {
   border-color: var(--calm-accent);
 }
 
+
 /* Filtros de localidades */
 .filter-localidad-tabs {
   display: flex;
