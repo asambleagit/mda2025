@@ -118,8 +118,8 @@ p {
 .hero-animated-img {
   width: 30%;
   object-fit: contain;
-  transition: filter 2s ease-in-out;
-  animation: colorShift 5s infinite alternate;
+  transition: filter s ease-in-out;
+  animation: colorShift 3s infinite alternate;
   margin-bottom: -3%;
   opacity: 0.7;
 
@@ -282,8 +282,8 @@ p {
 
 /* Tabs de videos en mobile */
 #videoTabs .nav-link {
-  color: var(--dark);              /* texto oscuro */
-  font-weight: 600;
+  color: var(--verdeOscuro);              /* texto oscuro */
+  font-weight: 500;
   border-radius: 20px;             /* esquinas redondeadas */
   padding: 0.5rem 1.2rem;
   background-color: #f1f1f1;       /* fondo gris claro */
@@ -292,8 +292,9 @@ p {
 }
 
 #videoTabs .nav-link.active {
-  background-color: var(--verdeOscuro); /* color de tu paleta */
-  color: white;                         /* texto blanco */
+border: 2px solid var(--verdeClaro);  /* borde delgado */
+  /* color de tu paleta */
+  color: var(--verdeOscuro);                         /* texto blanco */
 }
 
 #videoTabs .nav-link:hover {
@@ -573,6 +574,22 @@ p {
   z-index: 1000;
 }
 
+.animacion-lateral {
+    color: #1c6697;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    text-align: center;    
+    animation: balanceo 2s ease-in-out infinite;
+  }
+
+  @keyframes balanceo {
+    0%   { transform: translateX(0); }
+    10%  { transform: translateX(10px); }
+    20%  { transform: translateX(-10px); }
+    30%  { transform: translateX(0); }
+    100% { transform: translateX(0); } /* pausa hasta el final del ciclo */
+  }
+
 /* Animación de cambio de color suave */
 @keyframes colorShift {
   0% {
@@ -822,7 +839,7 @@ p {
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
             .hero-animated-img {
                 width: 50%;
@@ -874,6 +891,10 @@ p {
   .assembly-date {
     font-size:14px; /* ~12px */
   }
+  .faq-answer {
+  padding: 0 2px 2px;
+  
+}
 }
 
 @media (min-width: 1200px) { /* Desktop grande */
