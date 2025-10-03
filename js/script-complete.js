@@ -36,7 +36,7 @@ function openFaqVoluntario(event) {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    incrementMetric("INIT_PAGE_TEMP");
+    incrementMetric("INIT_PAGE_LIVE");
     const scrollBtn = document.getElementById("scrollBtn");
     const startSection = document.getElementById("startScroll");
 
