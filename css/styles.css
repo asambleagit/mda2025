@@ -573,6 +573,22 @@ p {
   z-index: 1000;
 }
 
+.animacion-lateral {
+    color: #1c6697;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    text-align: center;    
+    animation: balanceo 2s ease-in-out infinite;
+  }
+
+  @keyframes balanceo {
+    0%   { transform: translateX(0); }
+    10%  { transform: translateX(10px); }
+    20%  { transform: translateX(-10px); }
+    30%  { transform: translateX(0); }
+    100% { transform: translateX(0); } /* pausa hasta el final del ciclo */
+  }
+
 /* Animación de cambio de color suave */
 @keyframes colorShift {
   0% {
