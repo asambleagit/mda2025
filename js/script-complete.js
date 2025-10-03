@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             const data = await response.json();
             window.globalEventData = data;
-            console.log('Global event data loaded successfully:', data.length, 'items');
+            //console.log('Global event data loaded successfully:', data.length, 'items');
 
             // Dispatch event to notify other components that data is loaded
             const event = new CustomEvent('dataLoaded');
@@ -459,8 +459,13 @@ document.addEventListener('DOMContentLoaded', function() {
         console.warn('Global event data not loaded yet for dataLoaded event');
         return;
       }
+      let filteredList = window.globalEventData.filter(
+                x =>
+                  x.localidad?.toLowerCase().includes("ajo") &&
+                  x.categoria === "hotel"
+              );
       // Renderizar los servicios iniciales
-      renderAmenities2(window.globalEventData);
+      renderAmenities2(filteredList);
     });
 
     // ---- Manejar selección de asamblea y filtrar servicios ----
