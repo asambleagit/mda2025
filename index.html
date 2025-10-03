@@ -100,9 +100,10 @@
                 <!-- Contenido principal -->
                 <div class="row">
                   <div class="col-md-12">
-                    <p style="color: #1c6697; line-height: 1.5; margin-bottom: 25px; text-align: center;">
+                    <h4 style="color: #1c6697; line-height: 1.5; margin-bottom: 25px; text-align: center;">
                       <strong>¡Bienvenidos a las Asambleas Regionales "Adoracion Pura"!</strong>
-                      </p>
+                    </h4>
+
                       <p style="color: black; line-height: 1.5; margin-bottom: 25px; text-align: justify;">
                       En pocos días compartiremos juntos esta ocasión especial en el Estadio de “La Costa”.
                       Este sitio ha sido preparado para brindar orientación práctica: encontrarás la ubicación
@@ -1734,11 +1735,15 @@
 </script>
 <script>
   function cambiarLetra(tamano) {
-    const elementos = document.querySelectorAll('p, li,ul'); // ahora incluye párrafos y listas
+    const elementos = document.querySelectorAll('p,li,ul,h4'); // ahora incluye párrafos y listas
     elementos.forEach(el => {
       if (tamano === 'normal') {
-        el.style.fontSize = 'clamp(1rem, 2vw, 1.125rem)';
-      } else if (tamano === 'grande') {
+        if(el.localName === 'h4'){
+          el.style.fontSize = ''
+        }else{
+          el.style.fontSize = 'clamp(1rem, 2vw, 1.125rem)';
+        }
+      } else if (tamano === 'grande') {        
         el.style.fontSize = 'clamp(1.5rem, 3.5vw, 2rem)';
       }
     });
