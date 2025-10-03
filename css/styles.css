@@ -282,8 +282,8 @@ p {
 
 /* Tabs de videos en mobile */
 #videoTabs .nav-link {
-  color: var(--dark);              /* texto oscuro */
-  font-weight: 600;
+  color: var(--verdeOscuro);              /* texto oscuro */
+  font-weight: 500;
   border-radius: 20px;             /* esquinas redondeadas */
   padding: 0.5rem 1.2rem;
   background-color: #f1f1f1;       /* fondo gris claro */
@@ -292,8 +292,9 @@ p {
 }
 
 #videoTabs .nav-link.active {
-  background-color: var(--verdeOscuro); /* color de tu paleta */
-  color: white;                         /* texto blanco */
+border: 2px solid var(--verdeClaro);  /* borde delgado */
+  /* color de tu paleta */
+  color: var(--verdeOscuro);                         /* texto blanco */
 }
 
 #videoTabs .nav-link:hover {
