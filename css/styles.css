@@ -874,6 +874,10 @@ p {
   .assembly-date {
     font-size:14px; /* ~12px */
   }
+  .faq-answer {
+  padding: 0 2px 2px;
+  
+}
 }
 
 @media (min-width: 1200px) { /* Desktop grande */
