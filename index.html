@@ -259,7 +259,7 @@
               <!-- Contenido a la derecha -->
               <div class="col-8">
                 <div class="card-body">
-                  <h5 class="card-title">Estadio de "La Costa"</h5>
+                  <p class="card-title"><strong>Estadio de "La Costa"</strong></p>
                   <p class="card-text mb-3">
                     <strong>Dirección:</strong> Ruta Interbalnearia 11, Km 344
                     Partido de La Costa, Mar de Ajó, Buenos Aires
@@ -421,7 +421,7 @@
               <button class="faq-question" onclick="toggleFAQ(this)">
                 <i class="material-symbols-outlined me-2 " style="color: var(--verdeOscuro); ">directions</i>
                 <span class="faq-text">
-                  <p>Inicio de Recorrido en la Lucila</p>
+                  Inicio de Recorrido en la Lucila
                 </span>
                 <i class="material-symbols-outlined arrowRotate ms-auto">
                   keyboard_arrow_down
@@ -437,7 +437,7 @@
                     08:00hs y
                     08:30hs.</p>
 
-                  <ol class="mb-2">
+                  <ol class="mb-2" style="text-align: left;">
                     <li>Comienza el recorrido en Calle Salta y Tucumán en la Lucila del Mar</li>
                     <li>El colectivo avanza por Salta, en direccion a la costa, hasta llegar a calle Mendoza</li>
                     <li>El recorrido continua por calle Mendoza hasta convertirse en Av. de la Costa, atravesando la
@@ -466,29 +466,31 @@
                 </i>
               </button>
               <div class="faq-answer">
-                <ul class="mb-2">
-                  <strong>2 colectivos comenzarán su recorrido hacia La Lucila a las 17:00hs y 17:30hs.</strong>
-                  <ol>
-                    <li>
-                      Comienza el recorrido en el estadio de La Costa y se dirige por calle Brown hacia Av. Libertador
-                      San
-                      Martin
-                    </li>
-                    <li>
-                      El recorrido continúa por Av. Libertador en dirección a la costa, hasta calle Av. Costanera
-                      (Mendoza)
-                    </li>
-                    <li>
-                      El recorrido continúa por calle Av. Costanera hasta convertirse en Mendoza, atravesando Mar de
-                      Ajó,
-                      San Bernardo, Costa Azul y la Lucila hasta calle Salta en la Lucila.
+                <div class="highlighted-route p-2 rounded shadow-sm mb-2" style="
+                    background: #fcfafa;
+                    border-left: 5px solid var(--verdeOscuro);
+                    animation: pulseRoute 1s;
+                  ">
+                  <p class="fw-bold mb-2">2 colectivos comenzarán su recorrido hacia La Lucila a las 17:00hs y 17:30hs.
+                  </p>
 
-                    </li>
-                    <li>El recorrido continua por calle Salta en dirección a Ruta 11 hasta calle Tucumán y finaliza el
-                      recorrido</li>
+                  <ol class="mb-2" style="text-align: left;">
+                    <li> Comienza el recorrido en el estadio de La Costa y se dirige por calle Brown hacia Av.
+                      Libertador San Martin</li>
+                    <li>El recorrido continúa por Av. Libertador en dirección a la costa, hasta calle Av. Costanera
+                      (Mendoza)</li>
+                    <li> El recorrido continúa por calle Av. Costanera hasta convertirse en Mendoza, atravesando Mar de
+                      Ajó,
+                      San Bernardo, Costa Azul y la Lucila hasta calle Salta en la Lucila.</li>
+
+                    <li> El recorrido continúa por calle Av. Costanera hasta convertirse en Mendoza, atravesando Mar de
+                      Ajó,
+                      San Bernardo, Costa Azul y la Lucila hasta calle Salta en la Lucila.</li>
                   </ol>
-                </ul>
+
+                </div>
               </div>
+
             </div>
 
           </div>
