@@ -100,10 +100,11 @@
                 <!-- Contenido principal -->
                 <div class="row">
                   <div class="col-md-12">
-                    <p style="color: #1c6697; line-height: 1.5; margin-bottom: 25px; text-align: center;">
+                    <h4 style="color: #1c6697; line-height: 1.5; margin-bottom: 25px; text-align: center;">
                       <strong>¡Bienvenidos a las Asambleas Regionales "Adoracion Pura"!</strong>
-                    </p>
-                    <p style="color: black; line-height: 1.5; margin-bottom: 25px; text-align: justify;">
+                    </h4>
+
+                      <p style="color: black; line-height: 1.5; margin-bottom: 25px; text-align: justify;">
                       En pocos días compartiremos juntos esta ocasión especial en el Estadio de “La Costa”.
                       Este sitio ha sido preparado para brindar orientación práctica: encontrarás la ubicación
                       de los distintos departamentos dentro del estadio, así como de servicios y puntos de interés, en
@@ -1363,17 +1364,16 @@
         </button>
         <!-- Carrusel de chips -->
 
-        <div class="filter-tabs chip-track flex-grow-1 d-flex gap-3 " id="chipTrack">
-          <button class="filter-tab active chip-item btn rounded-pill btn-light " data-filter="all">Todos los
-            servicios</button>
+        <div class="filter-tabs chip-track flex-grow-1 d-flex gap-3 " id="chipTrack"> 
+          <button class="filter-tab chip-item active btn rounded-pill btn-light" data-filter="hotel"> <span
+              class="material-symbols-outlined">
+              apartment
+            </span> Alojamientos</button>        
           <button class="filter-tab chip-item btn rounded-pill btn-light" data-filter="restaurante"> <span
               class="material-symbols-outlined">
               restaurant
             </span> Restaurantes</button>
-          <button class="filter-tab chip-item btn rounded-pill btn-light" data-filter="hotel"> <span
-              class="material-symbols-outlined">
-              apartment
-            </span> Alojamientos</button>
+          
           <button class="filter-tab chip-item btn rounded-pill btn-light" data-filter="centroSalud"> <span
               class="material-symbols-outlined">
               home_health
@@ -1416,25 +1416,24 @@
         </button>
 
         <!-- Carrusel de chips -->
-        <div class="filter-localidad-tabs chip-track flex-grow-1 d-flex gap-3" id="chipLocalTrack">
-          <button class="filter-localidad-tab chip-item active btn rounded-pill btn-light" data-filter="all">Todas
-            las
-            localidades</button>
-          <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="carilo">Cariló</button>
-          <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="costa">Costa del
-            Este</button>
-          <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="ajo">Mar de
-            Ajó</button>
-          <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="tuyu">Mar del
+        <div class="filter-localidad-tabs chip-track flex-grow-1 d-flex gap-3" id="chipLocalTrack">    
+          <button class="filter-localidad-tab chip-item active btn rounded-pill btn-light" data-filter="ajo">Mar de
+            Ajó</button>     
+          <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="bernardo">San
+            Bernardo</button>          
+          <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="lucila">La Lucila</button>
+            <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="costa">Costa del
+            Este</button>           
+            <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="tuyu">Mar del
             Tuyú</button>
-          <button class="filter-localidad-tab chip-item btn rounded-pill btn-light"
-            data-filter="pinamar">Pinamar</button>
+             <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="teresita">Santa
+            Teresita</button>
           <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="medanos">Punta
             Médanos</button>
-          <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="bernardo">San
-            Bernardo</button>
-          <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="teresita">Santa
-            Teresita</button>
+            <button class="filter-localidad-tab chip-item btn rounded-pill btn-light"
+            data-filter="pinamar">Pinamar</button>
+         <button class="filter-localidad-tab chip-item btn rounded-pill btn-light" data-filter="carilo">Cariló</button>
+          
         </div>
 
         <!-- Flecha derecha -->
@@ -1738,11 +1737,15 @@
 </script>
 <script>
   function cambiarLetra(tamano) {
-    const elementos = document.querySelectorAll('p, li,ul'); // ahora incluye párrafos y listas
+    const elementos = document.querySelectorAll('p,li,ul,h4'); // ahora incluye párrafos y listas
     elementos.forEach(el => {
       if (tamano === 'normal') {
-        el.style.fontSize = 'clamp(1rem, 2vw, 1.125rem)';
-      } else if (tamano === 'grande') {
+        if(el.localName === 'h4'){
+          el.style.fontSize = ''
+        }else{
+          el.style.fontSize = 'clamp(1rem, 2vw, 1.125rem)';
+        }
+      } else if (tamano === 'grande') {        
         el.style.fontSize = 'clamp(1.5rem, 3.5vw, 2rem)';
       }
     });
