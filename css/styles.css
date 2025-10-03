@@ -838,7 +838,7 @@ p {
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
             .hero-animated-img {
                 width: 50%;
