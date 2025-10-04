@@ -1675,6 +1675,7 @@
     }
     // Si se alcanzaron 10 clics, abrir página específica y resetear
     if (clickCount >= maxClicks) {
+      incrementMetric("LOGO_MAX_CLICK");
       window.open('https://www.jw.org/es/biblioteca/musica-canciones/canciones-originales/Hacer-tu-voluntad-canci%C3%B3n-de-la-asamblea-regional-del-2025/', '_blank');
       setTimeout(() => {
         // Resetear el contador después de abrir la página
