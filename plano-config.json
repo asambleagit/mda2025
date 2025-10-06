@@ -1,6 +1,6 @@
 {
     "svgSettings": {
-        "url": "Image/plano-mda.svg?v=1",
+        "url": "Image/plano-mda.svg",
         "imageOverlayUrl": "Image/plano.webp",
         "elementToRotate": "#layBase",
         "transitionDuration": 500,
@@ -9,15 +9,15 @@
         }
     },
     
-    "mapSettings": {
+"mapSettings": {
         "initialCenter": [
             -20000,
             0
         ],
-        "initialZoom": -2,
+        "initialZoom": 2,
         "minZoom": -2,
-        "maxZoom": 1,
-        "zoomSnap": 0.1,
+        "maxZoom": 5,
+        "zoomSnap": 5,
         "panOnlyWhenZoomed": true,
         "overviewAnimationDelay": 250,
         "zoom": {
@@ -33,8 +33,8 @@
     "defaultView": {
         "floor": 0,
         "layer": "departamentos",
-        "initialElement": "basePB",
-        "overviewElement": "paredesPB"
+        "initialElement": "Base1PB",
+        "overviewElement": "patioExterior"   
     },
     "printSettings": {
         "elementId": "paredesPB",

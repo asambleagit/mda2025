@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     async function initializeMap() {
         try {
             // Fetch configuration
-            const response = await fetch('plano-config.json?v=' + Date.now());
+            const response = await fetch('plano-config.json');
             config = await response.json();
             
             // Fetch SVG
@@ -94,7 +94,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                 center: config.mapSettings.initialCenter,
                 zoom: config.mapSettings.initialZoom,
                 attributionControl: false
-
             });
 
             // Add image overlay as the base layer
@@ -102,7 +101,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             // Add SVG overlay
             svgOverlay = L.svgOverlay(svgElement, bounds).addTo(map);
-            map.fitBounds([[2129,2282],[1302,1003]]);
+            map.fitBounds(bounds);
 
             // Setup UI and event listeners
             setupUI();
@@ -403,6 +402,7 @@ document.addEventListener('DOMContentLoaded', async () => {
      * @param {string} elementId The ID of the SVG element to focus on.
      */
     function centerOnElement(elementId, animate = true) {
+        console.log(`Centering on element: ${elementId}, animate: ${animate}`);
         const element = svgElement.querySelector(`#${elementId}`);
         if (!element) {
             console.error(`Element with ID '${elementId}' not found.`);
@@ -410,6 +410,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         const bbox = element.getBBox();
+        console.log(`bbox.width: ${bbox.width}, bbox.height: ${bbox.height}`);
+        console.log(`bbox.x: ${bbox.x}, bbox.y: ${bbox.y}`);
         if (bbox.width === 0 || bbox.height === 0) {
             console.warn(`Element #${elementId} has zero dimensions. Cannot fit bounds.`);
             return;
@@ -422,15 +424,22 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Get SVG dimensions for coordinate conversion
         const svgHeight = svgElement.viewBox.baseVal.height;
+        southWest = L.latLng( (bbox.y + bbox.height), bbox.x);
+        northEast = L.latLng( bbox.y, bbox.x + bbox.width);  
 
-        // Convert SVG bbox coordinates to Leaflet LatLngBounds.
-        // const southWest = L.latLng(svgHeight - (bbox.y + bbox.height), bbox.x);
-        // const northEast = L.latLng(svgHeight - bbox.y, bbox.x + bbox.width);
 
-        const southWest = L.latLng((bbox.y - bbox.height) - bottomPadding, bbox.x);
-        const northEast = L.latLng(bbox.y + topPadding, bbox.x + bbox.width);
+        // if (elementId === "icoPrimerosAuxiliosPB") {
+        //     southWest = L.latLng( 1000, 3500);
+        //     northEast = L.latLng( 900, 3700);
+        // }
+
+        //const southWest = L.latLng((bbox.y + bbox.height), bbox.x);
+        console.log(`southWest: lat=${southWest.lat}, lng=${southWest.lng}`);
+        //const northEast = L.latLng(bbox.y, bbox.x + bbox.width);
+        console.log(`northEast: lat=${northEast.lat}, lng=${northEast.lng}`);
 
         const elementBounds = L.latLngBounds(southWest, northEast);
+        console.log(`elementBounds: ${elementBounds.toBBoxString()}`);
 
 
         const flyToBoundsOptions = {
@@ -444,6 +453,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             paddingBottomRight: L.point(0, bottomPadding),
             animate: false
         };
+
+        console.log(`map.getCenter: ${map.getCenter()}`);
+        console.log(map.getZoom());
+        console.log(map.getBounds());
 
         // Use flyToBounds for a smooth animation that fits the element in the view.
         animate
@@ -637,5 +650,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         }, 500); // Increased timeout for stability
     }
 
+
+    // This code is never to be modified by Gemini
+    
+    function createFloorSuffixRegex(config) {
+        const floorSuffixes = Object.values(config.floors).map(f => f.suffix);
+        return new RegExp(`(${floorSuffixes.join('|')})$`);
+    }
     // Remove the old, separate afterprint listener to avoid duplication
 });

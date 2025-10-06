@@ -305,12 +305,14 @@
 
             <!-- Video 1 -->
             <div class="carousel-item active text-center">
-              <div class="ratio ratio-16x9">
+              <div class="ratio ratio-16x9 video-container" data-src="https://player.vimeo.com/video/1123540012?badge=0&autopause=0&player_id=0&app_id=58479&loop=1">
+                <div class="play-overlay">
+                  <button class="play-btn"><span class="material-symbols-outlined">play_arrow</span></button>
+                </div>
                 <iframe
-                  src="https://player.vimeo.com/video/1123540012?badge=0&autopause=0&player_id=0&app_id=58479&loop=1"
                   frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media;"
                   referrerpolicy="strict-origin-when-cross-origin"
-                  style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                  style="position:absolute;top:0;left:0;width:100%;height:100%; display:none;"
                   title="Acceso desde Mar de Ajó - Zona Sur">
                 </iframe>
               </div>
@@ -322,12 +324,14 @@
 
             <!-- Video 2 -->
             <div class="carousel-item text-center">
-              <div class="ratio ratio-16x9">
+              <div class="ratio ratio-16x9 video-container" data-src="https://player.vimeo.com/video/1123540068?badge=0&autopause=0&player_id=0&app_id=58479&loop=1">
+                <div class="play-overlay">
+                  <button class="play-btn"><span class="material-symbols-outlined">play_arrow</span></button>
+                </div>
                 <iframe
-                  src="https://player.vimeo.com/video/1123540068?badge=0&autopause=0&player_id=0&app_id=58479&loop=1"
                   frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
                   referrerpolicy="strict-origin-when-cross-origin"
-                  style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                  style="position:absolute;top:0;left:0;width:100%;height:100%; display:none;"
                   title="Acceso desde San Bernardo - Zona Norte">
                 </iframe>
               </div>
@@ -1011,8 +1015,10 @@
                   caminar, busca la ayuda de los acomodadores más cercanos a ti.
                 </p>
                 <div class="amenity-actions mt-2">
-                  <a href="#ubicacion-bautismo" class="calm-btn-sm" onclick="showLocation('mapa-pb-v2.html')">Ver en
+                  <a href="#ubicacion-primerosauxilios" class="calm-btn-sm" onclick="showLocation('mapa-pb-v2.html')">Ver en
                     Mapa</a>
+                  <a href="#ubicacion-primerosauxilios-pb" class="calm-btn-sm"
+                        onclick="plano(0,'departamentos','PrimerosAuxilios')">Ubicación PB.</a>                     
                 </div>
               </div>
 
