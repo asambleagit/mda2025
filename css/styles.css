@@ -301,6 +301,7 @@ border: 2px solid var(--verdeClaro);  /* borde delgado */
   background-color: var(--verdeOscuro);
   color: white;
 }
+
 .highlight-card {
   background: linear-gradient(270deg, #ffffff, #e6f4ea, #ffffff);
   background-size: 600% 600%;
@@ -462,7 +463,22 @@ border: 2px solid var(--verdeClaro);  /* borde delgado */
   box-shadow: 0 8px 18px rgba(125, 141, 140, 0.2);
 }
 
+.btn-beneficiosRestaurant{
+  margin-top: 5%; 
+  margin-bottom: 5%; 
+  width: 30%;
+  background-color: #f0f0f0;
+color: rgb(54, 52, 52);
+font-weight: 600;
+border-radius: 16px;
+border: 1px solid #737e7e;
+border-left: 5px solid #586464;
+box-shadow: 0 10px 18px rgba(37, 99, 235, 0.07);
+padding: 10px;
+font-size: 18px;
 
+
+}
 
 
 /* Reseteo general para evitar scroll horizontal */
@@ -893,8 +909,21 @@ border: 2px solid var(--verdeClaro);  /* borde delgado */
   }
   .faq-answer {
   padding: 0 2px 2px;
-  
+  }
+  .btn-beneficiosRestaurant {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 80%;
+    font-size: 16px;
+  }
+  .btn-beneficiosRestaurant .material-symbols-outlined {
+  font-size: 20px;  
+  padding-left: 2%;                /* ajusta tamaño del icono */
+  padding-top: 0;                   /* elimina el desplazamiento vertical */
+  vertical-align: middle;           /* asegura alineación vertical */
 }
+  
+
 }
 
 @media (min-width: 1200px) { /* Desktop grande */

@@ -99,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ---- Seleccionar una asamblea (tarjeta) ----
     function selectAssembly(assemblyId) {
       const wrapper = document.querySelector('.assembly-cards-wrapper');
+      
 
       // Agregar clase para indicar que hay una selección activa
       wrapper.classList.add('has-selection');
@@ -115,12 +116,11 @@ document.addEventListener('DOMContentLoaded', function() {
       // Marcar la card seleccionada como 'active' y aplicar estilos de botón
       const selectedCard = document.querySelector(`[data-assembly="${assemblyId}"]`);
       selectedCard.classList.add('active', 'btn', 'btn-light');
-      selectedCard.style.backgroundColor = '#f8f9fa'; // Similar to btn-light
+      selectedCard.style.backgroundColor = '#d1deebff'; // Similar to btn-light
       selectedCard.style.color = '#212529';
-      selectedCard.style.border = '1px solid #dee2e6';
+      selectedCard.style.border = '1px solid #d1deebff';
 
-      // Mensaje en consola (debug)
-      console.log(`Asamblea seleccionada: ${assemblyId}`);
+  
 
       // Disparar un evento personalizado para notificar a otros componentes
       const event = new CustomEvent('assemblyChanged', {
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
       document.dispatchEvent(event);
     }
-
+    
     // ---- Resetear selección (volver al estado inicial) ----
     function resetAssemblySelection() {
       const wrapper = document.querySelector('.assembly-cards-wrapper');
