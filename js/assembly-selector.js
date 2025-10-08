@@ -17,9 +17,9 @@ function selectAssembly(assemblyId) {
     // Marcar la card seleccionada como 'active' y aplicar estilos de botón
     const selectedCard = document.querySelector(`[data-assembly="${assemblyId}"]`);
     selectedCard.classList.add('active', 'btn', 'btn-light');
-    selectedCard.style.backgroundColor = '#f8f9fa'; // Similar to btn-light
+    selectedCard.style.backgroundColor = '#d1deebff'; // Similar to btn-light
     selectedCard.style.color = '#212529';
-    selectedCard.style.border = '1px solid #dee2e6';
+    selectedCard.style.border = '1px solid #d1deebff';
 
     // Mensaje en consola (debug)
     console.log(`Asamblea seleccionada: ${assemblyId}`);
