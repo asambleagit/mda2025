@@ -621,6 +621,43 @@ font-size: 18px;
   }
 }
 
+ .tabla-horarios {
+    width: 100%;
+    max-width: 420px;
+    border-collapse: collapse;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+  }
+
+  .tabla-horarios caption {
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    padding: 0.25rem 0;
+  }
+
+  .tabla-horarios th,
+  .tabla-horarios td {
+    border: 1px solid rgba(0,0,0,0.08);
+    padding: 6px 8px;
+    text-align: center;
+  }
+
+  .tabla-horarios thead th {
+    background: rgba(0,0,0,0.03);
+    font-weight: 600;
+  }
+
+  .tabla-horarios tbody tr:nth-child(even) td {
+    background: rgba(0,0,0,0.02);
+  }
+
+  /* Opcional: ajusta en pantallas muy pequeñas */
+  @media (max-width: 380px) {
+    .tabla-horarios { font-size: 0.85rem; }
+  }
+
 
 /* Media Queries para responsividad */
 @media (min-width: 992px) {
