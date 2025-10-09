@@ -467,12 +467,12 @@ border: 2px solid var(--verdeClaro);  /* borde delgado */
   margin-top: 5%; 
   margin-bottom: 5%; 
   width: 30%;
-  background-color: #f0f0f0;
+  background-color: var(--beigeClaro);
 color: rgb(54, 52, 52);
 font-weight: 600;
 border-radius: 16px;
-border: 1px solid #737e7e;
-border-left: 5px solid #586464;
+border: 1px solid var(--beigeOscuro);
+border-left: 5px solid var(--beigeOscuro);
 box-shadow: 0 10px 18px rgba(37, 99, 235, 0.07);
 padding: 10px;
 font-size: 18px;
@@ -919,6 +919,13 @@ font-size: 18px;
 
     /* tamaño natural */
   }
+  .btn-beneficiosRestaurant .material-symbols-outlined {
+    
+  font-size: 20px;  
+  padding-left: 2%;                /* ajusta tamaño del icono */
+  padding-top: 0;                   /* elimina el desplazamiento vertical */
+  vertical-align: middle;           /* asegura alineación vertical */
+  }
 }
 /* Pantallas grandes */
 @media (min-width: 1200px) {
@@ -948,6 +955,7 @@ font-size: 18px;
   padding: 0 2px 2px;
   }
   .btn-beneficiosRestaurant {
+    height: 8vh;
     margin-top: 10%;
     margin-bottom: 10%;
     width: 80%;
