@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       }, 500);
     }
-    
+
     const scrollBtn = document.getElementById("scrollBtn");
     const startSection = document.getElementById("startScroll");
 
@@ -164,195 +164,126 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ---- Filtro por categoría de servicios ----
-    document.querySelectorAll('.filter-tab').forEach(btn => {
-      btn.addEventListener('click', function () {
-        if (!window.globalEventData || !Array.isArray(window.globalEventData)) {
-          console.warn('Global event data not loaded yet');
-          return;
-        }
+document.querySelectorAll('.filter-tab').forEach(btn => {
+  btn.addEventListener('click', function () {
+    if (!window.globalEventData || !Array.isArray(window.globalEventData)) {
+      console.warn('Global event data not loaded yet');
+      return;
+    }
 
-        // Quitar 'active' de todos los filtros y aplicar solo al seleccionado
-        document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
+    // Quitar 'active' de todos los filtros de categoría y aplicar solo al seleccionado
+    document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
 
-        const parentFilter = this.dataset.filter; // Categoría seleccionada
-        const localidadTab = document.querySelector(".filter-localidad-tab.active");
-        const localidadFilter = localidadTab ? localidadTab.dataset.filter : "all";
+    const parentFilter = this.dataset.filter; // Categoría seleccionada
 
-        // Obtener la asamblea seleccionada
-        const activeAssemblyCard = document.querySelector('.assembly-card.active');
-        const currentAssembly = activeAssemblyCard ? activeAssemblyCard.dataset.assembly : null;
+    // ✅ Obtener todas las localidades activas (múltiple selección)
+    const activeLocalidades = Array.from(document.querySelectorAll('.filter-localidad-tab.active'))
+      .map(b => b.dataset.filter);
 
-        try {
-          // Mostrar todos los servicios si se selecciona "all"
-          if (parentFilter === "all") {
-            if (localidadFilter === "all") {
-              // Mostrar todo si no hay filtros
-              let filteredList = window.globalEventData;
-              if (currentAssembly) {
-                filteredList = filteredList.filter(item => {
-                  if (currentAssembly === 'asamblea1') {
-                    return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
-                  } else if (currentAssembly === 'asamblea2') {
-                    return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
-                  }
-                  return true;
-                });
-              }
-              renderAmenities2(filteredList);
-            }
-            else {
-              // Filtrar solo por localidad
-              let filteredList = window.globalEventData.filter(x => x.localidad?.toLowerCase().includes(localidadFilter.toLowerCase()));
-              if (currentAssembly) {
-                filteredList = filteredList.filter(item => {
-                  if (currentAssembly === 'asamblea1') {
-                    return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
-                  } else if (currentAssembly === 'asamblea2') {
-                    return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
-                  }
-                  return true;
-                });
-              }
-              renderAmenities2(filteredList);
-            }
+    // Obtener la asamblea seleccionada
+    const activeAssemblyCard = document.querySelector('.assembly-card.active');
+    const currentAssembly = activeAssemblyCard ? activeAssemblyCard.dataset.assembly : null;
+
+    try {
+      let filteredList = window.globalEventData;
+
+      // Filtrar por categoría si no es "all"
+      if (parentFilter !== "all") {
+        filteredList = filteredList.filter(i => i.categoria === parentFilter);
+      }
+
+      // Filtrar por localidades activas si hay alguna seleccionada
+      if (activeLocalidades.length > 0) {
+        filteredList = filteredList.filter(item =>
+          activeLocalidades.some(loc =>
+            item.localidad?.toLowerCase().includes(loc.toLowerCase())
+          )
+        );
+      }
+
+      // Filtrar por asamblea si aplica
+      if (currentAssembly) {
+        filteredList = filteredList.filter(item => {
+          if (currentAssembly === 'asamblea1') {
+            return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
+          } else if (currentAssembly === 'asamblea2') {
+            return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
           }
-          else {
-            if (localidadFilter === "all") {
-              // Filtrar solo por categoría
-              let filteredList = window.globalEventData.filter(i => i.categoria === parentFilter);
-              if (currentAssembly) {
-                filteredList = filteredList.filter(item => {
-                  if (currentAssembly === 'asamblea1') {
-                    return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
-                  } else if (currentAssembly === 'asamblea2') {
-                    return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
-                  }
-                  return true;
-                });
-              }
-              renderAmenities2(filteredList);
-            }
-            else {
-              // Filtrar por localidad Y categoría
-              let filteredList = window.globalEventData.filter(
-                x =>
-                  x.localidad?.toLowerCase().includes(localidadFilter.toLowerCase()) &&
-                  x.categoria === parentFilter
-              );
-              if (currentAssembly) {
-                filteredList = filteredList.filter(item => {
-                  if (currentAssembly === 'asamblea1') {
-                    return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
-                  } else if (currentAssembly === 'asamblea2') {
-                    return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
-                  }
-                  return true;
-                });
-              }
-              renderAmenities2(filteredList);
-            }
+          return true;
+        });
+      }
+
+      // Render final
+      renderAmenities2(filteredList);
+
+    } catch (error) {
+      console.error('Error filtering data:', error);
+    }
+  });
+});
+
+
+    // ---- Filtro por localidad (selección múltiple) ----
+document.querySelectorAll('.filter-localidad-tab').forEach(btn => {
+  btn.addEventListener('click', function () {
+    if (!window.globalEventData || !Array.isArray(window.globalEventData)) {
+      console.warn('Global event data not loaded yet');
+      return;
+    }
+
+    // Alternar el estado activo del botón
+    this.classList.toggle('active');
+
+    // Obtener todas las localidades seleccionadas
+    const activeLocalidades = Array.from(document.querySelectorAll('.filter-localidad-tab.active'))
+      .map(b => b.dataset.filter);
+
+    const filterParentTab = document.querySelector(".filter-tab.active");
+    const parentFilter = filterParentTab ? filterParentTab.dataset.filter : "all"; // Categoría activa
+
+    // Obtener la asamblea seleccionada
+    const activeAssemblyCard = document.querySelector('.assembly-card.active');
+    const currentAssembly = activeAssemblyCard ? activeAssemblyCard.dataset.assembly : null;
+
+    try {
+      let filteredList = window.globalEventData;
+
+      // Si hay localidades seleccionadas, filtrar por ellas
+      if (activeLocalidades.length > 0) {
+        filteredList = filteredList.filter(item =>
+          activeLocalidades.some(loc =>
+            item.localidad?.toLowerCase().includes(loc.toLowerCase())
+          )
+        );
+      }
+
+      // Si hay una categoría activa distinta de "all"
+      if (parentFilter !== "all") {
+        filteredList = filteredList.filter(i => i.categoria === parentFilter);
+      }
+
+      // Filtrar por asamblea si aplica
+      if (currentAssembly) {
+        filteredList = filteredList.filter(item => {
+          if (currentAssembly === 'asamblea1') {
+            return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
+          } else if (currentAssembly === 'asamblea2') {
+            return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
           }
-        } catch (error) {
-          console.error('Error filtering data:', error);
-        }
-      });
-    });
+          return true;
+        });
+      }
 
-    // ---- Filtro por localidad ----
-    document.querySelectorAll('.filter-localidad-tab').forEach(btn => {
-      btn.addEventListener('click', function () {
-        if (!window.globalEventData || !Array.isArray(window.globalEventData)) {
-          console.warn('Global event data not loaded yet');
-          return;
-        }
+      // Render final
+      renderAmenities2(filteredList);
 
-        // Quitar 'active' de todos los filtros de localidad y aplicar solo al seleccionado
-        document.querySelectorAll('.filter-localidad-tab').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
+    } catch (error) {
+      console.error('Error filtering data:', error);
+    }
+  });
+});
 
-        const filterParentTab = document.querySelector(".filter-tab.active");
-        const localidadFilter = this.dataset.filter; // Localidad seleccionada
-        const parentFilter = filterParentTab ? filterParentTab.dataset.filter : "all"; // Categoría activa
-
-        // Obtener la asamblea seleccionada
-        const activeAssemblyCard = document.querySelector('.assembly-card.active');
-        const currentAssembly = activeAssemblyCard ? activeAssemblyCard.dataset.assembly : null;
-
-        try {
-          if (parentFilter === "all") {
-            if (localidadFilter === "all") {
-              // Mostrar todo si no hay filtros
-              let filteredList = window.globalEventData;
-              if (currentAssembly) {
-                filteredList = filteredList.filter(item => {
-                  if (currentAssembly === 'asamblea1') {
-                    return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
-                  } else if (currentAssembly === 'asamblea2') {
-                    return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
-                  }
-                  return true;
-                });
-              }
-              renderAmenities2(filteredList);
-            }
-            else {
-              // Filtrar solo por localidad
-              let filteredList = window.globalEventData.filter(x => x.localidad?.toLowerCase().includes(localidadFilter.toLowerCase()));
-              if (currentAssembly) {
-                filteredList = filteredList.filter(item => {
-                  if (currentAssembly === 'asamblea1') {
-                    return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
-                  } else if (currentAssembly === 'asamblea2') {
-                    return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
-                  }
-                  return true;
-                });
-              }
-              renderAmenities2(filteredList);
-            }
-          }
-          else {
-            if (localidadFilter === "all") {
-              // Filtrar solo por categoría
-              let filteredList = window.globalEventData.filter(i => i.categoria === parentFilter);
-              if (currentAssembly) {
-                filteredList = filteredList.filter(item => {
-                  if (currentAssembly === 'asamblea1') {
-                    return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
-                  } else if (currentAssembly === 'asamblea2') {
-                    return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
-                  }
-                  return true;
-                });
-              }
-              renderAmenities2(filteredList);
-            }
-            else {
-              // Filtrar por localidad Y categoría
-              let filteredList = window.globalEventData.filter(
-                x =>
-                  x.localidad?.toLowerCase().includes(localidadFilter.toLowerCase()) &&
-                  x.categoria === parentFilter
-              );
-              if (currentAssembly) {
-                filteredList = filteredList.filter(item => {
-                  if (currentAssembly === 'asamblea1') {
-                    return item.asamblea === '1' || item.asamblea === 'both' || !item.asamblea;
-                  } else if (currentAssembly === 'asamblea2') {
-                    return item.asamblea === '2' || item.asamblea === 'both' || !item.asamblea;
-                  }
-                  return true;
-                });
-              }
-              renderAmenities2(filteredList);
-            }
-          }
-        } catch (error) {
-          console.error('Error filtering data:', error);
-        }
-      });
-    });
 
     // ---- Función para obtener icono según categoría ----
     function getIcon(categoria) {
