@@ -37,6 +37,17 @@ function openFaqVoluntario(event) {
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     incrementMetric("INIT_PAGE_LIVE");
+
+    if (window.location.hash === "#Encuesta") {
+      // Espera un momento por si hay contenido dinámico
+      setTimeout(() => {
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth"
+        });
+      }, 500);
+    }
+    
     const scrollBtn = document.getElementById("scrollBtn");
     const startSection = document.getElementById("startScroll");
 
