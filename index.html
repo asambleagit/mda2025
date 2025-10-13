@@ -305,10 +305,21 @@
         <!-- ✅ Versión Desktop: Carousel -->
 
         <div id="carouselVideos" class="carousel slide my-5 d-none d-md-block" data-bs-interval="false">
+          <ul class="nav nav-pills justify-content-center mb-3" id="videoTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="tab-sur" data-bs-toggle="tab" data-bs-target="#videoSur" type="button"
+                role="tab">Acceso Sur</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab-norte" data-bs-toggle="tab" data-bs-target="#videoNorte" type="button"
+                role="tab">Acceso Norte</button>
+            </li>
+          </ul>
+
           <div class="carousel-inner rounded shadow" style="max-width: 800px; margin: auto;">
 
-            Video 1
-            <div class="carousel-item active text-center">
+
+            <div class="carousel-item active text-center" id="videoSur" role="tabpanel">
 
               <div class="ratio ratio-16x9">
                 <iframe
@@ -326,7 +337,7 @@
             </div>
 
 
-            <div class="carousel-item text-center">
+            <div class="carousel-item text-center" id="videoNorte" role="tabpanel">
               <div class="ratio ratio-16x9">
                 <iframe
                   src="https://player.vimeo.com/video/1123540068?badge=0&autopause=0&player_id=0&app_id=58479&loop=1"
@@ -343,22 +354,7 @@
             </div>
           </div>
 
-          <!-- Controles -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselVideos" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
-            <span class="visually-hidden">Anterior</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselVideos" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
-            <span class="visually-hidden">Siguiente</span>
-          </button>
 
-          <!-- Indicadores -->
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselVideos" data-bs-slide-to="0" class="active"
-              aria-current="true"></button>
-            <button type="button" data-bs-target="#carouselVideos" data-bs-slide-to="1"></button>
-          </div>
         </div>
 
 
