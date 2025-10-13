@@ -397,7 +397,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   </div>                 
                   ${item.aviso ? '<p style="color: var(--calm-text-light); margin-bottom: 16px;"><strong>' + item.aviso + '</strong></p>' : ''}
                   ${item.categoria === 'restaurante' && item.convenio ? '<p style="color: var(--calm-text-light); margin-bottom: 16px;">Presentando tu tarjeta de la asamblea "Adoración pura" se ofrece el siguiente beneficio. </p>' : 
-                    '<p style="color: var(--calm-text-light); margin-bottom: 16px;">Elige alguna de las siguientes opciones para ver la información.</p>'}                  
+                    item.flag ?'<p style="color: var(--calm-text-light); margin-bottom: 16px;">Elige alguna de las siguientes opciones para ver la información.</p>' : ''}                  
                   <div class="amenity-actions">
                     ${item.categoria === 'hotel'
                         ? (
@@ -405,7 +405,8 @@ document.addEventListener('DOMContentLoaded', function() {
                             ? `<a href="${item.link1}" class="calm-btn-sm" target="_blank">Google Maps</a>`
                             : (currentAssembly === 'asamblea2' && item.link2)
                               ? `<a href="${item.link2}" class="calm-btn-sm" target="_blank">Google Maps</a>`
-                              : `<span>No existe información disponible, realiza la búsqueda en localidades cercanas</span>`
+                              : (item.flag)
+                            ? `<span>No existe información disponible, realiza la búsqueda en localidades cercanas</span>` : ``
                         )
                         : 
                         item.categoria === 'farmacia' ? 
@@ -451,7 +452,8 @@ document.addEventListener('DOMContentLoaded', function() {
                                               ${item.link1 ? `<a href="${item.link1}" class="calm-btn-sm" target="_blank">Google Maps</a>` : ''}
                                               ${item.link2 ? `<a href="${item.link2}" class="calm-btn-sm" target="_blank">Sitio de la Municipalidad</a>` : ''}
                                             `
-                            : `<span>No existe información disponible, realiza la búsqueda en localidades cercanas</span>`
+                            : (item.flag)
+                            ? `<span>No existe información disponible, realiza la búsqueda en localidades cercanas</span>` : ``
                         )
                       }
                   </div>

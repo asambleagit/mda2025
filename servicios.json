@@ -365,8 +365,25 @@
   {
     "categoria": "hotel",
     "localidad": "bernardo",
-    "titulo": "Hoteles en San Bernardo",
-    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento.",
+    "titulo": "Hoteles con Beneficios",
+    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento. Para obtener más información debes pedir a los ancianos de tu congregación el sitio de internet y los códigos para acceder a la Lista de Alojamientos.",
+    "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
+    "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
+    "asamblea": "both"
+  },
+  {
+    "categoria": "hotel",
+    "localidad": "bernardo",
+    "titulo": "Necesidades especiales de alojamiento",
+    "aviso" : "Si necesitas alojamiento especial, informa de estas necesidades a los ancianos de tu congregación. Después envía una solicitud para que los ancianos la revisen.",    
+    "asamblea": "both",
+    "flag" : false
+  },
+  {
+    "categoria": "hotel",
+    "localidad": "ajo",
+    "titulo": "Hoteles con Beneficios",
+    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento. Para obtener más información debes pedir a los ancianos de tu congregación el sitio de internet y los códigos para acceder a la Lista de Alojamientos.",
     "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
     "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
     "asamblea": "both"
@@ -374,8 +391,16 @@
   {
     "categoria": "hotel",
     "localidad": "ajo",
-    "titulo": "Hoteles en Mar de Ajó",
-    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento.",
+    "titulo": "Necesidades especiales de alojamiento",
+    "aviso" : "Si necesitas alojamiento especial, informa de estas necesidades a los ancianos de tu congregación. Después envía una solicitud para que los ancianos la revisen.",    
+    "asamblea": "both",
+    "flag" : false
+  },
+  {
+    "categoria": "hotel",
+    "localidad": "teresita",
+    "titulo": "Hoteles con Beneficios",
+    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento. Para obtener más información debes pedir a los ancianos de tu congregación el sitio de internet y los códigos para acceder a la Lista de Alojamientos.",
     "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
     "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
     "asamblea": "both"
@@ -383,83 +408,146 @@
   {
     "categoria": "hotel",
     "localidad": "teresita",
-    "titulo": "Hoteles en Santa Teresita",
-    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento.",
-    "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
-    "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
-    "asamblea": "both"
+    "titulo": "Necesidades especiales de alojamiento",
+    "aviso" : "Si necesitas alojamiento especial, informa de estas necesidades a los ancianos de tu congregación. Después envía una solicitud para que los ancianos la revisen.",    
+    "asamblea": "both",
+    "flag" : false
   },
   {
     "categoria": "hotel",
     "localidad": "tuyu",
-    "titulo": "Hoteles en Mar del Tuyú",
-    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento.",
+    "titulo": "Hoteles con Beneficios",
+    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento. Para obtener más información debes pedir a los ancianos de tu congregación el sitio de internet y los códigos para acceder a la Lista de Alojamientos.",
     "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
     "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
     "asamblea": "both"
+  },
+   {
+    "categoria": "hotel",
+    "localidad": "tuyu",
+    "titulo": "Necesidades especiales de alojamiento",
+    "aviso" : "Si necesitas alojamiento especial, informa de estas necesidades a los ancianos de tu congregación. Después envía una solicitud para que los ancianos la revisen.",    
+    "asamblea": "both",
+    "flag" : false
   },
   {
     "categoria": "hotel",
     "localidad": "costa",
-    "titulo": "Hoteles en Costa del Este",
-    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento.",
+    "titulo": "Hoteles con Beneficios",
+    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento. Para obtener más información debes pedir a los ancianos de tu congregación el sitio de internet y los códigos para acceder a la Lista de Alojamientos.",
     "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
     "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
     "asamblea": "both"
+  },
+   {
+    "categoria": "hotel",
+    "localidad": "costa",
+    "titulo": "Necesidades especiales de alojamiento",
+    "aviso" : "Si necesitas alojamiento especial, informa de estas necesidades a los ancianos de tu congregación. Después envía una solicitud para que los ancianos la revisen.",    
+    "asamblea": "both",
+    "flag" : false
   },
   {
     "categoria": "hotel",
     "localidad": "aguas",
-    "titulo": "Hoteles en Aguas Verdes",
-    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento.",
+    "titulo": "Hoteles con Beneficios",
+    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento. Para obtener más información debes pedir a los ancianos de tu congregación el sitio de internet y los códigos para acceder a la Lista de Alojamientos.",
     "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
     "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
     "asamblea": "both"
+  },
+   {
+    "categoria": "hotel",
+    "localidad": "aguas",
+    "titulo": "Necesidades especiales de alojamiento",
+    "aviso" : "Si necesitas alojamiento especial, informa de estas necesidades a los ancianos de tu congregación. Después envía una solicitud para que los ancianos la revisen.",    
+    "asamblea": "both",
+    "flag" : false
   },
   {
     "categoria": "hotel",
     "localidad": "lucila",
-    "titulo": "Hoteles en Lucila del Mar",
-    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento.",
+    "titulo": "Hoteles con Beneficios",
+    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento. Para obtener más información debes pedir a los ancianos de tu congregación el sitio de internet y los códigos para acceder a la Lista de Alojamientos.",
     "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
     "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
     "asamblea": "both"
+  },
+   {
+    "categoria": "hotel",
+    "localidad": "lucila",
+    "titulo": "Necesidades especiales de alojamiento",
+    "aviso" : "Si necesitas alojamiento especial, informa de estas necesidades a los ancianos de tu congregación. Después envía una solicitud para que los ancianos la revisen.",    
+    "asamblea": "both",
+    "flag" : false
   },
   {
     "categoria": "hotel",
     "localidad": "atlantis",
-    "titulo": "Hoteles en Nueva Atlantis",
-    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento.",
+    "titulo": "Hoteles con Beneficios",
+    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento. Para obtener más información debes pedir a los ancianos de tu congregación el sitio de internet y los códigos para acceder a la Lista de Alojamientos.",
     "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
     "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
     "asamblea": "both"
+  },
+   {
+    "categoria": "hotel",
+    "localidad": "atlantis",
+    "titulo": "Necesidades especiales de alojamiento",
+    "aviso" : "Si necesitas alojamiento especial, informa de estas necesidades a los ancianos de tu congregación. Después envía una solicitud para que los ancianos la revisen.",    
+    "asamblea": "both",
+    "flag" : false
   },
   {
     "categoria": "hotel",
     "localidad": "medanos",
-    "titulo": "Hoteles en Punta Medanos",
-    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento.",
+    "titulo": "Hoteles con Beneficios",
+    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento. Para obtener más información debes pedir a los ancianos de tu congregación el sitio de internet y los códigos para acceder a la Lista de Alojamientos.",
     "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
     "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
     "asamblea": "both"
+  },
+   {
+    "categoria": "hotel",
+    "localidad": "medanos",
+    "titulo": "Necesidades especiales de alojamiento",
+    "aviso" : "Si necesitas alojamiento especial, informa de estas necesidades a los ancianos de tu congregación. Después envía una solicitud para que los ancianos la revisen.",    
+    "asamblea": "both",
+    "flag" : false
   },
   {
     "categoria": "hotel",
     "localidad": "pinamar",
-    "titulo": "Hoteles en Pinamar",
-    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento.",
+    "titulo": "Hoteles con Beneficios",
+    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento. Para obtener más información debes pedir a los ancianos de tu congregación el sitio de internet y los códigos para acceder a la Lista de Alojamientos.",
     "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
     "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
     "asamblea": "both"
   },
+   {
+    "categoria": "hotel",
+    "localidad": "pinamar",
+    "titulo": "Necesidades especiales de alojamiento",
+    "aviso" : "Si necesitas alojamiento especial, informa de estas necesidades a los ancianos de tu congregación. Después envía una solicitud para que los ancianos la revisen.",    
+    "asamblea": "both",
+    "flag" : false
+  },
   {
     "categoria": "hotel",
     "localidad": "carilo",
-    "titulo": "Hoteles en Cariló",
-    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento.",
+    "titulo": "Hoteles con Beneficios",
+    "aviso" : "Consulta la lista de hoteles disponibles para esta localidad o zonas cercanas. Recuerda que estos hoteles tienen tarifas especiales para este evento. Para obtener más información debes pedir a los ancianos de tu congregación el sitio de internet y los códigos para acceder a la Lista de Alojamientos.",
     "link1": "https://maps.app.goo.gl/4fmw58p1TPweGBea7",
     "link2" : "https://maps.app.goo.gl/2AwcSnv2FYiBdzZe8",
     "asamblea": "both"
+  },
+   {
+    "categoria": "hotel",
+    "localidad": "carilo",
+    "titulo": "Necesidades especiales de alojamiento",
+    "aviso" : "Si necesitas alojamiento especial, informa de estas necesidades a los ancianos de tu congregación. Después envía una solicitud para que los ancianos la revisen.",    
+    "asamblea": "both",
+    "flag" : false
   },
   {
     "categoria": "restaurante",
