@@ -70,6 +70,20 @@
     "dir": "Chiozza N°1820 - San Bernardo",
     "convenio" : true
   },
+   {
+    "categoria": "restaurante",
+    "localidad": "bernardo",
+    "titulo": "Alfajoreria Esturion",
+    "asamblea": "both",
+    "link1": "https://maps.app.goo.gl/j9PKTda8LGv6j8ZRA",
+    "descuento": "15%",
+    "menu": "",
+    "tel": "",
+    "url": "https://www.alfajoresesturion.com/productos",
+    "flyer": "",
+    "dir": "Chiozza N°2206 - San Bernardo",
+    "convenio" : true
+  },
   {
     "categoria": "restaurante",
     "localidad": "bernardo",
