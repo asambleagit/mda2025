@@ -79,6 +79,12 @@ document.addEventListener('DOMContentLoaded', function() {
             window.globalEventData = data;
             //console.log('Global event data loaded successfully:', data.length, 'items');
 
+            const responseNews = await fetch('novedades.json');
+            if (!responseNews.ok) {
+                throw new Error(`HTTP error on news! status: ${responseNews.status}`);
+            }
+            const dataNews = await responseNews.json();
+            window.globalEventDataNews = dataNews;
             // Dispatch event to notify other components that data is loaded
             const event = new CustomEvent('dataLoaded');
             document.dispatchEvent(event);
@@ -479,6 +485,41 @@ document.addEventListener('DOMContentLoaded', function() {
               );
       // Renderizar los servicios iniciales
       renderAmenities2(filteredList);
+      //Carga de novedades
+      if (window.globalEventDataNews) {
+        const barra = document.getElementById("barra-novedades");
+        try {
+          const hoy = new Date();
+          const novedadesVigentes = window.globalEventDataNews.filter(n => {
+            const inicio = new Date(n.inicio);
+            const fin = new Date(n.fin);
+            return hoy >= inicio && hoy <= fin;
+          });
+
+          if (novedadesVigentes.length > 0) {
+            const contenido = novedadesVigentes.map(n => {
+              const boton = n.link
+                ? ` <a href="${n.link}" class="btn-novedad">Ver más</a>`
+                : "";
+              return `<strong>${n.titulo}:</strong> ${n.descripcion}${boton}`;
+            }).join(" &nbsp; | &nbsp; ");
+
+            barra.innerHTML = contenido;
+            barra.style.display = "block";
+
+            // Mostrar 5 segundos y ocultar con fade
+            setTimeout(() => {
+              barra.classList.add("ocultar");
+              setTimeout(() => {
+                barra.style.display = "none";
+                barra.classList.remove("ocultar");
+              }, 1000);
+            }, 5000);
+          }
+        } catch (error) {
+          console.error("Error cargando las novedades:", error);
+        }
+      }
     });
 
     // ---- Manejar selección de asamblea y filtrar servicios ----
