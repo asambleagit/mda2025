@@ -3,7 +3,14 @@
     "titulo": "Vea lo nuevo",
     "descripcion": "Revisa los nuevos videos de estacionamiento en Información / Cómo llegar",
     "inicio": "2025-10-14",
-    "fin": "2025-10-16",
+    "fin": "2025-10-14",
     "link": "#como-llegar"
+  },
+    {
+    "titulo": "Vea lo nuevo",
+    "descripcion": "Nuevo video de Plan de evacuacion en Información / Plan de Evacuación",
+    "inicio": "2025-10-15",
+    "fin": "2025-10-20",
+    "link": "#evacuacion"
   }
 ]
