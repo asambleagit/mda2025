@@ -10,11 +10,11 @@
     "menu": "$20000",
     "tel": "3516750780",
     "url": "https://asambleagit.github.io/mda2025/Image/menu-los-angeles.jpg",
-    "flyer": "Imagen de WhatsApp 2025-09-15 a las 16.39.54_f8744e45.jpg",
+    "flyer": "menu-los-angeles.jpg",
     "dir": "Calle 40 N°347 - Santa Teresita",
     "convenio" : true
   },
-  {
+    {
     "categoria": "restaurante",
     "localidad": "ajo",
     "titulo": "Azopardo",
@@ -26,6 +26,20 @@
     "url": "https://www.instagram.com/azopardocafebar?igsh=ZDNvNDZiZjN1MHU2",
     "flyer": "",
     "dir": "Lebensohn y Azopardo - Mar de Ajó",
+    "convenio" : true
+  },
+  {
+    "categoria": "restaurante",
+    "localidad": "ajo",
+    "titulo": "Sol Luna - Hotel Latinoamericano 🌙",
+    "asamblea": "both",
+    "link1": "https://maps.app.goo.gl/KDmY46UAfs92XDD27",
+    "descuento": "10% - Con reserva previa",
+    "menu": "$20000 (Plato principal + postre + bebida sin alcohol por persona)",
+    "tel": "1160239652",
+    "url": "",
+    "flyer": "",
+    "dir": "Av. Costanera Sur 27 - Mar de Ajó",
     "convenio" : true
   },
   {
@@ -136,7 +150,7 @@
     "menu": "$25000 (Plato principal + bebida sin alcohol por persona)",
     "tel": "2246586461",
     "url": "https://asambleagit.github.io/mda2025/menu-barra-bosque.pdf",
-    "flyer": "La Barra del Bosque CDE .pdf",
+    "flyer": "menu-barra-bosque.pdf",
     "dir": "Las camelias  N°228 - Costa del este",
     "convenio" : true
   },
@@ -150,7 +164,7 @@
     "menu": "$12000 (Plato principal + bebida sin alcohol por persona)",
     "tel": "1159979455",
     "url": "https://asambleagit.github.io/mda2025/menu-turnedo.jpeg",
-    "flyer": "Turnedo LM .jpeg",
+    "flyer": "menu-turnedo.jpeg",
     "dir": "Av 1 esquina Tucuman - Lucila del Mar",
     "convenio" : true
   },
@@ -161,10 +175,10 @@
     "asamblea": "both",
     "link1": "https://maps.app.goo.gl/4xH39K1oZpQgiKWi7",
     "descuento": "",
-    "menu": "Diversos Platos desde $6900",
+    "menu": "Diversos Platos desde $9000",
     "tel": "2257828417",
-    "url": "https://www.instagram.com/littosbar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-    "flyer": "Littos SB .jpeg",
+    "url": "https://asambleagit.github.io/mda2025/Image/menu-littos.jpg",
+    "flyer": "menu-littos.jpg",
     "dir": "Chiozza N°2260 - San Bernarddo",
     "convenio" : true
   },
@@ -178,7 +192,7 @@
     "menu": "$24000 (Incluye Plato principal + postre + bebida)",
     "tel": "",
     "url": "https://asambleagit.github.io/mda2025/menu-inocencio.jpg",
-    "flyer": "Inocencio jgp.jpg",
+    "flyer": "menu-inocencio.jpg",
     "dir": "Av. Costanera Sur 164 - Mar de Ajó,",
     "convenio" : true
   },
@@ -206,7 +220,7 @@
     "menu": "",
     "tel": "",
     "url": "https://www.instagram.com/elmercadohnos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-    "flyer": "Imagen de WhatsApp 2025-09-19 a las 20.47.53_2b192437.jpg",
+    "flyer": "menu-hnos.jpg",
     "dir": "Chiozza N°2044 - San Bernardo",
     "convenio" : true
   },
@@ -220,7 +234,7 @@
     "menu": "$21000",
     "tel": "2257527316",
     "url": "https://www.instagram.com/augustopizza?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-    "flyer": "menú para dos 1 pizza 2 empanadas 2 bebidas",
+    "flyer": "",
     "dir": "Chiozza N°2056 - San Bernardo",
     "convenio" : true
   },
@@ -230,7 +244,7 @@
     "titulo": "Pimavera",
     "asamblea": "both",
     "link1": "https://maps.app.goo.gl/jspNYwN8vd2x6wwWA",
-    "descuento": "",
+    "descuento": "15% en efectivo o 5% con otros medios",
     "menu": "",
     "tel": "",
     "url": "https://www.instagram.com/cafeterialaprimavera?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
