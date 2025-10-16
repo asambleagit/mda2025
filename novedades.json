@@ -1,16 +1,10 @@
 [
-  {
-    "titulo": "Vea lo nuevo",
-    "descripcion": "Revisa los nuevos videos de estacionamiento en Información / Cómo llegar",
-    "inicio": "2025-10-14",
-    "fin": "2025-10-14",
-    "link": "#como-llegar"
-  },
+  
     {
     "titulo": "Vea lo nuevo",
-    "descripcion": "Nueva sección Plan de Evacuación en Información / Plan de Evacuación",
+    "descripcion": "Recorrido especial de colectivos - Recibe avisos del recorrido en tiempo real. Mas información aquí",
     "inicio": "2025-10-15",
     "fin": "2025-10-20",
-    "link": "#evacuacion"
+    "link": "#vivo"
   }
 ]
