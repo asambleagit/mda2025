@@ -514,7 +514,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 barra.style.display = "none";
                 barra.classList.remove("ocultar");
               }, 1000);
-            }, 5000);
+            }, 10000);
           }
         } catch (error) {
           console.error("Error cargando las novedades:", error);
