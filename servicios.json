@@ -45,6 +45,20 @@
   {
     "categoria": "restaurante",
     "localidad": "bernardo",
+    "titulo": "Hotel Colores",
+    "asamblea": "both",
+    "link1": "https://maps.app.goo.gl/Gonv4xpnTUw4LPyAA",
+    "descuento": "",
+    "menu": "$15000 (Entrada + plato fuerte + postre) - Incluye bebida",
+    "tel": "",
+    "url": "https://asambleagit.github.io/mda2025/Image/menu-colores.png",
+    "flyer": "",
+    "dir": "San Juan N° 1544 - San Bernardo",
+    "convenio" : true
+  },
+  {
+    "categoria": "restaurante",
+    "localidad": "bernardo",
     "titulo": "El Quincho",
     "asamblea": "both",
     "link1": "https://maps.app.goo.gl/LTzuaiBGrCJFjYEo9",
