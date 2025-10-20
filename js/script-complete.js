@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ---- Load global event data from servicios.json ----
     async function loadGlobalEventData() {
         try {
-            const response = await fetch('servicios.json');
+            const response = await fetch('https://asambleagit.github.io/mda2025/servicios.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -162,11 +162,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Auto seleccionar asamblea1 si la fecha actual es anterior al 21 de Octubre de 2025
     const currentDate = new Date();
-    const cutoffDate = new Date('2025-10-21T00:00:00');
-    if (currentDate < cutoffDate) {
-      selectAssembly('asamblea1');
-    } else {
+    const cutoffDate = new Date('2025-10-19T00:00:00');
+    if (currentDate > cutoffDate) {
       selectAssembly('asamblea2');
+    } else {
+      selectAssembly('asamblea1');
     }
 
  // ---- Filtro por categoría de servicios ----
@@ -564,7 +564,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ---- Inicializar selección de asamblea y disparar evento para filtrar servicios ----
     const currentDate2 = new Date();
-    const cutoffDate2 = new Date('2025-10-21T00:00:00');
+    const cutoffDate2 = new Date('2025-10-20T00:00:00');
     let initialAssembly = 'asamblea1';
     if (currentDate2 >= cutoffDate2) {
       initialAssembly = 'asamblea2';
