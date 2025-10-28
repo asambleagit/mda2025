@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ---- Load global event data from servicios.json ----
     async function loadGlobalEventData() {
         try {
-            const response = await fetch('https://asambleagit.github.io/mda2025/servicios.json');
+            const response = await fetch('/servicios.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }

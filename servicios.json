@@ -9,7 +9,7 @@
     "descuento": "",
     "menu": "$20000",
     "tel": "3516750780",
-    "url": "https://asambleagit.github.io/mda2025/Image/menu-los-angeles.jpg",
+    "url": "/Image/menu-los-angeles.jpg",
     "flyer": "menu-los-angeles.jpg",
     "dir": "Calle 40 N°347 - Santa Teresita",
     "convenio" : true
@@ -51,7 +51,7 @@
     "descuento": "",
     "menu": "$15000 (Entrada + plato fuerte + postre) - Incluye bebida",
     "tel": "",
-    "url": "https://asambleagit.github.io/mda2025/Image/menu-colores.png",
+    "url": "/Image/menu-colores.png",
     "flyer": "",
     "dir": "San Juan N° 1544 - San Bernardo",
     "convenio" : true
@@ -233,7 +233,7 @@
     "descuento": "",
     "menu": "$25000 (Plato principal + bebida sin alcohol por persona)",
     "tel": "2246586461",
-    "url": "https://asambleagit.github.io/mda2025/menu-barra-bosque.pdf",
+    "url": "/menu-barra-bosque.pdf",
     "flyer": "menu-barra-bosque.pdf",
     "dir": "Las camelias  N°228 - Costa del este",
     "convenio" : true
@@ -247,7 +247,7 @@
     "descuento": "",
     "menu": "$12000 (Plato principal + bebida sin alcohol por persona)",
     "tel": "1159979455",
-    "url": "https://asambleagit.github.io/mda2025/Image/menu-turnedo.jpeg",
+    "url": "/Image/menu-turnedo.jpeg",
     "flyer": "menu-turnedo.jpeg",
     "dir": "Av 1 esquina Tucuman - Lucila del Mar",
     "convenio" : true
@@ -261,7 +261,7 @@
     "descuento": "20% en pagos por transferencia y efectivo",
     "menu": "Diversos Platos desde $9000",
     "tel": "2257828417",
-    "url": "https://asambleagit.github.io/mda2025/Image/menu-littos.jpg",
+    "url": "/Image/menu-littos.jpg",
     "flyer": "menu-littos.jpg",
     "dir": "Chiozza N°2260 - San Bernarddo",
     "convenio" : true
@@ -275,7 +275,7 @@
     "descuento": "",
     "menu": "$24000 (Incluye Plato principal + postre + bebida)",
     "tel": "",
-    "url": "https://asambleagit.github.io/mda2025/menu-inocencio.jpg",
+    "url": "/menu-inocencio.jpg",
     "flyer": "menu-inocencio.jpg",
     "dir": "Av. Costanera Sur 164 - Mar de Ajó,",
     "convenio" : true
